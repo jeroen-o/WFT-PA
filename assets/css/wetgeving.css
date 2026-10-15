@@ -1,0 +1,232 @@
+/* Onderdelen van de WFT Bieb (DFO), overgenomen voor de pagina Wet- en regelgeving. */
+/* DFO-huisstijl: blauwe kop- en voetband, witte kaarten met lichtblauwe rand op grijsblauw vlak */
+:root{
+  --dfo-blue:#0E5AA7;
+  --dfo-blue-dark:#0A4683;
+  --dfo-blue-soft:#E8F0F9;
+  --border:#BBD3EA;
+  --bg:#FFFFFF;
+  --bg-alt:#F4F7FB;
+  --card:#EDF3FA;
+  --shadow:0 3px 14px rgba(20,50,90,.16);
+  --text:#4A4A4A;
+  --text-strong:#2C3A47;
+  --heading:#1B5FA9;
+  --amber:#B06E00;
+  --amber-soft:#FDF2DC;
+  --red:#A52A21;
+  --red-soft:#FBE9E7;
+  --green:#1B6B3A;
+  --green-soft:#E6F3EB;
+  --radius:4px;
+  --maxw:1180px;
+  --font:"Poppins","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{color:var(--heading);font-weight:600;text-wrap:balance;margin:0}
+a{color:var(--dfo-blue)}
+
+/* Topbalk zoals dfobv.nl: wit, navigatie links, logo rechts */
+.topbar{background:#fff;border-bottom:1px solid #E3EAF2}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-block:10px}
+.topnav{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:13px}
+.topnav a{color:var(--dfo-blue);text-decoration:none;font-weight:500}
+.topnav a:hover{text-decoration:underline}
+.topnav a.actief{color:#7FA6CF}
+.topnav{font-size:14px;gap:4px 22px}
+.toprechts{display:flex;align-items:center;gap:18px}
+.navknop{background:var(--dfo-blue);color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:8px 14px;border-radius:var(--radius);white-space:nowrap}
+.navknop:hover{background:var(--dfo-blue-dark)}
+.topnav .kort{display:none}
+.navknop:focus-visible{outline:2px solid var(--dfo-blue-dark);outline-offset:2px}
+
+/* Kopband */
+.masthead{background:linear-gradient(100deg,#0A4683 0%,#0E5AA7 55%,#3F7FC0 100%);color:#fff;position:relative;overflow:hidden}
+.masthead::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 85% 30%,rgba(255,255,255,.14),transparent 45%);pointer-events:none}
+.masthead .wrap{padding-block:32px 36px}
+.masthead h1{color:#fff;font-size:34px;line-height:1.2;font-weight:700;letter-spacing:-.01em}
+.masthead p{margin:10px 0 0;color:#D7E6F6;font-size:17px;max-width:62ch}
+.eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#A9CBEC;font-weight:600;margin-bottom:10px}
+.peildatum{margin-top:18px;display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:var(--radius);padding:7px 12px;font-size:13px;color:#fff}
+
+.masthead .wrap{position:relative;z-index:1}
+.masthead .intro{min-width:0}
+.logo{flex:0 0 auto;display:block;line-height:0;text-decoration:none}
+.logo img{display:block;height:44px;width:auto}
+.logo .woordmerk{display:none;line-height:1;font-weight:700;font-size:26px;letter-spacing:.02em;color:var(--dfo-blue)}
+.logo .woordmerk small{display:block;font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--text);margin-top:4px}
+.logo.geenimg img{display:none}
+.logo.geenimg .woordmerk{display:block}
+
+/* Kennis en praktijk */
+.kennis{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.kblok{background:var(--card);border:0;box-shadow:var(--shadow);border-radius:var(--radius);padding:20px;min-width:0}
+.kblok h3{font-size:17px;margin-bottom:4px}
+.kblok > p{margin:0 0 12px;font-size:14px}
+.kblok ul{list-style:none;margin:0;padding:0}
+.kblok li{border-top:1px solid #D3E1F0;padding:9px 0}
+.kblok li a{font-weight:500;font-size:14.5px;text-decoration:none;color:var(--text-strong)}
+.kblok li a:hover{color:var(--dfo-blue);text-decoration:underline}
+.kblok li span{display:block;font-size:13px;line-height:1.5;margin-top:2px}
+.kblok .groep{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--dfo-blue);margin:14px 0 2px}
+.kblok .meer{margin-top:12px}
+.kleeg{font-size:13px;color:var(--text);padding:8px 0}
+
+/* Zoek- en filterbalk */
+.toolbar{background:#fff;box-shadow:0 2px 8px rgba(20,50,90,.08);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:20}
+.toolbar .wrap{padding-block:16px}
+.searchrow{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.searchfield{flex:1 1 320px;min-width:0;position:relative}
+.searchfield input{
+  width:100%;font-family:var(--font);font-size:16px;color:var(--text-strong);
+  padding:12px 14px 12px 42px;border:1px solid var(--border);border-radius:var(--radius);background:#fff;
+}
+.searchfield input:focus{outline:2px solid var(--dfo-blue);outline-offset:1px;border-color:var(--dfo-blue)}
+.searchfield svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;fill:none;stroke:var(--dfo-blue);stroke-width:2}
+.count{font-size:14px;color:var(--text);white-space:nowrap;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{
+  font-family:var(--font);font-size:13px;font-weight:500;cursor:pointer;
+  background:#fff;color:var(--dfo-blue);border:1px solid var(--border);
+  border-radius:var(--radius);padding:7px 13px;line-height:1.2;
+}
+.chip:hover{background:var(--dfo-blue-soft)}
+.chip[aria-pressed="true"]{background:var(--dfo-blue);border-color:var(--dfo-blue);color:#fff}
+.chip:focus-visible{outline:2px solid var(--dfo-blue-dark);outline-offset:2px}
+.chip .n{font-variant-numeric:tabular-nums;opacity:.7;margin-left:5px}
+.chip[disabled]{opacity:.45;cursor:default}
+.chip[disabled]:hover{background:#fff}
+.searchfield .wis{position:absolute;right:6px;top:50%;transform:translateY(-50%);border:0;background:none;color:var(--text);font-size:20px;line-height:1;padding:6px 9px;cursor:pointer;border-radius:var(--radius)}
+.searchfield .wis:hover{background:var(--dfo-blue-soft)}
+.searchfield input{padding-right:40px}
+.searchfield input::-webkit-search-cancel-button{display:none}
+.opties{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:12px;font-size:14px}
+.opties label{display:inline-flex;align-items:center;gap:7px;cursor:pointer}
+.opties input[type=checkbox]{width:16px;height:16px;accent-color:var(--dfo-blue)}
+.opties select{font-family:var(--font);font-size:14px;color:var(--text-strong);padding:6px 8px;border:1px solid var(--border);border-radius:var(--radius);background:#fff}
+.opties .spacer{flex:1}
+.linkbtn{font-family:var(--font);font-size:13px;font-weight:500;background:#fff;color:var(--dfo-blue);border:1px solid var(--dfo-blue);border-radius:var(--radius);padding:6px 12px;cursor:pointer}
+.linkbtn:hover{background:var(--dfo-blue-soft)}
+mark{background:#FFE58F;color:inherit;padding:0 1px;border-radius:2px}
+.card .acties{display:flex;flex-wrap:wrap;gap:8px}
+.card .acties .btn{margin-top:4px}
+.kopieer{font-family:var(--font);font-size:12px;background:none;border:0;color:var(--dfo-blue);cursor:pointer;padding:0;text-decoration:underline}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* Attentieblok */
+.alert{background:var(--amber-soft);border:1px solid #E8C98A;border-radius:var(--radius);padding:18px 20px;margin-top:28px}
+.alert h2{font-size:17px;color:#8A5600}
+.alert ul{margin:10px 0 0;padding-left:20px}
+.alert li{margin-bottom:6px;font-size:15px}
+.alert li strong{color:var(--text-strong)}
+
+/* Secties */
+section{padding-block:40px}
+section[id]{scroll-margin-top:150px}
+section.alt{background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.sectionhead{margin-bottom:20px}
+.sectionhead h2{font-size:25px;color:var(--text-strong);font-weight:700}
+.sectionhead p{margin:6px 0 0;font-size:15px;max-width:70ch}
+
+/* Kaartgrid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+.card{
+  background:var(--card);border:0;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:18px;display:flex;flex-direction:column;gap:9px;min-width:0;
+}
+.card h3,.source h3,.kblok h3{color:var(--heading)}
+.card .afk{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--dfo-blue)}
+.card h3{font-size:16px;line-height:1.35;color:var(--text-strong);font-weight:600}
+.card p{margin:0;font-size:14px;line-height:1.55}
+.card .meta{margin-top:auto;padding-top:12px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.badge{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:2px;white-space:nowrap}
+.badge.thema{background:#fff;color:var(--dfo-blue-dark)}
+.badge.jaarlijks{background:var(--amber-soft);color:var(--amber)}
+.badge.nieuw{background:var(--green-soft);color:var(--green)}
+.badge.check{background:var(--red-soft);color:var(--red)}
+.btn{
+  display:inline-block;background:var(--dfo-blue);color:#fff;text-decoration:none;
+  font-size:12.5px;font-weight:600;padding:8px 14px;border-radius:var(--radius);margin-top:4px;align-self:flex-start;
+}
+.btn:hover{background:var(--dfo-blue-dark)}
+.btn.ghost{background:#fff;color:var(--dfo-blue);border:1px solid var(--dfo-blue)}
+.btn.ghost:hover{background:var(--dfo-blue-soft)}
+.btn:focus-visible{outline:2px solid var(--dfo-blue-dark);outline-offset:2px}
+.nolink{font-size:13px;color:var(--red);font-weight:500}
+.empty{padding:40px 0;text-align:center;color:var(--text)}
+
+/* Snel naar thema: knoppenraster zoals 'Overige dienstverlening' */
+.snel{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.snel button{font-family:var(--font);font-size:12.5px;font-weight:600;background:var(--dfo-blue);color:#fff;border:0;border-radius:3px;padding:9px 10px;cursor:pointer}
+.snel button:hover{background:var(--dfo-blue-dark)}
+.snel button:focus-visible{outline:2px solid var(--dfo-blue-dark);outline-offset:2px}
+
+/* DFO Compliance */
+.compliance{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:22px;align-items:start}
+.compliance .kblok ul{list-style:none;margin:6px 0 16px;padding:0}
+.compliance .kblok li{padding:8px 0 8px 26px;position:relative;font-size:15px}
+.compliance .kblok li::before{content:"";position:absolute;left:4px;top:15px;width:10px;height:10px;border-radius:50%;background:var(--dfo-blue)}
+.compliance .knoppen{display:flex;flex-wrap:wrap;gap:8px}
+.compliance .knoppen .btn{margin-top:0}
+.contactblok{background:var(--dfo-blue);color:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+.contactblok h3{color:#fff;font-size:18px;margin-bottom:8px}
+.contactblok p{margin:0 0 12px;font-size:14.5px;color:#E3EEF9}
+.contactblok a{color:#fff;font-weight:600}
+.contactblok .btn{background:#fff;color:var(--dfo-blue)}
+.contactblok .btn:hover{background:var(--dfo-blue-soft)}
+.verantw{margin-top:22px;background:#fff;border-left:4px solid var(--amber);box-shadow:var(--shadow);border-radius:var(--radius);padding:16px 20px;font-size:14.5px}
+.verantw strong{color:var(--text-strong)}
+@media (max-width:760px){.compliance{grid-template-columns:1fr}}
+
+/* Wachtwoordscherm */
+
+/* FAQ */
+.faqs{display:grid;gap:10px;max-width:880px}
+.faq{background:#fff;box-shadow:var(--shadow);border-radius:var(--radius)}
+.faq summary{cursor:pointer;padding:14px 18px;font-weight:600;color:var(--heading);list-style:none;position:relative;padding-right:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);font-size:20px;color:var(--dfo-blue)}
+.faq[open] summary::after{content:"–"}
+.faq p{margin:0;padding:0 18px 16px;font-size:15px}
+kbd{font-family:var(--font);font-size:12px;border:1px solid var(--border);border-bottom-width:2px;border-radius:3px;padding:0 5px;background:#fff}
+
+/* Bronnenkaarten */
+.sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.source{background:var(--card);border:0;box-shadow:var(--shadow);border-radius:var(--radius);padding:20px;display:flex;flex-direction:column;gap:10px}
+.source h3{font-size:17px}
+.source p{margin:0;font-size:14px}
+
+/* Voetband */
+footer{background:var(--dfo-blue);color:#E3EEF9}
+footer .wrap{padding-block:30px 34px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
+footer h4{color:#fff;font-size:14px;margin:0 0 8px;font-weight:600}
+footer p,footer li{font-size:13.5px;line-height:1.65;margin:0}
+footer ul{list-style:none;padding:0;margin:0}
+footer a{color:#fff}
+.disclaimer{border-top:1px solid rgba(255,255,255,.22)}
+.disclaimer .wrap{display:block;padding-block:16px 22px}
+.disclaimer p{font-size:12.5px;color:#CFE0F2;max-width:92ch}
+
+@media (max-width:600px){
+  .masthead h1{font-size:27px}
+  .topbar .wrap{flex-direction:column-reverse;align-items:stretch;gap:10px}
+  .toprechts{justify-content:space-between}
+  .topnav{font-size:13.5px;gap:4px 16px;flex-wrap:nowrap}
+  .topnav .lang{display:none}
+  .topnav .kort{display:inline}
+  .logo img{height:36px}
+  .masthead .wrap{padding-block:26px 28px}
+  .grid{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
