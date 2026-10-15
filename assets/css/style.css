@@ -166,3 +166,6 @@ main.kaal .melding{margin-top:32px}
   .poster{padding:44px var(--pad)}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.agenda{margin-top:20px}
+.agenda>p{font-size:15px;font-weight:600}
+.agenda .acties{margin-top:10px}
