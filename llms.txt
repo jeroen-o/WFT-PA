@@ -1,6 +1,6 @@
 # Wft Permanent Actueel (PA-WFT.nl)
 
-> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: 15 oktober 2026.
+> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen (5 extra per toegevoegde module) en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: 15 oktober 2026.
 
 ## PE en Permanent Actueel
 
@@ -8,7 +8,7 @@
 
 ## Toets
 
-- [PA-toets](https://pa-wft.nl/toets.html): kies een module of een mix; 7 willekeurige vragen, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.
+- [PA-toets](https://pa-wft.nl/toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.
 
 ## Modules
 
