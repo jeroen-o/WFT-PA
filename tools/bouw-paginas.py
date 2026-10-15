@@ -14,7 +14,7 @@ MARK = ('<svg class="mark" width="44" height="44" viewBox="0 0 120 120" aria-hid
         '<circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
         '<text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg>')
 
-NAV = [('index.html#modules', 'Modules'), ('index.html#check', "Welke heb ik nodig?"), ('toets.html', 'Toets'), ('vragen.html', 'Veelgestelde vragen')]
+NAV = [('index.html#modules', 'Modules'), ('toets.html', 'Toets'), ('pe-punten-wft.html', 'PE uitgelegd'), ('index.html#check', 'Mijn pakket'), ('vragen.html', 'Vragen')]
 
 def header(actief=''):
     links = ''.join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == actief else '', t) for h, t in NAV)
@@ -165,7 +165,7 @@ def nl(iso): j, m, d = iso.split('-'); return f'{int(d)} {MAANDEN[int(m)-1]} {j}
 for i, mod in enumerate(MODS, 1):
     mid, naam, bij, tekst = mod['id'], mod['naam'], mod['bijgewerkt'], mod['tekst']
     d = M[mid]
-    inh = (f'    <p class="lead">{html.escape(tekst)}</p>\n'
+    inh = (f'    <p class="lead">{html.escape(tekst)} Oefen gratis met 100 PE-oefenvragen voor Wft {html.escape(naam)}, met uitleg bij elk antwoord.</p>\n'
            f'    <p class="meta-regel">100 oefenvragen · laatst bijgewerkt {nl(bij)} · peildatum regelgeving {PEIL}</p>\n'
            f'    <div class="actions"><a class="btn btn-primary" href="toets.html#{mid}">Doe de toets <span>→</span></a><a class="btn btn-outline" href="index.html#modules">Alle modules</a></div>\n'
            '    <h2>Wat komt aan bod</h2>\n    <ul>' + ''.join(f'<li>{o}</li>' for o in d['onderwerpen']) + '</ul>\n'
@@ -173,13 +173,24 @@ for i, mod in enumerate(MODS, 1):
            '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
            f'    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen leerstof voor een erkend PE-examen. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
-    pagina(f'module-{mid}.html', f'Wft {naam} — Wft Permanent Actueel', f'Wft {naam}: wat komt aan bod, wat is actueel en de bronnen. Gratis oefentoets met 100 vragen.',
-           f'Wft {html.escape(naam)}', f'Module {i:02d}', inh)
+    ld = {'@context': 'https://schema.org', '@graph': [
+        {'@type': 'Course', 'name': f'Wft {naam} — Permanent Actueel', 'description': f'Gratis PE-oefenvragen Wft {naam}: 100 meerkeuzevragen met uitleg, een toets van 7 vragen en een certificaat. {tekst}',
+         'url': f'{SITE}module-{mid}.html', 'inLanguage': 'nl', 'isAccessibleForFree': True, 'educationalLevel': 'Beroepsniveau', 'teaches': d['onderwerpen'][:6],
+         'dateModified': bij, 'provider': {'@type': 'Organization', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/'},
+         'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR', 'category': 'Gratis'},
+         'hasCourseInstance': {'@type': 'CourseInstance', 'courseMode': 'online', 'courseWorkload': 'PT10M'}},
+        {'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': 'Wft Permanent Actueel', 'item': SITE},
+                                                        {'@type': 'ListItem', 'position': 2, 'name': f'Wft {naam}', 'item': f'{SITE}module-{mid}.html'}]}]}
+    titel = f'Wft {naam}: gratis PE-oefenvragen | Permanent Actueel'
+    if len(titel) > 62: titel = f'Wft {naam}: gratis PE-oefenvragen'
+    pagina(f'module-{mid}.html', titel, f'Wft {naam} Permanent Actueel: 100 gratis PE-oefenvragen met uitleg, wat er actueel is en de bronnen. Oefentoets voor adviseurs, geen PE-examen.',
+           f'Wft {html.escape(naam)}', f'Module {i:02d} · Permanent Actueel', inh, ld=ld)
 
 # ---------- Veelgestelde vragen ----------
 FAQ = [
  ('Wat is permanente educatie (PE)?', 'Wie in de financiële dienstverlening adviseert, moet vakbekwaam zijn en blijven. Daarvoor heb je een Wft-diploma nodig en houd je je kennis bij met permanente educatie. Binnen elke PE-periode haal je de PE-examens die bij je diploma’s horen. De actuele periode en eisen vind je bij het <a href="https://www.cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
  ('Telt deze toets mee voor mijn PE?', 'Nee. De PA-toets is een oefentoets. Hij helpt je je kennis te testen en bij te houden, maar is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Je PE-examen leg je af bij een door het CDFD erkend examencentrum.'),
+ ('Levert de toets PE-punten op?', 'Nee. Onder de Wft bestaan geen PE-punten meer: je houdt je diploma’s geldig met PE-examens. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op. Lees meer in <a href="pe-punten-wft.html">PE-punten en Wft Permanent Actueel</a>.'),
  ('Wat kost het?', 'Niets. Alle modules en de toets zijn gratis voor alle adviseurs, zonder abonnement en zonder account. Wft Permanent Actueel is een activiteit van DFO BV.'),
  ('Hoe werkt de toets?', 'Je kiest een module en krijgt 7 willekeurige vragen uit 100. Na elk antwoord zie je de uitleg. Heb je er 5 of meer goed, dan maak je een certificaat aan dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
  ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
@@ -275,9 +286,33 @@ inh = f'''    <p class="lead">Niet tevreden over Wft Permanent Actueel? Laat het
     <p class="klein">Laatst bijgewerkt: {PEIL}.</p>'''
 pagina('klachten.html', 'Klachten — Wft Permanent Actueel', 'Zo dien je een klacht in over Wft Permanent Actueel.', 'Klachtenprocedure', 'Klachten', inh)
 
+# ---------- PE uitgelegd (SEO/GEO) ----------
+PE = [
+ ('Bestaan PE-punten nog onder de Wft?', 'Nee. Sinds 1 januari 2014 werkt permanente educatie onder de Wft niet meer met PE-punten. Je houdt je Wft-diploma’s geldig door binnen elke PE-periode de PE-examens te halen die bij je diploma’s horen. PE-punten kom je nog wel tegen bij vrijwillige beroepsregisters; welke activiteiten daar meetellen, bepaalt elk register zelf.'),
+ ('Wat is PE onder de Wft?', 'PE staat voor permanente educatie. Wie adviseert of bemiddelt in financiële producten, moet vakbekwaam zijn: je hebt een Wft-diploma voor je vakgebied en je houdt die kennis actueel met PE. Je legt de PE-examens af bij een door het CDFD erkend examencentrum; het CDFD registreert je diploma’s en behaalde PE-examens.'),
+ ('Wat betekent Wft Permanent Actueel (PA)?', 'Permanent Actueel betekent dat je vakkennis na je Wft-diploma bij de tijd blijft. PE-examens toetsen vooral wat er is veranderd in wet- en regelgeving en in de markt. Wft Permanent Actueel (PA-WFT.nl) is een gratis oefenomgeving van DFO BV waarmee je per Wft-module oefent.'),
+ ('Welke PE-examens heb ik nodig?', 'Dat hangt af van je Wft-diploma’s en het soort klantcontact. Er zijn negen modules: Basis, Consumptief Krediet, Schadeverzekering Particulier, Schadeverzekering Zakelijk, Vermogen, Hypothecair Krediet, Inkomen, Pensioen en Zorgverzekering. Gebruik de <a href="index.html#check">pakketcheck</a> als hulpmiddel en controleer de eisen die voor jou gelden bij het <a href="https://www.cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
+ ('Wat gebeurt er als ik mijn PE niet op tijd haal?', 'Dan voldoe je voor dat vakgebied niet meer aan de vakbekwaamheidseisen van de Wft en mag je daar niet meer adviseren of bemiddelen tot je weer voldoet. Kijk bij het CDFD wat je in dat geval moet doen.'),
+ ('Levert de PA-toets PE-punten of een PE-examen op?', 'Nee. De PA-toets is een oefentoets. Je krijgt bij 5 of meer van de 7 vragen goed een certificaat met je resultaat, maar dat is geen bewijs van vakbekwaamheid en telt niet mee voor je PE-registratie.'),
+ ('Hoe oefen ik gratis voor mijn PE-examen?', 'Op PA-WFT.nl staan per Wft-module 100 meerkeuzevragen met uitleg, 900 in totaal. Elke toets bevat 7 willekeurige vragen. Je kunt ook een mix maken van alle modules uit je eigen pakket. Gratis voor alle adviseurs, zonder account.'),
+]
+inh = ('    <p class="lead antwoord"><strong>Kort antwoord:</strong> onder de Wft bestaan geen PE-punten meer. Sinds 1 januari 2014 houd je je Wft-diploma’s geldig met PE-examens per module. '
+       'Wft Permanent Actueel helpt je daar gratis mee te oefenen; de toets zelf levert geen PE-punten of PE-examen op.</p>\n'
+       '    <div class="actions"><a class="btn btn-primary" href="toets.html">Oefen gratis <span>→</span></a><a class="btn btn-outline" href="index.html#check">Welke modules heb ik nodig?</a></div>\n'
+       + '\n'.join(f'    <h2>{q}</h2>\n    <p>{a}</p>' for q, a in PE) +
+       '\n    <h2>Oefenen per Wft-module</h2>\n    <ul>' + ''.join(f'<li><a href="module-{m["id"]}.html">Wft {m["naam"]}</a>: 100 PE-oefenvragen</li>' for m in MODS) + '</ul>\n'
+       '    <h2>Bronnen</h2>\n    <ul class="bronnen"><li><a href="https://www.cdfd.nl/" target="_blank" rel="noopener">CDFD — College Deskundigheid Financiële Dienstverlening</a></li>'
+       '<li><a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars" target="_blank" rel="noopener">AFM — adviseurs en bemiddelaars</a></li>'
+       f'<li><a href="{B["eind"][1]}" target="_blank" rel="noopener">{B["eind"][0]}</a></li><li><a href="{B["wft"][1]}" target="_blank" rel="noopener">{B["wft"][0]}</a></li></ul>\n'
+       f'    <p class="klein">Peildatum {PEIL}. Algemene informatie, geen advies. De eisen die precies voor jou gelden, vind je bij het CDFD.</p>')
+ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': re.sub('<[^>]+>', '', a)}} for q, a in PE]}
+pagina('pe-punten-wft.html', 'PE-punten Wft en Permanent Actueel: zo werkt PE in 2026', 'Bestaan PE-punten nog? Hoe werkt PE onder de Wft en wat is Wft Permanent Actueel? Uitleg voor financieel adviseurs, plus gratis PE-oefenvragen per module.',
+       'PE-punten, PE-examens en Wft Permanent Actueel', 'PE uitgelegd', inh, actief='pe-punten-wft.html', ld=ld)
+
 # ---------- llms.txt ----------
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module 100 meerkeuzevragen met uitleg, een toets van 7 vragen en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: ' + PEIL + '.', '',
+        '## PE en Permanent Actueel', '', f'- [PE-punten, PE-examens en Wft Permanent Actueel]({SITE}pe-punten-wft.html): onder de Wft bestaan geen PE-punten meer; sinds 1 januari 2014 houd je je diploma’s geldig met PE-examens per module. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op.', '',
         '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 willekeurige vragen uit 100 per module, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
@@ -286,7 +321,7 @@ llms += ['', '## Informatie', '', f'- [Veelgestelde vragen]({SITE}vragen.html)',
 open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
 
 # ---------- sitemap en robots ----------
-paden = ['', 'toets.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
+paden = ['', 'toets.html', 'pe-punten-wft.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>2026-10-15</lastmod></url>\n' for p in paden) + '</urlset>\n')
 open(R + 'robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
