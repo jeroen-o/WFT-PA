@@ -30,7 +30,7 @@ a{color:var(--blue)}a:hover{color:var(--blue-dark)}
 .topbar{background:#fff;border-bottom:var(--rule)}
 .topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:14px;flex-wrap:wrap}
 .logo{flex:0 0 auto;display:block;line-height:0}
-.logo img{display:block;height:64px;width:auto}
+.logo img{display:block;height:84px;width:auto}
 .topnav{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px;font-weight:500}
 .topnav a{color:var(--ink);text-decoration:none}
 .topnav a:hover{color:var(--blue)}
@@ -147,7 +147,7 @@ main.kaal .melding{margin-top:32px}
 @media (max-width:700px){
   :root{--pad:20px}
   .topbar .wrap{flex-direction:column;align-items:flex-start;gap:6px}
-  .logo img{height:46px}
+  .logo img{height:62px}
   .topnav{flex-wrap:nowrap;overflow-x:auto;gap:0;width:calc(100% + 2*var(--pad));margin:0 calc(-1*var(--pad));padding:0 var(--pad);scrollbar-width:none}
   .topnav::-webkit-scrollbar{display:none}
   .topnav a{white-space:nowrap;padding:12px 16px 12px 0;min-height:44px;display:flex;align-items:center}
@@ -170,3 +170,7 @@ main.kaal .melding{margin-top:32px}
 .agenda{margin-top:20px}
 .agenda>p{font-size:15px;font-weight:600}
 .agenda .acties{margin-top:10px}
+/* Tikdoelen van minimaal 24 px, ook op tablets */
+.topnav a{padding-block:6px;display:inline-block}
+.foot-links a{padding-block:5px;display:inline-block}
+body.breed .kopieer{padding:6px 8px;min-height:28px}

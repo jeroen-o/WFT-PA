@@ -14,7 +14,7 @@ MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 
         '<circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
         '<text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg>')
 
-NAV = [('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('wetgeving.html', 'Wet- en regelgeving'),
+NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('wetgeving.html', 'Wet- en regelgeving'),
        ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV')]
 
 def header(actief=''):
@@ -393,7 +393,7 @@ ld_home = {'@context': 'https://schema.org', '@graph': [
 pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs',
        'Wft Permanent Actueel: gratis voor alle adviseurs. PE-oefenvragen met uitleg voor alle 9 Wft-modules, van Basis tot Pensioen. Met certificaat.',
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
-       intro='Kennis actueel, elk jaar weer. Oefen per Wft-module met vragen over wat er actueel is, met uitleg bij elk antwoord.',
+       intro='Kennis actueel, elk kwartaal weer. Oefen per Wft-module met vragen over wat er actueel is, met uitleg bij elk antwoord.',
        mast_extra='    <p class="gratis"><strong>Gratis voor alle adviseurs.</strong> Alle modules en de kennistoets, zonder kosten.</p>\n    ' + MARK.replace('<svg ', '<svg class="hero-mark" ', 1) + '\n',
        scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>\n<script src="assets/js/agenda.js"></script>')
 s = open(R + 'index.html', encoding='utf-8').read()
@@ -407,7 +407,7 @@ pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Perm
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
        intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop maak je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/toets.js"></script>')
+       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
 
 # ---------- Wet- en regelgeving ----------
 bron = open(R + 'tools/wetgeving-bron.md', encoding='utf-8').read()
