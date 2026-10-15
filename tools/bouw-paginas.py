@@ -53,6 +53,16 @@ def head(titel, omschrijving, pad, extra=''):
             '<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
             '<link rel="stylesheet" href="assets/css/style.css">' + extra + '\n</head>\n<body>')
 
+import hashlib
+def versie(html_tekst):
+    """Zet achter elke lokale CSS- en JS-link een versiecode op basis van de inhoud, zodat browsers na een wijziging het nieuwe bestand laden."""
+    def code(m):
+        pad = m.group(2)
+        try: h = hashlib.sha1(open(R + pad.lstrip('/'), 'rb').read()).hexdigest()[:8]
+        except OSError: return m.group(0)
+        return f'{m.group(1)}{pad}?v={h}"'
+    return re.sub(r'((?:href|src)=")(/?assets/(?:css|js)/[^"?]+\.(?:css|js))"', code, html_tekst)
+
 def link_cdfd(html_tekst):
     kop, sep, romp = html_tekst.partition('<body')
     delen = re.split(r'(<[^>]+>)', romp)
@@ -77,7 +87,7 @@ def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', l
          + ('\n<main id="inhoud" class="kaal">\n' + inhoud + '\n<div class="wrap">' + MELDING + '</div>\n</main>\n' if kaal else
             '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n') + FOOTER + scripts + '\n</body>\n</html>\n')
     if kaal: s = s.replace('<body>', '<body class="breed">', 1)
-    open(R + pad, 'w', encoding='utf-8').write(link_cdfd(s))
+    open(R + pad, 'w', encoding='utf-8').write(versie(link_cdfd(s)))
 
 # ---------- Modules ----------
 WT = 'https://wetten.overheid.nl/'
