@@ -72,7 +72,7 @@
       el('a', {href:'index.html#check'}, 'Kies op beroepskwalificatie'));
     paneel.replaceChildren(el('div', {class:'start'},
       el('h2', null, 'Test je kennis'),
-      el('p', null, 'Kies een of meer modules. Bij één module krijg je 7 willekeurige meerkeuzevragen, en voor elke module die je toevoegt 5 extra (2 modules: 12 vragen, 3 modules: 17). Na elk antwoord zie je bij alle vier de antwoorden waarom ze goed of fout zijn. Na afloop maak je een certificaat met je resultaat.'),
+      el('p', null, 'Kies een of meer modules. Bij één module krijg je 7 willekeurige meerkeuzevragen, en voor elke module die je toevoegt 5 extra (2 modules: 12 vragen, 3 modules: 17). Na elk antwoord zie je bij alle vier de antwoorden waarom ze goed of fout zijn. Na afloop ontvang je een certificaat met je resultaat.'),
       vakjes, snel, uitlegAantal, info,
       el('p', {class:'advies'}, 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.'),
       startKnop,

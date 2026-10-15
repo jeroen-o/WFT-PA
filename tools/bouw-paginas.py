@@ -32,16 +32,22 @@ MELDING = ('<div class="melding" role="note"><strong>Let op.</strong> De PA-toet
            'DFO BV is niet verantwoordelijk voor de juistheid en volledigheid van alle vragen en antwoorden; regels wijzigen. Wil je het zeker weten? '
            'Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
-FOOTER = ('<footer>\n  <div class="wrap foot-grid">\n  <div class="foot-tekst">\n'
-    '    <div>Wft Permanent Actueel is een activiteit van DFO BV · De Wel 14–16, 3871 MV Hoevelaken · <a href="tel:+31332580460">033 258 04 60</a> · <a href="mailto:info@dfobv.nl">info@dfobv.nl</a> · <a href="https://www.dfobv.nl/contact/" target="_blank" rel="noopener">Contact</a></div>\n'
-    '    <div class="foot-disc">KvK 32068727 · btw NL806480828B01</div>\n'
-    '    <nav class="foot-links" aria-label="Voettekst"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a>'
-    '<a href="privacy.html">Privacy en cookies</a><a href="vragen.html">Veelgestelde vragen</a><a href="https://www.dfobv.nl/ons-team/" target="_blank" rel="noopener">Ons team</a>'
-    '<a href="https://www.dfobv.nl/product/nieuwsbrief-wft/" target="_blank" rel="noopener">Nieuwsbrief Wft</a></nav>\n'
-    '    <p class="foot-disc">Op de hoogte blijven? Schrijf je in voor de wekelijkse <a href="https://www.dfobv.nl/product/nieuwsbrief-wft/" target="_blank" rel="noopener">Nieuwsbrief Wft</a> van DFO. '
-    'Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p>\n  </div>\n'
-    '  <a class="foot-logo" href="https://www.dfobv.nl/" target="_blank" rel="noopener" aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a>\n'
-    '  </div>\n</footer>')
+EXT = ' target="_blank" rel="noopener"'
+FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
+    '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
+    '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
+    '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
+    '<li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
+    '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
+    '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
+    '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
+    '<a href="https://www.dfobv.nl/contact/"' + EXT + '>Contactpagina</a></address><p class="foot-klein">KvK 32068727 · btw NL806480828B01</p></div>\n'
+    '    </div>\n  </div>\n'
+    '  <div class="foot-balk"><div class="wrap">'
+    '<div class="foot-balk-tekst"><nav class="foot-links" aria-label="Voorwaarden"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a><a href="privacy.html">Privacy en cookies</a></nav>'
+    '<p class="foot-disc">© 2026 DFO BV. Wft Permanent Actueel is een activiteit van DFO BV. Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p></div>'
+    '<a class="foot-logo" href="https://www.dfobv.nl/"' + EXT + ' aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a>'
+    '</div></div>\n</footer>')
 
 def head(titel, omschrijving, pad, extra=''):
     return ('<!doctype html>\n<html lang="nl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
@@ -230,7 +236,7 @@ FAQ = [
  ('Telt deze toets mee voor mijn PE?', 'Nee. De PA-toets is een oefentoets. Hij helpt je je kennis te testen en bij te houden, maar is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Je PE-examen leg je af bij een door het CDFD erkend examencentrum.'),
  ('Levert de toets PE-punten op?', 'Nee. Onder de Wft bestaan geen PE-punten meer: je houdt je diploma’s geldig met PE-examens. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op. Lees meer in <a href="pe-punten-wft.html">PE-punten en Wft Permanent Actueel</a>.'),
  ('Wat kost het?', 'Niets. Alle modules en de toets zijn gratis voor alle adviseurs, zonder abonnement en zonder account. Wft Permanent Actueel is een activiteit van DFO BV.'),
- ('Hoe werkt de toets?', 'Je kiest een of meer modules. Bij één module krijg je 7 willekeurige vragen, en voor elke module die je toevoegt 5 extra: 2 modules geven 12 vragen, 3 modules 17, alle 9 modules 47. Na elk antwoord zie je de uitleg. Daarna maak je een certificaat met je resultaat, dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
+ ('Hoe werkt de toets?', 'Je kiest een of meer modules. Bij één module krijg je 7 willekeurige vragen, en voor elke module die je toevoegt 5 extra: 2 modules geven 12 vragen, 3 modules 17, alle 9 modules 47. Na elk antwoord zie je de uitleg. Daarna ontvang je een certificaat met je resultaat, als pdf in je mail of om te printen. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
  ('Hoe vaak doe ik de toets?', 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Op de homepage en in de toets zet je met één klik een herinnering in je agenda: elk kwartaal, de komende 5 jaar, met een link naar de toets. Bewaar elk certificaat in je personeelsdossier en lever het ook in bij je werkgever. Zo laat je zien dat je je kennis bijhoudt. Het certificaat vervangt je PE-examen niet.'),
  ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
  ('Wordt er iets van mij bewaard?', 'Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
@@ -405,7 +411,7 @@ inh = '<div class="paneel" id="paneel" aria-live="polite">\n      <noscript><p>S
 pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Permanent Actueel',
        'Gratis Wft-kennistoets voor adviseurs: 7 vragen per module, 5 extra per toegevoegde module, elke keer anders. Met uitleg en certificaat.',
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
-       intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop maak je een certificaat.',
+       intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop ontvang je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
        scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
 
