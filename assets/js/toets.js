@@ -205,7 +205,7 @@
   function certTekst(g, metVragen){
     var r = laatste;
     return 'Certificaat PA-toets — Wft Permanent Actueel\n\nNaam: ' + g.naam + '\nGeboortedatum: ' + PA_DATUM(g.geb) + '\nE-mailadres: ' + g.mail + (g.bedrijf ? '\nBedrijf: ' + g.bedrijf : '') + '\nVerstuurd op: ' + g.uitgegeven + '\nResultaat: ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%)\nModule: ' + r.thema + (r.modules.length > 1 ? '\nModules: ' + r.modules.join(', ') + '\nVragen uit: ' + r.vanMods.join(', ') : '') + '\nDatum: ' + r.datum + '\nVragenbank bijgewerkt: ' + r.bijgewerkt + '\nCertificaatnummer: ' + r.nummer + '\n\n'
-      + ADVIES + '\n\n' + DISCLAIMER + '\n';
+      + ADVIES + '\n\nDoe de toets opnieuw: https://pa-wft.nl/toets.html\nWft Permanent Actueel: https://pa-wft.nl/\n\n' + DISCLAIMER + '\n';
   }
   function mailHref(g){
     var onderwerp = 'Certificaat PA-toets ' + laatste.nummer + ' — ' + g.naam + ' (' + laatste.goed + '/' + laatste.n + ')';
@@ -246,7 +246,7 @@
       + '<div>de PA-toets heeft afgelegd met het volgende resultaat:</div>'
       + '<div class="res"><div><strong>' + r.goed + ' / ' + r.n + '</strong>vragen goed</div><div><strong>' + r.pct + '%</strong>score</div><div><strong>' + esc(r.thema) + '</strong>module</div><div><strong>' + esc(r.bijgewerkt) + '</strong>vragenbank bijgewerkt</div></div>'
       + (r.modules.length > 1 ? '<dl class="pers mods"><dt>Modules</dt><dd>' + esc(r.modules.join(', ')) + '</dd><dt>Vragen uit</dt><dd>' + esc(r.vanMods.join(', ')) + '</dd></dl>' : '')
-      + '<p class="advies">' + ADVIES + '</p>'
+      + '<p class="advies">' + ADVIES + ' Doe de toets opnieuw op <a href="https://pa-wft.nl/toets.html">pa-wft.nl/toets.html</a>.</p>'
       + '<div class="voet"><p>' + DISCLAIMER + '</p>' + STEMPEL + '</div>'
       + '</div></div>';
     return '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Certificaat PA-toets — ' + esc(g.naam) + '</title><style>' + css + '</style></head><body>' + body

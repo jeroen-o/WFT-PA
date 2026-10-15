@@ -119,9 +119,9 @@ main{padding-block:0 0}
 
 /* Afsluitend blauw blok */
 .poster{background:var(--blue);color:#fff;padding:72px 0}
-.poster .wrap{display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+.poster .wrap{display:flex;flex-direction:column;align-items:center;text-align:center}
 .poster .btn{align-self:center}
-.poster h2{color:#fff;font-size:clamp(34px,5vw,60px);line-height:1.05;max-width:900px;margin:0 auto}
+.poster h2{color:#fff;font-size:clamp(34px,5vw,60px);line-height:1.1;max-width:900px;margin:0 auto 32px}
 
 /* Veelgestelde vragen */
 .faq{border-top:var(--rule);padding:16px 0}.faq:last-child{border-bottom:var(--rule)}
