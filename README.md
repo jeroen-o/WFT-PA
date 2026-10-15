@@ -12,13 +12,28 @@ Statische website + merkbestanden voor Wft Permanent Actueel (een dienst van DFO
 
 ## Structuur
 ```
-index.html                  website
-assets/css/style.css        stijlen
+index.html                  homepage met modules en pakket-check
+toets.html                  PA-toets: 7 vragen per module uit 100, certificaat om naar jezelf te mailen
+module-<id>.html            per module: wat komt aan bod, actueel, bronnen
+vragen.html, over.html, privacy.html, 404.html
+sitemap.xml, robots.txt
+assets/css/style.css        stijlen (lettertype Archivo lokaal in assets/fonts, OFL-licentie)
+assets/css/toets.css        stijlen van de toets
+assets/js/modules.js        de 9 modules met datum "bijgewerkt"
+assets/js/vragen.js         vragenbank (eerste antwoord is steeds het juiste)
 assets/js/main.js           modulelijst + pakket-check
-assets/logo/                logo's (SVG) + merkteken 1024px (PNG)
+assets/js/toets.js          toets en certificaat
+assets/logo/                logo's (SVG), merkteken 1024px (PNG), DFO-logo
 favicon.ico / .svg / -16 / -32, apple-touch-icon.png, android-chrome-*.png
 site.webmanifest, og-image.png (1200×630 deelafbeelding), CNAME
 ```
+
+Let op: de repository heeft een `.nojekyll`, dus elk bestand in de repository komt online, ook mappen met een `_` ervoor. Zet interne bestanden (zoals het signaleringsoverzicht) niet in deze repository.
+
+## Een module bijwerken
+1. Pas de vragen van de module aan in `assets/js/vragen.js`.
+2. Zet in `assets/js/modules.js` de datum `bijgewerkt` op vandaag; die verschijnt op de homepage, de toets en het certificaat.
+3. Werk zo nodig het blok "Actueel" op `module-<id>.html` bij.
 
 ## Logo's
 | Bestand | Gebruik |
