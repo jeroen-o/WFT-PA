@@ -193,14 +193,12 @@
   function certTekst(g, metVragen){
     var r = laatste;
     return 'Certificaat PA-toets — Wft Permanent Actueel\n\nNaam: ' + g.naam + '\nGeboortedatum: ' + PA_DATUM(g.geb) + '\nE-mailadres: ' + g.mail + (g.bedrijf ? '\nBedrijf: ' + g.bedrijf : '') + '\nVerstuurd op: ' + g.uitgegeven + '\nResultaat: ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%)\nModule: ' + r.thema + '\nDatum: ' + r.datum + '\nVragenbank bijgewerkt: ' + r.bijgewerkt + '\nCertificaatnummer: ' + r.nummer + '\n\n'
-      + (metVragen ? r.vragen.map(function(v, i){ return (i + 1) + '. ' + v.vraag + '\n   ' + (v.goed ? 'Goed' : 'Fout') + ' — juist: ' + v.juist; }).join('\n') + '\n\n' : '')
       + DISCLAIMER + '\n';
   }
   function mailHref(g){
     var onderwerp = 'Certificaat PA-toets ' + laatste.nummer + ' — ' + g.naam + ' (' + laatste.goed + '/' + laatste.n + ')';
     var basis = 'mailto:' + encodeURIComponent(g.mail) + '?subject=' + encodeURIComponent(onderwerp) + '&body=';
-    var href = basis + encodeURIComponent(certTekst(g, true));
-    return href.length > 1900 ? basis + encodeURIComponent(certTekst(g, false)) : href;
+    return basis + encodeURIComponent(certTekst(g, false));
   }
 
   var STEMPEL = '<svg class="stempel" viewBox="0 0 200 200" aria-label="Stempel DFO BV" role="img"><defs><path id="cirkel" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>'
@@ -211,7 +209,6 @@
 
   function certificaatHTML(g){
     var r = laatste;
-    var rijen = r.vragen.map(function(v, i){ return '<tr><td>' + (i + 1) + '</td><td>' + esc(v.vraag) + '</td><td class="' + (v.goed ? 'g' : 'f') + '">' + (v.goed ? '✓ Goed' : '✗ Fout') + '</td><td>' + esc(v.juist) + '</td></tr>'; }).join('');
     var css = 'body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:#2C3A47;background:#fff}'
       + '.cert{max-width:900px;margin:0 auto;padding:28px}'
       + '.kader{border:3px solid #0E5AA7;outline:1px solid #0E5AA7;outline-offset:-10px;padding:40px 44px;position:relative}'
@@ -222,11 +219,10 @@
       + '.pers{display:grid;grid-template-columns:max-content 1fr;gap:2px 14px;font-size:13px;margin:-8px 0 18px}.pers dt{color:#4A4A4A}.pers dd{margin:0;font-weight:600}'
       + '.naam{font-size:30px;font-weight:700;border-bottom:2px solid #BBD3EA;padding-bottom:6px;margin:6px 0 18px;display:inline-block;min-width:60%}'
       + '.res{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 24px}.res div{background:#EDF3FA;border-radius:4px;padding:10px 16px;font-size:13px}.res strong{display:block;font-size:22px;color:#0E5AA7}'
-      + 'table{width:100%;border-collapse:collapse;font-size:12px;margin-top:8px}th,td{text-align:left;vertical-align:top;padding:6px 8px;border-bottom:1px solid #BBD3EA}th{background:#0E5AA7;color:#fff}.g{color:#1B6B3A;font-weight:700;white-space:nowrap}.f{color:#A52A21;font-weight:700;white-space:nowrap}'
-      + '.voet{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:26px}.voet p{font-size:11px;color:#4A4A4A;max-width:60ch;margin:0}'
+      + '.voet{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:40px}.voet p{font-size:11px;color:#4A4A4A;max-width:60ch;margin:0}'
       + '.stempel{width:140px;height:140px;transform:rotate(-12deg);opacity:.88;flex:0 0 auto}'
       + '@media (max-width:600px){.cert{padding:12px}.kader{padding:24px 18px}.voet{flex-direction:column;align-items:flex-start}}'
-      + '@media print{.cert{padding:0}@page{size:A4;margin:12mm}th,.res div{-webkit-print-color-adjust:exact;print-color-adjust:exact}}';
+      + '@media print{.cert{padding:0}@page{size:A4;margin:12mm}.res div{-webkit-print-color-adjust:exact;print-color-adjust:exact}}';
     var body = '<div class="cert"><div class="kader">'
       + '<div class="kop"><img src="' + LOGO + '" alt="DFO — dienstverlening voor financiële ondernemers"><div class="nr">Certificaatnummer<br><strong>' + r.nummer + '</strong><br>' + r.datum + '</div></div>'
       + '<h1>Certificaat</h1><p class="sub">PA-toets · Wft Permanent Actueel</p>'
@@ -235,7 +231,6 @@
       + '<dt>' + (g.verstuurd ? 'Verstuurd op' : 'Aangemaakt op') + '</dt><dd>' + esc(g.uitgegeven) + '</dd></dl>'
       + '<div>de PA-toets heeft afgelegd met het volgende resultaat:</div>'
       + '<div class="res"><div><strong>' + r.goed + ' / ' + r.n + '</strong>vragen goed</div><div><strong>' + r.pct + '%</strong>score</div><div><strong>' + esc(r.thema) + '</strong>module</div><div><strong>' + esc(r.bijgewerkt) + '</strong>vragenbank bijgewerkt</div></div>'
-      + '<table><thead><tr><th>#</th><th>Vraag</th><th>Resultaat</th><th>Juiste antwoord</th></tr></thead><tbody>' + rijen + '</tbody></table>'
       + '<div class="voet"><p>' + DISCLAIMER + '</p>' + STEMPEL + '</div>'
       + '</div></div>';
     return '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Certificaat PA-toets — ' + esc(g.naam) + '</title><style>' + css + '</style></head><body>' + body
