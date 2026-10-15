@@ -4,17 +4,16 @@
   var grid=document.getElementById('moduleGrid');
   MODS.forEach(function(m,i){var d=document.createElement('article');d.className='module';d.innerHTML='<span class="nr">'+String(i+1).padStart(2,'0')+'</span><h3><a href="module-'+m[3]+'.html">'+m[0]+'</a></h3><p>'+m[1]+'</p><p class="upd">Laatst bijgewerkt: '+window.PA_DATUM(m[2])+'</p><a class="mod-link" href="toets.html#'+m[3]+'">Doe de toets →</a>';grid.appendChild(d);});
 
-  /* Beroepskwalificaties met de modules waaruit ze bestaan. Bron: CDFD (adviesbevoegdheden), geraadpleegd oktober 2026.
-     'controle': de volledige samenstelling stond niet in de bron; de check toont alleen de eigen module en verwijst naar het CDFD. */
+  /* Beroepskwalificaties met de benodigde diploma's. Bron: AFM, Vakbekwaamheidseisen (tabel beroep en producten), en CDFD, geraadpleegd oktober 2026. */
   var KWAL=[
     {naam:'Adviseur Hypothecair krediet',mods:['basis','vermogen','hypothecair-krediet']},
     {naam:'Adviseur Vermogen',mods:['basis','vermogen']},
     {naam:'Adviseur Pensioen',mods:['basis','vermogen','pensioen']},
     {naam:'Adviseur Consumptief krediet',mods:['basis','consumptief-krediet']},
     {naam:'Adviseur Schadeverzekering zakelijk',mods:['basis','schade-particulier','schade-zakelijk']},
-    {naam:'Adviseur Schadeverzekering particulier',mods:['schade-particulier'],controle:true},
-    {naam:'Adviseur Inkomen',mods:['inkomen'],controle:true},
-    {naam:'Adviseur Zorgverzekering',mods:['zorgverzekering'],controle:true}
+    {naam:'Adviseur Schadeverzekering particulier',mods:['basis','schade-particulier']},
+    {naam:'Adviseur Inkomen',mods:['basis','inkomen']},
+    {naam:'Adviseur Zorgverzekering',mods:['zorgverzekering']}
   ];
   var sel=[0];
   var chips=document.getElementById('chips');
