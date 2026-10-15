@@ -218,7 +218,7 @@ FAQ = [
  ('Hoe vaak doe ik de toets?', 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Op de homepage en in de toets zet je met één klik een herinnering in je agenda: elk kwartaal, de komende 5 jaar, met een link naar de toets. Bewaar elk certificaat in je personeelsdossier en lever het ook in bij je werkgever. Zo laat je zien dat je je kennis bijhoudt. Het certificaat vervangt je PE-examen niet.'),
  ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
  ('Wordt er iets van mij bewaard?', 'Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
- ('Welke modules heb ik nodig?', 'Dat hangt af van je diploma’s en het soort klantcontact. Gebruik de <a href="index.html#check">pakketcheck</a> op de homepage als hulpmiddel. Voor de precieze eisen die voor jou gelden, kijk je bij het CDFD of de AFM.'),
+ ('Welke modules heb ik nodig?', 'Dat hangt af van je beroepskwalificaties. Een beroepskwalificatie bestaat uit een combinatie van modules, bijvoorbeeld Adviseur Hypothecair krediet: Basis, Vermogen en Hypothecair krediet. Kies je kwalificaties in de <a href="index.html#check">pakketcheck</a> op de homepage en controleer de eisen die voor jou gelden bij het CDFD.'),
  ('Hoe actueel zijn de vragen?', 'Per module zie je wanneer de vragen voor het laatst zijn bijgewerkt. De peildatum van de regelgeving is ' + PEIL + '. Bedragen en percentages die elk jaar wijzigen, zitten bewust niet in de vragen.'),
  ('Ik zie een fout in een vraag. Wat nu?', 'Graag horen we het. Mail de vraag en wat er volgens jou niet klopt naar <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.'),
 ]
@@ -232,7 +232,7 @@ inh = f'''    <p class="lead">Wft Permanent Actueel verzamelt en bewaart geen pe
     <h2>Wie is verantwoordelijk</h2>
     <p>DFO BV, De Wel 14–16, 3871 MV Hoevelaken. Vragen over privacy: <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>
     <h2>De toets en het certificaat</h2>
-    <p>Voor het certificaat vul je je naam, geboortedatum en e-mailadres in, en desgewenst het bedrijf waar je werkt. Die gegevens blijven in je eigen browser en worden alleen gebruikt om het certificaat op je scherm te zetten. Er wordt niets naar ons verstuurd of opgeslagen. Kies je voor mailen, dan opent je eigen mailprogramma; jij verstuurt het bericht zelf. Sluit je het tabblad, dan zijn de gegevens weg.</p>
+    <p>Voor het certificaat vul je je naam, geboortedatum en e-mailadres in, en desgewenst het bedrijf waar je werkt en het e-mailadres van je werkgever voor een kopie. Die gegevens blijven in je eigen browser en worden alleen gebruikt om het certificaat op je scherm te zetten. Er wordt niets naar ons verstuurd of opgeslagen. Kies je voor mailen, dan opent je eigen mailprogramma; jij verstuurt het bericht zelf. Sluit je het tabblad, dan zijn de gegevens weg.</p>
     <h2>Cookies en meten</h2>
     <p>We gebruiken geen cookies, geen analyse- of advertentiediensten en geen trackers. Het lettertype staat op onze eigen site, zodat er geen gegevens naar externe partijen gaan.</p>
     <h2>Hosting</h2>
@@ -346,7 +346,7 @@ inh = f'''<div class="paneel page" id="uitleg">
 <div class="paneel" id="check">
     <h2>Welke modules heb ik nodig?</h2>
     <div class="check">
-      <div><p>Selecteer de diploma's die je bezit. Basis staat standaard aan. Voor de eisen die precies voor jou gelden, kijk je bij het CDFD.</p><div class="chips" id="chips"></div></div>
+      <div><p>Kies je beroepskwalificaties. Je ziet welke modules daarbij horen en maakt een toets over precies die modules. Binnen elke PE-periode haal je één PE-examen per beroepskwalificatie.</p><div class="chips" id="chips"></div><p class="klein" id="checkNoot" aria-live="polite"></p><p class="klein">Bron: adviesbevoegdheden van het CDFD, geraadpleegd oktober 2026. Een hulpmiddel, geen advies.</p></div>
       <div class="result"><div class="ring-wrap">{RING}<div class="ring-count" id="count">0</div></div>
         <div class="pkg"><span class="label">Jouw PA-pakket</span><span class="pkg-n" id="countLabel"></span><ul id="chosen"></ul><a class="btn" id="startToets" href="toets.html">Toets over mijn pakket</a></div></div>
     </div>
@@ -354,7 +354,7 @@ inh = f'''<div class="paneel page" id="uitleg">
 <div class="paneel" id="werkwijze">
     <h2>Zo werkt het</h2>
     <div class="steps">
-      <div class="step"><span class="num">01</span><h3>Kies je modules</h3><p>Op basis van je diploma's en type klantcontact.</p></div>
+      <div class="step"><span class="num">01</span><h3>Kies je modules</h3><p>Per beroepskwalificatie, of alle modules door elkaar.</p></div>
       <div class="step"><span class="num">02</span><h3>Oefen en leer</h3><p>7 vragen per toets, met uitleg bij alle vier de antwoorden.</p></div>
       <div class="step"><span class="num">03</span><h3>Certificaat</h3><p>Bewaar het in je personeelsdossier en lever het in bij je werkgever.</p></div>
       <div class="step"><span class="num">04</span><h3>Elk kwartaal</h3><p>Doe de toets elk kwartaal, zo blijf je permanent actueel.</p></div>

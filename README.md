@@ -41,12 +41,17 @@ Let op: de repository heeft een `.nojekyll`, dus elk bestand in de repository ko
    footer van `index.html` en `toets.html` gelijk.
 
 ## Onderhoudskalender
+Adviseurs krijgen het advies de toets elk kwartaal te doen. Dan moet er ook elk kwartaal iets nieuws in staan.
+
 | Wanneer | Wat |
 |---|---|
-| Doorlopend | Signalen (AFM, Staatscourant, Rechtspraak) beoordelen via het interne signaleringsoverzicht; relevante wijzigingen verwerken zoals hierboven |
+| Elk kwartaal (januari, april, juli, oktober) | **Kwartaalronde**: signalen (AFM, Staatscourant, Rechtspraak, DFO Signalen) beoordelen via het interne signaleringsoverzicht; per module nieuwe of aangepaste vragen over wat er veranderd is; verouderde vragen vervangen; `bijgewerkt` en `log` in `assets/js/modules.js` bijwerken; bouwscript draaien |
+| April | PE-toetstermen van het CDFD (per 1 april) naast de vragen leggen; nieuwe ontwikkelingen per module als vragen opnemen |
+| December/januari | Blokken "Actueel" en "Wat er dit jaar verandert" nalopen: TRHK, NHG Voorwaarden & Normen (kostengrens), zorgverzekering (eigen risico, premies), box 3; `PEIL` en `PEIL_ISO` in het bouwscript aanpassen |
 | Bij een foutmelding | Vraag controleren en aanpassen; datum en log van de module bijwerken |
-| December/januari | Blokken "Actueel" nalopen: TRHK, NHG Voorwaarden & Normen (kostengrens), zorgverzekering (eigen risico, premies), box 3; peildatum `PEIL` in het bouwscript aanpassen |
-| Jaarlijks | Externe links op de modulepagina's controleren; privacyverklaring en gebruiksvoorwaarden nalezen |
+| Jaarlijks | Externe links controleren (ook cdfd.nl en dfobv.nl); privacyverklaring, gebruiksvoorwaarden en de samenstelling van de beroepskwalificaties in `assets/js/main.js` nalezen |
+
+Er is bewust geen database: de site is statisch, er wordt niets opgeslagen en certificaten worden niet centraal geregistreerd.
 
 ## Logo's
 | Bestand | Gebruik |
