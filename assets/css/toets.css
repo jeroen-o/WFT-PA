@@ -30,3 +30,4 @@ button.btn-outline{background:#fff}
 @media (max-width:700px){.cert{padding:24px}.cert dl{grid-template-columns:1fr}.cert dd{margin-bottom:6px}}
 .module.mix{background:var(--blue-tint)}
 .meld{font-size:14px}
+@media (max-width:700px){.vraag{font-size:22px}.optie{font-size:16px;padding:12px 14px}#stap-vraag .cell{padding-top:20px}}
