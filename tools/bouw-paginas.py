@@ -196,6 +196,30 @@ WIJZ = {'schade-particulier': 'Toetsterm 1d.9 is per 1 april 2026 aangepast: mee
 # lees modulegegevens uit modules.js
 MODS = json.loads(subprocess.check_output(['node', '-e', "global.window={};eval(require('fs').readFileSync(process.argv[1],'utf8'));process.stdout.write(JSON.stringify(window.PA_MODULES))", R + 'assets/js/modules.js']))
 PEIL_ISO = '2026-10-15'
+VRAGEN = json.loads(subprocess.check_output(['node', '-e', "global.window={};eval(require('fs').readFileSync(process.argv[1],'utf8'));process.stdout.write(JSON.stringify(window.PA_VRAGEN))", R + 'assets/js/vragen.js']))
+
+def voorbeelden(mid, n=3):
+    """Vaste voorbeeldvragen per module voor de modulepagina: bij voorkeur casussen, verspreid over de vragenbank."""
+    vs = VRAGEN.get(mid, [])
+    kand = [q for q in vs if len(q[0]) > 220]
+    if len(kand) < n * 3: kand = sorted(vs, key=lambda q: -len(q[0]))[:max(n * 3, len(kand))]
+    stap = max(1, len(kand) // n)
+    return [kand[(i * stap + stap // 2) % len(kand)] for i in range(min(n, len(kand)))]
+
+def voorbeeld_html(q, nr):
+    term = f' <span class="term">toetsterm CDFD {html.escape(q[2])}</span>' if len(q) > 2 and q[2] else ''
+    opties = sorted(q[1], key=lambda a: a[0].lower())
+    return (f'    <article class="voorbeeld"><h3>Voorbeeldvraag {nr}{term}</h3>\n      <p>{html.escape(q[0])}</p>\n      <ul>'
+            + ''.join(f'<li>{html.escape(a[0])}</li>' for a in opties) + '</ul>\n'
+            f'      <details><summary>Bekijk het antwoord en de uitleg</summary><p><strong>Juist: {html.escape(q[1][0][0])}.</strong> {html.escape(q[1][0][1])}</p>'
+            '<ul class="uitleg">' + ''.join(f'<li><strong>{html.escape(a[0])}</strong>: {html.escape(a[1])}</li>' for a in q[1][1:]) + '</ul></details></article>\n')
+
+def quiz_ld(naam, qs):
+    return {'@type': 'Quiz', 'name': f'Voorbeeldvragen Wft {naam}', 'inLanguage': 'nl', 'isAccessibleForFree': True, 'educationalLevel': 'Beroepsniveau',
+            'about': {'@type': 'Thing', 'name': f'Wft {naam}'},
+            'hasPart': [{'@type': 'Question', 'eduQuestionType': 'Multiple choice', 'learningResourceType': 'Practice problem', 'text': q[0],
+                         'acceptedAnswer': {'@type': 'Answer', 'text': q[1][0][0], 'answerExplanation': {'@type': 'Comment', 'text': q[1][0][1]}},
+                         'suggestedAnswer': [{'@type': 'Answer', 'text': a[0]} for a in q[1][1:]]} for q in qs]}
 BIJGEWERKT = {}
 MAANDEN = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december']
 def nl(iso): j, m, d = iso.split('-'); return f'{int(d)} {MAANDEN[int(m)-1]} {j}'
@@ -206,14 +230,20 @@ for i, mod in enumerate(MODS, 1):
     BIJGEWERKT[f"module-{mod['id']}.html"] = mod['bijgewerkt']
     mid, naam, bij, tekst = mod['id'], mod['naam'], mod['bijgewerkt'], mod['tekst']
     d = M[mid]
+    vb = voorbeelden(mid)
+    nieuw = (['<strong>Nieuwe toetstermen CDFD per 1 april 2026.</strong> De eind- en toetstermen voor deze module zijn vernieuwd en gelden voor examens vanaf 1 april 2026. De vragen in de toets zijn erop afgestemd.']
+             + ([f'<strong>Gewijzigde toetsterm.</strong> {WIJZ[mid]}'] if mid in WIJZ else []) + d['actueel'])
     inh = (f'    <p class="lead">{html.escape(tekst)} Oefen gratis met PE-oefenvragen voor Wft {html.escape(naam)}, met uitleg bij elk antwoord.</p>\n'
            f'    <p class="meta-regel">Laatst bijgewerkt {nl(bij)} · peildatum regelgeving {PEIL}</p>\n'
            f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Doe de toets</a><a class="btn ghost" href="index.html#modules">Alle modules</a></div>\n'
            '    <h2>Wat komt aan bod</h2>\n    <ul>' + ''.join(f'<li>{o}</li>' for o in d['onderwerpen']) + '</ul>\n'
-           '    <h2>Actueel</h2>\n    <ul>' + ''.join(f'<li>{a}</li>' for a in d['actueel']) + '</ul>\n'
+           '    <h2>Wat is er nieuw in 2026</h2>\n    <ul>' + ''.join(f'<li>{a}</li>' for a in nieuw) + '</ul>\n'
            '    <h2>Toetstermen CDFD per 1 april 2026</h2>\n    <p>De eind- en toetstermen van het CDFD voor deze module zijn ingedeeld in taken:</p>\n    <ol>' + ''.join(f'<li>{html.escape(t)}</li>' for t in TAKEN[mid]) + '</ol>\n'
-           + (f'    <p class="antwoord"><strong>Gewijzigd per 1 april 2026.</strong> {WIJZ[mid]}</p>\n' if mid in WIJZ else '')
+
            + '    <p class="klein">Bron: eind- en toetstermen per module van het CDFD, geldend voor examens vanaf 1 april 2026. De volledige documenten staan bij de <a href="https://cdfd.nl/downloads/" target="_blank" rel="noopener">downloads van het CDFD</a>.</p>\n'
+           f'    <h2>Voorbeeldvragen Wft {html.escape(naam)}</h2>\n    <p>Zo zien de vragen in de toets eruit. In de toets staan de antwoorden in willekeurige volgorde.</p>\n'
+           + ''.join(voorbeeld_html(q, k) for k, q in enumerate(vb, 1))
+           + f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Oefen verder in de toets</a></div>\n'
            '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
            f'    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen leerstof voor een erkend PE-examen. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
@@ -224,7 +254,8 @@ for i, mod in enumerate(MODS, 1):
          'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR', 'category': 'Gratis'},
          'hasCourseInstance': {'@type': 'CourseInstance', 'courseMode': 'online', 'courseWorkload': 'PT10M'}},
         {'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': 'Wft Permanent Actueel', 'item': SITE},
-                                                        {'@type': 'ListItem', 'position': 2, 'name': f'Wft {naam}', 'item': f'{SITE}module-{mid}.html'}]}]}
+                                                        {'@type': 'ListItem', 'position': 2, 'name': f'Wft {naam}', 'item': f'{SITE}module-{mid}.html'}]},
+        quiz_ld(naam, vb)]}
     titel = f'Wft {naam}: gratis PE-oefenvragen | Permanent Actueel'
     if len(titel) > 62: titel = f'Wft {naam}: gratis PE-oefenvragen'
     pagina(f'module-{mid}.html', titel, f'Wft {naam} Permanent Actueel: gratis PE-oefenvragen met uitleg, wat er actueel is en de bronnen. Oefentoets voor adviseurs, geen PE-examen.',
