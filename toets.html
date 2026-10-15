@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PA-toets — Wft Permanent Actueel</title>
+<meta name="description" content="Test je kennis per Wft-module: 7 willekeurige vragen uit 100, met uitleg per antwoord en een certificaat om naar jezelf te mailen.">
+<meta name="theme-color" content="#1462ad">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/toets.css">
+</head>
+<body>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Wft Permanent Actueel — home"><svg class="mark" width="44" height="44" viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 60 60)"><circle cx="60" cy="60" r="48" fill="none" stroke="#1462ad" stroke-width="14" stroke-dasharray="28.5 5.01"/><circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g><text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, Helvetica, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg><span class="brand-txt"><strong>Permanent Actueel</strong><span class="s">Wft</span><span class="d">PA-WFT.nl</span></span></a>
+  <nav><a href="index.html#modules">Modules</a><a href="index.html#check">Welke heb ik nodig?</a><a href="index.html#werkwijze">Werkwijze</a><a href="toets.html" aria-current="page">Toets</a></nav>
+</header>
+<main>
+<section class="block" id="stap-kies">
+  <div class="block-head">
+    <span class="kicker">PA-toets</span>
+    <h2>Test je kennis in 7 vragen</h2>
+    <p class="lead">Kies een module. Je krijgt 7 willekeurige vragen uit 100, met uitleg na elk antwoord. Heb je er 5 of meer goed, dan maak je een certificaat aan dat je naar jezelf mailt.</p>
+  </div>
+  <div class="modules" id="toetsModules"></div>
+</section>
+
+<section class="block" id="stap-vraag" hidden>
+  <div class="block-head">
+    <span class="kicker" id="vraagKop"></span>
+    <div class="voortgang" aria-hidden="true"><span id="voortgangBalk"></span></div>
+    <h2 class="vraag" id="vraagTekst" tabindex="-1"></h2>
+  </div>
+  <div class="cell">
+    <div class="opties" id="opties" role="group" aria-labelledby="vraagTekst"></div>
+    <div class="uitleg" id="uitleg" role="status" aria-live="polite"></div>
+    <div class="actions"><button type="button" class="btn btn-primary" id="volgende" hidden>Volgende vraag <span>→</span></button></div>
+  </div>
+</section>
+
+<section class="block" id="stap-uitslag" hidden>
+  <div class="grid2">
+    <div class="cell">
+      <span class="kicker" id="uitslagKop"></span>
+      <h2 id="uitslagTitel" tabindex="-1"></h2>
+      <p class="lead" id="uitslagTekst"></p>
+      <form id="certForm" class="certform" hidden novalidate>
+        <label>Naam op het certificaat<input id="naam" name="naam" autocomplete="name" required maxlength="80"></label>
+        <label>Je e-mailadres<input id="email" name="email" type="email" autocomplete="email" required maxlength="120"></label>
+        <p class="fout" id="formFout" role="alert"></p>
+        <button type="submit" class="btn btn-primary">Certificaat maken <span>→</span></button>
+      </form>
+      <div class="actions"><button type="button" class="btn btn-outline" id="opnieuw">Nieuwe toets</button><button type="button" class="btn btn-outline" id="andereModule">Andere module</button></div>
+    </div>
+    <div class="cell tint">
+      <span class="kicker ink">Je antwoorden</span>
+      <ol class="overzicht" id="overzicht"></ol>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="stap-cert" hidden>
+  <div class="block-head">
+    <span class="kicker">Certificaat</span>
+    <h2 tabindex="-1" id="certTitel">Je certificaat staat klaar</h2>
+    <p class="lead">Mail het naar jezelf of open het om te printen of als pdf op te slaan. Er wordt niets automatisch verstuurd of bewaard.</p>
+    <div class="actions"><a class="btn btn-primary" id="mailKnop" href="#">Mail naar mezelf <span>→</span></a><button type="button" class="btn btn-outline" id="printKnop">Bekijken of printen</button><button type="button" class="btn btn-outline" id="terug">Nieuwe toets</button></div>
+  </div>
+  <div class="cell tint"><div id="certVoorbeeld"></div></div>
+</section>
+</main>
+<footer class="foot"><span class="foot-dfo"><img src="assets/logo/dfo-logo.png" alt="DFO — dienstverlening voor financiële ondernemers" width="170" height="40">Wft Permanent Actueel is een activiteit van DFO BV</span><span>PA-WFT.nl · De Wel 14–16, 3871 MV Hoevelaken</span></footer>
+<script src="assets/js/modules.js"></script>
+<script src="assets/js/vragen.js"></script>
+<script src="assets/js/toets.js"></script>
+</body>
+</html>
