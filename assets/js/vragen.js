@@ -1,4 +1,4 @@
-/* Vragenbank PA-toets: per module 100 vragen. Vorm: [vraag, [[antwoord, uitleg] x4]]; het EERSTE antwoord is steeds het juiste (de toets husselt zelf).
+/* Vragenbank PA-toets per module. Vorm: [vraag, [[antwoord, uitleg] x4], toetsterm CDFD]; het EERSTE antwoord is steeds het juiste (de toets husselt zelf).
    Na het herzien van een module: pas de datum "bijgewerkt" aan in assets/js/modules.js. */
 window.PA_VRAGEN={
 "basis":[

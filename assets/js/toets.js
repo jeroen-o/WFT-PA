@@ -96,7 +96,7 @@
     });
     toets = hussel(gekozen).map(function(x){
       gehad[x.sleutel] = 1;
-      return {module:x.module, vraag:x.q[0], opties:hussel(x.q[1].map(function(a, k){ return {t:a[0], u:a[1], juist:k === 0}; })), keuze:null};
+      return {module:x.module, vraag:x.q[0], term:x.q[2] || '', opties:hussel(x.q[1].map(function(a, k){ return {t:a[0], u:a[1], juist:k === 0}; })), keuze:null};
     });
     stap = 0;
     toonVraag();
@@ -140,7 +140,7 @@
     });
     var pct = Math.round(stap / toets.length * 100);
     paneel.replaceChildren(el('div', {class:'vraag'},
-      el('div', {class:'voortgang'}, el('span', {id:'vraagKop'}, 'Vraag ' + (stap + 1) + ' van ' + toets.length), el('span', {class:'badge'}, 'Wft ' + v.module.naam)),
+      el('div', {class:'voortgang'}, el('span', {id:'vraagKop'}, 'Vraag ' + (stap + 1) + ' van ' + toets.length), el('span', {class:'badge'}, 'Wft ' + v.module.naam + (v.term ? ' · toetsterm ' + v.term : ''))),
       el('div', {class:'balk', role:'progressbar', 'aria-label':'Voortgang', 'aria-valuemin':'0', 'aria-valuemax':'100', 'aria-valuenow':String(pct)}, el('span', {style:'width:' + pct + '%'})),
       titel, opties, uitlegVak,
       el('div', {class:'acties'}, el('button', {class:'btn ghost', type:'button', onclick:function(){ if(confirm('Toets stoppen? Je antwoorden gaan verloren.')) startScherm(); }}, 'Stoppen'), volgende)
@@ -299,7 +299,7 @@
     if(!w){ alert('Pop-up geblokkeerd. Sta pop-ups toe om de antwoorden te printen.'); return; }
     var items = toets.map(function(v, i){
       var ok = v.opties[v.keuze].juist;
-      return '<li class="' + (ok ? 'ok' : 'nok') + '"><p class="kop"><span>Vraag ' + (i + 1) + ' · Wft ' + esc(v.module.naam) + '</span><strong>' + (ok ? '✓ Goed' : '✗ Fout') + '</strong></p><p class="v">' + esc(v.vraag) + '</p><ul>'
+      return '<li class="' + (ok ? 'ok' : 'nok') + '"><p class="kop"><span>Vraag ' + (i + 1) + ' · Wft ' + esc(v.module.naam) + (v.term ? ' · toetsterm CDFD ' + esc(v.term) : '') + '</span><strong>' + (ok ? '✓ Goed' : '✗ Fout') + '</strong></p><p class="v">' + esc(v.vraag) + '</p><ul>'
         + v.opties.map(function(o, k){ return '<li class="' + (o.juist ? 'j' : 'f') + (k === v.keuze ? ' g' : '') + '"><b>' + 'ABCD'[k] + '. ' + esc(o.t) + (o.juist ? ' — juist antwoord' : '') + (k === v.keuze ? ' — jouw antwoord' : '') + '</b><br>' + esc(o.u) + '</li>'; }).join('') + '</ul></li>';
     }).join('');
     var css = 'body{font-family:"Segoe UI",Arial,sans-serif;color:#2C3A47;margin:24px;font-size:12.5px;line-height:1.45}h1{font-size:22px;color:#0E5AA7;margin:0 0 4px}.meta{color:#4A4A4A;margin:0 0 18px}'

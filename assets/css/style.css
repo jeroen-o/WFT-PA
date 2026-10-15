@@ -190,3 +190,12 @@ main.kaal .melding{margin-top:32px}
 body.breed .kopieer{padding:6px 8px;min-height:28px}
 .foot .btn-white,.foot .btn-white:hover{color:var(--blue);text-decoration:none}
 .foot-logo{margin-left:auto}
+
+/* Voorbeeldvragen op de modulepagina's */
+.voorbeeld{border:2px solid var(--blue);padding:18px 20px;margin:0 0 18px;background:#fff}
+.voorbeeld h3{margin:0 0 8px;font-size:1.05rem;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.voorbeeld .term{font-size:.8rem;font-weight:600;color:var(--blue);background:#e8f0f9;padding:2px 8px}
+.voorbeeld ul{margin:8px 0 12px;padding-left:20px}
+.voorbeeld details{border-top:1px solid #d6e3f2;padding-top:10px}
+.voorbeeld summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:44px;display:flex;align-items:center}
+.voorbeeld .uitleg{padding-left:18px;font-size:.95rem}
