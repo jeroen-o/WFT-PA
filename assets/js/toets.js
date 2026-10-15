@@ -139,6 +139,8 @@
     var ms = gekozenModules();
     laatste = {goed:goed, n:n, pct:Math.round(goed / n * 100), thema:keuzeLabel(), datum:PA_DATUM(vandaag()), nummer:certificaatnummer(),
       bijgewerkt:PA_DATUM(ms.map(function(m){ return m.bijgewerkt; }).sort()[0]),
+      modules:ms.map(function(m){ return 'Wft ' + m.naam; }),
+      vanMods:MODS.map(function(m){ var n = toets.filter(function(v){ return v.module.id === m.id; }).length; return n ? m.naam + ' (' + n + ')' : null; }).filter(Boolean),
       vragen:toets.map(function(v){ var j = v.opties.filter(function(o){ return o.juist; })[0]; return {vraag:v.vraag, jouw:v.opties[v.keuze].t, juist:j.t, goed:v.opties[v.keuze].juist}; })};
     var oordeel = goed === n ? 'Foutloos. Uitstekend!' : goed / n >= 0.7 ? 'Goed gedaan, ruim voldoende.' : goed / n >= 0.5 ? 'Redelijk, maar er is ruimte voor verbetering.' : 'Dat kan beter. Lees de uitleg hieronder en probeer het opnieuw.';
     var lijst = el('ol', {class:'overzicht'});
@@ -202,7 +204,7 @@
 
   function certTekst(g, metVragen){
     var r = laatste;
-    return 'Certificaat PA-toets — Wft Permanent Actueel\n\nNaam: ' + g.naam + '\nGeboortedatum: ' + PA_DATUM(g.geb) + '\nE-mailadres: ' + g.mail + (g.bedrijf ? '\nBedrijf: ' + g.bedrijf : '') + '\nVerstuurd op: ' + g.uitgegeven + '\nResultaat: ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%)\nModule: ' + r.thema + '\nDatum: ' + r.datum + '\nVragenbank bijgewerkt: ' + r.bijgewerkt + '\nCertificaatnummer: ' + r.nummer + '\n\n'
+    return 'Certificaat PA-toets — Wft Permanent Actueel\n\nNaam: ' + g.naam + '\nGeboortedatum: ' + PA_DATUM(g.geb) + '\nE-mailadres: ' + g.mail + (g.bedrijf ? '\nBedrijf: ' + g.bedrijf : '') + '\nVerstuurd op: ' + g.uitgegeven + '\nResultaat: ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%)\nModule: ' + r.thema + (r.modules.length > 1 ? '\nModules: ' + r.modules.join(', ') + '\nVragen uit: ' + r.vanMods.join(', ') : '') + '\nDatum: ' + r.datum + '\nVragenbank bijgewerkt: ' + r.bijgewerkt + '\nCertificaatnummer: ' + r.nummer + '\n\n'
       + ADVIES + '\n\n' + DISCLAIMER + '\n';
   }
   function mailHref(g){
@@ -226,6 +228,7 @@
       + '.kop .nr{font-size:12px;color:#4A4A4A;text-align:right}'
       + 'h1{font-size:34px;color:#0E5AA7;margin:34px 0 4px;font-weight:700;letter-spacing:.02em}'
       + '.sub{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#4A4A4A;margin:0 0 28px}'
+      + '.pers.mods{margin:-8px 0 0}.pers.mods dd{font-weight:500}'
       + '.pers{display:grid;grid-template-columns:max-content 1fr;gap:2px 14px;font-size:13px;margin:-8px 0 18px}.pers dt{color:#4A4A4A}.pers dd{margin:0;font-weight:600}'
       + '.naam{font-size:30px;font-weight:700;border-bottom:2px solid #BBD3EA;padding-bottom:6px;margin:6px 0 18px;display:inline-block;min-width:60%}'
       + '.res{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 24px}.res div{background:#EDF3FA;border-radius:4px;padding:10px 16px;font-size:13px}.res strong{display:block;font-size:22px;color:#0E5AA7}'
@@ -242,6 +245,7 @@
       + '<dt>' + (g.verstuurd ? 'Verstuurd op' : 'Aangemaakt op') + '</dt><dd>' + esc(g.uitgegeven) + '</dd></dl>'
       + '<div>de PA-toets heeft afgelegd met het volgende resultaat:</div>'
       + '<div class="res"><div><strong>' + r.goed + ' / ' + r.n + '</strong>vragen goed</div><div><strong>' + r.pct + '%</strong>score</div><div><strong>' + esc(r.thema) + '</strong>module</div><div><strong>' + esc(r.bijgewerkt) + '</strong>vragenbank bijgewerkt</div></div>'
+      + (r.modules.length > 1 ? '<dl class="pers mods"><dt>Modules</dt><dd>' + esc(r.modules.join(', ')) + '</dd><dt>Vragen uit</dt><dd>' + esc(r.vanMods.join(', ')) + '</dd></dl>' : '')
       + '<p class="advies">' + ADVIES + '</p>'
       + '<div class="voet"><p>' + DISCLAIMER + '</p>' + STEMPEL + '</div>'
       + '</div></div>';
