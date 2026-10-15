@@ -1,33 +1,51 @@
-button.btn-outline{background:#fff}
-.module.kies{cursor:pointer;background:#fff;font:inherit;text-align:left;color:inherit}
-.module.kies:hover{background:var(--blue-100)}
-.module .meta{font-size:14px;color:var(--blue-dark)}
-.voortgang{height:6px;background:var(--blue-200)}
-.voortgang span{display:block;height:100%;width:0;background:var(--blue);transition:width .2s}
-.vraag{font-size:clamp(22px,3vw,32px);line-height:1.25;max-width:900px}
-.opties{display:flex;flex-direction:column;gap:10px;max-width:900px}
-.optie{font:inherit;font-size:17px;line-height:1.4;text-align:left;padding:14px 18px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer;border-radius:0}
-.optie:hover:not(:disabled){background:var(--blue-100)}
+.start h2{font-size:21px;margin-bottom:8px}
+.start p{margin:0 0 16px}
+.keuze{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:10px}
+.keuze label{font-weight:500;color:var(--text-strong)}
+select{font-family:var(--font);font-size:15px;color:var(--text-strong);padding:9px 10px;border:1px solid var(--border);border-radius:var(--radius);background:#fff;max-width:100%}
+.bijgewerkt{font-size:13.5px;color:var(--dfo-blue-dark);margin:0 0 18px!important}
+.voortgang{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px;margin-bottom:10px;font-variant-numeric:tabular-nums}
+.balk{height:6px;background:var(--dfo-blue-soft);border-radius:3px;overflow:hidden;margin-bottom:20px}
+.balk span{display:block;height:100%;background:var(--dfo-blue);transition:width .25s}
+.badge{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--dfo-blue-soft);color:var(--dfo-blue-dark);text-align:right}
+.vraag h2{font-size:19px;color:var(--text-strong);line-height:1.45;margin:10px 0 18px}
+.opties{display:grid;gap:10px;margin:0;padding:0;border:0}
+.optie{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;font-family:var(--font);font-size:15.5px;color:var(--text-strong);background:var(--card);border:2px solid transparent;border-radius:var(--radius);padding:12px 14px;cursor:pointer;line-height:1.45}
+.optie:hover:not(:disabled){border-color:var(--border)}
+.optie .l{flex:0 0 26px;height:26px;border-radius:50%;background:#fff;color:var(--dfo-blue);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
 .optie:disabled{cursor:default}
-.optie.goed{border-color:#1d7a46;background:#e6f4ec}
-.optie.fout{border-color:#b3261e;background:#fbeaea}
-.uitleg{max-width:900px;font-size:16px;line-height:1.5}
-.uitleg:empty{display:none}
-.uitleg p+p{margin-top:8px}
-.overzicht{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.45}
-.overzicht .ok{color:#1d7a46;font-weight:700}.overzicht .nok{color:#b3261e;font-weight:700}
-.certform{display:flex;flex-direction:column;gap:14px;max-width:420px}
-.certform label{display:flex;flex-direction:column;gap:6px;font-weight:600;font-size:15px}
-.certform input{font:inherit;font-size:16px;padding:12px;border:2px solid var(--ink);border-radius:0}
-.fout{color:#b3261e;font-size:15px}.fout:empty{display:none}
-.cert{background:#fff;border:2px solid var(--ink);padding:40px;max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
-.cert-top{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
-.cert-top img{height:44px;width:auto}
-.cert h3{font-size:clamp(26px,4vw,40px)}
-.cert dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;margin:0;font-size:16px}
-.cert dt{font-weight:700}.cert dd{margin:0}
-.cert .klein{font-size:13px;line-height:1.5;color:#4a4745;border-top:1px solid var(--blue-200);padding-top:12px}
-@media (max-width:700px){.cert{padding:24px}.cert dl{grid-template-columns:1fr}.cert dd{margin-bottom:6px}}
-.module.mix{background:var(--blue-tint)}
-.meld{font-size:14px}
-@media (max-width:700px){.vraag{font-size:22px}.optie{font-size:16px;padding:12px 14px}#stap-vraag .cell{padding-top:20px}}
+.optie.goed{background:var(--green-soft);border-color:var(--green)}
+.optie.goed .l{background:var(--green);color:#fff}
+.optie.fout{background:var(--red-soft);border-color:var(--red)}
+.optie.fout .l{background:var(--red);color:#fff}
+.uitleg{margin-top:16px;border-left:4px solid var(--dfo-blue);background:var(--bg-alt);padding:12px 16px;font-size:15px;border-radius:0 var(--radius) var(--radius) 0}
+.uitleg strong{color:var(--text-strong)}
+.uitleg.ok{border-color:var(--green)}
+.uitleg.nok{border-color:var(--red)}
+.uitleg .meld{margin-top:10px;font-size:13.5px}
+.vraag .acties{justify-content:flex-end;margin-top:20px}
+.score{text-align:center;padding:8px 0 18px}
+.score .getal{font-size:54px;font-weight:700;color:var(--dfo-blue);line-height:1.1;font-variant-numeric:tabular-nums}
+.score p{margin:6px 0 0;font-size:16px}
+.uitleglijst{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:8px}
+.uitleglijst li{background:#fff;border-radius:var(--radius);padding:8px 12px;border-left:3px solid var(--red);font-size:14.5px}
+.uitleglijst li.ok{border-left-color:var(--green)}
+.uitleglijst li.gekozen{box-shadow:0 0 0 1px var(--border)}
+.uitleglijst .kop{display:block;font-weight:600;color:var(--text-strong)}
+.uitleglijst li.ok .kop{color:var(--green)}
+.uitleglijst li.nok .kop{color:var(--red)}
+.uitleglijst .tekst{display:block;margin-top:2px}
+.overzicht{margin:10px 0 0;padding-left:20px;display:grid;gap:10px}
+.overzicht>li{background:var(--card);border-radius:var(--radius);padding:12px 14px;font-size:14.5px;border-left:4px solid var(--green)}
+.overzicht>li.nok{border-left-color:var(--red)}
+.overzicht .v{font-weight:600;color:var(--text-strong);display:block}
+.certform{background:var(--card);border-radius:6px;padding:20px;margin:6px 0 10px}
+.certform h3{font-size:18px;margin:0 0 6px}
+.certform p{margin:0 0 14px;font-size:14.5px}
+.veld{display:grid;gap:4px;margin-bottom:12px}
+.veld label{font-weight:500;color:var(--text-strong);font-size:14px}
+.veld input{font-family:var(--font);font-size:16px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);background:#fff;width:100%}
+.veld input:focus{outline:2px solid var(--dfo-blue);outline-offset:1px}
+.certstatus{margin-top:10px;font-size:14px;color:var(--red)}
+.certstatus:empty{display:none}
+.certstatus.klaar{color:var(--green);font-weight:500}

@@ -13,7 +13,7 @@ Statische website + merkbestanden voor Wft Permanent Actueel (een dienst van DFO
 ## Structuur
 ```
 index.html                  homepage met modules en pakket-check
-toets.html                  PA-toets: 7 vragen per module uit 100, certificaat om naar jezelf te mailen
+toets.html                  kennistoets: 7 vragen per toets, certificaat om naar jezelf te mailen
 module-<id>.html            per module: wat komt aan bod, actueel, bronnen
 vragen.html, over.html, privacy.html, 404.html
 sitemap.xml, robots.txt, llms.txt
@@ -59,7 +59,7 @@ Let op: de repository heeft een `.nojekyll`, dus elk bestand in de repository ko
 | pa-wft-favicon.svg | Vierkant app-icoon |
 
 Kleuren: blauw #1462ad · donkerblauw #0b3d73 (segment Basis) · lichtblauw #8db8e3.
-Lettertype: Archivo (Google Fonts). De SVG's gebruiken live tekst; laat ze voor drukwerk omzetten naar contouren (Illustrator: Tekst → Contouren maken) zodat ze ook zonder Archivo kloppen.
+Lettertype: Poppins, lokaal in assets/fonts (OFL). Ontwerp in de stijl van de WFT Bieb van DFO.
 
 ## Inhoud aanpassen
 Moduleteksten staan bovenin `assets/js/main.js` (MODS). De koppeling diploma → module is nu 1-op-1; pas dat daar aan als de regels anders zijn.
