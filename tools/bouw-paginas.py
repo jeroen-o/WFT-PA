@@ -52,6 +52,21 @@ def head(titel, omschrijving, pad, extra=''):
             '<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
             '<link rel="stylesheet" href="assets/css/style.css">' + extra + '\n</head>\n<body>')
 
+def link_cdfd(html_tekst):
+    kop, sep, romp = html_tekst.partition('<body')
+    delen = re.split(r'(<[^>]+>)', romp)
+    in_a = in_script = 0
+    for i, d in enumerate(delen):
+        if d.startswith('<'):
+            t = d[1:].split(None, 1)[0].lower().rstrip('>') if len(d) > 2 else ''
+            if t == 'a': in_a += 1
+            elif t == '/a': in_a -= 1
+            elif t in ('script', 'style', 'title'): in_script += 1
+            elif t in ('/script', '/style', '/title'): in_script -= 1
+        elif not in_a and not in_script and 'CDFD' in d:
+            delen[i] = re.sub(r'\bCDFD\b', '<a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a>', d)
+    return kop + sep + ''.join(delen)
+
 def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False):
     datum = datum or BIJGEWERKT.get(pad, PEIL_ISO)
     if ld: extra += '\n<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>'
@@ -61,7 +76,7 @@ def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', l
          + ('\n<main id="inhoud" class="kaal">\n' + inhoud + '\n<div class="wrap">' + MELDING + '</div>\n</main>\n' if kaal else
             '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n') + FOOTER + scripts + '\n</body>\n</html>\n')
     if kaal: s = s.replace('<body>', '<body class="breed">', 1)
-    open(R + pad, 'w', encoding='utf-8').write(s)
+    open(R + pad, 'w', encoding='utf-8').write(link_cdfd(s))
 
 # ---------- Modules ----------
 WT = 'https://wetten.overheid.nl/'
@@ -195,11 +210,11 @@ for i, mod in enumerate(MODS, 1):
 
 # ---------- Veelgestelde vragen ----------
 FAQ = [
- ('Wat is permanente educatie (PE)?', 'Wie in de financiële dienstverlening adviseert, moet vakbekwaam zijn en blijven. Daarvoor heb je een Wft-diploma nodig en houd je je kennis bij met permanente educatie. Binnen elke PE-periode haal je de PE-examens die bij je diploma’s horen. De actuele periode en eisen vind je bij het <a href="https://www.cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
+ ('Wat is permanente educatie (PE)?', 'Wie in de financiële dienstverlening adviseert, moet vakbekwaam zijn en blijven. Daarvoor heb je een Wft-diploma nodig en houd je je kennis bij met permanente educatie. Binnen elke PE-periode haal je één PE-examen per beroepskwalificatie; de lopende periode loopt van 1 april 2025 tot en met 31 maart 2028. De actuele periode en eisen vind je bij het <a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
  ('Telt deze toets mee voor mijn PE?', 'Nee. De PA-toets is een oefentoets. Hij helpt je je kennis te testen en bij te houden, maar is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Je PE-examen leg je af bij een door het CDFD erkend examencentrum.'),
  ('Levert de toets PE-punten op?', 'Nee. Onder de Wft bestaan geen PE-punten meer: je houdt je diploma’s geldig met PE-examens. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op. Lees meer in <a href="pe-punten-wft.html">PE-punten en Wft Permanent Actueel</a>.'),
  ('Wat kost het?', 'Niets. Alle modules en de toets zijn gratis voor alle adviseurs, zonder abonnement en zonder account. Wft Permanent Actueel is een activiteit van DFO BV.'),
- ('Hoe werkt de toets?', 'Je kiest een module en krijgt 7 willekeurige vragen. Na elk antwoord zie je de uitleg. Heb je er 5 of meer goed, dan maak je een certificaat aan dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
+ ('Hoe werkt de toets?', 'Je kiest een module en krijgt 7 willekeurige vragen. Na elk antwoord zie je de uitleg. Daarna maak je een certificaat met je resultaat, dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
  ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
  ('Wordt er iets van mij bewaard?', 'Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
  ('Welke modules heb ik nodig?', 'Dat hangt af van je diploma’s en het soort klantcontact. Gebruik de <a href="index.html#check">pakketcheck</a> op de homepage als hulpmiddel. Voor de precieze eisen die voor jou gelden, kijk je bij het CDFD of de AFM.'),
@@ -285,20 +300,24 @@ pagina('klachten.html', 'Klachten — Wft Permanent Actueel', 'Zo dien je een kl
 
 # ---------- PE uitgelegd (SEO/GEO) ----------
 PE = [
- ('Bestaan PE-punten nog onder de Wft?', 'Nee. Sinds 1 januari 2014 werkt permanente educatie onder de Wft niet meer met PE-punten. Je houdt je Wft-diploma’s geldig door binnen elke PE-periode de PE-examens te halen die bij je diploma’s horen. PE-punten kom je nog wel tegen bij vrijwillige beroepsregisters; welke activiteiten daar meetellen, bepaalt elk register zelf.'),
- ('Wat is PE onder de Wft?', 'PE staat voor permanente educatie. Wie adviseert of bemiddelt in financiële producten, moet vakbekwaam zijn: je hebt een Wft-diploma voor je vakgebied en je houdt die kennis actueel met PE. Je legt de PE-examens af bij een door het CDFD erkend examencentrum; het CDFD registreert je diploma’s en behaalde PE-examens.'),
+ ('Bestaan PE-punten nog onder de Wft?', 'Nee. Sinds 1 januari 2014 werkt permanente educatie onder de Wft niet meer met PE-punten. Je houdt je adviesbevoegdheid geldig door binnen elke PE-periode het PE-examen te halen voor elke beroepskwalificatie die je hebt. PE-punten kom je nog wel tegen bij vrijwillige beroepsregisters; welke activiteiten daar meetellen, bepaalt elk register zelf.'),
+ ('Wat is PE onder de Wft?', 'PE staat voor permanente educatie. Wie adviseert over financiële producten, moet aantoonbaar vakbekwaam zijn: het juiste Wft-diploma voor elke product-dienstcombinatie waarin je adviseert, en dat diploma geldig houden met PE-examens. Je legt de examens af bij een door het CDFD erkend examen-instituut. De AFM houdt toezicht op de naleving van de diplomaplicht door de onderneming.'),
+ ('Wat doet het CDFD?', 'Het College Deskundigheid Financiële Dienstverlening (CDFD) adviseert de minister van Financiën over de eind- en toetstermen van de Wft-examens en erkent de examen-instituten. Via <a href="https://cdfd.nl/mijn-wft/" target="_blank" rel="noopener">Mijn Wft</a> (met DigiD) zie je welke beroepskwalificaties je hebt en download je je diploma’s en certificaten.'),
+ ('Hoe lang duurt de PE-periode?', 'Volgens het CDFD loopt de lopende PE-periode van 1 april 2025 tot en met 31 maart 2028; de volgende loopt van 1 april 2028 tot en met 31 maart 2031. Per beroepskwalificatie haal je binnen de periode één PE-examen. Wanneer je dat doet, bepaal je zelf, zolang het voor de einddatum is. Zie <a href="https://cdfd.nl/wanneer-moet-ik-pe-examen-doen/" target="_blank" rel="noopener">Wanneer moet ik PE-examen doen?</a>'),
+ ('Wat toetst een PE-examen?', 'Het PE-examen toetst recente ontwikkelingen in het vakgebied. De toetstermen worden jaarlijks per 1 april geactualiseerd; per 1 april 2026 zijn de PE-examens vernieuwd. Volgens het CDFD gaat het om ontwikkelingen die passen bij de module, relevant zijn voor het klantbelang en tijdig definitief bekend zijn. Zie het <a href="https://cdfd.nl/nieuws/wft-pe-examens-vernieuwd-vanaf-1-april-2026-cdfd-vraagt-nieuwe-ontwikkelingen/" target="_blank" rel="noopener">nieuwsbericht van het CDFD</a>.'),
  ('Wat betekent Wft Permanent Actueel (PA)?', 'Permanent Actueel betekent dat je vakkennis na je Wft-diploma bij de tijd blijft. PE-examens toetsen vooral wat er is veranderd in wet- en regelgeving en in de markt. Wft Permanent Actueel (PA-WFT.nl) is een gratis oefenomgeving van DFO BV waarmee je per Wft-module oefent.'),
- ('Welke PE-examens heb ik nodig?', 'Dat hangt af van je Wft-diploma’s en het soort klantcontact. Er zijn negen modules: Basis, Consumptief Krediet, Schadeverzekering Particulier, Schadeverzekering Zakelijk, Vermogen, Hypothecair Krediet, Inkomen, Pensioen en Zorgverzekering. Gebruik de <a href="index.html#check">pakketcheck</a> als hulpmiddel en controleer de eisen die voor jou gelden bij het <a href="https://www.cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
- ('Wat gebeurt er als ik mijn PE niet op tijd haal?', 'Dan voldoe je voor dat vakgebied niet meer aan de vakbekwaamheidseisen van de Wft en mag je daar niet meer adviseren of bemiddelen tot je weer voldoet. Kijk bij het CDFD wat je in dat geval moet doen.'),
- ('Levert de PA-toets PE-punten of een PE-examen op?', 'Nee. De PA-toets is een oefentoets. Je krijgt bij 5 of meer van de 7 vragen goed een certificaat met je resultaat, maar dat is geen bewijs van vakbekwaamheid en telt niet mee voor je PE-registratie.'),
+ ('Welke PE-examens heb ik nodig?', 'Dat hangt af van je beroepskwalificaties. Het stelsel is modulair: per module haal je een initieel examen, en een combinatie van modules levert een beroepskwalificatie op. Zo bestaat Adviseur Hypothecair krediet volgens het CDFD uit Basis, Vermogen en Hypothecair krediet, en Adviseur Vermogen uit Basis en Vermogen. Controleer de exacte samenstelling bij de <a href="https://cdfd.nl/adviseurs/" target="_blank" rel="noopener">adviesbevoegdheden van het CDFD</a>; de <a href="index.html#check">pakketcheck</a> is alleen een hulpmiddel.'),
+ ('Wat gebeurt er als ik mijn PE niet op tijd haal?', 'Dan vervalt je adviesbevoegdheid voor die beroepskwalificatie. Je herstelt die door een bijzonder examen te halen of door de initiële module-examens opnieuw te doen. Tot dat moment mag je in dat domein niet zelfstandig adviseren. Plan je PE-examen dus niet op het laatste moment: richting het einde van een periode is het druk bij de examen-instituten.'),
+ ('Telt een PE-training mee?', 'Voor de wettelijke adviesbevoegdheid telt alleen het gehaalde PE-examen; een training zonder examen houdt je diploma niet geldig. Trainingen kunnen wel helpen om permanent actueel te blijven en tellen soms mee voor registertitels.'),
+ ('Levert de PA-toets PE-punten of een PE-examen op?', 'Nee. De PA-toets is een oefentoets. Je krijgt een certificaat met je resultaat, maar dat is geen bewijs van vakbekwaamheid en telt niet mee voor je PE.'),
  ('Hoe oefen ik gratis voor mijn PE-examen?', 'Op PA-WFT.nl staan per Wft-module meerkeuzevragen met uitleg. Elke toets bevat 7 willekeurige vragen. Je kunt ook een mix maken van alle modules uit je eigen pakket. Gratis voor alle adviseurs, zonder account.'),
 ]
-inh = ('    <p class="lead antwoord"><strong>Kort antwoord:</strong> onder de Wft bestaan geen PE-punten meer. Sinds 1 januari 2014 houd je je Wft-diploma’s geldig met PE-examens per module. '
+inh = ('    <p class="lead antwoord"><strong>Kort antwoord:</strong> onder de Wft bestaan geen PE-punten meer. Sinds 1 januari 2014 houd je je adviesbevoegdheid geldig met één PE-examen per beroepskwalificatie binnen elke PE-periode; de lopende periode loopt tot en met 31 maart 2028. '
        'Wft Permanent Actueel helpt je daar gratis mee te oefenen; de toets zelf levert geen PE-punten of PE-examen op.</p>\n'
        '    <div class="acties"><a class="btn" href="toets.html">Oefen gratis</a><a class="btn ghost" href="index.html#check">Welke modules heb ik nodig?</a></div>\n'
        + '\n'.join(f'    <h2>{q}</h2>\n    <p>{a}</p>' for q, a in PE) +
        '\n    <h2>Oefenen per Wft-module</h2>\n    <ul>' + ''.join(f'<li><a href="module-{m["id"]}.html">Wft {m["naam"]}</a>: PE-oefenvragen</li>' for m in MODS) + '</ul>\n'
-       '    <h2>Bronnen</h2>\n    <ul class="bronnen"><li><a href="https://www.cdfd.nl/" target="_blank" rel="noopener">CDFD — College Deskundigheid Financiële Dienstverlening</a></li>'
+       '    <h2>Bronnen</h2>\n    <ul class="bronnen"><li><a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD — College Deskundigheid Financiële Dienstverlening</a></li><li><a href="https://cdfd.nl/adviseurs/" target="_blank" rel="noopener">CDFD — adviesbevoegdheden</a></li><li><a href="https://cdfd.nl/wanneer-moet-ik-pe-examen-doen/" target="_blank" rel="noopener">CDFD — wanneer moet ik PE-examen doen?</a></li><li><a href="https://cdfd.nl/mijn-wft/" target="_blank" rel="noopener">CDFD — Mijn Wft</a></li>'
        '<li><a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars" target="_blank" rel="noopener">AFM — adviseurs en bemiddelaars</a></li>'
        f'<li><a href="{B["eind"][1]}" target="_blank" rel="noopener">{B["eind"][0]}</a></li><li><a href="{B["wft"][1]}" target="_blank" rel="noopener">{B["wft"][0]}</a></li></ul>\n'
        f'    <p class="klein">Peildatum {PEIL}. Algemene informatie, geen advies. De eisen die precies voor jou gelden, vind je bij het CDFD.</p>')
@@ -313,7 +332,7 @@ inh = f'''<div class="paneel page" id="uitleg">
     <p class="lead">Wft Permanent Actueel helpt je je vakkennis bij te houden. Oefen met PE-oefenvragen precies de Wft-modules die bij jouw diploma's en klantcontact horen, met uitleg bij elk antwoord. Zonder kosten, zonder abonnement en zonder account.</p>
     <div class="acties"><a class="btn" href="toets.html">Start de kennistoets</a><a class="btn ghost" href="#modules">Bekijk de 9 modules</a></div>
     <h2>Wft, PE en Permanent Actueel</h2>
-    <p>Als financieel adviseur moet je vakbekwaam blijven: je hebt een Wft-diploma en houdt je kennis bij met permanente educatie (PE). PE-punten bestaan onder de Wft niet meer; sinds 1 januari 2014 haal je PE-examens per module, bij een door het CDFD erkend examencentrum. De PA-toets is een oefentoets en levert geen PE-punten of PE-examen op.</p>
+    <p>Als financieel adviseur moet je vakbekwaam blijven: je hebt een Wft-diploma en houdt je kennis bij met permanente educatie (PE). PE-punten bestaan onder de Wft niet meer; sinds 1 januari 2014 haal je binnen elke PE-periode één PE-examen per beroepskwalificatie, bij een door het CDFD erkend examen-instituut. De lopende PE-periode loopt tot en met 31 maart 2028. De PA-toets is een oefentoets en levert geen PE-punten of PE-examen op.</p>
     <p><a href="pe-punten-wft.html">Lees hoe PE, PE-punten en Permanent Actueel werken</a></p>
 </div>
 <div class="paneel" id="modules">
@@ -443,7 +462,7 @@ pagina('opleidingen.html', 'DFO Opleidingen: opleidingen en kennis voor financie
 # ---------- llms.txt ----------
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: ' + PEIL + '.', '',
-        '## PE en Permanent Actueel', '', f'- [PE-punten, PE-examens en Wft Permanent Actueel]({SITE}pe-punten-wft.html): onder de Wft bestaan geen PE-punten meer; sinds 1 januari 2014 houd je je diploma’s geldig met PE-examens per module. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op.', '',
+        '## PE en Permanent Actueel', '', f'- [PE-punten, PE-examens en Wft Permanent Actueel]({SITE}pe-punten-wft.html): onder de Wft bestaan geen PE-punten meer; sinds 1 januari 2014 houd je je adviesbevoegdheid geldig met één PE-examen per beroepskwalificatie binnen elke PE-periode (lopende periode: 1 april 2025 tot en met 31 maart 2028, volgens het CDFD). De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op.', '',
         '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 willekeurige vragen, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
