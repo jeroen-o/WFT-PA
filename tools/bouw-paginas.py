@@ -4,7 +4,7 @@ gebruiksvoorwaarden, klachten, 404, sitemap, robots en llms.txt, plus header en 
 Gebruik (vanuit de map van de repository):  python3 tools/bouw-paginas.py
 Vereist Node.js om assets/js/modules.js te lezen.
 """
-import re, html, os, json, subprocess
+import re, html, os, json, subprocess, urllib.parse
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 SITE = 'https://pa-wft.nl/'
 PEIL = '15 oktober 2026'
@@ -37,7 +37,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
-    '<li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
+    '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
     '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
     '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
@@ -196,7 +196,10 @@ WIJZ = {'schade-particulier': 'Toetsterm 1d.9 is per 1 april 2026 aangepast: mee
 # lees modulegegevens uit modules.js
 MODS = json.loads(subprocess.check_output(['node', '-e', "global.window={};eval(require('fs').readFileSync(process.argv[1],'utf8'));process.stdout.write(JSON.stringify(window.PA_MODULES))", R + 'assets/js/modules.js']))
 PEIL_ISO = '2026-10-15'
-VRAGEN = json.loads(subprocess.check_output(['node', '-e', "global.window={};eval(require('fs').readFileSync(process.argv[1],'utf8'));process.stdout.write(JSON.stringify(window.PA_VRAGEN))", R + 'assets/js/vragen.js']))
+# vragenbank per module (assets/js/vragen/<id>.js); de toets laadt alleen de gekozen modules
+VRAGEN = json.loads(subprocess.check_output(['node', '-e', "global.window={};for(const f of process.argv.slice(1))eval(require('fs').readFileSync(f,'utf8'));process.stdout.write(JSON.stringify(window.PA_VRAGEN))"]
+                                            + [R + f'assets/js/vragen/{m["id"]}.js' for m in MODS]))
+VRAGEN_V = {m['id']: hashlib.sha1(open(R + f'assets/js/vragen/{m["id"]}.js', 'rb').read()).hexdigest()[:8] for m in MODS}
 
 def voorbeelden(mid, n=3):
     """Vaste voorbeeldvragen per module voor de modulepagina: bij voorkeur casussen, verspreid over de vragenbank."""
@@ -212,7 +215,24 @@ def voorbeeld_html(q, nr):
     return (f'    <article class="voorbeeld"><h3>Voorbeeldvraag {nr}{term}</h3>\n      <p>{html.escape(q[0])}</p>\n      <ul>'
             + ''.join(f'<li>{html.escape(a[0])}</li>' for a in opties) + '</ul>\n'
             f'      <details><summary>Bekijk het antwoord en de uitleg</summary><p><strong>Juist: {html.escape(q[1][0][0])}.</strong> {html.escape(q[1][0][1])}</p>'
-            '<ul class="uitleg">' + ''.join(f'<li><strong>{html.escape(a[0])}</strong>: {html.escape(a[1])}</li>' for a in q[1][1:]) + '</ul></details></article>\n')
+            '<ul class="uitleg">' + ''.join(f'<li><strong>{html.escape(a[0])}</strong>: {html.escape(a[1])}</li>' for a in q[1][1:]) + '</ul>'
+            + f'<p class="meld"><a href="{html.escape(meld_href(q))}">Twijfel je over deze vraag of het antwoord? Mail hem direct naar DFO</a></p></details></article>\n')
+
+def meld_href(q):
+    body = (f'Vraag:\n{q[0]}\n\nAntwoorden:\n' + '\n'.join(f'- {a[0]}' + ('  [gegeven als juist]' if k == 0 else '') for k, a in enumerate(q[1]))
+            + f'\n\nUitleg bij het juiste antwoord:\n{q[1][0][1]}\n\nMijn twijfel:\n')
+    if len(q) > 2 and q[2]: body = f'Toetsterm CDFD: {q[2]}\n\n' + body
+    return 'mailto:info@dfobv.nl?subject=' + urllib.parse.quote('check deze vraag op PA-WFT.nl') + '&body=' + urllib.parse.quote(body)
+
+def termen_html(mid):
+    """Oefenlinks per CDFD-toetsterm (alleen als de vragen een toetsterm hebben)."""
+    tel = {}
+    for q in VRAGEN.get(mid, []):
+        if len(q) > 2 and q[2]: tel[q[2]] = tel.get(q[2], 0) + 1
+    if not tel: return ''
+    sleutel = lambda t: [int(x) if x.isdigit() else x for x in re.split(r'(\d+)', t)]
+    return ('    <h2>Oefen per toetsterm</h2>\n    <p>Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderwerp dat je lastig vindt. Een oefenronde telt niet mee voor het certificaat.</p>\n'
+            '    <ul class="termen">' + ''.join(f'<li><a href="toets.html#term={mid}:{t}">{t}</a></li>' for t in sorted(tel, key=sleutel)) + '</ul>\n')
 
 def quiz_ld(naam, qs):
     return {'@type': 'Quiz', 'name': f'Voorbeeldvragen Wft {naam}', 'inLanguage': 'nl', 'isAccessibleForFree': True, 'educationalLevel': 'Beroepsniveau',
@@ -226,6 +246,7 @@ def nl(iso): j, m, d = iso.split('-'); return f'{int(d)} {MAANDEN[int(m)-1]} {j}
 
 LAATSTE = max(m['bijgewerkt'] for m in MODS)
 BIJGEWERKT.update({'index.html': LAATSTE, 'toets.html': LAATSTE})
+NIEUW = {}
 for i, mod in enumerate(MODS, 1):
     BIJGEWERKT[f"module-{mod['id']}.html"] = mod['bijgewerkt']
     mid, naam, bij, tekst = mod['id'], mod['naam'], mod['bijgewerkt'], mod['tekst']
@@ -233,6 +254,7 @@ for i, mod in enumerate(MODS, 1):
     vb = voorbeelden(mid)
     nieuw = (['<strong>Nieuwe toetstermen CDFD per 1 april 2026.</strong> De eind- en toetstermen voor deze module zijn vernieuwd en gelden voor examens vanaf 1 april 2026. De vragen in de toets zijn erop afgestemd.']
              + ([f'<strong>Gewijzigde toetsterm.</strong> {WIJZ[mid]}'] if mid in WIJZ else []) + d['actueel'])
+    NIEUW[mid] = nieuw
     inh = (f'    <p class="lead">{html.escape(tekst)} Oefen gratis met PE-oefenvragen voor Wft {html.escape(naam)}, met uitleg bij elk antwoord.</p>\n'
            f'    <p class="meta-regel">Laatst bijgewerkt {nl(bij)} · peildatum regelgeving {PEIL}</p>\n'
            f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Doe de toets</a><a class="btn ghost" href="index.html#modules">Alle modules</a></div>\n'
@@ -244,7 +266,8 @@ for i, mod in enumerate(MODS, 1):
            f'    <h2>Voorbeeldvragen Wft {html.escape(naam)}</h2>\n    <p>Zo zien de vragen in de toets eruit. In de toets staan de antwoorden in willekeurige volgorde.</p>\n'
            + ''.join(voorbeeld_html(q, k) for k, q in enumerate(vb, 1))
            + f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Oefen verder in de toets</a></div>\n'
-           '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
+           + termen_html(mid)
+           + '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
            f'    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen leerstof voor een erkend PE-examen. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
     ld = {'@context': 'https://schema.org', '@graph': [
@@ -262,6 +285,20 @@ for i, mod in enumerate(MODS, 1):
            f'Wft {html.escape(naam)}', f'Module {i:02d} · Permanent Actueel', inh, ld=ld)
 
 # ---------- Veelgestelde vragen ----------
+# ---------- wat is er nieuw (kwartaaloverzicht) ----------
+KWARTAAL = f'{(int(PEIL_ISO[5:7]) - 1) // 3 + 1}e kwartaal {PEIL_ISO[:4]}'
+inh = (f'    <p class="lead">Wat is er nieuw voor financieel adviseurs in het {KWARTAAL}? Per Wft-module de wijzigingen in wet- en regelgeving, toetstermen en markt die je moet kennen om permanent actueel te blijven.</p>\n'
+       f'    <p class="meta-regel">Peildatum regelgeving {PEIL}</p>\n'
+       '    <div class="acties"><a class="btn" href="toets.html">Doe de kennistoets</a></div>\n'
+       + ''.join(f'    <h2 id="{m["id"]}"><a href="module-{m["id"]}.html">Wft {html.escape(m["naam"])}</a></h2>\n    <ul>' + ''.join(f'<li>{x}</li>' for x in NIEUW[m['id']]) + f'</ul>\n    <p><a href="toets.html#{m["id"]}">Test je kennis van Wft {html.escape(m["naam"])} →</a></p>\n' for m in MODS)
+       + '    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen advies. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
+ld = {'@context': 'https://schema.org', '@type': 'Article', 'headline': f'Wat is er nieuw in de Wft: {KWARTAAL}', 'inLanguage': 'nl', 'dateModified': LAATSTE,
+      'author': {'@type': 'Organization', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/'}, 'publisher': {'@type': 'Organization', 'name': 'DFO BV'},
+      'mainEntityOfPage': f'{SITE}nieuw.html', 'about': [f'Wft {m["naam"]}' for m in MODS]}
+BIJGEWERKT['nieuw.html'] = LAATSTE
+pagina('nieuw.html', f'Wat is er nieuw in de Wft: {KWARTAAL} | Permanent Actueel', f'Wat is er nieuw voor financieel adviseurs in het {KWARTAAL}: per Wft-module de wijzigingen in regelgeving, toetstermen en markt.',
+       f'Wat is er nieuw: {KWARTAAL}', 'Permanent Actueel', inh, ld=ld)
+
 FAQ = [
  ('Wat is permanente educatie (PE)?', 'Wie in de financiële dienstverlening adviseert, moet vakbekwaam zijn en blijven. Daarvoor heb je een Wft-diploma nodig en houd je je kennis bij met permanente educatie. Binnen elke PE-periode haal je één PE-examen per beroepskwalificatie; de lopende periode loopt van 1 april 2025 tot en met 31 maart 2028. De actuele periode en eisen vind je bij het <a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
  ('Telt deze toets mee voor mijn PE?', 'Nee. De PA-toets is een oefentoets. Hij helpt je je kennis te testen en bij te houden, maar is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Je PE-examen leg je af bij een door het CDFD erkend examencentrum.'),
@@ -444,7 +481,7 @@ pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Perm
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
        intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop ontvang je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
+       scripts='\n<script src="assets/js/modules.js"></script>\n<script>window.PA_VRAGEN_V=' + json.dumps(VRAGEN_V, separators=(',', ':')) + ';</script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
 
 # ---------- Wet- en regelgeving ----------
 bron = open(R + 'tools/wetgeving-bron.md', encoding='utf-8').read()
@@ -528,12 +565,12 @@ llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
-llms += ['', '## Informatie', '', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
+llms += ['', '## Informatie', '', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
          '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
 open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
 
 # ---------- sitemap en robots ----------
-paden = ['', 'toets.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
+paden = ['', 'toets.html', 'nieuw.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
     ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>2026-10-15</lastmod></url>\n' for p in paden) + '</urlset>\n')
 open(R + 'robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')

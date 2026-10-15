@@ -22,7 +22,9 @@ tools/bouw-paginas.py       bouwt de vaste pagina's opnieuw (zie hieronder)
 assets/css/style.css        stijlen (lettertype Archivo lokaal in assets/fonts, OFL-licentie)
 assets/css/toets.css        stijlen van de toets
 assets/js/modules.js        de 9 modules met datum "bijgewerkt"
-assets/js/vragen.js         vragenbank (eerste antwoord is steeds het juiste)
+assets/js/vragen/<id>.js    vragenbank per module: [vraag, [[antwoord, uitleg] x4], toetsterm CDFD];
+                            het eerste antwoord is steeds het juiste. De toets laadt alleen de gekozen modules.
+tools/vragen-js.py          zet JSON-bestanden ({"vragen":[{"v","a","t"}]}) om naar assets/js/vragen/<id>.js
 assets/js/main.js           modulelijst + pakket-check
 assets/js/toets.js          toets en certificaat
 assets/logo/                logo's (SVG), merkteken 1024px (PNG), DFO-logo
@@ -33,9 +35,10 @@ site.webmanifest, og-image.png (1200×630 deelafbeelding), CNAME
 Let op: de repository heeft een `.nojekyll`, dus elk bestand in de repository komt online, ook mappen met een `_` ervoor. Zet interne bestanden (zoals het signaleringsoverzicht) niet in deze repository.
 
 ## Een module bijwerken
-1. Pas de vragen van de module aan in `assets/js/vragen.js`.
+1. Pas de vragen van de module aan in `assets/js/vragen/<id>.js` (of in JSON en zet om met `python3 tools/vragen-js.py <map>`).
+   Geef elke vraag de code van de CDFD-toetsterm als derde element; die verschijnt in de toets en onder "Oefen per toetsterm".
 2. Zet in `assets/js/modules.js` de datum `bijgewerkt` op vandaag en zet bovenaan `log` een regel met wat er veranderd is.
-3. Werk zo nodig het blok "Actueel" bij in `tools/bouw-paginas.py` (variabele `M`).
+3. Werk zo nodig het blok "Wat is er nieuw" bij in `tools/bouw-paginas.py` (variabele `M`).
 4. Draai `python3 tools/bouw-paginas.py` (vereist Node.js). Dat bouwt de modulepagina's, veelgestelde vragen,
    privacy, over, gebruiksvoorwaarden, klachten, 404, sitemap, robots en llms.txt opnieuw, en zet de header en
    footer van `index.html` en `toets.html` gelijk.

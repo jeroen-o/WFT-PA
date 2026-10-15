@@ -38,13 +38,13 @@
       doc.setFont('helvetica', 'bold'); doc.setFontSize(30); doc.setTextColor.apply(doc, BLAUW); doc.text('Certificaat', L, y);
       doc.setFont('helvetica', 'normal'); doc.setFontSize(9.5); doc.setTextColor.apply(doc, GRIJS); doc.setCharSpace(1.1); doc.text('PA-TOETS · WFT PERMANENT ACTUEEL', L, y + 7); doc.setCharSpace(0);
       y += 22;
-      doc.setFontSize(11.5); doc.setTextColor.apply(doc, INKT); doc.text('Hierbij verklaart DFO BV dat', L, y);
+      doc.setFontSize(11.5); doc.setTextColor.apply(doc, INKT); doc.text('Eigen verklaring van', L, y);
       y += 11; doc.setFont('helvetica', 'bold'); doc.setFontSize(24); doc.text(doc.splitTextToSize(g.naam, R - L)[0], L, y);
       doc.setDrawColor.apply(doc, LIJN); doc.setLineWidth(.6); doc.line(L, y + 3, L + 110, y + 3);
       // persoonsgegevens
       y += 11; doc.setFontSize(9.5);
       var rij = function(label, waarde){ doc.setFont('helvetica', 'normal'); doc.setTextColor.apply(doc, GRIJS); doc.text(label, L, y); doc.setFont('helvetica', 'bold'); doc.setTextColor.apply(doc, INKT); var t = doc.splitTextToSize(waarde, R - L - 34); doc.text(t, L + 34, y); y += 4.8 * t.length; };
-      rij('Geboortedatum', PA_DATUM(g.geb));
+      if(g.geb) rij('Geboortedatum', PA_DATUM(g.geb));
       if(g.mail) rij('E-mailadres', g.mail);
       if(g.bedrijf) rij('Bedrijf', g.bedrijf);
       rij(g.verstuurd ? 'Verstuurd op' : 'Aangemaakt op', g.uitgegeven);
