@@ -50,13 +50,15 @@ def head(titel, omschrijving, pad, extra=''):
             '<link rel="preload" href="assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>\n'
             '<link rel="stylesheet" href="assets/css/style.css">' + extra + '\n</head>\n<body>')
 
-def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None):
+def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False):
     datum = datum or BIJGEWERKT.get(pad, PEIL_ISO)
     if ld: extra += '\n<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>'
-    if not inhoud.lstrip().startswith('<div class="paneel'):
+    if not kaal and not inhoud.lstrip().startswith('<div class="paneel'):
         inhoud = '<div class="paneel page">\n' + inhoud + '\n</div>'
     s = (head(titel, omschrijving, pad, extra) + '\n' + header(actief) + '\n' + masthead(kicker, kop, intro, mast_extra, datum)
-         + '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n' + FOOTER + scripts + '\n</body>\n</html>\n')
+         + ('\n<main id="inhoud" class="kaal">\n' + inhoud + '\n<div class="wrap">' + MELDING + '</div>\n</main>\n' if kaal else
+            '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n') + FOOTER + scripts + '\n</body>\n</html>\n')
+    if kaal: s = s.replace('<body>', '<body class="breed">', 1)
     open(R + pad, 'w', encoding='utf-8').write(s)
 
 # ---------- Modules ----------
@@ -385,10 +387,13 @@ inh = ('<div class="paneel page">\n    <h2>Wat er dit jaar verandert</h2>\n    <
                    + ''.join(f'<li><a href="{html.escape(u)}" target="_blank" rel="noopener">{html.escape(n)}</a>' + ('<span class="tag">verwijzing te verifiëren</span>' if t else '') + f'<span>{html.escape(d)}</span></li>' for n, u, d, t in items) + '</ul>'
                    for c, items in cats)
        + f'\n    <p class="klein">Peildatum {PEIL}. Bron: WFT Bieb van DFO. Algemene informatie, geen advies.</p>\n</div>')
+secties = open(R + 'tools/wetgeving-secties.html', encoding='utf-8').read()
 pagina('wetgeving.html', 'Wet- en regelgeving voor financieel adviseurs: Wft, Wwft en meer',
-       'Overzicht van wet- en regelgeving voor financieel adviseurs: Wft, Wwft, hypothecair en consumptief krediet, fiscaal, pensioen, sociale zekerheid en toeslagen, met links naar de officiële tekst.',
-       'Wet- en regelgeving', 'Wft Permanent Actueel', inh, actief='wetgeving.html',
-       intro=f'Elke regeling met een link naar de officiële tekst op wetten.overheid.nl of EUR-Lex. {sum(len(i) for _, i in cats)} regelingen in {len(cats)} thema\'s, peildatum {PEIL}.')
+       'Doorzoekbaar overzicht van wet- en regelgeving voor financieel adviseurs: Wft, Wwft, hypothecair en consumptief krediet, fiscaal, pensioen, sociale zekerheid en toeslagen, met links naar de officiële tekst.',
+       'Wet- en regelgeving', 'Wft Permanent Actueel', secties, actief='wetgeving.html', kaal=True,
+       intro=f'Doorzoekbare bibliotheek van wet- en regelgeving voor financiële dienstverleners. Elke regeling linkt naar de officiële tekst op wetten.overheid.nl of EUR-Lex. <span id="peildatum">Peildatum {PEIL}</span>.',
+       extra='\n<link rel="stylesheet" href="assets/css/wetgeving.css">\n<link rel="stylesheet" href="assets/css/style.css">',
+       scripts='\n<script src="assets/js/wetgeving.js"></script>')
 
 # ---------- DFO Compliance ----------
 def lijst(items): return '<ul class="linklijst">' + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener">{n}</a>' + (f'<span>{d}</span>' if d else '') + '</li>' for n, u, d in items) + '</ul>'

@@ -134,3 +134,11 @@ footer a{color:#fff}
   .ring-wrap,.ring-wrap svg{width:150px;height:150px}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* Brede pagina's met WFT Bieb-secties (wet- en regelgeving) */
+body.breed .wrap{max-width:1180px}
+main.kaal{padding-block:0 40px}
+main.kaal .melding{margin-top:28px}
+@media (max-width:600px){
+  .bijgewerkt-kop{position:static;text-align:right;margin:-14px 0 8px}
+  .bijgewerkt-kop+.kicker,.bijgewerkt-kop+h1{padding-right:0}
+}
