@@ -8,11 +8,11 @@ select{font-family:var(--font);font-size:15px;color:var(--text-strong);padding:9
 .balk{height:6px;background:var(--dfo-blue-soft);border-radius:3px;overflow:hidden;margin-bottom:20px}
 .balk span{display:block;height:100%;background:var(--dfo-blue);transition:width .25s}
 .badge{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:3px 8px;border-radius:2px;background:var(--dfo-blue-soft);color:var(--dfo-blue-dark);text-align:right}
-.vraag h2{font-size:19px;color:var(--text-strong);line-height:1.45;margin:10px 0 18px}
+.vraag h2{font-size:clamp(22px,3vw,30px);font-weight:800;color:var(--text-strong);line-height:1.45;margin:10px 0 18px}
 .opties{display:grid;gap:10px;margin:0;padding:0;border:0}
-.optie{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;font-family:var(--font);font-size:15.5px;color:var(--text-strong);background:var(--card);border:2px solid transparent;border-radius:var(--radius);padding:12px 14px;cursor:pointer;line-height:1.45}
-.optie:hover:not(:disabled){border-color:var(--border)}
-.optie .l{flex:0 0 26px;height:26px;border-radius:50%;background:#fff;color:var(--dfo-blue);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
+.optie{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;font-family:var(--font);font-size:17px;color:var(--text-strong);background:#fff;border:2px solid var(--ink);border-radius:var(--radius);padding:12px 14px;cursor:pointer;line-height:1.45}
+.optie:hover:not(:disabled){background:var(--blue-100)}
+.optie .l{flex:0 0 26px;height:26px;border-radius:0;background:var(--blue-100);color:var(--dfo-blue);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:13px}
 .optie:disabled{cursor:default}
 .optie.goed{background:var(--green-soft);border-color:var(--green)}
 .optie.goed .l{background:var(--green);color:#fff}
@@ -49,3 +49,5 @@ select{font-family:var(--font);font-size:15px;color:var(--text-strong);padding:9
 .certstatus{margin-top:10px;font-size:14px;color:var(--red)}
 .certstatus:empty{display:none}
 .certstatus.klaar{color:var(--green);font-weight:500}
+#paneel{border-bottom:0}
+.score .getal{font-weight:800}
