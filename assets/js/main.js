@@ -8,7 +8,7 @@
   var segs=document.getElementById('segs'),circles=MODS.map(function(_,i){var c=document.createElementNS(NS,'circle');c.setAttribute('cx',60);c.setAttribute('cy',60);c.setAttribute('r',48);c.setAttribute('fill','none');c.setAttribute('stroke-width',14);c.setAttribute('stroke-dasharray','28.5 273.09');c.setAttribute('stroke-dashoffset',-(i*33.51));segs.appendChild(c);return c;});
   function render(){
     var on=function(i){return i===0||sel.indexOf(i)>-1;};
-    circles.forEach(function(c,i){c.setAttribute('stroke',i===0?'#0b3d73':on(i)?'#1462ad':'#d6e3f2');});
+    circles.forEach(function(c,i){c.setAttribute('stroke',i===0?'#0A4683':on(i)?'#0E5AA7':'#D5E3F1');});
     [].forEach.call(chips.children,function(b){b.setAttribute('aria-pressed',sel.indexOf(+b.dataset.i)>-1);});
     var chosen=MODS.filter(function(_,i){return on(i);});
     document.getElementById('count').textContent=chosen.length;
