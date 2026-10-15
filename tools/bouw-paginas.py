@@ -10,9 +10,9 @@ SITE = 'https://pa-wft.nl/'
 PEIL = '15 oktober 2026'
 
 MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 60 60)">'
-        '<circle cx="60" cy="60" r="48" fill="none" stroke="#0E5AA7" stroke-width="14" stroke-dasharray="28.5 5.01"/>'
-        '<circle cx="60" cy="60" r="48" fill="none" stroke="#0A4683" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
-        '<text x="60" y="72" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="700" font-size="34" fill="#0E5AA7">PA</text></svg>')
+        '<circle cx="60" cy="60" r="48" fill="none" stroke="#1462ad" stroke-width="14" stroke-dasharray="28.5 5.01"/>'
+        '<circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
+        '<text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg>')
 
 NAV = [('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('wetgeving.html', 'Wet- en regelgeving'),
        ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV')]
@@ -20,8 +20,8 @@ NAV = [('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-pu
 def header(actief=''):
     links = ''.join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == actief else '', t) for h, t in NAV)
     return ('<a class="skip" href="#inhoud">Naar de inhoud</a>\n<div class="topbar">\n  <div class="wrap">\n'
-            '    <nav class="topnav" aria-label="Hoofdmenu"><a class="home" href="index.html"' + (' aria-current="page"' if actief == 'index.html' else '') + '>' + MARK + 'Wft Permanent Actueel</a>' + links + '</nav>\n'
-            '    <a class="logo" href="https://www.dfobv.nl/" target="_blank" rel="noopener" aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a>\n'
+            '    <a class="logo" href="index.html" aria-label="Wft Permanent Actueel — home"' + (' aria-current="page"' if actief == 'index.html' else '') + '><img src="assets/logo/pa-wft-logo-horizontal.png" width="144" height="60" alt="Wft Permanent Actueel — PA-WFT.nl"></a>\n'
+            '    <nav class="topnav" aria-label="Hoofdmenu">' + links + '</nav>\n'
             '  </div>\n</div>')
 
 def masthead(kicker, kop, intro='', extra='', datum=''):
@@ -32,22 +32,24 @@ MELDING = ('<div class="melding" role="note"><strong>Let op.</strong> De PA-toet
            'DFO BV is niet verantwoordelijk voor de juistheid en volledigheid van alle vragen en antwoorden; regels wijzigen. Wil je het zeker weten? '
            'Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
-FOOTER = ('<footer>\n  <div class="wrap">\n'
+FOOTER = ('<footer>\n  <div class="wrap foot-grid">\n  <div class="foot-tekst">\n'
     '    <div>Wft Permanent Actueel is een activiteit van DFO BV · De Wel 14–16, 3871 MV Hoevelaken · <a href="tel:+31332580460">033 258 04 60</a> · <a href="mailto:info@dfobv.nl">info@dfobv.nl</a></div>\n'
     '    <nav class="foot-links" aria-label="Voettekst"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a>'
     '<a href="privacy.html">Privacy en cookies</a><a href="vragen.html">Veelgestelde vragen</a><a href="https://www.dfobv.nl/ons-team/" target="_blank" rel="noopener">Ons team</a>'
     '<a href="https://www.dfobv.nl/product/nieuwsbrief-wft/" target="_blank" rel="noopener">Nieuwsbrief Wft</a></nav>\n'
     '    <p class="foot-disc">Op de hoogte blijven? Schrijf je in voor de wekelijkse <a href="https://www.dfobv.nl/product/nieuwsbrief-wft/" target="_blank" rel="noopener">Nieuwsbrief Wft</a> van DFO. '
-    'Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p>\n  </div>\n</footer>')
+    'Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p>\n  </div>\n'
+    '  <a class="foot-logo" href="https://www.dfobv.nl/" target="_blank" rel="noopener" aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a>\n'
+    '  </div>\n</footer>')
 
 def head(titel, omschrijving, pad, extra=''):
     return ('<!doctype html>\n<html lang="nl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-            f'<title>{html.escape(titel)}</title>\n<meta name="description" content="{html.escape(omschrijving)}">\n<meta name="theme-color" content="#0E5AA7">\n'
+            f'<title>{html.escape(titel)}</title>\n<meta name="description" content="{html.escape(omschrijving)}">\n<meta name="theme-color" content="#1462ad">\n'
             f'<link rel="canonical" href="{SITE}{pad}">\n<link rel="icon" href="favicon.ico" sizes="any">\n<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
             '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n<link rel="manifest" href="site.webmanifest">\n'
             f'<meta property="og:title" content="{html.escape(titel)}">\n<meta property="og:description" content="{html.escape(omschrijving)}">\n'
             f'<meta property="og:image" content="{SITE}og-image.png">\n<meta property="og:url" content="{SITE}{pad}">\n<meta name="twitter:card" content="summary_large_image">\n'
-            '<link rel="preload" href="assets/fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>\n'
+            '<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
             '<link rel="stylesheet" href="assets/css/style.css">' + extra + '\n</head>\n<body>')
 
 def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False):
@@ -335,7 +337,10 @@ inh = f'''<div class="paneel page" id="uitleg">
       <div class="step"><span class="num">03</span><h3>Certificaat</h3><p>Mail je resultaat naar jezelf of print het als pdf.</p></div>
       <div class="step"><span class="num">04</span><h3>Blijf bij</h3><p>Per module zie je wanneer de vragen zijn bijgewerkt.</p></div>
     </div>
-</div>'''
+</div>
+</div>
+<section class="poster"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></section>
+<div class="wrap">'''
 ld_home = {'@context': 'https://schema.org', '@graph': [
  {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460',
   'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'}},
@@ -345,10 +350,10 @@ pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs
        'Wft Permanent Actueel: gratis voor alle adviseurs. PE-oefenvragen met uitleg voor alle 9 Wft-modules, van Basis tot Pensioen. Met certificaat.',
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
        intro='Kennis actueel, elk jaar weer. Oefen per Wft-module met vragen over wat er actueel is, met uitleg bij elk antwoord.',
-       mast_extra='    <p class="gratis"><strong>Gratis voor alle adviseurs.</strong> Alle modules en de kennistoets, zonder kosten.</p>\n',
+       mast_extra='    <p class="gratis"><strong>Gratis voor alle adviseurs.</strong> Alle modules en de kennistoets, zonder kosten.</p>\n    ' + MARK.replace('<svg ', '<svg class="hero-mark" ', 1) + '\n',
        scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>')
 s = open(R + 'index.html', encoding='utf-8').read()
-s = s.replace('<meta name="theme-color" content="#0E5AA7">', '<meta name="google-site-verification" content="3JKf334ow3hOt0pa1YDk1TUvE6EaKzWpUMmtlkBD6fo">\n<meta name="theme-color" content="#0E5AA7">', 1)
+s = s.replace('<meta name="theme-color" content="#1462ad">', '<meta name="google-site-verification" content="3JKf334ow3hOt0pa1YDk1TUvE6EaKzWpUMmtlkBD6fo">\n<meta name="theme-color" content="#1462ad">', 1)
 open(R + 'index.html', 'w', encoding='utf-8').write(s)
 
 # ---------- Kennistoets ----------
