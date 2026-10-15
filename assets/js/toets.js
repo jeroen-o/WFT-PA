@@ -48,6 +48,8 @@
   var LOGO = 'assets/logo/dfo-logo.png';
   (function(){ var img = new Image(); img.onload = function(){ try{ var c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight; c.getContext('2d').drawImage(img, 0, 0); LOGO = c.toDataURL('image/png'); }catch(e){} }; img.src = LOGO; })();
 
+  function agendaBlok(){ var d = el('div', {style:'margin-top:24px'}); if(window.PA_AGENDA) window.PA_AGENDA(d); return d; }
+
   function startScherm(){
     var sel = el('select', {id:'module'});
     sel.append(el('option', {value:'alles'}, 'Alle modules'));
@@ -61,7 +63,9 @@
       el('p', null, 'Je krijgt ' + AANTAL + ' willekeurige meerkeuzevragen. Na elk antwoord zie je bij alle vier de antwoorden waarom ze goed of fout zijn. Na afloop maak je een certificaat met je resultaat, dat je naar jezelf mailt of print.'),
       el('div', {class:'keuze'}, el('label', {for:'module'}, 'Module'), sel),
       info,
-      el('button', {class:'btn', type:'button', id:'startKnop', onclick:start}, 'Start de toets')
+      el('p', {class:'advies'}, 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.'),
+      el('button', {class:'btn', type:'button', id:'startKnop', onclick:start}, 'Start de toets'),
+      agendaBlok()
     ));
   }
 
@@ -142,6 +146,7 @@
     paneel.replaceChildren(
       el('div', {class:'score'}, el('div', {class:'getal', id:'score', tabindex:'-1'}, goed + '/' + n), el('p', null, oordeel)),
       certificaatFormulier(),
+      agendaBlok(),
       el('div', {class:'acties', style:'justify-content:center'},
         el('button', {class:'btn ghost', type:'button', onclick:start}, 'Nieuwe toets, zelfde module'),
         el('button', {class:'btn ghost', type:'button', onclick:startScherm}, 'Andere module kiezen')),
@@ -166,6 +171,7 @@
     var status = el('div', {class:'certstatus', id:'certStatus', 'aria-live':'polite'});
     var form = el('form', {class:'certform', id:'certForm', novalidate:''},
       el('h3', null, 'Ontvang je certificaat'),
+      el('p', {class:'advies'}, 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.'),
       el('p', null, 'Vul je gegevens in. Ze komen op het certificaat en blijven in je eigen browser: er gaat niets naar DFO en er wordt niets bewaard. Je e-mailprogramma opent met je certificaat, gericht aan jezelf. Via "Certificaat bekijken of printen" sla je het op als pdf.'),
       el('div', {class:'veld'}, el('label', {for:'certnaam'}, 'Naam op het certificaat'), naam),
       el('div', {class:'veld'}, el('label', {for:'certgeb'}, 'Geboortedatum'), geb),
@@ -188,12 +194,13 @@
     return form;
   }
 
+  var ADVIES = 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.';
   var DISCLAIMER = 'Dit certificaat bevestigt deelname aan een oefentoets van Wft Permanent Actueel (PA-WFT.nl), een activiteit van DFO BV, De Wel 14–16, 3871 MV Hoevelaken. Het is geen Wft-diploma, geen PE-examen en levert geen PE-punten op. Het certificaat wordt niet centraal geregistreerd.';
 
   function certTekst(g, metVragen){
     var r = laatste;
     return 'Certificaat PA-toets — Wft Permanent Actueel\n\nNaam: ' + g.naam + '\nGeboortedatum: ' + PA_DATUM(g.geb) + '\nE-mailadres: ' + g.mail + (g.bedrijf ? '\nBedrijf: ' + g.bedrijf : '') + '\nVerstuurd op: ' + g.uitgegeven + '\nResultaat: ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%)\nModule: ' + r.thema + '\nDatum: ' + r.datum + '\nVragenbank bijgewerkt: ' + r.bijgewerkt + '\nCertificaatnummer: ' + r.nummer + '\n\n'
-      + DISCLAIMER + '\n';
+      + ADVIES + '\n\n' + DISCLAIMER + '\n';
   }
   function mailHref(g){
     var onderwerp = 'Certificaat PA-toets ' + laatste.nummer + ' — ' + g.naam + ' (' + laatste.goed + '/' + laatste.n + ')';
@@ -220,6 +227,7 @@
       + '.naam{font-size:30px;font-weight:700;border-bottom:2px solid #BBD3EA;padding-bottom:6px;margin:6px 0 18px;display:inline-block;min-width:60%}'
       + '.res{display:flex;gap:16px;flex-wrap:wrap;margin:8px 0 24px}.res div{background:#EDF3FA;border-radius:4px;padding:10px 16px;font-size:13px}.res strong{display:block;font-size:22px;color:#0E5AA7}'
       + '.voet{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-top:40px}.voet p{font-size:11px;color:#4A4A4A;max-width:60ch;margin:0}'
+      + '.advies{margin:28px 0 0;background:#EDF3FA;border-left:4px solid #0E5AA7;padding:10px 14px;font-size:13px}'
       + '.stempel{width:140px;height:140px;transform:rotate(-12deg);opacity:.88;flex:0 0 auto}'
       + '@media (max-width:600px){.cert{padding:12px}.kader{padding:24px 18px}.voet{flex-direction:column;align-items:flex-start}}'
       + '@media print{.cert{padding:0}@page{size:A4;margin:12mm}.res div{-webkit-print-color-adjust:exact;print-color-adjust:exact}}';
@@ -231,6 +239,7 @@
       + '<dt>' + (g.verstuurd ? 'Verstuurd op' : 'Aangemaakt op') + '</dt><dd>' + esc(g.uitgegeven) + '</dd></dl>'
       + '<div>de PA-toets heeft afgelegd met het volgende resultaat:</div>'
       + '<div class="res"><div><strong>' + r.goed + ' / ' + r.n + '</strong>vragen goed</div><div><strong>' + r.pct + '%</strong>score</div><div><strong>' + esc(r.thema) + '</strong>module</div><div><strong>' + esc(r.bijgewerkt) + '</strong>vragenbank bijgewerkt</div></div>'
+      + '<p class="advies">' + ADVIES + '</p>'
       + '<div class="voet"><p>' + DISCLAIMER + '</p>' + STEMPEL + '</div>'
       + '</div></div>';
     return '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Certificaat PA-toets — ' + esc(g.naam) + '</title><style>' + css + '</style></head><body>' + body

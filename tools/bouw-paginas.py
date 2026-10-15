@@ -215,6 +215,7 @@ FAQ = [
  ('Levert de toets PE-punten op?', 'Nee. Onder de Wft bestaan geen PE-punten meer: je houdt je diploma’s geldig met PE-examens. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op. Lees meer in <a href="pe-punten-wft.html">PE-punten en Wft Permanent Actueel</a>.'),
  ('Wat kost het?', 'Niets. Alle modules en de toets zijn gratis voor alle adviseurs, zonder abonnement en zonder account. Wft Permanent Actueel is een activiteit van DFO BV.'),
  ('Hoe werkt de toets?', 'Je kiest een module en krijgt 7 willekeurige vragen. Na elk antwoord zie je de uitleg. Daarna maak je een certificaat met je resultaat, dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
+ ('Hoe vaak doe ik de toets?', 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Op de homepage en in de toets zet je met één klik een terugkerende herinnering in je agenda, met een link naar de toets. Bewaar elk certificaat in je personeelsdossier en lever het ook in bij je werkgever. Zo laat je zien dat je je kennis bijhoudt. Het certificaat vervangt je PE-examen niet.'),
  ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
  ('Wordt er iets van mij bewaard?', 'Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
  ('Welke modules heb ik nodig?', 'Dat hangt af van je diploma’s en het soort klantcontact. Gebruik de <a href="index.html#check">pakketcheck</a> op de homepage als hulpmiddel. Voor de precieze eisen die voor jou gelden, kijk je bij het CDFD of de AFM.'),
@@ -330,7 +331,9 @@ RING = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 
 inh = f'''<div class="paneel page" id="uitleg">
     <h2>Gratis voor alle adviseurs</h2>
     <p class="lead">Wft Permanent Actueel helpt je je vakkennis bij te houden. Oefen met PE-oefenvragen precies de Wft-modules die bij jouw diploma's en klantcontact horen, met uitleg bij elk antwoord. Zonder kosten, zonder abonnement en zonder account.</p>
+    <p class="antwoord"><strong>Doe de toets elk kwartaal</strong>, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.</p>
     <div class="acties"><a class="btn" href="toets.html">Start de kennistoets</a><a class="btn ghost" href="#modules">Bekijk de 9 modules</a></div>
+    <div data-agenda><p><a href="toets.html">Zet de toets elk kwartaal in je agenda</a></p></div>
     <h2>Wft, PE en Permanent Actueel</h2>
     <p>Als financieel adviseur moet je vakbekwaam blijven: je hebt een Wft-diploma en houdt je kennis bij met permanente educatie (PE). PE-punten bestaan onder de Wft niet meer; sinds 1 januari 2014 haal je binnen elke PE-periode één PE-examen per beroepskwalificatie, bij een door het CDFD erkend examen-instituut. De lopende PE-periode loopt tot en met 31 maart 2028. De PA-toets is een oefentoets en levert geen PE-punten of PE-examen op.</p>
     <p><a href="pe-punten-wft.html">Lees hoe PE, PE-punten en Permanent Actueel werken</a></p>
@@ -353,8 +356,8 @@ inh = f'''<div class="paneel page" id="uitleg">
     <div class="steps">
       <div class="step"><span class="num">01</span><h3>Kies je modules</h3><p>Op basis van je diploma's en type klantcontact.</p></div>
       <div class="step"><span class="num">02</span><h3>Oefen en leer</h3><p>7 vragen per toets, met uitleg bij alle vier de antwoorden.</p></div>
-      <div class="step"><span class="num">03</span><h3>Certificaat</h3><p>Mail je resultaat naar jezelf of print het als pdf.</p></div>
-      <div class="step"><span class="num">04</span><h3>Blijf bij</h3><p>Per module zie je wanneer de vragen zijn bijgewerkt.</p></div>
+      <div class="step"><span class="num">03</span><h3>Certificaat</h3><p>Bewaar het in je personeelsdossier en lever het in bij je werkgever.</p></div>
+      <div class="step"><span class="num">04</span><h3>Elk kwartaal</h3><p>Doe de toets elk kwartaal, zo blijf je permanent actueel.</p></div>
     </div>
 </div>
 </div>
@@ -370,7 +373,7 @@ pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
        intro='Kennis actueel, elk jaar weer. Oefen per Wft-module met vragen over wat er actueel is, met uitleg bij elk antwoord.',
        mast_extra='    <p class="gratis"><strong>Gratis voor alle adviseurs.</strong> Alle modules en de kennistoets, zonder kosten.</p>\n    ' + MARK.replace('<svg ', '<svg class="hero-mark" ', 1) + '\n',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>')
+       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>\n<script src="assets/js/agenda.js"></script>')
 s = open(R + 'index.html', encoding='utf-8').read()
 s = s.replace('<meta name="theme-color" content="#1462ad">', '<meta name="google-site-verification" content="3JKf334ow3hOt0pa1YDk1TUvE6EaKzWpUMmtlkBD6fo">\n<meta name="theme-color" content="#1462ad">', 1)
 open(R + 'index.html', 'w', encoding='utf-8').write(s)
@@ -382,7 +385,7 @@ pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Perm
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
        intro=f'Zeven vragen, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop maak je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/toets.js"></script>')
+       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/toets.js"></script>')
 
 # ---------- Wet- en regelgeving ----------
 bron = open(R + 'tools/wetgeving-bron.md', encoding='utf-8').read()
