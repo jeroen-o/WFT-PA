@@ -60,3 +60,11 @@ select{font-family:var(--font);font-size:15px;color:var(--text-strong);padding:9
 .snel{font-size:15px;margin:6px 0 10px!important}
 .linkknop{background:none;border:0;padding:6px 0;font:inherit;color:var(--blue);text-decoration:underline;cursor:pointer}
 .aantal{font-weight:700;font-size:17px;margin:6px 0 4px!important}
+
+/* Geslaagd: HOERA en confetti */
+.confetti{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:1000}
+.score .hoera{font-size:clamp(30px,7vw,52px);font-weight:800;line-height:1.1;color:var(--blue,#1462ad);margin:0 0 6px;letter-spacing:-.01em;animation:hoera .7s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes hoera{0%{transform:scale(.3) rotate(-6deg);opacity:0}70%{transform:scale(1.08) rotate(2deg);opacity:1}100%{transform:scale(1) rotate(0)}}
+@media (prefers-reduced-motion:reduce){.hoera{animation:none}}
+.team{margin:10px 0 0}
+.score{scroll-margin-top:16px}

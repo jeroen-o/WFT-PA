@@ -24,6 +24,7 @@
 
 ## Informatie
 
+- [Wat is er nieuw](https://pa-wft.nl/nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal
 - [Wet- en regelgeving](https://pa-wft.nl/wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst
 - [DFO Compliance](https://pa-wft.nl/compliance.html)
 - [DFO Opleidingen](https://pa-wft.nl/opleidingen.html)
