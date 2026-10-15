@@ -212,7 +212,7 @@ for i, mod in enumerate(MODS, 1):
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
            f'    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen leerstof voor een erkend PE-examen. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
     ld = {'@context': 'https://schema.org', '@graph': [
-        {'@type': 'Course', 'name': f'Wft {naam} — Permanent Actueel', 'description': f'Gratis PE-oefenvragen Wft {naam}: meerkeuzevragen met uitleg, een toets van 7 vragen en een certificaat. {tekst}',
+        {'@type': 'Course', 'name': f'Wft {naam} — Permanent Actueel', 'description': f'Gratis PE-oefenvragen Wft {naam}: meerkeuzevragen met uitleg, een toets van 7 vragen (5 extra per toegevoegde module) en een certificaat. {tekst}',
          'url': f'{SITE}module-{mid}.html', 'inLanguage': 'nl', 'isAccessibleForFree': True, 'educationalLevel': 'Beroepsniveau', 'teaches': d['onderwerpen'][:6],
          'dateModified': bij, 'provider': {'@type': 'Organization', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/'},
          'offers': {'@type': 'Offer', 'price': '0', 'priceCurrency': 'EUR', 'category': 'Gratis'},
@@ -230,7 +230,7 @@ FAQ = [
  ('Telt deze toets mee voor mijn PE?', 'Nee. De PA-toets is een oefentoets. Hij helpt je je kennis te testen en bij te houden, maar is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Je PE-examen leg je af bij een door het CDFD erkend examencentrum.'),
  ('Levert de toets PE-punten op?', 'Nee. Onder de Wft bestaan geen PE-punten meer: je houdt je diploma’s geldig met PE-examens. De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op. Lees meer in <a href="pe-punten-wft.html">PE-punten en Wft Permanent Actueel</a>.'),
  ('Wat kost het?', 'Niets. Alle modules en de toets zijn gratis voor alle adviseurs, zonder abonnement en zonder account. Wft Permanent Actueel is een activiteit van DFO BV.'),
- ('Hoe werkt de toets?', 'Je kiest een module en krijgt 7 willekeurige vragen. Na elk antwoord zie je de uitleg. Daarna maak je een certificaat met je resultaat, dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
+ ('Hoe werkt de toets?', 'Je kiest een of meer modules. Bij één module krijg je 7 willekeurige vragen, en voor elke module die je toevoegt 5 extra: 2 modules geven 12 vragen, 3 modules 17, alle 9 modules 47. Na elk antwoord zie je de uitleg. Daarna maak je een certificaat met je resultaat, dat je naar jezelf mailt of print. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
  ('Hoe vaak doe ik de toets?', 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Op de homepage en in de toets zet je met één klik een herinnering in je agenda: elk kwartaal, de komende 5 jaar, met een link naar de toets. Bewaar elk certificaat in je personeelsdossier en lever het ook in bij je werkgever. Zo laat je zien dat je je kennis bijhoudt. Het certificaat vervangt je PE-examen niet.'),
  ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
  ('Wordt er iets van mij bewaard?', 'Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
@@ -331,7 +331,7 @@ PE = [
  ('Wat gebeurt er als ik mijn PE niet op tijd haal?', 'Dan vervalt je adviesbevoegdheid voor die beroepskwalificatie. Je herstelt die door een bijzonder examen te halen of door de initiële module-examens opnieuw te doen. Tot dat moment mag je in dat domein niet zelfstandig adviseren. Plan je PE-examen dus niet op het laatste moment: richting het einde van een periode is het druk bij de examen-instituten.'),
  ('Telt een PE-training mee?', 'Voor de wettelijke adviesbevoegdheid telt alleen het gehaalde PE-examen; een training zonder examen houdt je diploma niet geldig. Trainingen kunnen wel helpen om permanent actueel te blijven en tellen soms mee voor registertitels.'),
  ('Levert de PA-toets PE-punten of een PE-examen op?', 'Nee. De PA-toets is een oefentoets. Je krijgt een certificaat met je resultaat, maar dat is geen bewijs van vakbekwaamheid en telt niet mee voor je PE.'),
- ('Hoe oefen ik gratis voor mijn PE-examen?', 'Op PA-WFT.nl staan per Wft-module meerkeuzevragen met uitleg. Elke toets bevat 7 willekeurige vragen. Je kunt ook een mix maken van alle modules uit je eigen pakket. Gratis voor alle adviseurs, zonder account.'),
+ ('Hoe oefen ik gratis voor mijn PE-examen?', 'Op PA-WFT.nl staan per Wft-module meerkeuzevragen met uitleg. Een toets over één module heeft 7 vragen; elke extra module voegt er 5 toe. Je kunt ook een mix maken van alle modules uit je eigen pakket. Gratis voor alle adviseurs, zonder account.'),
 ]
 inh = ('    <p class="lead antwoord"><strong>Kort antwoord:</strong> onder de Wft bestaan geen PE-punten meer. Sinds 1 januari 2014 houd je je adviesbevoegdheid geldig met één PE-examen per beroepskwalificatie binnen elke PE-periode; de lopende periode loopt tot en met 31 maart 2028. '
        'Wft Permanent Actueel helpt je daar gratis mee te oefenen; de toets zelf levert geen PE-punten of PE-examen op.</p>\n'
@@ -377,7 +377,7 @@ inh = f'''<div class="paneel page" id="uitleg">
     <h2>Zo werkt het</h2>
     <div class="steps">
       <div class="step"><span class="num">01</span><h3>Kies je modules</h3><p>Per beroepskwalificatie, of alle modules door elkaar.</p></div>
-      <div class="step"><span class="num">02</span><h3>Oefen en leer</h3><p>7 vragen per toets, met uitleg bij alle vier de antwoorden.</p></div>
+      <div class="step"><span class="num">02</span><h3>Oefen en leer</h3><p>7 vragen per module, 5 extra per module die je toevoegt, met uitleg bij alle vier de antwoorden.</p></div>
       <div class="step"><span class="num">03</span><h3>Certificaat</h3><p>Bewaar het in je personeelsdossier en lever het in bij je werkgever.</p></div>
       <div class="step"><span class="num">04</span><h3>Elk kwartaal</h3><p>Doe de toets elk kwartaal, zo blijf je permanent actueel.</p></div>
     </div>
@@ -389,7 +389,7 @@ ld_home = {'@context': 'https://schema.org', '@graph': [
  {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460', 'vatID': 'NL806480828B01', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'KvK', 'value': '32068727'},
   'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'}},
  {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Wft Permanent Actueel', 'url': SITE, 'inLanguage': 'nl', 'publisher': {'@id': SITE + '#dfo'},
-  'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen en een certificaat.'}]}
+  'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.'}]}
 pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs',
        'Wft Permanent Actueel: gratis voor alle adviseurs. PE-oefenvragen met uitleg voor alle 9 Wft-modules, van Basis tot Pensioen. Met certificaat.',
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
@@ -403,9 +403,9 @@ open(R + 'index.html', 'w', encoding='utf-8').write(s)
 # ---------- Kennistoets ----------
 inh = '<div class="paneel" id="paneel" aria-live="polite">\n      <noscript><p>Schakel JavaScript in om de toets te maken.</p></noscript>\n</div>'
 pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Permanent Actueel',
-       'Gratis Wft-kennistoets voor adviseurs: 7 vragen, elke keer anders, over de 9 Wft-modules. Met uitleg en certificaat.',
+       'Gratis Wft-kennistoets voor adviseurs: 7 vragen per module, 5 extra per toegevoegde module, elke keer anders. Met uitleg en certificaat.',
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
-       intro=f'Zeven vragen, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop maak je een certificaat.',
+       intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop maak je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
        scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/vragen.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/toets.js"></script>')
 
@@ -486,9 +486,9 @@ pagina('opleidingen.html', 'DFO Opleidingen: opleidingen en kennis voor financie
 
 # ---------- llms.txt ----------
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
-        '> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: ' + PEIL + '.', '',
+        '> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen (5 extra per toegevoegde module) en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: ' + PEIL + '.', '',
         '## PE en Permanent Actueel', '', f'- [PE-punten, PE-examens en Wft Permanent Actueel]({SITE}pe-punten-wft.html): onder de Wft bestaan geen PE-punten meer; sinds 1 januari 2014 houd je je adviesbevoegdheid geldig met één PE-examen per beroepskwalificatie binnen elke PE-periode (lopende periode: 1 april 2025 tot en met 31 maart 2028, volgens het CDFD). De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op.', '',
-        '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 willekeurige vragen, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.', '',
+        '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
 llms += ['', '## Informatie', '', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',

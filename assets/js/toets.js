@@ -1,6 +1,7 @@
 /* PA-toets in de stijl van de WFT Bieb-kennistoets. Vragen: assets/js/vragen.js, modules: assets/js/modules.js. */
 (function(){
-  var AANTAL = 7;
+  // 7 vragen bij één module, 5 extra per module die je toevoegt: 1 → 7, 2 → 12, 3 → 17, 9 → 47
+  function aantalVragen(n){ return 7 + 5 * (Math.max(1, n) - 1); }
   var MODS = window.PA_MODULES, VRAGEN = window.PA_VRAGEN || {};
   var paneel = document.getElementById('paneel');
   var keuze = 'alles', pakket = null, toets = [], stap = 0, laatste = null, gehad = {};
@@ -57,10 +58,12 @@
     MODS.forEach(function(m){ sel.append(el('option', {value:m.id}, 'Wft ' + m.naam)); });
     sel.value = keuze;
     var info = el('p', {class:'bijgewerkt', 'aria-live':'polite'}, bijgewerktTekst());
-    sel.addEventListener('change', function(){ keuze = sel.value; info.textContent = bijgewerktTekst(); });
+    function aantalTekst(){ return 'Je krijgt 7 willekeurige meerkeuzevragen bij één module, en 5 extra voor elke module die je toevoegt (2 modules: 12 vragen, 3 modules: 17). Met deze keuze: ' + aantalVragen(gekozenModules().length) + ' vragen. Na elk antwoord zie je bij alle vier de antwoorden waarom ze goed of fout zijn. Na afloop maak je een certificaat met je resultaat, dat je naar jezelf mailt of print.'; }
+    var uitlegAantal = el('p', {id:'aantalTekst', 'aria-live':'polite'}, aantalTekst());
+    sel.addEventListener('change', function(){ keuze = sel.value; info.textContent = bijgewerktTekst(); uitlegAantal.textContent = aantalTekst(); });
     paneel.replaceChildren(el('div', {class:'start'},
       el('h2', null, 'Test je kennis'),
-      el('p', null, 'Je krijgt ' + AANTAL + ' willekeurige meerkeuzevragen. Na elk antwoord zie je bij alle vier de antwoorden waarom ze goed of fout zijn. Na afloop maak je een certificaat met je resultaat, dat je naar jezelf mailt of print.'),
+      uitlegAantal,
       el('div', {class:'keuze'}, el('label', {for:'module'}, 'Module'), sel),
       info,
       el('p', {class:'advies'}, 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.'),
@@ -70,13 +73,21 @@
   }
 
   function start(){
-    var bank = [];
-    gekozenModules().forEach(function(m){ (VRAGEN[m.id] || []).forEach(function(q, i){ bank.push({q:q, module:m, sleutel:m.id + ':' + i}); }); });
-    var nieuw = hussel(bank.filter(function(b){ return !gehad[b.sleutel]; }));
-    if(nieuw.length < AANTAL){ bank.forEach(function(b){ delete gehad[b.sleutel]; }); nieuw = hussel(bank); }
-    toets = nieuw.slice(0, AANTAL).map(function(b){
-      gehad[b.sleutel] = 1;
-      return {module:b.module, vraag:b.q[0], opties:hussel(b.q[1].map(function(a, k){ return {t:a[0], u:a[1], juist:k === 0}; })), keuze:null};
+    var ms = gekozenModules(), totaal = aantalVragen(ms.length);
+    // Per module 5 vragen (bij één module 7); de rest gaat naar willekeurige modules, zodat elke module meedoet
+    var basis = ms.length === 1 ? totaal : 5, quota = {};
+    ms.forEach(function(m){ quota[m.id] = basis; });
+    hussel(ms).slice(0, totaal - basis * ms.length).forEach(function(m){ quota[m.id]++; });
+    var gekozen = [];
+    ms.forEach(function(m){
+      var bank = (VRAGEN[m.id] || []).map(function(q, i){ return {q:q, module:m, sleutel:m.id + ':' + i}; });
+      var nieuw = hussel(bank.filter(function(x){ return !gehad[x.sleutel]; }));
+      if(nieuw.length < quota[m.id]){ bank.forEach(function(x){ delete gehad[x.sleutel]; }); nieuw = hussel(bank); }
+      gekozen = gekozen.concat(nieuw.slice(0, quota[m.id]));
+    });
+    toets = hussel(gekozen).map(function(x){
+      gehad[x.sleutel] = 1;
+      return {module:x.module, vraag:x.q[0], opties:hussel(x.q[1].map(function(a, k){ return {t:a[0], u:a[1], juist:k === 0}; })), keuze:null};
     });
     stap = 0;
     toonVraag();
