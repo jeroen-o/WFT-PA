@@ -24,6 +24,7 @@ p{margin:0;text-wrap:pretty}
 h1{font-size:clamp(44px,6vw,80px);line-height:.98;letter-spacing:-.02em}
 h2{font-size:44px;letter-spacing:-.01em}
 .lead{font-size:20px;line-height:1.5;max-width:520px}
+.gratis{display:inline-block;align-self:flex-start;background:var(--blue-100);border-left:6px solid var(--blue);padding:10px 16px;font-size:18px;line-height:1.4}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .btn{display:flex;justify-content:space-between;gap:16px;padding:14px 20px;font-weight:600;font-size:16px;text-decoration:none;border:0;border-radius:0;font-family:inherit;cursor:pointer}
 .btn-primary{background:var(--blue);color:#fff;min-width:220px}.btn-primary:hover{background:var(--blue-dark);color:#fff}
@@ -56,4 +57,7 @@ h2{font-size:44px;letter-spacing:-.01em}
 .poster{background:var(--blue);color:#fff;padding:72px var(--pad);display:flex;flex-direction:column;gap:24px}
 .poster h2{font-size:clamp(40px,5vw,64px);line-height:1;max-width:900px}
 .foot{padding:24px var(--pad);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px}
+.module .upd{font-size:14px;color:var(--blue-dark);margin-top:auto;padding-top:8px}
+.mod-link{font-weight:700;text-decoration:none}
+.foot-dfo{display:flex;align-items:center;gap:16px;flex-wrap:wrap}.foot-dfo img{height:40px;width:auto}
 @media (max-width:700px){:root{--pad:24px}.grid2>.cell:first-child{border-right:0;border-bottom:var(--rule)}.step{border-right:0;border-bottom:var(--rule)}.step:last-child{border-bottom:0}}
