@@ -368,7 +368,7 @@ inh = f'''<div class="paneel page" id="uitleg">
     </div>
 </div>
 </div>
-<section class="poster"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></section>
+<section class="poster"><div class="wrap"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
 <div class="wrap">'''
 ld_home = {'@context': 'https://schema.org', '@graph': [
  {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460',
