@@ -13,6 +13,7 @@
     var chosen=MODS.filter(function(_,i){return on(i);});
     document.getElementById('count').textContent=chosen.length;
     document.getElementById('countLabel').textContent=chosen.length===1?'1 module':chosen.length+' modules';
+    var start=document.getElementById('startToets');if(start)start.href='toets.html#'+(chosen.length>1?'mix='+chosen.map(function(m){return m[3];}).join(','):chosen[0][3]);
     document.getElementById('chosen').innerHTML=chosen.map(function(m){return '<li>Wft '+m[0]+'</li>';}).join('');
   }
   render();

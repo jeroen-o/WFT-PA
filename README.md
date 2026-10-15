@@ -16,7 +16,9 @@ index.html                  homepage met modules en pakket-check
 toets.html                  PA-toets: 7 vragen per module uit 100, certificaat om naar jezelf te mailen
 module-<id>.html            per module: wat komt aan bod, actueel, bronnen
 vragen.html, over.html, privacy.html, 404.html
-sitemap.xml, robots.txt
+sitemap.xml, robots.txt, llms.txt
+gebruiksvoorwaarden.html, klachten.html
+tools/bouw-paginas.py       bouwt de vaste pagina's opnieuw (zie hieronder)
 assets/css/style.css        stijlen (lettertype Archivo lokaal in assets/fonts, OFL-licentie)
 assets/css/toets.css        stijlen van de toets
 assets/js/modules.js        de 9 modules met datum "bijgewerkt"
@@ -32,8 +34,19 @@ Let op: de repository heeft een `.nojekyll`, dus elk bestand in de repository ko
 
 ## Een module bijwerken
 1. Pas de vragen van de module aan in `assets/js/vragen.js`.
-2. Zet in `assets/js/modules.js` de datum `bijgewerkt` op vandaag; die verschijnt op de homepage, de toets en het certificaat.
-3. Werk zo nodig het blok "Actueel" op `module-<id>.html` bij.
+2. Zet in `assets/js/modules.js` de datum `bijgewerkt` op vandaag en zet bovenaan `log` een regel met wat er veranderd is.
+3. Werk zo nodig het blok "Actueel" bij in `tools/bouw-paginas.py` (variabele `M`).
+4. Draai `python3 tools/bouw-paginas.py` (vereist Node.js). Dat bouwt de modulepagina's, veelgestelde vragen,
+   privacy, over, gebruiksvoorwaarden, klachten, 404, sitemap, robots en llms.txt opnieuw, en zet de header en
+   footer van `index.html` en `toets.html` gelijk.
+
+## Onderhoudskalender
+| Wanneer | Wat |
+|---|---|
+| Doorlopend | Signalen (AFM, Staatscourant, Rechtspraak) beoordelen via het interne signaleringsoverzicht; relevante wijzigingen verwerken zoals hierboven |
+| Bij een foutmelding | Vraag controleren en aanpassen; datum en log van de module bijwerken |
+| December/januari | Blokken "Actueel" nalopen: TRHK, NHG Voorwaarden & Normen (kostengrens), zorgverzekering (eigen risico, premies), box 3; peildatum `PEIL` in het bouwscript aanpassen |
+| Jaarlijks | Externe links op de modulepagina's controleren; privacyverklaring en gebruiksvoorwaarden nalezen |
 
 ## Logo's
 | Bestand | Gebruik |
