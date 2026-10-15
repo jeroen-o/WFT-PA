@@ -28,3 +28,5 @@ button.btn-outline{background:#fff}
 .cert dt{font-weight:700}.cert dd{margin:0}
 .cert .klein{font-size:13px;line-height:1.5;color:#4a4745;border-top:1px solid var(--blue-200);padding-top:12px}
 @media (max-width:700px){.cert{padding:24px}.cert dl{grid-template-columns:1fr}.cert dd{margin-bottom:6px}}
+.module.mix{background:var(--blue-tint)}
+.meld{font-size:14px}

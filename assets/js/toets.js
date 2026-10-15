@@ -21,12 +21,28 @@
     b.addEventListener('click',function(){start(m);});
     grid.appendChild(b);
   });
+  var mixKnop=document.createElement('button');
+  mixKnop.type='button';mixKnop.className='module kies mix';
+  mixKnop.innerHTML='<span class="nr">Mix</span><h3>Alle modules door elkaar</h3><p>7 vragen uit alle 9 modules. Wil je alleen jouw pakket? Kies je diploma\'s in de <a href="index.html#check">pakketcheck</a>.</p><p class="meta">900 vragen</p>';
+  mixKnop.addEventListener('click',function(e){if(e.target.tagName==='A')return;start(maakMix(MODS.map(function(m){return m.id;})));});
+  grid.appendChild(mixKnop);
+
+  // Een toets over meerdere modules: toets.html#mix=basis,hypothecair-krediet
+  function maakMix(ids){
+    var ms=MODS.filter(function(m){return ids.indexOf(m.id)>-1&&(VRAGEN[m.id]||[]).length;});
+    if(!ms.length)return null;
+    if(ms.length===1)return ms[0];
+    var oudste=ms.map(function(m){return m.bijgewerkt;}).sort()[0];
+    return {id:'mix='+ms.map(function(m){return m.id;}).join(','),mix:ms,label:ms.length===MODS.length?'PA-mix, alle modules':'PA-mix: '+ms.map(function(m){return m.naam;}).join(', '),bijgewerkt:oudste};
+  }
+  function label(m){return m.label||('Wft '+m.naam);}
 
   function start(m){
     mod=m;nr=0;antwoorden=[];
-    reeks=hussel(VRAGEN[m.id]).slice(0,AANTAL).map(function(q){
+    var bank=(m.mix||[m]).reduce(function(a,x){return a.concat(VRAGEN[x.id].map(function(q){return {q:q,module:x.naam};}));},[]);
+    reeks=hussel(bank).slice(0,AANTAL).map(function(item){var q=item.q;
       var opties=hussel(q[1].map(function(a,i){return {tekst:a[0],uitleg:a[1],juist:i===0};}));
-      return {vraag:q[0],opties:opties};
+      return {vraag:q[0],opties:opties,module:item.module};
     });
     if(location.hash!=='#'+m.id)history.replaceState(null,'','#'+m.id);
     vraag();
@@ -35,7 +51,7 @@
   // Stap 2: vragen
   function vraag(){
     var q=reeks[nr];
-    $('vraagKop').textContent='Wft '+mod.naam+' · vraag '+(nr+1)+' van '+AANTAL;
+    $('vraagKop').textContent=label(mod)+' · vraag '+(nr+1)+' van '+AANTAL;
     $('voortgangBalk').style.width=(nr/AANTAL*100)+'%';
     $('vraagTekst').textContent=q.vraag;
     $('uitleg').innerHTML='';$('volgende').hidden=true;
@@ -54,6 +70,8 @@
     antwoorden.push({vraag:q.vraag,gekozen:gekozen,juist:juist});
     [].forEach.call($('opties').children,function(b,j){b.disabled=true;if(q.opties[j].juist)b.classList.add('goed');else if(j===i)b.classList.add('fout');});
     $('uitleg').innerHTML=(gekozen.juist?'<p><strong>Goed.</strong> '+esc(gekozen.uitleg)+'</p>':'<p><strong>Niet goed.</strong> '+esc(gekozen.uitleg)+'</p><p><strong>Juist antwoord:</strong> '+esc(juist.tekst)+'. '+esc(juist.uitleg)+'</p>');
+    var meld='mailto:info@dfobv.nl?subject='+encodeURIComponent('Fout in PA-toets: Wft '+q.module)+'&body='+encodeURIComponent('Vraag: '+q.vraag+'\n\nGegeven als juist antwoord: '+juist.tekst+'\n\nWat klopt er volgens mij niet:\n');
+    $('uitleg').insertAdjacentHTML('beforeend','<p class="meld"><a href="'+esc(meld)+'">Klopt deze vraag niet? Meld het</a></p>');
     var v=$('volgende');v.hidden=false;v.innerHTML=(nr+1<AANTAL?'Volgende vraag':'Bekijk je uitslag')+' <span>→</span>';v.focus();
   }
   $('volgende').addEventListener('click',function(){nr++;nr<AANTAL?vraag():uitslag();});
@@ -62,7 +80,7 @@
   function score(){return antwoorden.filter(function(a){return a.gekozen.juist;}).length;}
   function uitslag(){
     var s=score(),ok=s>=GESLAAGD;
-    $('uitslagKop').textContent='Wft '+mod.naam;
+    $('uitslagKop').textContent=label(mod);
     $('uitslagTitel').textContent=s+' van '+AANTAL+' goed';
     $('uitslagTekst').textContent=ok?'Geslaagd. Vul je naam en e-mailadres in om je certificaat te maken.':'Voor een certificaat heb je er minimaal '+GESLAAGD+' van de '+AANTAL+' goed nodig. Probeer het nog eens; je krijgt nieuwe vragen.';
     $('certForm').hidden=!ok;$('formFout').textContent='';
@@ -84,7 +102,7 @@
     if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){$('formFout').textContent='Vul een geldig e-mailadres in.';$('email').focus();return;}
     var d=new Date(),iso=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
     var code='';for(var i=0;i<6;i++)code+='ABCDEFGHJKLMNPQRSTUVWXYZ23456789'[rnd(32)];
-    cert={naam:naam,email:email,module:'Wft '+mod.naam,bijgewerkt:PA_DATUM(mod.bijgewerkt),score:score(),datum:PA_DATUM(iso),nummer:'PA-'+iso.replace(/-/g,'')+'-'+code};
+    cert={naam:naam,email:email,module:label(mod),bijgewerkt:PA_DATUM(mod.bijgewerkt),score:score(),datum:PA_DATUM(iso),nummer:'PA-'+iso.replace(/-/g,'')+'-'+code};
     $('certVoorbeeld').innerHTML=certHtml(cert,'assets/logo/dfo-logo.png');
     $('mailKnop').href='mailto:'+encodeURIComponent(email)+'?subject='+encodeURIComponent('Certificaat PA-toets '+cert.module+' — '+cert.nummer)+'&body='+encodeURIComponent(certTekst(cert));
     toon('stap-cert','certTitel');
@@ -123,6 +141,6 @@
   });
 
   // Direct naar een module via toets.html#hypothecair-krediet
-  var h=location.hash.slice(1),m=MODS.filter(function(x){return x.id===h;})[0];
-  if(m&&(VRAGEN[m.id]||[]).length>=AANTAL)start(m);
+  var h=location.hash.slice(1),m=h.indexOf('mix=')===0?maakMix(h.slice(4).split(',')):MODS.filter(function(x){return x.id===h;})[0];
+  if(m&&(m.mix||(VRAGEN[m.id]||[]).length>=AANTAL))start(m);
 })();
