@@ -200,7 +200,7 @@
   }
 
   var ADVIES = 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.';
-  var DISCLAIMER = 'Dit certificaat bevestigt deelname aan een oefentoets van Wft Permanent Actueel (PA-WFT.nl), een activiteit van DFO BV, De Wel 14–16, 3871 MV Hoevelaken. Het is geen Wft-diploma, geen PE-examen en levert geen PE-punten op. Het certificaat wordt niet centraal geregistreerd.';
+  var DISCLAIMER = 'Dit certificaat bevestigt deelname aan een oefentoets van Wft Permanent Actueel (PA-WFT.nl), een activiteit van DFO BV (KvK 32068727), De Wel 14–16, 3871 MV Hoevelaken. Het is geen Wft-diploma, geen PE-examen en levert geen PE-punten op. Het certificaat wordt niet centraal geregistreerd.';
 
   function certTekst(g, metVragen){
     var r = laatste;

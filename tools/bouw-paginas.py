@@ -33,7 +33,8 @@ MELDING = ('<div class="melding" role="note"><strong>Let op.</strong> De PA-toet
            'Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
 FOOTER = ('<footer>\n  <div class="wrap foot-grid">\n  <div class="foot-tekst">\n'
-    '    <div>Wft Permanent Actueel is een activiteit van DFO BV · De Wel 14–16, 3871 MV Hoevelaken · <a href="tel:+31332580460">033 258 04 60</a> · <a href="mailto:info@dfobv.nl">info@dfobv.nl</a></div>\n'
+    '    <div>Wft Permanent Actueel is een activiteit van DFO BV · De Wel 14–16, 3871 MV Hoevelaken · <a href="tel:+31332580460">033 258 04 60</a> · <a href="mailto:info@dfobv.nl">info@dfobv.nl</a> · <a href="https://www.dfobv.nl/contact/" target="_blank" rel="noopener">Contact</a></div>\n'
+    '    <div class="foot-disc">KvK 32068727 · btw NL806480828B01</div>\n'
     '    <nav class="foot-links" aria-label="Voettekst"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a>'
     '<a href="privacy.html">Privacy en cookies</a><a href="vragen.html">Veelgestelde vragen</a><a href="https://www.dfobv.nl/ons-team/" target="_blank" rel="noopener">Ons team</a>'
     '<a href="https://www.dfobv.nl/product/nieuwsbrief-wft/" target="_blank" rel="noopener">Nieuwsbrief Wft</a></nav>\n'
@@ -250,7 +251,7 @@ pagina('privacy.html', 'Privacy — Wft Permanent Actueel', 'Wft Permanent Actue
 # ---------- Over en verantwoording ----------
 inh = f'''    <p class="lead">Wft Permanent Actueel is een gratis oefenomgeving voor financieel adviseurs: per Wft-module oefenvragen met uitleg, om je kennis te testen en bij te houden.</p>
     <h2>Wie zit erachter</h2>
-    <p>Wft Permanent Actueel is een activiteit van DFO BV, dienstverlening voor financiële ondernemers. DFO BV, De Wel 14–16, 3871 MV Hoevelaken, telefoon <a href="tel:+31332580460">033 258 04 60</a>, e-mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>, <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">www.dfobv.nl</a>. Maak kennis met <a href="https://www.dfobv.nl/ons-team/" target="_blank" rel="noopener">ons team</a>.</p>
+    <p>Wft Permanent Actueel is een activiteit van DFO BV, dienstverlening voor financiële ondernemers. DFO BV, De Wel 14–16, 3871 MV Hoevelaken, telefoon <a href="tel:+31332580460">033 258 04 60</a>, e-mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>, <a href="https://www.dfobv.nl/contact/" target="_blank" rel="noopener">contactpagina</a>. KvK 32068727, btw-nummer NL806480828B01. Maak kennis met <a href="https://www.dfobv.nl/ons-team/" target="_blank" rel="noopener">ons team</a>.</p>
     <h2>Wat het wel en niet is</h2>
     <ul>
       <li>Het is een oefentoets. Het is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid.</li>
@@ -368,10 +369,10 @@ inh = f'''<div class="paneel page" id="uitleg">
     </div>
 </div>
 </div>
-<section class="poster"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></section>
+<section class="poster"><div class="wrap"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
 <div class="wrap">'''
 ld_home = {'@context': 'https://schema.org', '@graph': [
- {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460',
+ {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460', 'vatID': 'NL806480828B01', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'KvK', 'value': '32068727'},
   'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'}},
  {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Wft Permanent Actueel', 'url': SITE, 'inLanguage': 'nl', 'publisher': {'@id': SITE + '#dfo'},
   'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen en een certificaat.'}]}
@@ -477,7 +478,7 @@ llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
 llms += ['', '## Informatie', '', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
-         '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/']
+         '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
 open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
 
 # ---------- sitemap en robots ----------
