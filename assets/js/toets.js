@@ -160,12 +160,14 @@
     var mail = el('input', {type:'email', id:'certmail', autocomplete:'email', required:'', maxlength:'120'});
     var geb = el('input', {type:'date', id:'certgeb', autocomplete:'bday', required:'', max:vandaag(), min:'1925-01-01'});
     var bedrijf = el('input', {type:'text', id:'certbedrijf', autocomplete:'organization', maxlength:'100'});
-    function gegevens(){ return {naam:naam.value.trim(), mail:mail.value.trim(), geb:geb.value, bedrijf:bedrijf.value.trim()}; }
+    var werkgever = el('input', {type:'email', id:'certwerkgever', maxlength:'120'});
+    function gegevens(){ return {naam:naam.value.trim(), mail:mail.value.trim(), geb:geb.value, bedrijf:bedrijf.value.trim(), werkgever:werkgever.value.trim()}; }
     function controleer(metMail){
       var g = gegevens();
       if(!g.naam){ status.textContent = 'Vul je naam in.'; naam.focus(); return null; }
       if(!/^\d{4}-\d{2}-\d{2}$/.test(g.geb) || g.geb > vandaag() || g.geb < '1925-01-01'){ status.textContent = 'Vul een geldige geboortedatum in.'; geb.focus(); return null; }
       if(metMail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g.mail)){ status.textContent = 'Vul een geldig e-mailadres in.'; mail.focus(); return null; }
+      if(g.werkgever && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g.werkgever)){ status.textContent = 'Vul een geldig e-mailadres van je werkgever in, of laat het veld leeg.'; werkgever.focus(); return null; }
       return g;
     }
     var status = el('div', {class:'certstatus', id:'certStatus', 'aria-live':'polite'});
@@ -177,6 +179,7 @@
       el('div', {class:'veld'}, el('label', {for:'certgeb'}, 'Geboortedatum'), geb),
       el('div', {class:'veld'}, el('label', {for:'certmail'}, 'Je e-mailadres'), mail),
       el('div', {class:'veld'}, el('label', {for:'certbedrijf'}, 'Bedrijf waar je werkt (optioneel)'), bedrijf),
+      el('div', {class:'veld'}, el('label', {for:'certwerkgever'}, 'E-mailadres werkgever, voor een kopie (optioneel)'), werkgever),
       el('div', {class:'acties', style:'margin-top:12px'},
         el('button', {class:'btn', type:'submit'}, 'Mail mijn certificaat naar mezelf'),
         el('button', {class:'btn ghost', type:'button', id:'printKnop', onclick:function(){ status.className = 'certstatus'; var g = controleer(false); if(!g) return; g.uitgegeven = nu(); g.verstuurd = false; printCertificaat(g); }}, 'Certificaat bekijken of printen')),
@@ -189,7 +192,7 @@
       form.setAttribute('data-mailto', href);
       window.location.href = href;
       status.className = 'certstatus klaar';
-      status.textContent = 'Je e-mailprogramma is geopend met je certificaat, gericht aan ' + g.mail + '. Klik daar op Verzenden. Wil je ook de opgemaakte versie? Kies dan "Certificaat bekijken of printen".';
+      status.textContent = 'Je e-mailprogramma is geopend met je certificaat, gericht aan ' + g.mail + (g.werkgever ? ', met een kopie aan ' + g.werkgever : '') + '. Klik daar op Verzenden. Wil je ook de opgemaakte versie? Kies dan "Certificaat bekijken of printen".';
     });
     return form;
   }
@@ -204,7 +207,7 @@
   }
   function mailHref(g){
     var onderwerp = 'Certificaat PA-toets ' + laatste.nummer + ' — ' + g.naam + ' (' + laatste.goed + '/' + laatste.n + ')';
-    var basis = 'mailto:' + encodeURIComponent(g.mail) + '?subject=' + encodeURIComponent(onderwerp) + '&body=';
+    var basis = 'mailto:' + encodeURIComponent(g.mail) + '?' + (g.werkgever ? 'cc=' + encodeURIComponent(g.werkgever) + '&' : '') + 'subject=' + encodeURIComponent(onderwerp) + '&body=';
     return basis + encodeURIComponent(certTekst(g, false));
   }
 
