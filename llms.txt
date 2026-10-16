@@ -8,7 +8,7 @@
 
 ## Toets
 
-- [PA-toets](https://pa-wft.nl/toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.
+- [PA-toets](https://pa-wft.nl/toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg bij alle vier de antwoorden, na afloop een certificaat (eigen verklaring, geen PE-bewijs), foute vragen opnieuw oefenen en oefenen per CDFD-toetsterm.
 
 ## Modules
 
@@ -22,8 +22,26 @@
 - [Wft Pensioen](https://pa-wft.nl/module-pensioen.html): Voor medewerkers en adviseurs in de pensioendienstverlening. Laatst bijgewerkt 16 oktober 2026.
 - [Wft Zorgverzekering](https://pa-wft.nl/module-zorgverzekering.html): (Aanvullende) zorgverzekeringen. Laatst bijgewerkt 16 oktober 2026.
 
+## Belangrijke datums
+
+- 30 december 2024: MiCA volledig van toepassing. Aanbieders van cryptodiensten in de EU hebben een vergunning nodig.
+- 1 januari 2025: Handhaving schijnzelfstandigheid. De Belastingdienst handhaaft weer op de beoordeling van arbeidsrelaties.
+- 17 januari 2025: DORA van toepassing. Europese regels voor digitale operationele weerbaarheid van financiële instellingen.
+- 1 april 2025: Start PE-periode 2025–2028. Binnen deze periode haal je per beroepskwalificatie één PE-examen.
+- 1 januari 2026: DAC8 van toepassing. Cryptodienstverleners in de EU geven klantgegevens door aan de belastingdienst.
+- 1 april 2026: Nieuwe toetstermen CDFD. Vernieuwde eind- en toetstermen voor alle Wft-modules.
+- 20 november 2026: CCD II gaat gelden. De herziene richtlijn consumentenkrediet: strengere kredietwaardigheidstoets, ook BNPL en lease met koopoptie.
+- 9 december 2026: Omzetting nieuwe richtlijn productaansprakelijkheid. Uiterste datum voor de Nederlandse wet; software telt als product.
+- 1 januari 2027: Jaarlijkse wijzigingen. Nieuwe jaarversies van onder meer de leennormen, NHG-normen, zorgpremies en eigen risico, en fiscale bedragen.
+- 10 juli 2027: EU-witwasverordening (AMLR) gaat gelden. De kernregels voor cliëntenonderzoek komen in een rechtstreeks werkende EU-verordening.
+- 1 januari 2028: Uiterste datum overgang nieuw pensioenstelsel. Pensioenregelingen moeten zijn overgegaan naar het stelsel van de Wet toekomst pensioenen.
+- 31 maart 2028: Einde PE-periode 2025–2028. Uiterste datum om je PE-examen per beroepskwalificatie te halen.
+
 ## Informatie
 
+- [Begrippenlijst Wft](https://pa-wft.nl/begrippen.html): korte uitleg van de belangrijkste begrippen uit de Wft en permanente educatie
+- [Zoeken](https://pa-wft.nl/zoeken.html?q=): doorzoek de site
+- [Volledige tekst voor taalmodellen](https://pa-wft.nl/llms-full.txt)
 - [Wat is er nieuw](https://pa-wft.nl/nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal
 - [Wet- en regelgeving](https://pa-wft.nl/wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst
 - [DFO Compliance](https://pa-wft.nl/compliance.html)
