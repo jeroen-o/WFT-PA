@@ -4,7 +4,7 @@ gebruiksvoorwaarden, klachten, 404, sitemap, robots en llms.txt, plus header en 
 Gebruik (vanuit de map van de repository):  python3 tools/bouw-paginas.py
 Vereist Node.js om assets/js/modules.js te lezen.
 """
-import re, html, os, json, subprocess, urllib.parse
+import re, html, os, json, subprocess, urllib.parse, unicodedata
 R = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 SITE = 'https://pa-wft.nl/'
 PEIL = '15 oktober 2026'
@@ -15,12 +15,14 @@ MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 
         '<text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg>')
 
 NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('wetgeving.html', 'Wet- en regelgeving'),
-       ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV')]
+       ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV'), ('zoeken.html', 'Zoeken')]
 
 def header(actief=''):
-    links = ''.join('<a href="%s"%s>%s</a>' % (h, ' aria-current="page"' if h == actief else '', t) for h, t in NAV)
+    loep = '<svg class="loep" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
+    links = ''.join('<a href="%s"%s>%s%s</a>' % (h, ' aria-current="page"' if h == actief else '', loep if h == 'zoeken.html' else '', t) for h, t in NAV)
     return ('<a class="skip" href="#inhoud">Naar de inhoud</a>\n<div class="topbar">\n  <div class="wrap">\n'
             '    <a class="logo" href="index.html" aria-label="Wft Permanent Actueel — home"' + (' aria-current="page"' if actief == 'index.html' else '') + '><img src="assets/logo/pa-wft-logo-horizontal.png" width="144" height="60" alt="Wft Permanent Actueel — PA-WFT.nl"></a>\n'
+            '    <a class="zoekknop" href="zoeken.html" aria-label="Zoeken op de site">' + loep.replace('width="16" height="16"', 'width="24" height="24"') + '</a>\n'
             '    <nav class="topnav" aria-label="Hoofdmenu">' + links + '</nav>\n'
             '  </div>\n</div>')
 
@@ -47,7 +49,8 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '<div class="foot-balk-tekst"><nav class="foot-links" aria-label="Voorwaarden"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a><a href="privacy.html">Privacy en cookies</a></nav>'
     '<p class="foot-disc">© 2026 DFO BV. Wft Permanent Actueel is een activiteit van DFO BV. Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p></div>'
     '<a class="foot-logo" href="https://www.dfobv.nl/"' + EXT + ' aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a>'
-    '</div></div>\n</footer>')
+    '</div></div>\n</footer>\n'
+    '<script>(function(){function o(){var h=location.hash.slice(1),e=h&&document.getElementById(decodeURIComponent(h));if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView();}}o();addEventListener("hashchange",o);})();</script>')
 
 def head(titel, omschrijving, pad, extra=''):
     return ('<!doctype html>\n<html lang="nl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
@@ -106,7 +109,52 @@ def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', l
          + ('\n<main id="inhoud" class="kaal">\n' + inhoud + '\n<div class="wrap">' + MELDING + '</div>\n</main>\n' if kaal else
             '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n') + FOOTER + scripts + '\n</body>\n</html>\n')
     if kaal: s = s.replace('<body>', '<body class="breed">', 1)
+    s = kop_ids(s)
+    if pad not in ('404.html', 'zoeken.html'): zoek_indexeer(pad, titel, omschrijving, s)
     open(R + pad, 'w', encoding='utf-8').write(versie(link_cdfd(s)))
+
+# ---------- zoeken: ids op tussenkoppen en een zoekindex per sectie (alles in de browser, geen database) ----------
+ZOEK = []
+def slug(t):
+    t = re.sub(r'<[^>]+>', '', html.unescape(t)).lower()
+    t = unicodedata.normalize('NFKD', t).encode('ascii', 'ignore').decode()
+    return re.sub(r'[^a-z0-9]+', '-', t).strip('-')[:60] or 'sectie'
+def kop_ids(s):
+    gezien = set(re.findall(r'\sid="([^"]+)"', s))
+    def zet(m):
+        if ' id=' in m.group(1): return m.group(0)
+        b = slug(m.group(2)); i = b; n = 2
+        while i in gezien: i = f'{b}-{n}'; n += 1
+        gezien.add(i)
+        return f'<h2{m.group(1)} id="{i}">{m.group(2)}</h2>'
+    s = re.sub(r'<h2([^>]*)>(.*?)</h2>', zet, s, flags=re.S)
+    def faq(m):
+        b = 'vraag-' + slug(m.group(1)); i = b; n = 2
+        while i in gezien: i = f'{b}-{n}'; n += 1
+        gezien.add(i)
+        return f'<details class="faq" id="{i}"><summary>{m.group(1)}</summary>'
+    return re.sub(r'<details class="faq"><summary>(.*?)</summary>', faq, s, flags=re.S)
+def platte_tekst(h):
+    h = re.sub(r'(?is)<(script|style|svg|nav|form|button)[^>]*>.*?</\1>', ' ', h)
+    h = re.sub(r'(?i)<br\s*/?>|</(p|li|h[1-6]|div|dt|dd|tr)>', ' ', h)
+    return ' '.join(html.unescape(re.sub(r'<[^>]+>', ' ', h)).split())
+def zoek_indexeer(pad, titel, omschrijving, s):
+    m = re.search(r'(?s)<main id="inhoud"[^>]*>(.*)</main>', s)
+    if not m: return
+    main = m.group(1).replace(MELDING, '')
+    paginatitel = re.sub(r'\s*[|—].*$', '', titel).strip()
+    url = '' if pad == 'index.html' else pad
+    # losse veelgestelde vragen als eigen zoekresultaat
+    for fid, vraag, antw in re.findall(r'<details class="faq" id="([^"]+)"><summary>(.*?)</summary>(.*?)</details>', main, flags=re.S):
+        ZOEK.append({'u': f'{url}#{fid}', 'p': paginatitel, 'h': platte_tekst(vraag), 'x': platte_tekst(antw)[:3000]})
+    main = re.sub(r'<details class="faq".*?</details>', ' ', main, flags=re.S)
+    delen = re.split(r'(<h2[^>]*>.*?</h2>)', main, flags=re.S)
+    ZOEK.append({'u': url, 'p': paginatitel, 'h': '', 'x': (omschrijving + ' ' + platte_tekst(delen[0]))[:3000]})
+    for i in range(1, len(delen), 2):
+        km = re.match(r'<h2[^>]*id="([^"]+)"[^>]*>(.*?)</h2>', delen[i], re.S)
+        if not km: continue
+        tekst = platte_tekst(delen[i + 1] if i + 1 < len(delen) else '')
+        if tekst: ZOEK.append({'u': f'{url}#{km.group(1)}', 'p': paginatitel, 'h': platte_tekst(km.group(2)), 'x': tekst[:8000]})
 
 # ---------- Modules ----------
 WT = 'https://wetten.overheid.nl/'
@@ -481,6 +529,7 @@ inh = f'''<div class="paneel page" id="uitleg">
     <p class="antwoord"><strong>Doe de toets elk kwartaal</strong>, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.</p>
     <div class="acties"><a class="btn" href="toets.html">Start de kennistoets</a><a class="btn ghost" href="#modules">Bekijk de 9 modules</a></div>
     <div data-agenda><p><a href="toets.html">Zet de toets de komende 5 jaar elk kwartaal in je agenda</a></p></div>
+    <form class="zoekform homezoek" action="zoeken.html" method="get" role="search"><label for="homezoek">Zoek op de site</label><div class="zoekrij"><input type="search" id="homezoek" name="q" placeholder="Bijvoorbeeld: CCD II, PE-examen, box 3" maxlength="80"><button class="btn" type="submit">Zoeken</button></div></form>
     <h2>Wft, PE en Permanent Actueel</h2>
     <p>Als financieel adviseur moet je vakbekwaam blijven: je hebt een Wft-diploma en houdt je kennis bij met permanente educatie (PE). PE-punten bestaan onder de Wft niet meer; sinds 1 januari 2014 haal je binnen elke PE-periode één PE-examen per beroepskwalificatie, bij een door het CDFD erkend examen-instituut. De lopende PE-periode loopt tot en met 31 maart 2028. De PA-toets is een oefentoets en levert geen PE-punten of PE-examen op.</p>
     <p>Permanent actueel zijn geldt volgens de AFM voor alle medewerkers met inhoudelijk klantcontact, dus ook voor binnendienst en ondersteuners. Leg vast welke kennis je hebt opgedaan: bewaar je certificaten in je vakbekwaamheids- of personeelsdossier.</p>
@@ -520,7 +569,8 @@ ld_home = {'@context': 'https://schema.org', '@graph': [
  {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460', 'vatID': 'NL806480828B01', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'KvK', 'value': '32068727'},
   'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'}},
  {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Wft Permanent Actueel', 'url': SITE, 'inLanguage': 'nl', 'publisher': {'@id': SITE + '#dfo'},
-  'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.'}]}
+  'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.',
+  'potentialAction': {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + 'zoeken.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}}]}
 pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs',
        'Wft Permanent Actueel: gratis voor alle adviseurs. PE-oefenvragen met uitleg voor alle 9 Wft-modules, van Basis tot Pensioen. Met certificaat.',
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
@@ -625,6 +675,18 @@ llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst
 llms += ['', '## Informatie', '', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
          '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
 open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
+
+# ---------- zoekindex en zoekpagina (als laatste, zodat de index compleet is) ----------
+open(R + 'assets/js/zoekindex.js', 'w', encoding='utf-8').write('/* Zoekindex, gegenereerd door tools/bouw-paginas.py. Niet met de hand bewerken. */\nwindow.PA_ZOEK=' + json.dumps(ZOEK, ensure_ascii=False, separators=(',', ':')) + ';\n')
+inh = ('    <form class="zoekform" action="zoeken.html" method="get" role="search">\n'
+       '      <label for="zoekterm">Zoek op de site</label>\n'
+       '      <div class="zoekrij"><input type="search" id="zoekterm" name="q" autocomplete="off" placeholder="Bijvoorbeeld: CCD II, PE-examen, box 3, OVI" maxlength="80">'
+       '<button class="btn" type="submit">Zoeken</button></div>\n    </form>\n'
+       '    <p id="zoekstatus" class="zoekstatus" aria-live="polite"></p>\n    <ol id="zoekresultaten" class="zoekresultaten"></ol>\n'
+       '    <noscript><p>Zoeken werkt met JavaScript. Bekijk anders de <a href="sitemap.xml">sitemap</a>.</p></noscript>\n'
+       '    <h2>Populaire onderwerpen</h2>\n    <p class="zoektips">' + ' '.join(f'<a href="zoeken.html?q={urllib.parse.quote(t)}">{t}</a>' for t in ['PE-examen', 'CCD II', 'toetstermen', 'box 3', 'Wwft', 'Wet toekomst pensioenen', 'certificaat', 'OVI']) + '</p>\n')
+pagina('zoeken.html', 'Zoeken — Wft Permanent Actueel', 'Doorzoek Wft Permanent Actueel: modules, actuele wijzigingen, PE, wet- en regelgeving en veelgestelde vragen.',
+       'Zoeken', 'Doorzoek de site', inh, actief='zoeken.html', scripts='\n<script src="assets/js/zoekindex.js"></script>\n<script src="assets/js/zoek.js"></script>')
 
 # ---------- sitemap en robots ----------
 paden = ['', 'toets.html', 'nieuw.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']

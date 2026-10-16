@@ -18,15 +18,16 @@
 <meta property="og:url" content="https://pa-wft.nl/index.html">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css?v=7707c9dc">
-<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://pa-wft.nl/#dfo", "name": "DFO BV", "url": "https://www.dfobv.nl/", "email": "info@dfobv.nl", "telephone": "+31332580460", "vatID": "NL806480828B01", "identifier": {"@type": "PropertyValue", "propertyID": "KvK", "value": "32068727"}, "address": {"@type": "PostalAddress", "streetAddress": "De Wel 14-16", "postalCode": "3871 MV", "addressLocality": "Hoevelaken", "addressCountry": "NL"}}, {"@type": "WebSite", "@id": "https://pa-wft.nl/#site", "name": "Wft Permanent Actueel", "url": "https://pa-wft.nl/", "inLanguage": "nl", "publisher": {"@id": "https://pa-wft.nl/#dfo"}, "description": "Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat."}]}</script>
+<link rel="stylesheet" href="assets/css/style.css?v=4b9c8515">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://pa-wft.nl/#dfo", "name": "DFO BV", "url": "https://www.dfobv.nl/", "email": "info@dfobv.nl", "telephone": "+31332580460", "vatID": "NL806480828B01", "identifier": {"@type": "PropertyValue", "propertyID": "KvK", "value": "32068727"}, "address": {"@type": "PostalAddress", "streetAddress": "De Wel 14-16", "postalCode": "3871 MV", "addressLocality": "Hoevelaken", "addressCountry": "NL"}}, {"@type": "WebSite", "@id": "https://pa-wft.nl/#site", "name": "Wft Permanent Actueel", "url": "https://pa-wft.nl/", "inLanguage": "nl", "publisher": {"@id": "https://pa-wft.nl/#dfo"}, "description": "Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.", "potentialAction": {"@type": "SearchAction", "target": {"@type": "EntryPoint", "urlTemplate": "https://pa-wft.nl/zoeken.html?q={search_term_string}"}, "query-input": "required name=search_term_string"}}]}</script>
 </head>
 <body>
 <a class="skip" href="#inhoud">Naar de inhoud</a>
 <div class="topbar">
   <div class="wrap">
     <a class="logo" href="index.html" aria-label="Wft Permanent Actueel — home" aria-current="page"><img src="assets/logo/pa-wft-logo-horizontal.png" width="144" height="60" alt="Wft Permanent Actueel — PA-WFT.nl"></a>
-    <nav class="topnav" aria-label="Hoofdmenu"><a href="index.html" aria-current="page">Home</a><a href="toets.html">Kennistoets</a><a href="index.html#modules">Modules</a><a href="pe-punten-wft.html">PE uitgelegd</a><a href="wetgeving.html">Wet- en regelgeving</a><a href="compliance.html">DFO Compliance</a><a href="opleidingen.html">DFO Opleidingen</a><a href="over.html">DFO BV</a></nav>
+    <a class="zoekknop" href="zoeken.html" aria-label="Zoeken op de site"><svg class="loep" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></a>
+    <nav class="topnav" aria-label="Hoofdmenu"><a href="index.html" aria-current="page">Home</a><a href="toets.html">Kennistoets</a><a href="index.html#modules">Modules</a><a href="pe-punten-wft.html">PE uitgelegd</a><a href="wetgeving.html">Wet- en regelgeving</a><a href="compliance.html">DFO Compliance</a><a href="opleidingen.html">DFO Opleidingen</a><a href="over.html">DFO BV</a><a href="zoeken.html"><svg class="loep" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>Zoeken</a></nav>
   </div>
 </div>
 <header class="masthead">
@@ -42,23 +43,24 @@
 <main id="inhoud">
   <div class="wrap">
 <div class="paneel page" id="uitleg">
-    <h2>Gratis voor alle adviseurs</h2>
+    <h2 id="gratis-voor-alle-adviseurs">Gratis voor alle adviseurs</h2>
     <p class="lead">Wft Permanent Actueel helpt je je vakkennis bij te houden. Oefen met PE-oefenvragen precies de Wft-modules die bij jouw diploma's en klantcontact horen, met uitleg bij elk antwoord. Zonder kosten, zonder abonnement en zonder account.</p>
     <p class="antwoord"><strong>Doe de toets elk kwartaal</strong>, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.</p>
     <div class="acties"><a class="btn" href="toets.html">Start de kennistoets</a><a class="btn ghost" href="#modules">Bekijk de 9 modules</a></div>
     <div data-agenda><p><a href="toets.html">Zet de toets de komende 5 jaar elk kwartaal in je agenda</a></p></div>
-    <h2>Wft, PE en Permanent Actueel</h2>
+    <form class="zoekform homezoek" action="zoeken.html" method="get" role="search"><label for="homezoek">Zoek op de site</label><div class="zoekrij"><input type="search" id="homezoek" name="q" placeholder="Bijvoorbeeld: CCD II, PE-examen, box 3" maxlength="80"><button class="btn" type="submit">Zoeken</button></div></form>
+    <h2 id="wft-pe-en-permanent-actueel">Wft, PE en Permanent Actueel</h2>
     <p>Als financieel adviseur moet je vakbekwaam blijven: je hebt een Wft-diploma en houdt je kennis bij met permanente educatie (PE). PE-punten bestaan onder de Wft niet meer; sinds 1 januari 2014 haal je binnen elke PE-periode één PE-examen per beroepskwalificatie, bij een door het <a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a> erkend examen-instituut. De lopende PE-periode loopt tot en met 31 maart 2028. De PA-toets is een oefentoets en levert geen PE-punten of PE-examen op.</p>
     <p>Permanent actueel zijn geldt volgens de AFM voor alle medewerkers met inhoudelijk klantcontact, dus ook voor binnendienst en ondersteuners. Leg vast welke kennis je hebt opgedaan: bewaar je certificaten in je vakbekwaamheids- of personeelsdossier.</p>
     <p><a href="pe-punten-wft.html">Lees hoe PE, PE-punten en Permanent Actueel werken</a> · <a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/themas/vakbekwaamheidseisen" target="_blank" rel="noopener">Vakbekwaamheidseisen van de AFM</a></p>
 </div>
 <div class="paneel" id="modules">
-    <h2>De 9 modules</h2>
+    <h2 id="de-9-modules">De 9 modules</h2>
     <p>Per module oefenvragen met uitleg, met de datum waarop de vragen voor het laatst zijn bijgewerkt.</p>
     <div class="modules" id="moduleGrid"></div>
 </div>
 <div class="paneel" id="check">
-    <h2>Welke modules heb ik nodig?</h2>
+    <h2 id="welke-modules-heb-ik-nodig">Welke modules heb ik nodig?</h2>
     <div class="check">
       <div><p>Kies je beroepskwalificaties. Je ziet welke modules daarbij horen en maakt een toets over precies die modules. Binnen elke PE-periode haal je één PE-examen per beroepskwalificatie.</p><div class="chips" id="chips"></div><p class="klein" id="checkNoot" aria-live="polite"></p><p class="klein">Bron: <a href="https://www.afm.nl/nl-nl/sector/adviseurs-bemiddelaars-en-gevolmachtigde-agenten/themas/vakbekwaamheidseisen" target="_blank" rel="noopener">vakbekwaamheidseisen van de AFM</a> en het <a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a>, geraadpleegd oktober 2026. Een hulpmiddel, geen advies.</p></div>
       <div class="result"><div class="ring-wrap"><svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 60 60)" id="segs"></g></svg><div class="ring-count" id="count">0</div></div>
@@ -66,7 +68,7 @@
     </div>
 </div>
 <div class="paneel" id="werkwijze">
-    <h2>Zo werkt het</h2>
+    <h2 id="zo-werkt-het">Zo werkt het</h2>
     <div class="steps">
       <div class="step"><span class="num">01</span><h3>Kies je modules</h3><p>Per beroepskwalificatie, of alle modules door elkaar.</p></div>
       <div class="step"><span class="num">02</span><h3>Oefen en leer</h3><p>7 vragen per module, 5 extra per module die je toevoegt, met uitleg bij alle vier de antwoorden.</p></div>
@@ -89,7 +91,7 @@
   </section>
 </div>
 </div>
-<section class="poster"><div class="wrap"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
+<section class="poster"><div class="wrap"><h2 id="oefen-dit-jaar-alle-modules-uit-je-pakket-gratis">Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
 <div class="wrap">
 <div class="melding" role="note"><strong>Let op.</strong> De PA-toets is een oefentoets en geldt niet als Wft-examen, PE-examen of PE-bewijs. DFO BV is niet verantwoordelijk voor de juistheid en volledigheid van alle vragen en antwoorden; regels wijzigen. Wil je het zeker weten? Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>
   </div>
@@ -105,6 +107,7 @@
   </div>
   <div class="foot-balk"><div class="wrap"><div class="foot-balk-tekst"><nav class="foot-links" aria-label="Voorwaarden"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a><a href="privacy.html">Privacy en cookies</a></nav><p class="foot-disc">© 2026 DFO BV. Wft Permanent Actueel is een activiteit van DFO BV. Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p></div><a class="foot-logo" href="https://www.dfobv.nl/" target="_blank" rel="noopener" aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a></div></div>
 </footer>
+<script>(function(){function o(){var h=location.hash.slice(1),e=h&&document.getElementById(decodeURIComponent(h));if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView();}}o();addEventListener("hashchange",o);})();</script>
 <script src="assets/js/modules.js?v=c4244d2f"></script>
 <script src="assets/js/main.js?v=82f08efc"></script>
 <script src="assets/js/agenda.js?v=a187d17a"></script>
