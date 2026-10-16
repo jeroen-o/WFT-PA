@@ -39,7 +39,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
     '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
     '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
-    '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
+    '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://www.dfosignalen.nl/"' + EXT + '>DFO Signalen</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
     '<a href="https://www.dfobv.nl/contact/"' + EXT + '>Contactpagina</a></address><p class="foot-klein">KvK 32068727 · btw NL806480828B01</p></div>\n'
     '    </div>\n  </div>\n'
@@ -83,6 +83,19 @@ def link_cdfd(html_tekst):
         elif not in_a and not in_script and 'CDFD' in d:
             delen[i] = re.sub(r'\bCDFD\b', '<a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a>', d)
     return kop + sep + ''.join(delen)
+
+# Blok "Blijf op de hoogte": aanmelden gaat via de sites van DFO zelf; PA-WFT.nl bewaart geen gegevens
+NIEUWSBRIEVEN = ('<section class="nieuwsbrieven" id="nieuwsbrief" aria-labelledby="nb-kop">\n'
+    '    <h2 id="nb-kop">Blijf op de hoogte</h2>\n'
+    '    <p class="lead">Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO.</p>\n'
+    '    <div class="nb-kaarten">\n'
+    '      <article class="nb-kaart"><h3>Nieuwsbrief Wft</h3><p>Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners.</p>'
+    '<a class="btn" href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Meld je aan voor de Nieuwsbrief Wft</a></article>\n'
+    '      <article class="nb-kaart"><h3>DFO Signalen</h3><p>Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat.</p>'
+    '<a class="btn" href="https://www.dfosignalen.nl/"' + EXT + '>Meld je aan voor DFO Signalen</a></article>\n'
+    '    </div>\n'
+    '    <p class="klein">Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op.</p>\n'
+    '  </section>\n')
 
 def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False):
     datum = datum or BIJGEWERKT.get(pad, PEIL_ISO)
@@ -269,6 +282,7 @@ for i, mod in enumerate(MODS, 1):
            + termen_html(mid)
            + '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
+           + '  ' + NIEUWSBRIEVEN +
            f'    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen leerstof voor een erkend PE-examen. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
     ld = {'@context': 'https://schema.org', '@graph': [
         {'@type': 'Course', 'name': f'Wft {naam} — Permanent Actueel', 'description': f'Gratis PE-oefenvragen Wft {naam}: meerkeuzevragen met uitleg, een toets van 7 vragen (5 extra per toegevoegde module) en een certificaat. {tekst}',
@@ -291,6 +305,7 @@ inh = (f'    <p class="lead">Wat is er nieuw voor financieel adviseurs in het {K
        f'    <p class="meta-regel">Peildatum regelgeving {PEIL}</p>\n'
        '    <div class="acties"><a class="btn" href="toets.html">Doe de kennistoets</a></div>\n'
        + ''.join(f'    <h2 id="{m["id"]}"><a href="module-{m["id"]}.html">Wft {html.escape(m["naam"])}</a></h2>\n    <ul>' + ''.join(f'<li>{x}</li>' for x in NIEUW[m['id']]) + f'</ul>\n    <p><a href="toets.html#{m["id"]}">Test je kennis van Wft {html.escape(m["naam"])} →</a></p>\n' for m in MODS)
+       + '  ' + NIEUWSBRIEVEN
        + '    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen advies. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
 ld = {'@context': 'https://schema.org', '@type': 'Article', 'headline': f'Wat is er nieuw in de Wft: {KWARTAAL}', 'inLanguage': 'nl', 'dateModified': LAATSTE,
       'author': {'@type': 'Organization', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/'}, 'publisher': {'@type': 'Organization', 'name': 'DFO BV'},
@@ -459,6 +474,8 @@ inh = f'''<div class="paneel page" id="uitleg">
 <div class="paneel" id="tip">
     <div data-tip><h3>Tip je collega’s</h3><p>Stuur je collega’s een uitnodiging voor de gratis kennistoets: <a href="mailto:?subject=Tip%3A%20test%20gratis%20je%20Wft-kennis%20op%20PA-WFT.nl&amp;body=https%3A%2F%2Fpa-wft.nl%2Ftoets.html">mail een collega</a>.</p></div>
 </div>
+<div class="paneel">
+  ''' + NIEUWSBRIEVEN + f'''</div>
 </div>
 <section class="poster"><div class="wrap"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
 <div class="wrap">'''

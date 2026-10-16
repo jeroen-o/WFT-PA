@@ -216,3 +216,11 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .tipvoorbeeld summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:44px;display:flex;align-items:center}
 .tipvoorbeeld pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#f2f6fb;padding:12px 14px;margin:6px 0 0}
 .tipblok{margin-top:24px;padding-top:20px;border-top:2px solid #d6e3f2;text-align:left}
+
+/* Blijf op de hoogte: nieuwsbrieven DFO */
+.nieuwsbrieven{margin:32px 0 8px}
+.nb-kaarten{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin:16px 0 10px}
+.nb-kaart{border:2px solid var(--blue);border-top-width:6px;padding:18px 20px;display:flex;flex-direction:column;background:#fff}
+.nb-kaart h3{margin:0 0 8px}
+.nb-kaart p{flex:1;margin:0 0 14px}
+.nb-kaart .btn{align-self:flex-start}
