@@ -25,6 +25,8 @@ assets/js/modules.js        de 9 modules met datum "bijgewerkt"
 assets/js/vragen/<id>.js    vragenbank per module: [vraag, [[antwoord, uitleg] x4], toetsterm CDFD];
                             het eerste antwoord is steeds het juiste. De toets laadt alleen de gekozen modules.
 tools/vragen-js.py          zet JSON-bestanden ({"vragen":[{"v","a","t"}]}) om naar assets/js/vragen/<id>.js
+assets/js/zoek.js           zoeken op de site (zoeken.html), volledig in de browser
+assets/js/zoekindex.js      zoekindex per sectie; wordt gegenereerd door tools/bouw-paginas.py
 assets/js/main.js           modulelijst + pakket-check
 assets/js/toets.js          toets en certificaat
 assets/logo/                logo's (SVG), merkteken 1024px (PNG), DFO-logo
