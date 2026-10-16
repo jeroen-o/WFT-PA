@@ -152,13 +152,16 @@ M = {
                 'Informatieverstrekking en het dienstverleningsdocument', 'Beloning, provisieverbod en belangenconflicten', 'Kifid en klachtafhandeling',
                 'Wwft: cliëntenonderzoek en melden', 'AVG en integriteit, eed of belofte', 'Financiële basisbegrippen, consumentenrecht en sociale zekerheid op hoofdlijnen', 'Duurzaamheidsvoorkeuren'],
    actueel=['<strong>EU-witwaspakket (AMLR en AMLD6).</strong> Komt boven op de huidige Wwft; de Wwft wordt op termijn vervangen door een implementatiewet. De poortwachtersrol van adviseurs verandert mee.',
-            '<strong>AI-verordening en DORA.</strong> Gefaseerde toepassing raakt advieskantoren via software, modellen en uitbesteding.'],
+            '<strong>EU-witwasverordening (AMLR) vanaf 10 juli 2027.</strong> De kernregels voor cliëntenonderzoek komen dan in een rechtstreeks werkende EU-verordening. De nieuwe Europese witwasautoriteit AMLA is opgericht en gaat direct toezicht houden op een beperkt aantal grote instellingen; voor advieskantoren blijft de nationale toezichthouder het aanspreekpunt.',
+            '<strong>DORA geldt sinds 17 januari 2025.</strong> De Europese regels voor digitale operationele weerbaarheid gelden voor onder meer banken en verzekeraars. Verzekeringstussenpersonen die een micro-, kleine of middelgrote onderneming zijn, vallen erbuiten; via hun leveranciers en volmachtgevers merken ze er wel iets van. De Wft-eis van een beheerste bedrijfsvoering blijft voor ICT-risico’s gelden.',
+            '<strong>AI-verordening.</strong> Gefaseerde toepassing raakt advieskantoren via software, modellen en uitbesteding.'],
    bronnen=['wft', 'bgfo', 'eind', 'wwft', 'amlr', 'avg', 'idd', 'kifid', 'ai']),
  'consumptief-krediet': dict(
    onderwerpen=['Soorten krediet: doorlopend krediet, persoonlijke lening, private lease, BNPL, roodstand', 'Kredietwaardigheidstoets, leennormen en BKR-registratie',
                 'Informatie: Europese standaardinformatie en JKP', 'Herroepingsrecht, vervroegd aflossen en opzeggen', 'Maximale kredietvergoeding (principe)',
                 'Wft- en Wck-kader', 'Schuldhulp en betalingsproblemen', 'Zorgplicht, provisie en oversluiten', 'Wwft en AVG bij krediet'],
-   actueel=['<strong>CCD II per 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Nederlandse implementatiewet is nog in voorbereiding. Onder meer BNPL en huur of lease met koopoptie komen onder het kredietregime.'],
+   actueel=['<strong>CCD II per 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Nederlandse implementatiewet is nog in voorbereiding. Onder meer BNPL en huur of lease met koopoptie komen onder het kredietregime.',
+            '<strong>Strengere kredietwaardigheidstoets onder CCD II.</strong> Krediet mag alleen worden verstrekt als uit de kredietwaardigheidsbeoordeling blijkt dat de consument waarschijnlijk aan zijn verplichtingen kan voldoen. Daarnaast komen er strengere eisen aan reclame en aan de informatie vooraf.'],
    bronnen=['wft', 'bgfo', 'wck', 'ccd2', 'wwft', 'avg']),
  'schade-particulier': dict(
    onderwerpen=['Verzekeringsrecht: mededelingsplicht, premie, schadevergoeding, onderverzekering, verjaring', 'Motorrijtuigen: WAM, WA, casco, bonus-malus',
@@ -171,13 +174,16 @@ M = {
                 'Bestuurdersaansprakelijkheid (D&amp;O) en CAR', 'Transport, wagenpark en cyber', 'Collectieve contracten, volmachten, beurspolissen en coassurantie',
                 'Verzekeringsrecht: mededelingsplicht, eerste en tweede risico', 'IDD, Wwft en sanctiewetgeving'],
    actueel=['<strong>AI-verordening en DORA.</strong> Raken zakelijke klanten en hun verzekeringsbehoefte, onder meer bij cyber- en IT-risico’s.',
+            '<strong>Nieuwe richtlijn productaansprakelijkheid.</strong> De EU-richtlijn 2024/2853 moet uiterlijk 9 december 2026 in Nederlandse wet zijn omgezet en geldt voor producten die daarna op de markt komen. Software, ook AI-systemen, telt dan als product. Bespreek met klanten die software maken of gebruiken in hun producten of de aansprakelijkheidsdekking daarop aansluit.',
             '<strong>Sanctiewetgeving.</strong> Blijft een vast aandachtspunt bij zakelijke klanten en buitenlandse belangen.'],
    bronnen=['bw7', 'wft', 'bgfo', 'idd', 'wwft', 'dora', 'ai']),
  'vermogen': dict(
    onderwerpen=['Vermogensopbouw en financiële planning', 'Sparen en het depositogarantiestelsel', 'Beleggen: aandelen, obligaties, fondsen, risico en spreiding',
                 'Beleggingsverzekeringen, banksparen en lijfrente', 'Box 3 op hoofdlijnen', 'Schenken en erven', 'MiFID II: geschiktheid, klantclassificatie, kostentransparantie',
                 'PRIIPs en essentiële-informatiedocument', 'SFDR en duurzaamheidsvoorkeuren', 'Zorgplicht en beleggersprofiel'],
-   actueel=['<strong>Box 3.</strong> De Overbruggingswet box 3 geldt tot een nieuw stelsel in werking treedt; daarnaast loopt het rechtsherstel na het Kerstarrest. Werk met de regels van het betreffende belastingjaar.'],
+   actueel=['<strong>Box 3.</strong> De Overbruggingswet box 3 geldt tot een nieuw stelsel in werking treedt; daarnaast loopt het rechtsherstel na het Kerstarrest. Werk met de regels van het betreffende belastingjaar.',
+            '<strong>Crypto: MiCA en DAC8.</strong> Sinds 30 december 2024 hebben aanbieders van cryptodiensten in de EU een vergunning nodig onder de MiCA-verordening; in Nederland verleent de AFM die. Een vergunning beschermt niet tegen koersverlies en er is geen beleggerscompensatiestelsel voor crypto. Sinds 1 januari 2026 geven cryptodienstverleners in de EU gegevens over hun klanten door aan de belastingdienst (DAC8).',
+            '<strong>EU-witwasverordening (AMLR) vanaf 10 juli 2027.</strong> De regels voor cliëntenonderzoek komen in een rechtstreeks werkende EU-verordening.'],
    bronnen=['wft', 'bgfo', 'mifid', 'priips', 'sfdr', 'ib', 'obw3', 'sw', 'wwft']),
  'hypothecair-krediet': dict(
    onderwerpen=['Leennormen: financieringslast en verhouding lening-waarde', 'Hypotheekvormen en rentevormen', 'Eigenwoningregeling: aflossingseis, bijleenregeling, eigenwoningreserve',
@@ -190,7 +196,8 @@ M = {
    onderwerpen=['Loondoorbetaling bij ziekte en de Wet verbetering poortwachter', 'Ziektewet, WIA (WGA en IVA) en Wajong', 'WW en Anw op hoofdlijnen',
                 'Arbeidsongeschiktheidsverzekering voor zelfstandigen', 'WGA-hiaat, WIA-excedent en verzuimverzekering', 'Woonlastenverzekering en overlijdensrisicoverzekering',
                 'Fiscale behandeling van premies en uitkeringen', 'Inkomensanalyse en zorgplicht', 'AVG en gezondheidsgegevens'],
-   actueel=['<strong>Arbeidsongeschiktheidsverzekering voor zelfstandigen.</strong> Een verplichte basisverzekering is in voorbereiding. Volg de stand van het wetsvoorstel; de huidige regels blijven gelden tot invoering.'],
+   actueel=['<strong>Arbeidsongeschiktheidsverzekering voor zelfstandigen.</strong> Een verplichte basisverzekering is in voorbereiding. Volg de stand van het wetsvoorstel; de huidige regels blijven gelden tot invoering.',
+            '<strong>Handhaving schijnzelfstandigheid sinds 1 januari 2025.</strong> De Belastingdienst handhaaft weer op de beoordeling van arbeidsrelaties. Is een zzp’er in werkelijkheid werknemer, dan gelden de werknemersverzekeringen. Bespreek bij zzp-klanten hoe zeker hun status is; dat raakt hun inkomensrisico en de keuze voor een arbeidsongeschiktheidsverzekering.'],
    bronnen=['wia', 'zw', 'ww', 'anw', 'wft', 'bgfo', 'idd', 'avg']),
  'pensioen': dict(
    onderwerpen=['De drie pijlers en de AOW', 'Pensioenwet: pensioenovereenkomst, uitvoerders, informatie en waardeoverdracht', 'Wet toekomst pensioenen: premieregelingen, transitie en invaren',
@@ -260,6 +267,34 @@ def nl(iso): j, m, d = iso.split('-'); return f'{int(d)} {MAANDEN[int(m)-1]} {j}
 LAATSTE = max(m['bijgewerkt'] for m in MODS)
 BIJGEWERKT.update({'index.html': LAATSTE, 'toets.html': LAATSTE})
 NIEUW = {}
+# Belangrijke datums (alleen vaststaande datums uit wet- en regelgeving); modules waarvoor ze gelden
+ALLE = ['basis', 'consumptief-krediet', 'hypothecair-krediet', 'schade-particulier', 'schade-zakelijk', 'vermogen', 'inkomen', 'pensioen', 'zorgverzekering']
+DATUMS = [
+    ('2024-12-30', 'MiCA volledig van toepassing', 'Aanbieders van cryptodiensten in de EU hebben een vergunning nodig.', ['vermogen']),
+    ('2025-01-01', 'Handhaving schijnzelfstandigheid', 'De Belastingdienst handhaaft weer op de beoordeling van arbeidsrelaties.', ['inkomen']),
+    ('2025-01-17', 'DORA van toepassing', 'Europese regels voor digitale operationele weerbaarheid van financiële instellingen.', ['basis']),
+    ('2025-04-01', 'Start PE-periode 2025–2028', 'Binnen deze periode haal je per beroepskwalificatie één PE-examen.', ALLE),
+    ('2026-01-01', 'DAC8 van toepassing', 'Cryptodienstverleners in de EU geven klantgegevens door aan de belastingdienst.', ['vermogen']),
+    ('2026-04-01', 'Nieuwe toetstermen CDFD', 'Vernieuwde eind- en toetstermen voor alle Wft-modules.', ALLE),
+    ('2026-11-20', 'CCD II gaat gelden', 'De herziene richtlijn consumentenkrediet: strengere kredietwaardigheidstoets, ook BNPL en lease met koopoptie.', ['consumptief-krediet']),
+    ('2026-12-09', 'Omzetting nieuwe richtlijn productaansprakelijkheid', 'Uiterste datum voor de Nederlandse wet; software telt als product.', ['schade-zakelijk', 'schade-particulier']),
+    ('2027-01-01', 'Jaarlijkse wijzigingen', 'Nieuwe jaarversies van onder meer de leennormen, NHG-normen, zorgpremies en eigen risico, en fiscale bedragen.', ['hypothecair-krediet', 'zorgverzekering', 'vermogen', 'inkomen', 'pensioen']),
+    ('2027-07-10', 'EU-witwasverordening (AMLR) gaat gelden', 'De kernregels voor cliëntenonderzoek komen in een rechtstreeks werkende EU-verordening.', ['basis', 'vermogen', 'hypothecair-krediet', 'consumptief-krediet']),
+    ('2028-01-01', 'Uiterste datum overgang nieuw pensioenstelsel', 'Pensioenregelingen moeten zijn overgegaan naar het stelsel van de Wet toekomst pensioenen.', ['pensioen']),
+    ('2028-03-31', 'Einde PE-periode 2025–2028', 'Uiterste datum om je PE-examen per beroepskwalificatie te halen.', ALLE),
+]
+
+def datums_html(mid=None, kop='h2'):
+    rij = [d for d in DATUMS if mid is None or mid in d[3]]
+    if not rij: return ''
+    naam = {m['id']: m['naam'] for m in MODS}
+    def mods(d): return '' if mid or len(d[3]) == len(ALLE) else ' <span class="datums-mods">' + ', '.join('Wft ' + naam[x] for x in d[3]) + '</span>'
+    def li(d): return f'<li><time datetime="{d[0]}">{nl(d[0])}</time><span><strong>{html.escape(d[1])}.</strong> {html.escape(d[2])}{mods(d)}</span></li>'
+    komend = [d for d in rij if d[0] > PEIL_ISO]; recent = [d for d in rij if d[0] <= PEIL_ISO]
+    uit = f'    <{kop}>Belangrijke datums</{kop}>\n'
+    if komend: uit += '    <p class="datums-kop">Binnenkort</p>\n    <ul class="datums">' + ''.join(li(d) for d in komend) + '</ul>\n'
+    if recent: uit += '    <p class="datums-kop">Recent ingegaan</p>\n    <ul class="datums recent">' + ''.join(li(d) for d in reversed(recent)) + '</ul>\n'
+    return uit
 for i, mod in enumerate(MODS, 1):
     BIJGEWERKT[f"module-{mod['id']}.html"] = mod['bijgewerkt']
     mid, naam, bij, tekst = mod['id'], mod['naam'], mod['bijgewerkt'], mod['tekst']
@@ -273,7 +308,8 @@ for i, mod in enumerate(MODS, 1):
            f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Doe de toets</a><a class="btn ghost" href="index.html#modules">Alle modules</a></div>\n'
            '    <h2>Wat komt aan bod</h2>\n    <ul>' + ''.join(f'<li>{o}</li>' for o in d['onderwerpen']) + '</ul>\n'
            '    <h2>Wat is er nieuw in 2026</h2>\n    <ul>' + ''.join(f'<li>{a}</li>' for a in nieuw) + '</ul>\n'
-           '    <h2>Toetstermen CDFD per 1 april 2026</h2>\n    <p>De eind- en toetstermen van het CDFD voor deze module zijn ingedeeld in taken:</p>\n    <ol>' + ''.join(f'<li>{html.escape(t)}</li>' for t in TAKEN[mid]) + '</ol>\n'
+           + datums_html(mid)
+           + '    <h2>Toetstermen CDFD per 1 april 2026</h2>\n    <p>De eind- en toetstermen van het CDFD voor deze module zijn ingedeeld in taken:</p>\n    <ol>' + ''.join(f'<li>{html.escape(t)}</li>' for t in TAKEN[mid]) + '</ol>\n'
 
            + '    <p class="klein">Bron: eind- en toetstermen per module van het CDFD, geldend voor examens vanaf 1 april 2026. De volledige documenten staan bij de <a href="https://cdfd.nl/downloads/" target="_blank" rel="noopener">downloads van het CDFD</a>.</p>\n'
            f'    <h2>Voorbeeldvragen Wft {html.escape(naam)}</h2>\n    <p>Zo zien de vragen in de toets eruit. In de toets staan de antwoorden in willekeurige volgorde.</p>\n'
@@ -304,6 +340,7 @@ KWARTAAL = f'{(int(PEIL_ISO[5:7]) - 1) // 3 + 1}e kwartaal {PEIL_ISO[:4]}'
 inh = (f'    <p class="lead">Wat is er nieuw voor financieel adviseurs in het {KWARTAAL}? Per Wft-module de wijzigingen in wet- en regelgeving, toetstermen en markt die je moet kennen om permanent actueel te blijven.</p>\n'
        f'    <p class="meta-regel">Peildatum regelgeving {PEIL}</p>\n'
        '    <div class="acties"><a class="btn" href="toets.html">Doe de kennistoets</a></div>\n'
+       + datums_html()
        + ''.join(f'    <h2 id="{m["id"]}"><a href="module-{m["id"]}.html">Wft {html.escape(m["naam"])}</a></h2>\n    <ul>' + ''.join(f'<li>{x}</li>' for x in NIEUW[m['id']]) + f'</ul>\n    <p><a href="toets.html#{m["id"]}">Test je kennis van Wft {html.escape(m["naam"])} →</a></p>\n' for m in MODS)
        + '  ' + NIEUWSBRIEVEN
        + '    <p class="klein">Dit overzicht helpt je je kennis bij te houden en is geen advies. Controleer bedragen en normen altijd in de geldende bron. Zie je een fout? Mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>')
@@ -592,6 +629,6 @@ open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
 # ---------- sitemap en robots ----------
 paden = ['', 'toets.html', 'nieuw.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>2026-10-15</lastmod></url>\n' for p in paden) + '</urlset>\n')
+    ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>{LAATSTE}</lastmod></url>\n' for p in paden) + '</urlset>\n')
 open(R + 'robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
 print('klaar:', len(paden), 'pagina’s in sitemap')

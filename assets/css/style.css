@@ -224,3 +224,13 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .nb-kaart h3{margin:0 0 8px}
 .nb-kaart p{flex:1;margin:0 0 14px}
 .nb-kaart .btn{align-self:flex-start}
+
+/* Belangrijke datums */
+.datums-kop{font-weight:800;color:var(--blue);margin:14px 0 6px;text-transform:uppercase;letter-spacing:.04em;font-size:13px}
+.datums{list-style:none;padding:0;margin:0 0 10px;border-left:3px solid var(--blue)}
+.datums li{display:grid;grid-template-columns:150px 1fr;gap:4px 16px;padding:8px 0 8px 16px;border-bottom:1px solid #d6e3f2}
+.datums time{font-weight:800}
+.datums.recent{border-left-color:#8db8e3}
+.datums.recent time{color:#4a4a4a}
+.datums-mods{display:block;font-size:13px;color:#4a4a4a;margin-top:2px}
+@media (max-width:560px){.datums li{grid-template-columns:1fr}}
