@@ -27,6 +27,8 @@ assets/js/vragen/<id>.js    vragenbank per module: [vraag, [[antwoord, uitleg] x
 tools/vragen-js.py          zet JSON-bestanden ({"vragen":[{"v","a","t"}]}) om naar assets/js/vragen/<id>.js
 assets/js/zoek.js           zoeken op de site (zoeken.html), volledig in de browser
 assets/js/zoekindex.js      zoekindex per sectie; wordt gegenereerd door tools/bouw-paginas.py
+og/                         deelafbeeldingen (1200×630) per module, toets, nieuw en begrippen; worden automatisch gekoppeld
+llms.txt / llms-full.txt    samenvatting en volledige tekst voor AI-assistenten (gegenereerd)
 assets/js/main.js           modulelijst + pakket-check
 assets/js/toets.js          toets en certificaat
 assets/logo/                logo's (SVG), merkteken 1024px (PNG), DFO-logo

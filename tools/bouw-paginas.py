@@ -21,7 +21,7 @@ def header(actief=''):
     loep = '<svg class="loep" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
     links = ''.join('<a href="%s"%s>%s%s</a>' % (h, ' aria-current="page"' if h == actief else '', loep if h == 'zoeken.html' else '', t) for h, t in NAV)
     return ('<a class="skip" href="#inhoud">Naar de inhoud</a>\n<div class="topbar">\n  <div class="wrap">\n'
-            '    <a class="logo" href="index.html" aria-label="Wft Permanent Actueel — home"' + (' aria-current="page"' if actief == 'index.html' else '') + '><img src="assets/logo/pa-wft-logo-horizontal.png" width="144" height="60" alt="Wft Permanent Actueel — PA-WFT.nl"></a>\n'
+            '    <a class="logo" href="index.html" aria-label="Wft Permanent Actueel — home"' + (' aria-current="page"' if actief == 'index.html' else '') + '><img src="assets/logo/pa-wft-logo-horizontal.png" width="144" height="60" alt="Wft Permanent Actueel — PA-WFT.nl" fetchpriority="high"></a>\n'
             '    <a class="zoekknop" href="zoeken.html" aria-label="Zoeken op de site">' + loep.replace('width="16" height="16"', 'width="24" height="24"') + '</a>\n'
             '    <nav class="topnav" aria-label="Hoofdmenu">' + links + '</nav>\n'
             '  </div>\n</div>')
@@ -39,7 +39,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
-    '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
+    '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="begrippen.html">Begrippenlijst</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
     '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
     '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfosignalen.nl/"' + EXT + '>DFO Signalen</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
@@ -48,17 +48,26 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '  <div class="foot-balk"><div class="wrap">'
     '<div class="foot-balk-tekst"><nav class="foot-links" aria-label="Voorwaarden"><a href="over.html">Over en verantwoording</a><a href="gebruiksvoorwaarden.html">Gebruiksvoorwaarden</a><a href="klachten.html">Klachten</a><a href="privacy.html">Privacy en cookies</a></nav>'
     '<p class="foot-disc">© 2026 DFO BV. Wft Permanent Actueel is een activiteit van DFO BV. Oefentoets voor financieel adviseurs; geen erkend PE-examen en geen advies.</p></div>'
-    '<a class="foot-logo" href="https://www.dfobv.nl/"' + EXT + ' aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" alt="DFO — dienstverlening voor financiële ondernemers"></a>'
+    '<a class="foot-logo" href="https://www.dfobv.nl/"' + EXT + ' aria-label="DFO BV — naar dfobv.nl"><img src="assets/logo/dfo-logo.png" width="186" height="44" loading="lazy" decoding="async" alt="DFO — dienstverlening voor financiële ondernemers"></a>'
     '</div></div>\n</footer>\n'
     '<script>(function(){function o(){var h=location.hash.slice(1),e=h&&document.getElementById(decodeURIComponent(h));if(e&&e.tagName==="DETAILS"){e.open=true;e.scrollIntoView();}}o();addEventListener("hashchange",o);})();</script>')
 
-def head(titel, omschrijving, pad, extra=''):
+GEEN_INDEX = {'404.html', 'zoeken.html'}
+def canon(pad): return SITE + ('' if pad == 'index.html' else pad)
+def head(titel, omschrijving, pad, extra='', og_beeld='og-image.png', og_type='website'):
+    t, o, u = html.escape(titel), html.escape(omschrijving), canon(pad)
     return ('<!doctype html>\n<html lang="nl">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
-            f'<title>{html.escape(titel)}</title>\n<meta name="description" content="{html.escape(omschrijving)}">\n<meta name="theme-color" content="#1462ad">\n'
-            f'<link rel="canonical" href="{SITE}{pad}">\n<link rel="icon" href="favicon.ico" sizes="any">\n<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
+            f'<title>{t}</title>\n<meta name="description" content="{o}">\n'
+            + ('<meta name="robots" content="noindex, follow">\n' if pad in GEEN_INDEX else '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">\n')
+            + '<meta name="theme-color" content="#1462ad">\n<meta name="author" content="DFO BV">\n'
+            f'<link rel="canonical" href="{u}">\n<link rel="alternate" hreflang="nl" href="{u}">\n<link rel="alternate" hreflang="x-default" href="{u}">\n'
+            '<link rel="icon" href="favicon.ico" sizes="any">\n<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
             '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n<link rel="manifest" href="site.webmanifest">\n'
-            f'<meta property="og:title" content="{html.escape(titel)}">\n<meta property="og:description" content="{html.escape(omschrijving)}">\n'
-            f'<meta property="og:image" content="{SITE}og-image.png">\n<meta property="og:url" content="{SITE}{pad}">\n<meta name="twitter:card" content="summary_large_image">\n'
+            f'<meta property="og:type" content="{og_type}">\n<meta property="og:site_name" content="Wft Permanent Actueel">\n<meta property="og:locale" content="nl_NL">\n'
+            f'<meta property="og:title" content="{t}">\n<meta property="og:description" content="{o}">\n<meta property="og:url" content="{u}">\n'
+            f'<meta property="og:image" content="{SITE}{og_beeld}">\n<meta property="og:image:width" content="1200">\n<meta property="og:image:height" content="630">\n'
+            f'<meta property="og:image:alt" content="{t}">\n'
+            f'<meta name="twitter:card" content="summary_large_image">\n<meta name="twitter:title" content="{t}">\n<meta name="twitter:description" content="{o}">\n<meta name="twitter:image" content="{SITE}{og_beeld}">\n'
             '<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>\n'
             '<link rel="stylesheet" href="assets/css/style.css">' + extra + '\n</head>\n<body>')
 
@@ -100,18 +109,50 @@ NIEUWSBRIEVEN = ('<section class="nieuwsbrieven" id="nieuwsbrief" aria-labelledb
     '    <p class="klein">Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op.</p>\n'
     '  </section>\n')
 
-def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False):
+def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False, og_beeld='og-image.png', og_type='website', kruimel=None):
     datum = datum or BIJGEWERKT.get(pad, PEIL_ISO)
+    if og_beeld == 'og-image.png' and os.path.exists(R + 'og/' + pad.replace('.html', '.png')): og_beeld = 'og/' + pad.replace('.html', '.png')
+    if pad not in GEEN_INDEX:
+        ld = ld_aanvullen(ld, pad, titel, omschrijving, datum, kruimel or re.sub(r'<[^>]+>', '', kop), og_beeld)
     if ld: extra += '\n<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>'
     if not kaal and not inhoud.lstrip().startswith('<div class="paneel'):
         inhoud = '<div class="paneel page">\n' + inhoud + '\n</div>'
-    s = (head(titel, omschrijving, pad, extra) + '\n' + header(actief) + '\n' + masthead(kicker, kop, intro, mast_extra, datum)
+    s = (head(titel, omschrijving, pad, extra, og_beeld, og_type) + '\n' + header(actief) + '\n' + masthead(kicker, kop, intro, mast_extra, datum)
          + ('\n<main id="inhoud" class="kaal">\n' + inhoud + '\n<div class="wrap">' + MELDING + '</div>\n</main>\n' if kaal else
             '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n') + FOOTER + scripts + '\n</body>\n</html>\n')
     if kaal: s = s.replace('<body>', '<body class="breed">', 1)
     s = kop_ids(s)
     if pad not in ('404.html', 'zoeken.html'): zoek_indexeer(pad, titel, omschrijving, s)
     open(R + pad, 'w', encoding='utf-8').write(versie(link_cdfd(s)))
+
+# ---------- gestructureerde data: elke pagina krijgt Organization, WebSite, WebPage en een broodkruimelpad ----------
+ORG = {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'alternateName': 'DFO — dienstverlening voor financiële ondernemers', 'url': 'https://www.dfobv.nl/',
+       'logo': {'@type': 'ImageObject', 'url': SITE + 'assets/logo/dfo-logo.png'}, 'email': 'info@dfobv.nl', 'telephone': '+31332580460',
+       'vatID': 'NL806480828B01', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'KvK', 'value': '32068727'},
+       'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'},
+       'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': '+31332580460', 'email': 'info@dfobv.nl', 'availableLanguage': 'nl', 'url': 'https://www.dfobv.nl/contact/'},
+       'sameAs': ['https://www.dfobv.nl/', 'https://kennisbank.dfobv.nl/', 'https://www.dfosignalen.nl/']}
+WEBSITE = {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Wft Permanent Actueel', 'alternateName': 'PA-WFT.nl', 'url': SITE, 'inLanguage': 'nl', 'publisher': {'@id': SITE + '#dfo'},
+           'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.',
+           'potentialAction': {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + 'zoeken.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}}
+def ld_aanvullen(ld, pad, titel, omschrijving, datum, kruimel, beeld='og-image.png'):
+    ld = ld or {'@context': 'https://schema.org', '@graph': []}
+    if '@graph' not in ld:
+        ld = {'@context': 'https://schema.org', '@graph': [{k: v for k, v in ld.items() if k != '@context'}]}
+    g = ld['@graph']
+    typen = {n.get('@type') for n in g}
+    ids = {n.get('@id') for n in g}
+    if ORG['@id'] not in ids: g.insert(0, ORG)
+    if WEBSITE['@id'] not in ids: g.insert(1, WEBSITE)
+    u = canon(pad)
+    g.append({'@type': 'WebPage', '@id': u + '#pagina', 'url': u, 'name': re.sub(r'\s*\|.*$', '', titel), 'description': omschrijving, 'inLanguage': 'nl',
+              'dateModified': datum, 'isPartOf': {'@id': SITE + '#site'}, 'publisher': {'@id': SITE + '#dfo'},
+              'primaryImageOfPage': {'@type': 'ImageObject', 'url': SITE + beeld, 'width': 1200, 'height': 630}})
+    if 'BreadcrumbList' not in typen and pad != 'index.html':
+        g.append({'@type': 'BreadcrumbList', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Wft Permanent Actueel', 'item': SITE},
+            {'@type': 'ListItem', 'position': 2, 'name': kruimel, 'item': u}]})
+    return ld
 
 # ---------- zoeken: ids op tussenkoppen en een zoekindex per sectie (alles in de browser, geen database) ----------
 ZOEK = []
@@ -148,6 +189,9 @@ def zoek_indexeer(pad, titel, omschrijving, s):
     for fid, vraag, antw in re.findall(r'<details class="faq" id="([^"]+)"><summary>(.*?)</summary>(.*?)</details>', main, flags=re.S):
         ZOEK.append({'u': f'{url}#{fid}', 'p': paginatitel, 'h': platte_tekst(vraag), 'x': platte_tekst(antw)[:3000]})
     main = re.sub(r'<details class="faq".*?</details>', ' ', main, flags=re.S)
+    for bid, term, uitleg in re.findall(r'<dt id="([^"]+)">(.*?)</dt><dd>(.*?)</dd>', main, flags=re.S):
+        ZOEK.append({'u': f'{url}#{bid}', 'p': paginatitel, 'h': platte_tekst(term), 'x': platte_tekst(uitleg)})
+    main = re.sub(r'<dl class="begrippen">.*?</dl>', ' ', main, flags=re.S)
     delen = re.split(r'(<h2[^>]*>.*?</h2>)', main, flags=re.S)
     ZOEK.append({'u': url, 'p': paginatitel, 'h': '', 'x': (omschrijving + ' ' + platte_tekst(delen[0]))[:3000]})
     for i in range(1, len(delen), 2):
@@ -314,7 +358,84 @@ def nl(iso): j, m, d = iso.split('-'); return f'{int(d)} {MAANDEN[int(m)-1]} {j}
 
 LAATSTE = max(m['bijgewerkt'] for m in MODS)
 BIJGEWERKT.update({'index.html': LAATSTE, 'toets.html': LAATSTE})
+BEGRIPPEN = [
+ ('AFM', 'Autoriteit Financiële Markten: de gedragstoezichthouder. De AFM houdt toezicht op hoe financiële ondernemingen zich gedragen tegenover klanten, verleent vergunningen aan adviseurs en bemiddelaars en ziet toe op de vakbekwaamheid.', ['basis']),
+ ('DNB', 'De Nederlandsche Bank: de prudentiële toezichthouder. DNB let op de financiële soliditeit van banken, verzekeraars en pensioenfondsen.', ['basis', 'pensioen']),
+ ('CDFD', 'College Deskundigheid Financiële Dienstverlening. Het CDFD stelt de eind- en toetstermen van de Wft-examens vast en erkent de examen-instituten die Wft- en PE-examens afnemen.', ['basis']),
+ ('Wft', 'Wet op het financieel toezicht: de hoofdwet voor het toezicht op de financiële sector, met onder meer regels voor vergunningen, vakbekwaamheid, informatieverstrekking en zorgplicht.', ['basis']),
+ ('Beroepskwalificatie', 'De combinatie van Wft-modules die je nodig hebt om in een bepaald domein te adviseren, bijvoorbeeld Adviseur Hypothecair krediet (Basis, Vermogen en Hypothecair krediet).', ['basis']),
+ ('PE-examen', 'Examen voor permanente educatie. Wie adviseert, haalt binnen elke PE-periode per beroepskwalificatie één PE-examen bij een door het CDFD erkend examen-instituut. Het toetst vooral de actuele ontwikkelingen.', ['basis']),
+ ('PE-periode', 'De periode waarbinnen je je PE-examens haalt. De lopende PE-periode loopt van 1 april 2025 tot en met 31 maart 2028.', ['basis']),
+ ('PE-punten', 'Een systeem van punten voor permanente educatie dat onder de Wft niet meer bestaat. Sinds 1 januari 2014 houd je je adviesbevoegdheid geldig met PE-examens.', ['basis']),
+ ('Permanent actueel', 'De eis dat medewerkers met inhoudelijk klantcontact hun vakkennis bijhouden en kunnen toepassen. Het is een open norm: de onderneming bepaalt zelf hoe ze die invult en is ervoor verantwoordelijk.', ['basis']),
+ ('Eindterm en toetsterm', 'Eindtermen beschrijven wat een kandidaat moet kunnen; toetstermen werken dat uit in toetsbare kennis en vaardigheden. Het CDFD stelt ze vast; de huidige gelden voor examens vanaf 1 april 2026.', ['basis']),
+ ('Zorgplicht', 'De plicht van een financiële dienstverlener om zorgvuldig te handelen en rekening te houden met de belangen van de klant, onder meer door passend te adviseren.', ['basis']),
+ ('Klantprofiel', 'Het beeld van de klant dat de adviseur vastlegt: financiële positie, kennis en ervaring, doelstellingen en risicobereidheid. Het is de basis voor een passend advies.', ['basis']),
+ ('Provisieverbod', 'Het verbod om voor bepaalde producten, zoals hypotheken en complexe producten, provisie van de aanbieder te ontvangen. De klant betaalt de adviseur dan zelf.', ['basis', 'hypothecair-krediet']),
+ ('Kifid', 'Klachteninstituut Financiële Dienstverlening: behandelt klachten van consumenten over financiële dienstverleners als die er met de dienstverlener zelf niet uitkomen.', ['basis']),
+ ('Wwft', 'Wet ter voorkoming van witwassen en financieren van terrorisme. De wet verplicht onder meer tot cliëntenonderzoek en het melden van ongebruikelijke transacties.', ['basis', 'vermogen']),
+ ('AMLR', 'De EU-anti-witwasverordening. Vanaf 10 juli 2027 staan de kernregels voor cliëntenonderzoek in deze rechtstreeks werkende verordening.', ['basis', 'vermogen']),
+ ('DORA', 'Digital Operational Resilience Act: Europese regels voor de digitale weerbaarheid van financiële instellingen, van toepassing sinds 17 januari 2025. Kleine en middelgrote verzekeringstussenpersonen vallen erbuiten.', ['basis']),
+ ('IDD', 'Insurance Distribution Directive: de Europese richtlijn voor de distributie van verzekeringen, met onder meer eisen aan informatie, belangenconflicten en vakbekwaamheid.', ['basis', 'schade-particulier', 'schade-zakelijk']),
+ ('CCD II', 'De herziene Europese richtlijn consumentenkrediet (2023/2225). Hij geldt vanaf 20 november 2026 en brengt onder meer achteraf betalen via een externe aanbieder en lease met koopoptie onder het kredietregime.', ['consumptief-krediet']),
+ ('BKR', 'Bureau Krediet Registratie: registreert kredieten van consumenten. Kredietgevers raadplegen het register bij een aanvraag.', ['consumptief-krediet', 'hypothecair-krediet']),
+ ('NHG', 'Nationale Hypotheek Garantie: een borgstelling voor hypotheken tot een jaarlijks vastgestelde grens. Bij gedwongen verkoop met restschuld kan de borgstelling die schuld onder voorwaarden overnemen.', ['hypothecair-krediet']),
+ ('Leennormen', 'De regels die bepalen hoeveel iemand maximaal mag lenen voor een eigen woning: de financieringslast als deel van het inkomen en de lening ten opzichte van de woningwaarde. Ze worden jaarlijks vastgesteld.', ['hypothecair-krediet']),
+ ('Aflossingseis', 'Voor renteaftrek op een hypotheek die na 2012 is afgesloten, moet de lening in maximaal 30 jaar ten minste annuïtair worden afgelost.', ['hypothecair-krediet']),
+ ('OVI', 'Ongevallenverzekering inzittenden: keert een vast bedrag uit bij overlijden of blijvende invaliditeit van inzittenden door een verkeersongeval, ongeacht wie schuld heeft.', ['schade-particulier']),
+ ('SVI', 'Schadeverzekering inzittenden: vergoedt de werkelijke schade van inzittenden bij een verkeersongeval, zoals letselschade en schade aan spullen, ongeacht wie schuld heeft.', ['schade-particulier']),
+ ('Onderverzekering', 'Als het verzekerde bedrag lager is dan de werkelijke waarde, vergoedt de verzekeraar de schade naar evenredigheid, tenzij de polis een garantie tegen onderverzekering geeft.', ['schade-particulier', 'schade-zakelijk']),
+ ('Mededelingsplicht', 'De wettelijke plicht van de verzekeringnemer om vóór het sluiten van een verzekering alle feiten te melden die hij kent en die van belang zijn voor de beslissing van de verzekeraar.', ['schade-particulier', 'schade-zakelijk', 'inkomen']),
+ ('AVB', 'Aansprakelijkheidsverzekering voor bedrijven: dekt schade aan personen of zaken van anderen waarvoor een bedrijf aansprakelijk is.', ['schade-zakelijk']),
+ ('Bedrijfsschadeverzekering', 'Vergoedt het verlies aan brutowinst en doorlopende vaste kosten als het bedrijf na een gedekte gebeurtenis, zoals brand, stil komt te liggen, gedurende de uitkeringstermijn.', ['schade-zakelijk']),
+ ('Productaansprakelijkheid', 'De aansprakelijkheid van een producent voor schade door een gebrekkig product, zonder dat schuld hoeft te worden bewezen. Onder de nieuwe EU-richtlijn telt ook software als product.', ['schade-zakelijk']),
+ ('Box 3', 'De box in de inkomstenbelasting voor inkomen uit sparen en beleggen. Belast wordt een rendement over het vermogen op de peildatum.', ['vermogen']),
+ ('MiCA', 'Markets in Crypto-Assets: de Europese verordening voor cryptodiensten. Sinds 30 december 2024 hebben aanbieders van cryptodiensten in de EU een vergunning nodig.', ['vermogen']),
+ ('DAC8', 'Europese regels waardoor cryptodienstverleners sinds 1 januari 2026 gegevens over hun klanten doorgeven aan de belastingdienst.', ['vermogen']),
+ ('Risicoprofiel', 'De mate waarin een klant risico wil en kan lopen met beleggen. De adviseur stelt het vast op basis van doelstellingen, financiële positie, kennis en ervaring.', ['vermogen']),
+ ('WIA', 'Wet werk en inkomen naar arbeidsvermogen: de regeling voor werknemers die na twee jaar ziekte arbeidsongeschikt zijn, met de IVA en de WGA.', ['inkomen']),
+ ('IVA', 'Inkomensvoorziening volledig arbeidsongeschikten: de WIA-uitkering voor wie volledig en duurzaam arbeidsongeschikt is.', ['inkomen']),
+ ('WGA', 'Werkhervatting gedeeltelijk arbeidsgeschikten: de WIA-regeling voor wie gedeeltelijk of niet duurzaam arbeidsongeschikt is.', ['inkomen']),
+ ('AOV', 'Arbeidsongeschiktheidsverzekering: een particuliere verzekering waarmee een zelfstandige zijn inkomen verzekert bij arbeidsongeschiktheid.', ['inkomen']),
+ ('Schijnzelfstandigheid', 'Als iemand formeel als zzp’er werkt, maar de arbeidsrelatie in werkelijkheid een dienstbetrekking is. De Belastingdienst handhaaft hier sinds 1 januari 2025 weer op.', ['inkomen']),
+ ('Wtp', 'Wet toekomst pensioenen: het nieuwe pensioenstelsel met premieregelingen. Pensioenregelingen moeten uiterlijk op 1 januari 2028 zijn overgegaan.', ['pensioen']),
+ ('Invaren', 'Het omzetten van opgebouwde pensioenaanspraken naar het nieuwe pensioenstelsel van de Wtp.', ['pensioen']),
+ ('UPO', 'Uniform Pensioenoverzicht: het jaarlijkse overzicht van de pensioenuitvoerder met de opgebouwde en te bereiken pensioenaanspraken.', ['pensioen']),
+ ('AOW', 'Algemene Ouderdomswet: het basispensioen van de overheid vanaf de AOW-leeftijd.', ['pensioen']),
+ ('Eigen risico (Zvw)', 'Het verplichte bedrag per kalenderjaar dat een verzekerde van 18 jaar of ouder zelf betaalt voor zorg uit het basispakket, met uitzonderingen zoals de huisarts. De hoogte wordt jaarlijks vastgesteld.', ['zorgverzekering']),
+ ('Naturapolis', 'Een zorgverzekering waarbij de verzekeraar afspraken maakt met zorgaanbieders. Bij een niet-gecontracteerde zorgaanbieder kan de vergoeding lager zijn.', ['zorgverzekering']),
+ ('Restitutiepolis', 'Een zorgverzekering waarbij de verzekerde zelf de zorgaanbieder kiest en de kosten worden vergoed, tot maximaal een marktconform tarief.', ['zorgverzekering']),
+ ('Acceptatieplicht', 'De plicht van een zorgverzekeraar om iedereen te accepteren voor de basisverzekering, zonder premieverschil op basis van gezondheid.', ['zorgverzekering']),
+]
+
 NIEUW = {}
+# Beroepskwalificaties en de modules die erbij horen (AFM, vakbekwaamheidseisen); gelijk aan KWAL in assets/js/main.js
+KWAL = [('Adviseur Hypothecair krediet', ['basis', 'vermogen', 'hypothecair-krediet']), ('Adviseur Vermogen', ['basis', 'vermogen']),
+        ('Adviseur Pensioen', ['basis', 'vermogen', 'pensioen']), ('Adviseur Consumptief krediet', ['basis', 'consumptief-krediet']),
+        ('Adviseur Schadeverzekering zakelijk', ['basis', 'schade-particulier', 'schade-zakelijk']), ('Adviseur Schadeverzekering particulier', ['basis', 'schade-particulier']),
+        ('Adviseur Inkomen', ['basis', 'inkomen']), ('Adviseur Zorgverzekering', ['zorgverzekering'])]
+
+def kort_html(mid, naam, bij, nieuw):
+    kw = [k for k, ms in KWAL if mid in ms]
+    m = re.match(r'<strong>(.*?)\.?</strong>\s*(.*)', nieuw[0], re.S)
+    zin = lambda t: t[:1].lower() + t[1:] if len(t) > 1 and not t[1].isupper() else t
+    eerste = (m.group(1) + ': ' + zin(re.sub(r'<[^>]+>', '', m.group(2)).split('. ')[0])).rstrip('.') if m else re.sub(r'<[^>]+>', '', nieuw[0]).split('. ')[0].rstrip('.')
+    items = [f'<strong>Voor wie:</strong> nodig voor {len(kw)} beroepskwalificatie{"s" if len(kw) != 1 else ""}: ' + ', '.join(kw) + '.',
+             '<strong>PE:</strong> je haalt per beroepskwalificatie één PE-examen binnen de PE-periode, die loopt tot en met 31 maart 2028.',
+             '<strong>Toetstermen:</strong> de eind- en toetstermen van het CDFD zijn vernieuwd voor examens vanaf 1 april 2026.' + (' Daarbij is een toetsterm voor deze module gewijzigd.' if mid in WIJZ else ''),
+             f'<strong>Actueel:</strong> {html.escape(eerste)}.',
+             f'<strong>Oefenen:</strong> 7 meerkeuzevragen met uitleg bij alle antwoorden, gratis en zonder account. Laatst bijgewerkt {nl(bij)}.']
+    return '    <div class="kort"><h2>Wft ' + html.escape(naam) + ' in het kort</h2><ul>' + ''.join(f'<li>{x}</li>' for x in items) + '</ul></div>\n'
+
+def verwant_html(mid):
+    ids = []
+    for k, ms in KWAL:
+        if mid in ms: ids += [m for m in ms if m != mid and m not in ids]
+    if not ids: return ''
+    naam = {m['id']: m['naam'] for m in MODS}
+    return ('    <h2>Verwante modules</h2>\n    <p>Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: '
+            + f'<a href="toets.html#mix={",".join([mid] + ids)}">toets met alle {len(ids) + 1} modules</a>.</p>\n    <ul>'
+            + ''.join(f'<li><a href="module-{i}.html">Wft {html.escape(naam[i])}</a></li>' for i in ids) + '</ul>\n')
 # Belangrijke datums (alleen vaststaande datums uit wet- en regelgeving); modules waarvoor ze gelden
 ALLE = ['basis', 'consumptief-krediet', 'hypothecair-krediet', 'schade-particulier', 'schade-zakelijk', 'vermogen', 'inkomen', 'pensioen', 'zorgverzekering']
 DATUMS = [
@@ -354,6 +475,7 @@ for i, mod in enumerate(MODS, 1):
     inh = (f'    <p class="lead">{html.escape(tekst)} Oefen gratis met PE-oefenvragen voor Wft {html.escape(naam)}, met uitleg bij elk antwoord.</p>\n'
            f'    <p class="meta-regel">Laatst bijgewerkt {nl(bij)} · peildatum regelgeving {PEIL}</p>\n'
            f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Doe de toets</a><a class="btn ghost" href="index.html#modules">Alle modules</a></div>\n'
+           + kort_html(mid, naam, bij, d['actueel']) +
            '    <h2>Wat komt aan bod</h2>\n    <ul>' + ''.join(f'<li>{o}</li>' for o in d['onderwerpen']) + '</ul>\n'
            '    <h2>Wat is er nieuw in 2026</h2>\n    <ul>' + ''.join(f'<li>{a}</li>' for a in nieuw) + '</ul>\n'
            + datums_html(mid)
@@ -364,6 +486,8 @@ for i, mod in enumerate(MODS, 1):
            + ''.join(voorbeeld_html(q, k) for k, q in enumerate(vb, 1))
            + f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Oefen verder in de toets</a></div>\n'
            + termen_html(mid)
+           + verwant_html(mid)
+           + ('    <h2>Begrippen bij deze module</h2>\n    <p>' + ' · '.join(f'<a href="begrippen.html#begrip-{slug(b[0])}">{html.escape(b[0])}</a>' for b in BEGRIPPEN if mid in b[2]) + '</p>\n' if any(mid in b[2] for b in BEGRIPPEN) else '')
            + '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
            + '  ' + NIEUWSBRIEVEN +
@@ -377,9 +501,12 @@ for i, mod in enumerate(MODS, 1):
         {'@type': 'BreadcrumbList', 'itemListElement': [{'@type': 'ListItem', 'position': 1, 'name': 'Wft Permanent Actueel', 'item': SITE},
                                                         {'@type': 'ListItem', 'position': 2, 'name': f'Wft {naam}', 'item': f'{SITE}module-{mid}.html'}]},
         quiz_ld(naam, vb)]}
-    titel = f'Wft {naam}: gratis PE-oefenvragen | Permanent Actueel'
-    if len(titel) > 62: titel = f'Wft {naam}: gratis PE-oefenvragen'
-    pagina(f'module-{mid}.html', titel, f'Wft {naam} Permanent Actueel: gratis PE-oefenvragen met uitleg, wat er actueel is en de bronnen. Oefentoets voor adviseurs, geen PE-examen.',
+    titel = f'Wft {naam} 2026: gratis PE-oefenvragen en actualiteit'
+    if len(titel) > 60: titel = f'Wft {naam} 2026: gratis PE-oefenvragen'
+    if len(titel) > 60: titel = f'Wft {naam} 2026: gratis oefenvragen'
+    oms = f'Wft {naam}: gratis oefenvragen met praktijkcasussen en uitleg, wat er nieuw is in 2026, belangrijke datums en toetstermen. Oefentoets voor adviseurs.'
+    if len(oms) > 160: oms = f'Wft {naam}: gratis oefenvragen met uitleg, wat er nieuw is in 2026 en belangrijke datums. Oefentoets voor adviseurs.'
+    pagina(f'module-{mid}.html', titel, oms,
            f'Wft {html.escape(naam)}', f'Module {i:02d} · Permanent Actueel', inh, ld=ld)
 
 # ---------- Veelgestelde vragen ----------
@@ -396,8 +523,8 @@ ld = {'@context': 'https://schema.org', '@type': 'Article', 'headline': f'Wat is
       'author': {'@type': 'Organization', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/'}, 'publisher': {'@type': 'Organization', 'name': 'DFO BV'},
       'mainEntityOfPage': f'{SITE}nieuw.html', 'about': [f'Wft {m["naam"]}' for m in MODS]}
 BIJGEWERKT['nieuw.html'] = LAATSTE
-pagina('nieuw.html', f'Wat is er nieuw in de Wft: {KWARTAAL} | Permanent Actueel', f'Wat is er nieuw voor financieel adviseurs in het {KWARTAAL}: per Wft-module de wijzigingen in regelgeving, toetstermen en markt.',
-       f'Wat is er nieuw: {KWARTAAL}', 'Permanent Actueel', inh, ld=ld)
+pagina('nieuw.html', f'Wat is er nieuw in de Wft: {KWARTAAL}', f'Wat is er nieuw voor financieel adviseurs in het {KWARTAAL}: per Wft-module de wijzigingen in regelgeving, toetstermen en markt.',
+       f'Wat is er nieuw: {KWARTAAL}', 'Permanent Actueel', inh, ld=ld, og_type='article')
 
 FAQ = [
  ('Wat is permanente educatie (PE)?', 'Wie in de financiële dienstverlening adviseert, moet vakbekwaam zijn en blijven. Daarvoor heb je een Wft-diploma nodig en houd je je kennis bij met permanente educatie. Binnen elke PE-periode haal je één PE-examen per beroepskwalificatie; de lopende periode loopt van 1 april 2025 tot en met 31 maart 2028. De actuele periode en eisen vind je bij het <a href="https://cdfd.nl/" target="_blank" rel="noopener">CDFD</a>.'),
@@ -414,7 +541,7 @@ FAQ = [
 ]
 inh = '\n'.join(f'    <details class="faq"><summary>{q}</summary><p>{a}</p></details>' for q, a in FAQ)
 ld = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': re.sub('<[^>]+>', '', a)}} for q, a in FAQ]}
-pagina('vragen.html', 'Veelgestelde vragen — Wft Permanent Actueel', 'Antwoorden op vragen over de gratis PA-toets, permanente educatie en het certificaat.',
+pagina('vragen.html', 'Veelgestelde vragen — Wft Permanent Actueel', 'Antwoorden op veelgestelde vragen over de gratis Wft-kennistoets, PE-examens, PE-punten, permanent actueel blijven en het certificaat.',
        'Veelgestelde vragen', 'Vragen', inh, actief='vragen.html', ld=ld)
 
 # ---------- Privacy ----------
@@ -487,7 +614,7 @@ inh = f'''    <p class="lead">Niet tevreden over Wft Permanent Actueel? Laat het
     <h2>Komen we er samen niet uit?</h2>
     <p>Zie de klachtenprocedure van DFO BV op <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">www.dfobv.nl</a>.</p>
     <p class="klein">Laatst bijgewerkt: {PEIL}.</p>'''
-pagina('klachten.html', 'Klachten — Wft Permanent Actueel', 'Zo dien je een klacht in over Wft Permanent Actueel.', 'Klachtenprocedure', 'Klachten', inh)
+pagina('klachten.html', 'Klachten — Wft Permanent Actueel', 'Niet tevreden over Wft Permanent Actueel of de kennistoets? Zo dien je een klacht in bij DFO BV en zo handelen we die af.', 'Klachtenprocedure', 'Klachten', inh)
 
 # ---------- PE uitgelegd (SEO/GEO) ----------
 PE = [
@@ -565,12 +692,7 @@ inh = f'''<div class="paneel page" id="uitleg">
 </div>
 <section class="poster"><div class="wrap"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
 <div class="wrap">'''
-ld_home = {'@context': 'https://schema.org', '@graph': [
- {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'url': 'https://www.dfobv.nl/', 'email': 'info@dfobv.nl', 'telephone': '+31332580460', 'vatID': 'NL806480828B01', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'KvK', 'value': '32068727'},
-  'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'}},
- {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Wft Permanent Actueel', 'url': SITE, 'inLanguage': 'nl', 'publisher': {'@id': SITE + '#dfo'},
-  'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.',
-  'potentialAction': {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + 'zoeken.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}}]}
+ld_home = {'@context': 'https://schema.org', '@graph': []}  # Organization en WebSite komen via ld_aanvullen op elke pagina
 pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs',
        'Wft Permanent Actueel: gratis voor alle adviseurs. PE-oefenvragen met uitleg voor alle 9 Wft-modules, van Basis tot Pensioen. Met certificaat.',
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
@@ -582,10 +704,30 @@ s = s.replace('<meta name="theme-color" content="#1462ad">', '<meta name="google
 open(R + 'index.html', 'w', encoding='utf-8').write(s)
 
 # ---------- Kennistoets ----------
-inh = '<div class="paneel" id="paneel" aria-live="polite">\n      <noscript><p>Schakel JavaScript in om de toets te maken.</p></noscript>\n</div>'
-pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Permanent Actueel',
+TOETS_FAQ = [
+ ('Hoeveel vragen krijg ik?', 'Bij één module krijg je 7 meerkeuzevragen. Voor elke module die je toevoegt komen er 5 bij: 2 modules geven 12 vragen, 3 modules 17. De vragen worden elke keer opnieuw gekozen.'),
+ ('Is de toets gratis?', 'Ja. De toets en alle modules zijn gratis voor alle adviseurs, zonder account en zonder abonnement.'),
+ ('Telt de toets mee voor mijn PE?', 'Nee. Het is een oefentoets. Hij levert geen PE-punten of PE-examen op. Je adviesbevoegdheid houd je geldig met een PE-examen per beroepskwalificatie bij een erkend examen-instituut.'),
+ ('Wat staat er op het certificaat?', 'Je naam, de modules, je score en de datum, met de vermelding dat het een eigen verklaring is bij een oefentoets. Bewaar het in je personeelsdossier en lever het in bij je werkgever.'),
+ ('Kan ik oefenen op een onderwerp?', 'Ja. Op elke modulepagina kies je een toetsterm van het CDFD en oefen je alleen de vragen daarover. Na de toets kun je ook je foute vragen opnieuw oefenen.'),
+ ('Hoe vaak moet ik de toets doen?', 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Zet met één klik een herinnering in je agenda.'),
+]
+inh = ('<div class="paneel" id="paneel" aria-live="polite">\n      <noscript><p>Schakel JavaScript in om de toets te maken.</p></noscript>\n</div>\n'
+       '<div class="paneel page">\n    <h2>Zo werkt de Wft-kennistoets</h2>\n'
+       '    <ol><li>Kies een of meer Wft-modules, of je hele pakket per beroepskwalificatie.</li><li>Beantwoord de meerkeuzevragen: veel vragen zijn praktijkcasussen, afgestemd op de toetstermen van het CDFD per 1 april 2026.</li>'
+       '<li>Na elk antwoord lees je bij alle vier de antwoorden waarom ze goed of fout zijn.</li><li>Na afloop ontvang je een certificaat als pdf, en je kunt je foute vragen opnieuw oefenen.</li></ol>\n'
+       '    <h2>Modules in de toets</h2>\n    <ul class="kolommen">' + ''.join(f'<li><a href="module-{m["id"]}.html">Wft {html.escape(m["naam"])}</a></li>' for m in MODS) + '</ul>\n'
+       '    <h2>Veelgestelde vragen over de toets</h2>\n'
+       + ''.join(f'    <details class="faq"><summary>{v}</summary><p>{a}</p></details>\n' for v, a in TOETS_FAQ)
+       + '    <p>Meer weten? Lees <a href="pe-punten-wft.html">hoe PE werkt</a>, bekijk de <a href="begrippen.html">begrippenlijst</a> of <a href="nieuw.html">wat er nieuw is</a>.</p>\n</div>')
+ld_toets = {'@context': 'https://schema.org', '@graph': [
+    {'@type': 'LearningResource', 'name': 'Wft-kennistoets — Permanent Actueel', 'url': SITE + 'toets.html', 'inLanguage': 'nl', 'isAccessibleForFree': True,
+     'learningResourceType': 'Practice test', 'educationalLevel': 'Beroepsniveau', 'audience': {'@type': 'Audience', 'audienceType': 'Financieel adviseurs en klantmedewerkers'},
+     'teaches': [f'Wft {m["naam"]}' for m in MODS], 'provider': {'@id': SITE + '#dfo'}},
+    {'@type': 'FAQPage', 'mainEntity': [{'@type': 'Question', 'name': v, 'acceptedAnswer': {'@type': 'Answer', 'text': a}} for v, a in TOETS_FAQ]}]}
+pagina('toets.html', 'Gratis Wft-kennistoets met uitleg | Permanent Actueel',
        'Gratis Wft-kennistoets voor adviseurs: 7 vragen per module, 5 extra per toegevoegde module, elke keer anders. Met uitleg en certificaat.',
-       'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
+       'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html', ld=ld_toets, kruimel='Wft-kennistoets',
        intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop ontvang je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
        scripts='\n<script src="assets/js/modules.js"></script>\n<script>window.PA_VRAGEN_V=' + json.dumps(VRAGEN_V, separators=(',', ':')) + ';</script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
@@ -618,8 +760,8 @@ inh = ('<div class="paneel page">\n    <h2>Wat er dit jaar verandert</h2>\n    <
                    for c, items in cats)
        + f'\n    <p class="klein">Peildatum {PEIL}. Bron: WFT Bieb van DFO. Algemene informatie, geen advies.</p>\n</div>')
 secties = open(R + 'tools/wetgeving-secties.html', encoding='utf-8').read()
-pagina('wetgeving.html', 'Wet- en regelgeving voor financieel adviseurs: Wft, Wwft en meer',
-       'Doorzoekbaar overzicht van wet- en regelgeving voor financieel adviseurs: Wft, Wwft, hypothecair en consumptief krediet, fiscaal, pensioen, sociale zekerheid en toeslagen, met links naar de officiële tekst.',
+pagina('wetgeving.html', 'Wet- en regelgeving voor adviseurs: Wft, Wwft en meer',
+       'Overzicht van wet- en regelgeving voor financieel adviseurs: Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid, met links naar de officiële tekst.',
        'Wet- en regelgeving', 'Wft Permanent Actueel', secties, actief='wetgeving.html', kaal=True,
        intro=f'Doorzoekbare bibliotheek van wet- en regelgeving voor financiële dienstverleners. Elke regeling linkt naar de officiële tekst op wetten.overheid.nl of EUR-Lex. <span id="peildatum">Peildatum {PEIL}</span>.',
        extra='\n<link rel="stylesheet" href="assets/css/wetgeving.css">\n<link rel="stylesheet" href="assets/css/style.css">',
@@ -660,7 +802,7 @@ inh = ('<div class="paneel page">\n    <h2>Opleidingen en bijeenkomsten</h2>\n  
          ('Nieuwsbrief Wft', 'https://www.dfobv.nl/product/nieuwsbrief-wft/', 'Gemiddeld één nieuwsbrief per week over actuele Wft-ontwikkelingen.'),
          ('DFO Kennisbank', 'https://kennisbank.dfobv.nl/', 'Artikelen uit de Nieuwsbrief Wft, doorzoekbaar.')]) +
        '\n    <h2>Gratis oefenen</h2>\n    <p>Met de <a href="toets.html">Wft-kennistoets</a> van Wft Permanent Actueel oefen je per module met vragen met uitleg. Gratis voor alle adviseurs. De toets is een oefentoets en geen erkend PE-examen.</p>\n</div>')
-pagina('opleidingen.html', 'DFO Opleidingen: opleidingen en kennis voor financieel adviseurs',
+pagina('opleidingen.html', 'DFO Opleidingen voor financieel adviseurs',
        'Opleidingen, bijeenkomsten en kennisproducten van DFO voor medewerkers van financiële advieskantoren, plus gratis oefenen met de Wft-kennistoets.',
        'DFO Opleidingen', 'DFO BV', inh, actief='opleidingen.html',
        intro='Opleidingen en bijeenkomsten voor medewerkers van het advieskantoor, en kennis om je vak bij te houden.')
@@ -669,12 +811,35 @@ pagina('opleidingen.html', 'DFO Opleidingen: opleidingen en kennis voor financie
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen (5 extra per toegevoegde module) en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: ' + PEIL + '.', '',
         '## PE en Permanent Actueel', '', f'- [PE-punten, PE-examens en Wft Permanent Actueel]({SITE}pe-punten-wft.html): onder de Wft bestaan geen PE-punten meer; sinds 1 januari 2014 houd je je adviesbevoegdheid geldig met één PE-examen per beroepskwalificatie binnen elke PE-periode (lopende periode: 1 april 2025 tot en met 31 maart 2028, volgens het CDFD). De PA-toets is een gratis oefentoets en levert geen PE-punten of PE-examen op.', '',
-        '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg na elk antwoord, certificaat vanaf 5 van 7 goed.', '',
+        '## Toets', '', f'- [PA-toets]({SITE}toets.html): kies een module of een mix; 7 vragen bij één module en 5 extra per toegevoegde module, uitleg bij alle vier de antwoorden, na afloop een certificaat (eigen verklaring, geen PE-bewijs), foute vragen opnieuw oefenen en oefenen per CDFD-toetsterm.', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
-llms += ['', '## Informatie', '', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
+llms += ['', '## Belangrijke datums', ''] + [f'- {nl(d[0])}: {d[1]}. {d[2]}' for d in DATUMS]
+llms += ['', '## Informatie', '', f'- [Begrippenlijst Wft]({SITE}begrippen.html): korte uitleg van de belangrijkste begrippen uit de Wft en permanente educatie', f'- [Zoeken]({SITE}zoeken.html?q=): doorzoek de site', f'- [Volledige tekst voor taalmodellen]({SITE}llms-full.txt)', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
          '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
 open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
+
+
+# ---------- begrippenlijst (DefinedTermSet) ----------
+naam_van = {m['id']: m['naam'] for m in MODS}
+BIJGEWERKT['begrippen.html'] = LAATSTE
+inh = ('    <p class="lead">De belangrijkste begrippen uit de Wft, permanente educatie en de Wft-modules, kort uitgelegd. Handig als geheugensteun bij het oefenen.</p>\n'
+       '    <p class="meta-regel">Peildatum regelgeving ' + PEIL + '</p>\n'
+       '    <nav class="abc" aria-label="Begrippen op letter">' + ' '.join(f'<a href="#letter-{l.lower()}">{l}</a>' for l in sorted({b[0][0].upper() for b in BEGRIPPEN})) + '</nav>\n'
+       '    <dl class="begrippen">\n')
+vorige = ''
+for b in sorted(BEGRIPPEN, key=lambda x: x[0].lower()):
+    l = b[0][0].upper(); bid = 'begrip-' + slug(b[0])
+    anker = f' id="letter-{l.lower()}"' if l != vorige else ''; vorige = l
+    inh += (f'      <div class="begrip"{anker}><dt id="{bid}">{html.escape(b[0])}</dt><dd>{html.escape(b[1])} '
+            + '<span class="begrip-mods">' + ' · '.join(f'<a href="module-{m}.html">Wft {html.escape(naam_van[m])}</a>' for m in b[2]) + '</span></dd></div>\n')
+inh += ('    </dl>\n    <div class="acties"><a class="btn" href="toets.html">Test je kennis in de toets</a><a class="btn ghost" href="zoeken.html">Zoek op de site</a></div>\n'
+        '    <p class="klein">Deze uitleg is vereenvoudigd en geen advies. Bedragen en grenzen wijzigen per jaar; controleer altijd de geldende bron.</p>')
+ld = {'@context': 'https://schema.org', '@graph': [{'@type': 'DefinedTermSet', '@id': SITE + 'begrippen.html#begrippen', 'name': 'Begrippenlijst Wft — Permanent Actueel', 'inLanguage': 'nl',
+       'hasDefinedTerm': [{'@type': 'DefinedTerm', '@id': SITE + 'begrippen.html#begrip-' + slug(b[0]), 'name': b[0], 'description': b[1], 'inDefinedTermSet': SITE + 'begrippen.html#begrippen',
+                           'url': SITE + 'begrippen.html#begrip-' + slug(b[0])} for b in BEGRIPPEN]}]}
+pagina('begrippen.html', 'Begrippenlijst Wft: PE, toetstermen en Wft-modules uitgelegd', 'Wat is een PE-examen, een beroepskwalificatie, OVI of de Wtp? De belangrijkste Wft-begrippen kort en helder uitgelegd voor financieel adviseurs.',
+       'Begrippenlijst Wft', 'Kort uitgelegd', inh, ld=ld, kruimel='Begrippenlijst Wft')
 
 # ---------- zoekindex en zoekpagina (als laatste, zodat de index compleet is) ----------
 open(R + 'assets/js/zoekindex.js', 'w', encoding='utf-8').write('/* Zoekindex, gegenereerd door tools/bouw-paginas.py. Niet met de hand bewerken. */\nwindow.PA_ZOEK=' + json.dumps(ZOEK, ensure_ascii=False, separators=(',', ':')) + ';\n')
@@ -688,9 +853,25 @@ inh = ('    <form class="zoekform" action="zoeken.html" method="get" role="searc
 pagina('zoeken.html', 'Zoeken — Wft Permanent Actueel', 'Doorzoek Wft Permanent Actueel: modules, actuele wijzigingen, PE, wet- en regelgeving en veelgestelde vragen.',
        'Zoeken', 'Doorzoek de site', inh, actief='zoeken.html', scripts='\n<script src="assets/js/zoekindex.js"></script>\n<script src="assets/js/zoek.js"></script>')
 
+# ---------- llms-full.txt: de volledige tekst van de site in Markdown, voor AI-assistenten ----------
+volledig = ['# Wft Permanent Actueel (PA-WFT.nl) — volledige tekst', '',
+            f'> Gratis oefenomgeving voor financieel adviseurs van DFO BV. Peildatum regelgeving: {PEIL}. Oefentoets, geen erkend PE-examen en geen advies. Bron: {SITE}', '']
+huidige = None
+for d in ZOEK:
+    pagina_url = SITE + d['u'].split('#')[0]
+    if d['p'] != huidige:
+        volledig += ['', f"## {d['p']}", f'Bron: {pagina_url}', '']; huidige = d['p']
+    if d['h']: volledig += [f"### {d['h']}", '']
+    volledig += [d['x'], '']
+open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n')
+
 # ---------- sitemap en robots ----------
-paden = ['', 'toets.html', 'nieuw.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
+paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>{LAATSTE}</lastmod></url>\n' for p in paden) + '</urlset>\n')
-open(R + 'robots.txt', 'w').write(f'User-agent: *\nAllow: /\n\nSitemap: {SITE}sitemap.xml\n')
+    ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>{BIJGEWERKT.get(p or "index.html", PEIL_ISO)}</lastmod></url>\n' for p in paden) + '</urlset>\n')
+ROBOTS_AI = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'CCBot']
+NIET = ['/tools/', '/assets/js/vragen/']
+open(R + 'robots.txt', 'w').write('# PA-WFT.nl: vrij te lezen door zoekmachines en AI-assistenten. De vragenbank van de toets is uitgesloten.\n'
+    + ''.join(f'User-agent: {b}\n' for b in ['*'] + ROBOTS_AI) + 'Allow: /\n' + ''.join(f'Disallow: {d}\n' for d in NIET)
+    + f'\nSitemap: {SITE}sitemap.xml\n')
 print('klaar:', len(paden), 'pagina’s in sitemap')
