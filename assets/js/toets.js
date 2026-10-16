@@ -59,6 +59,7 @@
   var LOGO = 'assets/logo/dfo-logo.png';
   (function(){ var img = new Image(); img.onload = function(){ try{ var c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight; c.getContext('2d').drawImage(img, 0, 0); LOGO = c.toDataURL('image/png'); }catch(e){} }; img.src = LOGO; })();
 
+  function tipBlok(){ var d = el('div', {class:'tipblok'}); if(window.PA_TIP) window.PA_TIP(d); return d; }
   function agendaBlok(){ var d = el('div', {style:'margin-top:24px'}); if(window.PA_AGENDA) window.PA_AGENDA(d); return d; }
 
   function startScherm(){
@@ -238,6 +239,7 @@
       goed < n ? el('div', {class:'acties', style:'justify-content:center'}, oefenKnop(fouten(toets), 'Oefen je ' + (n - goed === 1 ? 'foute vraag' : (n - goed) + ' foute vragen') + ' opnieuw')) : null,
       certificaatFormulier(),
       agendaBlok(),
+      tipBlok(),
       el('div', {class:'acties', style:'justify-content:center'},
         el('button', {class:'btn ghost', type:'button', onclick:start}, 'Nieuwe toets, zelfde module'),
         el('button', {class:'btn ghost', type:'button', onclick:startScherm}, 'Andere module kiezen'),

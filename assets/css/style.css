@@ -202,3 +202,17 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .termen{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 18px}
 .termen a{display:inline-flex;align-items:center;min-height:44px;min-width:56px;justify-content:center;padding:0 12px;border:2px solid var(--blue);font-weight:700;text-decoration:none}
 .termen a:hover,.termen a:focus{background:var(--blue);color:#fff}
+
+/* Tip je collega's */
+.tip h3{margin:0 0 8px}
+.tip label{display:block;font-weight:700;margin:14px 0 4px}
+.tip .hulp{display:block;font-size:14px;color:#4a4a4a;margin:0 0 6px}
+.tip textarea,.tip input[type=text]{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--ink,#201e1d);border-radius:0;background:#fff}
+.tip textarea:focus,.tip input[type=text]:focus{outline:3px solid var(--blue);outline-offset:1px}
+.tip .vink{display:flex;gap:8px;align-items:center;font-weight:400;min-height:44px}
+.tip .vink input{width:20px;height:20px}
+.tip .acties{margin-top:12px}
+.tipstatus{min-height:1.4em;font-weight:600}
+.tipvoorbeeld summary{cursor:pointer;font-weight:700;color:var(--blue);min-height:44px;display:flex;align-items:center}
+.tipvoorbeeld pre{white-space:pre-wrap;font-family:inherit;font-size:14px;background:#f2f6fb;padding:12px 14px;margin:6px 0 0}
+.tipblok{margin-top:24px;padding-top:20px;border-top:2px solid #d6e3f2;text-align:left}
