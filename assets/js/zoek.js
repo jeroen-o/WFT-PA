@@ -1,4 +1,4 @@
-/* Zoeken op PA-WFT.nl: doorzoekt de zoekindex (assets/js/zoekindex.js) in de browser. Geen server, geen database. */
+/* Zoeken op PA-WFT.nl: doorzoekt de zoekindex (assets/js/zoekindex.js, of zoekindex-en.js voor de Engelse site) in de browser. Geen server, geen database. */
 (function(){
   var INDEX = window.PA_ZOEK || [];
   var veld = document.getElementById('zoekterm'), lijst = document.getElementById('zoekresultaten'), status = document.getElementById('zoekstatus');
@@ -52,15 +52,15 @@
   function toon(q, bijwerkenUrl){
     var ts = termen(q), res = zoek(q);
     lijst.replaceChildren();
-    if(bijwerkenUrl){ try{ history.replaceState(null, '', q ? 'zoeken.html?q=' + encodeURIComponent(q) : 'zoeken.html'); }catch(e){} }
+    if(bijwerkenUrl){ try{ history.replaceState(null, '', q ? PA_PAGINA('zoeken') + '?q=' + encodeURIComponent(q) : PA_PAGINA('zoeken')); }catch(e){} }
     if(!q.trim()){ status.textContent = ''; return; }
-    if(!ts.length){ status.textContent = 'Typ minimaal twee letters.'; return; }
-    status.textContent = res.length ? res.length + (res.length === 30 ? '+ resultaten' : res.length === 1 ? ' resultaat' : ' resultaten') + ' voor "' + q.trim() + '".' : 'Geen resultaten voor "' + q.trim() + '". Probeer een ander of korter zoekwoord.';
+    if(!ts.length){ status.textContent = PA_T('zMinimaal'); return; }
+    status.textContent = res.length ? PA_T('zResultaten', res.length, q.trim()) : PA_T('zGeen', q.trim());
     res.forEach(function(o){
       var d = o.r.d, li = document.createElement('li'), a = document.createElement('a');
-      a.href = d.u || 'index.html';
+      a.href = PA_PAD + (d.u || 'index.html');
       a.textContent = d.h ? d.h : d.p;
-      var waar = document.createElement('span'); waar.className = 'waar'; waar.textContent = d.h ? d.p : 'Pagina';
+      var waar = document.createElement('span'); waar.className = 'waar'; waar.textContent = d.h ? d.p : PA_T('zPagina');
       var h = document.createElement('h3'); h.append(a);
       li.append(waar, h, fragment(d.x, ts));
       lijst.append(li);

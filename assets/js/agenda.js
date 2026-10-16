@@ -1,11 +1,11 @@
 /* Agendaherinnering: elk kwartaal de PA-toets, 5 jaar lang (20 keer), met een link naar de toets.
    Gebruik: <div data-agenda></div>; window.PA_AGENDA(element) vult een element ook later (de toets). */
 (function(){
-  var URL_TOETS = 'https://pa-wft.nl/toets.html';
-  var TITEL = 'PA-toets Wft Permanent Actueel';
+  var URL_TOETS = PA_URL('toets');
+  var TITEL = PA_T('agTitel');
   var KEER = 20; // elk kwartaal, 5 jaar lang
   var REGEL = 'RRULE:FREQ=MONTHLY;INTERVAL=3;COUNT=' + KEER;
-  var TEKST = 'Doe de PA-toets, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het in bij je werkgever. ' + URL_TOETS;
+  var TEKST = PA_T('agTekst', URL_TOETS);
 
   function pad(n){ return String(n).padStart(2, '0'); }
   function dag(d){ return d.getFullYear() + pad(d.getMonth() + 1) + pad(d.getDate()); }
@@ -16,7 +16,7 @@
   function ics(){
     var s = eerste(), e = new Date(s); e.setDate(e.getDate() + 1);
     var nu = new Date(), stamp = nu.getUTCFullYear() + pad(nu.getUTCMonth() + 1) + pad(nu.getUTCDate()) + 'T' + pad(nu.getUTCHours()) + pad(nu.getUTCMinutes()) + '00Z';
-    var regels = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//DFO BV//PA-WFT.nl//NL', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+    var regels = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//DFO BV//PA-WFT.nl//' + PA_T('agProdid'), 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
       'BEGIN:VEVENT', 'UID:pa-toets-' + stamp + '@pa-wft.nl', 'DTSTAMP:' + stamp,
       'DTSTART;VALUE=DATE:' + dag(s), 'DTEND;VALUE=DATE:' + dag(e), REGEL,
       'SUMMARY:' + TITEL, 'DESCRIPTION:' + TEKST.replace(/,/g, '\\,'), 'URL:' + URL_TOETS, 'TRANSP:TRANSPARENT',
@@ -35,12 +35,12 @@
     doel.className = (doel.className ? doel.className + ' ' : '') + 'agenda';
     doel.innerHTML = '';
     var p = document.createElement('p');
-    p.textContent = 'Zet een herinnering in je agenda: elk kwartaal, de komende 5 jaar, met een link naar de toets.';
+    p.textContent = PA_T('agUitleg');
     var a1 = document.createElement('a');
     a1.className = 'btn ghost'; a1.href = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(ics());
-    a1.download = 'pa-toets-elk-kwartaal.ics'; a1.textContent = 'Zet in mijn agenda (Outlook, Apple)';
+    a1.download = PA_T('agIcsNaam'); a1.textContent = PA_T('agIcsKnop');
     var a2 = document.createElement('a');
-    a2.className = 'btn ghost'; a2.href = google(); a2.target = '_blank'; a2.rel = 'noopener'; a2.textContent = 'Google Agenda';
+    a2.className = 'btn ghost'; a2.href = google(); a2.target = '_blank'; a2.rel = 'noopener'; a2.textContent = PA_T('agGoogle');
     var rij = document.createElement('div'); rij.className = 'acties'; rij.append(a1, a2);
     doel.append(p, rij);
   };

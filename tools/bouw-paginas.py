@@ -9,6 +9,13 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '/'
 SITE = 'https://pa-wft.nl/'
 PEIL = '15 oktober 2026'
 
+# Tweetaligheid: Nederlandse pagina -> Engelse pagina (in /en/). Pagina's zonder Engelse tegenhanger linken naar de Engelse homepage.
+EN_PAD = {'index.html': 'index.html', 'toets.html': 'quiz.html', 'nieuw.html': 'whats-new.html', 'begrippen.html': 'glossary.html', 'pe-punten-wft.html': 'pe-explained.html',
+          'vragen.html': 'faq.html', 'over.html': 'about.html', 'privacy.html': 'privacy.html', 'gebruiksvoorwaarden.html': 'terms.html', 'klachten.html': 'complaints.html', 'zoeken.html': 'search.html'}
+for _m in ['basis', 'consumptief-krediet', 'hypothecair-krediet', 'schade-particulier', 'schade-zakelijk', 'vermogen', 'inkomen', 'pensioen', 'zorgverzekering']:
+    EN_PAD[f'module-{_m}.html'] = f'module-{_m}.html'
+def en_url(pad): return SITE + 'en/' + ('' if EN_PAD[pad] == 'index.html' else EN_PAD[pad])
+
 MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 60 60)">'
         '<circle cx="60" cy="60" r="48" fill="none" stroke="#1462ad" stroke-width="14" stroke-dasharray="28.5 5.01"/>'
         '<circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
@@ -17,11 +24,12 @@ MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 
 NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('wetgeving.html', 'Wet- en regelgeving'),
        ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV'), ('zoeken.html', 'Zoeken')]
 
-def header(actief=''):
+def header(actief='', pad=''):
     loep = '<svg class="loep" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
     links = ''.join('<a href="%s"%s>%s%s</a>' % (h, ' aria-current="page"' if h == actief else '', loep if h == 'zoeken.html' else '', t) for h, t in NAV)
     return ('<a class="skip" href="#inhoud">Naar de inhoud</a>\n<div class="topbar">\n  <div class="wrap">\n'
             '    <a class="logo" href="index.html" aria-label="Wft Permanent Actueel — home"' + (' aria-current="page"' if actief == 'index.html' else '') + '><img src="assets/logo/pa-wft-logo-horizontal.png" width="144" height="60" alt="Wft Permanent Actueel — PA-WFT.nl" fetchpriority="high"></a>\n'
+            '    <a class="taalknop" href="' + ('en/' + ('' if EN_PAD.get(pad, 'index.html') == 'index.html' else EN_PAD[pad]) if pad != '404.html' else 'en/') + '" hreflang="en" lang="en" title="Read this page in English">EN</a>\n'
             '    <a class="zoekknop" href="zoeken.html" aria-label="Zoeken op de site">' + loep.replace('width="16" height="16"', 'width="24" height="24"') + '</a>\n'
             '    <nav class="topnav" aria-label="Hoofdmenu">' + links + '</nav>\n'
             '  </div>\n</div>')
@@ -60,7 +68,8 @@ def head(titel, omschrijving, pad, extra='', og_beeld='og-image.png', og_type='w
             f'<title>{t}</title>\n<meta name="description" content="{o}">\n'
             + ('<meta name="robots" content="noindex, follow">\n' if pad in GEEN_INDEX else '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">\n')
             + '<meta name="theme-color" content="#1462ad">\n<meta name="author" content="DFO BV">\n'
-            f'<link rel="canonical" href="{u}">\n<link rel="alternate" hreflang="nl" href="{u}">\n<link rel="alternate" hreflang="x-default" href="{u}">\n'
+            f'<link rel="canonical" href="{u}">\n<link rel="alternate" hreflang="nl" href="{u}">\n'
+            + (f'<link rel="alternate" hreflang="en" href="{en_url(pad)}">\n' if pad in EN_PAD else '') + f'<link rel="alternate" hreflang="x-default" href="{u}">\n'
             '<link rel="icon" href="favicon.ico" sizes="any">\n<link rel="icon" href="favicon.svg" type="image/svg+xml">\n'
             '<link rel="apple-touch-icon" href="apple-touch-icon.png">\n<link rel="manifest" href="site.webmanifest">\n'
             f'<meta property="og:type" content="{og_type}">\n<meta property="og:site_name" content="Wft Permanent Actueel">\n<meta property="og:locale" content="nl_NL">\n'
@@ -117,7 +126,7 @@ def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', l
     if ld: extra += '\n<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>'
     if not kaal and not inhoud.lstrip().startswith('<div class="paneel'):
         inhoud = '<div class="paneel page">\n' + inhoud + '\n</div>'
-    s = (head(titel, omschrijving, pad, extra, og_beeld, og_type) + '\n' + header(actief) + '\n' + masthead(kicker, kop, intro, mast_extra, datum)
+    s = (head(titel, omschrijving, pad, extra, og_beeld, og_type) + '\n' + header(actief, pad) + '\n' + masthead(kicker, kop, intro, mast_extra, datum)
          + ('\n<main id="inhoud" class="kaal">\n' + inhoud + '\n<div class="wrap">' + MELDING + '</div>\n</main>\n' if kaal else
             '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING + '\n  </div>\n</main>\n') + FOOTER + scripts + '\n</body>\n</html>\n')
     if kaal: s = s.replace('<body>', '<body class="breed">', 1)
@@ -131,7 +140,7 @@ ORG = {'@type': 'Organization', '@id': SITE + '#dfo', 'name': 'DFO BV', 'alterna
        'vatID': 'NL806480828B01', 'identifier': {'@type': 'PropertyValue', 'propertyID': 'KvK', 'value': '32068727'},
        'address': {'@type': 'PostalAddress', 'streetAddress': 'De Wel 14-16', 'postalCode': '3871 MV', 'addressLocality': 'Hoevelaken', 'addressCountry': 'NL'},
        'contactPoint': {'@type': 'ContactPoint', 'contactType': 'customer service', 'telephone': '+31332580460', 'email': 'info@dfobv.nl', 'availableLanguage': 'nl', 'url': 'https://www.dfobv.nl/contact/'},
-       'sameAs': ['https://www.dfobv.nl/', 'https://kennisbank.dfobv.nl/', 'https://www.dfosignalen.nl/']}
+       'sameAs': ['https://www.dfobv.nl/', 'https://www.linkedin.com/company/bureaudfo/', 'https://kennisbank.dfobv.nl/', 'https://www.dfosignalen.nl/']}
 WEBSITE = {'@type': 'WebSite', '@id': SITE + '#site', 'name': 'Wft Permanent Actueel', 'alternateName': 'PA-WFT.nl', 'url': SITE, 'inLanguage': 'nl', 'publisher': {'@id': SITE + '#dfo'},
            'description': 'Gratis oefenomgeving voor financieel adviseurs: per Wft-module PE-oefenvragen met uitleg, een kennistoets van 7 vragen per module (5 extra per toegevoegde module) en een certificaat.',
            'potentialAction': {'@type': 'SearchAction', 'target': {'@type': 'EntryPoint', 'urlTemplate': SITE + 'zoeken.html?q={search_term_string}'}, 'query-input': 'required name=search_term_string'}}
@@ -698,7 +707,7 @@ pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
        intro='Kennis actueel, elk kwartaal weer. Oefen per Wft-module met vragen over wat er actueel is, met uitleg bij elk antwoord.',
        mast_extra='    <p class="gratis"><strong>Gratis voor alle adviseurs.</strong> Alle modules en de kennistoets, zonder kosten.</p>\n    ' + MARK.replace('<svg ', '<svg class="hero-mark" ', 1) + '\n',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>')
+       scripts='\n<script src="assets/js/taal.js"></script>\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>')
 s = open(R + 'index.html', encoding='utf-8').read()
 s = s.replace('<meta name="theme-color" content="#1462ad">', '<meta name="google-site-verification" content="3JKf334ow3hOt0pa1YDk1TUvE6EaKzWpUMmtlkBD6fo">\n<meta name="theme-color" content="#1462ad">', 1)
 open(R + 'index.html', 'w', encoding='utf-8').write(s)
@@ -730,7 +739,7 @@ pagina('toets.html', 'Gratis Wft-kennistoets met uitleg | Permanent Actueel',
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html', ld=ld_toets, kruimel='Wft-kennistoets',
        intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop ontvang je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script>window.PA_VRAGEN_V=' + json.dumps(VRAGEN_V, separators=(',', ':')) + ';</script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
+       scripts='\n<script src="assets/js/taal.js"></script>\n<script src="assets/js/modules.js"></script>\n<script>window.PA_VRAGEN_V=' + json.dumps(VRAGEN_V, separators=(',', ':')) + ';</script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
 
 # ---------- Wet- en regelgeving ----------
 bron = open(R + 'tools/wetgeving-bron.md', encoding='utf-8').read()
@@ -815,6 +824,7 @@ llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
 llms += ['', '## Belangrijke datums', ''] + [f'- {nl(d[0])}: {d[1]}. {d[2]}' for d in DATUMS]
+llms += ['', '## English version', '', f'- [English home]({SITE}en/): free Wft practice test for advisers, English convenience translation', f'- [Quiz]({SITE}en/quiz.html)', f'- [PE explained]({SITE}en/pe-explained.html)', f'- [What’s new]({SITE}en/whats-new.html)', f'- [Glossary]({SITE}en/glossary.html)', f'- [Full text in English]({SITE}llms-full-en.txt)']
 llms += ['', '## Informatie', '', f'- [Begrippenlijst Wft]({SITE}begrippen.html): korte uitleg van de belangrijkste begrippen uit de Wft en permanente educatie', f'- [Zoeken]({SITE}zoeken.html?q=): doorzoek de site', f'- [Volledige tekst voor taalmodellen]({SITE}llms-full.txt)', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
          '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
 open(R + 'llms.txt', 'w', encoding='utf-8').write('\n'.join(llms) + '\n')
@@ -851,7 +861,7 @@ inh = ('    <form class="zoekform" action="zoeken.html" method="get" role="searc
        '    <noscript><p>Zoeken werkt met JavaScript. Bekijk anders de <a href="sitemap.xml">sitemap</a>.</p></noscript>\n'
        '    <h2>Populaire onderwerpen</h2>\n    <p class="zoektips">' + ' '.join(f'<a href="zoeken.html?q={urllib.parse.quote(t)}">{t}</a>' for t in ['PE-examen', 'CCD II', 'toetstermen', 'box 3', 'Wwft', 'Wet toekomst pensioenen', 'certificaat', 'OVI']) + '</p>\n')
 pagina('zoeken.html', 'Zoeken — Wft Permanent Actueel', 'Doorzoek Wft Permanent Actueel: modules, actuele wijzigingen, PE, wet- en regelgeving en veelgestelde vragen.',
-       'Zoeken', 'Doorzoek de site', inh, actief='zoeken.html', scripts='\n<script src="assets/js/zoekindex.js"></script>\n<script src="assets/js/zoek.js"></script>')
+       'Zoeken', 'Doorzoek de site', inh, actief='zoeken.html', scripts='\n<script src="assets/js/taal.js"></script>\n<script src="assets/js/zoekindex.js"></script>\n<script src="assets/js/zoek.js"></script>')
 
 # ---------- llms-full.txt: de volledige tekst van de site in Markdown, voor AI-assistenten ----------
 volledig = ['# Wft Permanent Actueel (PA-WFT.nl) — volledige tekst', '',
@@ -865,13 +875,27 @@ for d in ZOEK:
     volledig += [d['x'], '']
 open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n')
 
+# ---------- Engelse versie (/en/) ----------
+exec(open(R + 'tools/bouw-engels.py', encoding='utf-8').read())
+
 # ---------- sitemap en robots ----------
 paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
-open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-    ''.join(f'  <url><loc>{SITE}{p}</loc><lastmod>{BIJGEWERKT.get(p or "index.html", PEIL_ISO)}</lastmod></url>\n' for p in paden) + '</urlset>\n')
+def sm_url(loc, lastmod, alt):
+    x = f'  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod>'
+    for taal, u in alt: x += f'<xhtml:link rel="alternate" hreflang="{taal}" href="{u}"/>'
+    return x + '</url>\n'
+sm = ''
+for p_ in paden:
+    key = p_ or 'index.html'
+    alt = [('nl', SITE + p_), ('en', en_url(key)), ('x-default', SITE + p_)] if key in EN_PAD else []
+    sm += sm_url(SITE + p_, BIJGEWERKT.get(key, PEIL_ISO), alt)
+for nlp, enp in EN_PAD.items():
+    if enp == 'search.html': continue
+    sm += sm_url(en_url(nlp), BIJGEWERKT_E.get(enp, PEIL_ISO), [('nl', SITE + ('' if nlp == 'index.html' else nlp)), ('en', en_url(nlp)), ('x-default', SITE + ('' if nlp == 'index.html' else nlp))])
+open(R + 'sitemap.xml', 'w').write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n' + sm + '</urlset>\n')
 ROBOTS_AI = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'CCBot']
-NIET = ['/tools/', '/assets/js/vragen/']
+NIET = ['/tools/', '/assets/js/vragen/', '/assets/js/vragen-en/']
 open(R + 'robots.txt', 'w').write('# PA-WFT.nl: vrij te lezen door zoekmachines en AI-assistenten. De vragenbank van de toets is uitgesloten.\n'
     + ''.join(f'User-agent: {b}\n' for b in ['*'] + ROBOTS_AI) + 'Allow: /\n' + ''.join(f'Disallow: {d}\n' for d in NIET)
     + f'\nSitemap: {SITE}sitemap.xml\n')
-print('klaar:', len(paden), 'pagina’s in sitemap')
+print('klaar:', len(paden) + len(EN_PAD) - 1, 'pagina’s in sitemap')

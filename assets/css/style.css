@@ -273,3 +273,9 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .kort ul{margin:0;padding-left:20px}
 .kort li{margin:4px 0}
 .kolommen{columns:2 220px;padding-left:20px}
+
+/* Taalknop (NL/EN) */
+.topbar .wrap{position:relative}
+.taalknop{position:absolute;top:18px;right:var(--pad,24px);display:flex;align-items:center;justify-content:center;min-width:48px;height:48px;border:2px solid var(--ink,#201e1d);font-weight:800;text-decoration:none;color:var(--ink,#201e1d);letter-spacing:.03em}
+.taalknop:hover,.taalknop:focus{background:var(--ink,#201e1d);color:#fff}
+@media (max-width:700px){.zoekknop{right:calc(var(--pad) + 58px)!important}}
