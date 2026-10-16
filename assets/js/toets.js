@@ -1,4 +1,4 @@
-/* PA-toets in de stijl van de WFT Bieb-kennistoets. Vragen: assets/js/vragen.js, modules: assets/js/modules.js. */
+/* PA-toets in de stijl van de WFT Bieb-kennistoets. Vragen: assets/js/vragen/<id>.js (nl) of assets/js/vragen-en/<id>.js (en), modules: assets/js/modules.js (nl) of modules-en.js (en), teksten: assets/js/taal.js. */
 (function(){
   // 7 vragen bij één module, 5 extra per module die je toevoegt: 1 → 7, 2 → 12, 3 → 17, 9 → 47
   function aantalVragen(n){ return 7 + 5 * (Math.max(1, n) - 1); }
@@ -9,12 +9,13 @@
     return Promise.all(ids.filter(function(id){ return !vragenVan(id); }).map(function(id){
       return laden[id] || (laden[id] = new Promise(function(ok, nok){
         var s = document.createElement('script');
-        s.src = 'assets/js/vragen/' + id + '.js?v=' + ((window.PA_VRAGEN_V || {})[id] || '');
+        s.src = '/assets/js/' + (window.PA_TAAL === 'en' ? 'vragen-en' : 'vragen') + '/' + id + '.js?v=' + ((window.PA_VRAGEN_V || {})[id] || '');
         s.onload = ok; s.onerror = function(){ delete laden[id]; s.remove(); nok(new Error('laden mislukt')); };
         document.head.appendChild(s);
       }));
     }));
   }
+  var ADVIES = PA_T('advies'), DISCLAIMER = PA_T('disclaimer');
   var paneel = document.getElementById('paneel');
   var keuze = ['basis'], toets = [], stap = 0, laatste = null, gehad = {}, hoofdtoets = null, oefenen = false; // keuze: id's van de gekozen modules
 
@@ -37,26 +38,26 @@
   function rnd(n){ var a = new Uint32Array(1); crypto.getRandomValues(a); return a[0] % n; }
   function hussel(a){ a = a.slice(); for(var i = a.length - 1; i > 0; i--){ var j = rnd(i + 1), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function vandaag(){ var d = new Date(); return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'); }
-  function nu(){ var d = new Date(); return PA_DATUM(vandaag()) + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + ' uur'; }
+  function nu(){ var d = new Date(); return PA_DATUM(vandaag()) + ', ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0') + PA_T('uur'); }
   function modById(id){ return MODS.filter(function(m){ return m.id === id; })[0]; }
 
   // Welke modules horen bij de huidige keuze (altijd in de vaste volgorde van de modules)
   function gekozenModules(){ return MODS.filter(function(m){ return keuze.indexOf(m.id) > -1; }); }
   function keuzeLabel(){
     var ms = gekozenModules();
-    if(ms.length === MODS.length) return 'Alle modules';
-    if(ms.length > 1) return 'Mijn pakket: ' + ms.map(function(m){ return m.naam; }).join(', ');
+    if(ms.length === MODS.length) return PA_T('alleModules');
+    if(ms.length > 1) return PA_T('mijnPakketLijst', ms.map(function(m){ return m.naam; }).join(', '));
     return 'Wft ' + ms[0].naam;
   }
   function bijgewerktTekst(){
     var ms = gekozenModules();
-    if(ms.length === 1) return 'Vragen van deze module laatst bijgewerkt op ' + PA_DATUM(ms[0].bijgewerkt) + '.';
+    if(ms.length === 1) return PA_T('bijgewerkt1', PA_DATUM(ms[0].bijgewerkt));
     var oudste = ms.map(function(m){ return m.bijgewerkt; }).sort()[0];
-    return ms.length + ' modules. Oudste bijwerkdatum: ' + PA_DATUM(oudste) + '.';
+    return PA_T('bijgewerktN', ms.length, PA_DATUM(oudste));
   }
 
   // Logo als data-URL, zodat het certificaat ook in een nieuw venster en bij printen het logo toont
-  var LOGO = 'assets/logo/dfo-logo.png';
+  var LOGO = window.PA_LOGO || '/assets/logo/dfo-logo.png';
   (function(){ var img = new Image(); img.onload = function(){ try{ var c = document.createElement('canvas'); c.width = img.naturalWidth; c.height = img.naturalHeight; c.getContext('2d').drawImage(img, 0, 0); LOGO = c.toDataURL('image/png'); }catch(e){} }; img.src = LOGO; })();
 
   function tipBlok(){ var d = el('div', {class:'tipblok'}); if(window.PA_TIP) window.PA_TIP(d); return d; }
@@ -64,10 +65,10 @@
 
   function startScherm(){
     var info = el('p', {class:'bijgewerkt', 'aria-live':'polite'});
-    function aantalTekst(){ var n = gekozenModules().length; return n ? 'Met deze keuze: ' + n + (n === 1 ? ' module, ' : ' modules, ') + aantalVragen(n) + ' vragen.' : 'Kies minimaal één module.'; }
+    function aantalTekst(){ var n = gekozenModules().length; return n ? PA_T('aantal', n, aantalVragen(n)) : PA_T('kiesMinimaal'); }
     var uitlegAantal = el('p', {id:'aantalTekst', class:'aantal', 'aria-live':'polite'});
-    var startKnop = el('button', {class:'btn', type:'button', id:'startKnop', onclick:start}, 'Start de toets');
-    var vakjes = el('div', {class:'modkeuze', role:'group', 'aria-label':'Modules'});
+    var startKnop = el('button', {class:'btn', type:'button', id:'startKnop', onclick:start}, PA_T('startToets'));
+    var vakjes = el('div', {class:'modkeuze', role:'group', 'aria-label':PA_T('modules')});
     function bijwerken(){
       [].forEach.call(vakjes.querySelectorAll('input'), function(i){ i.checked = keuze.indexOf(i.value) > -1; });
       var ms = gekozenModules();
@@ -82,14 +83,14 @@
       vakjes.append(el('label', {class:'modvak', for:'mod-' + m.id}, i, el('span', null, 'Wft ' + m.naam)));
     });
     var snel = el('p', {class:'snel'},
-      el('button', {type:'button', class:'linkknop', id:'alleModules', onclick:function(){ keuze = MODS.map(function(m){ return m.id; }); bijwerken(); }}, 'Alle modules'), ' · ',
-      el('button', {type:'button', class:'linkknop', onclick:function(){ keuze = []; bijwerken(); }}, 'Niets'), ' · ',
-      el('a', {href:'index.html#check'}, 'Kies op beroepskwalificatie'));
+      el('button', {type:'button', class:'linkknop', id:'alleModules', onclick:function(){ keuze = MODS.map(function(m){ return m.id; }); bijwerken(); }}, PA_T('alleModules')), ' · ',
+      el('button', {type:'button', class:'linkknop', onclick:function(){ keuze = []; bijwerken(); }}, PA_T('niets')), ' · ',
+      el('a', {href:PA_PAGINA('index', 'check')}, PA_T('kiesKwal')));
     vul(el('div', {class:'start'},
-      el('h2', null, 'Test je kennis'),
-      el('p', null, 'Kies een of meer modules. Bij één module krijg je 7 willekeurige meerkeuzevragen, en voor elke module die je toevoegt 5 extra (2 modules: 12 vragen, 3 modules: 17). Na elk antwoord zie je bij alle vier de antwoorden waarom ze goed of fout zijn. Na afloop ontvang je een certificaat met je resultaat.'),
+      el('h2', null, PA_T('testKennis')),
+      el('p', null, PA_T('startUitleg')),
       vakjes, snel, uitlegAantal, info, teamBlok(),
-      el('p', {class:'advies'}, 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.'),
+      el('p', {class:'advies'}, ADVIES),
       startKnop,
       agendaBlok()
     ));
@@ -99,24 +100,24 @@
   // Link naar precies deze modulekeuze, om te delen met collega's of het hele team
   function teamLink(){
     var ids = gekozenModules().map(function(m){ return m.id; });
-    return 'https://pa-wft.nl/toets.html' + (ids.length === MODS.length ? '#alles' : ids.length > 1 ? '#mix=' + ids.join(',') : ids.length ? '#' + ids[0] : '');
+    return PA_URL('toets') + (ids.length === MODS.length ? '#alles' : ids.length > 1 ? '#mix=' + ids.join(',') : ids.length ? '#' + ids[0] : '');
   }
   function teamBlok(){
     var melding = el('span', {class:'klein', id:'teamStatus', 'aria-live':'polite'});
     var knop = el('button', {type:'button', class:'linkknop', id:'teamLink', onclick:function(){
       var url = teamLink();
-      var klaar = function(){ melding.textContent = ' Gekopieerd: ' + url; }, zelf = function(){ melding.textContent = ' Kopieer deze link: ' + url; };
+      var klaar = function(){ melding.textContent = PA_T('teamGekopieerd', url); }, zelf = function(){ melding.textContent = PA_T('teamZelf', url); };
       try{ if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(klaar, zelf); else zelf(); }catch(e){ zelf(); }
-    }}, 'Kopieer de link naar deze toets voor je team');
+    }}, PA_T('teamKopieer'));
     return el('p', {class:'team'}, knop, melding);
   }
 
   function start(){
     var ms = gekozenModules(), knop = document.getElementById('startKnop');
-    if(knop){ knop.disabled = true; knop.textContent = 'Vragen laden…'; }
+    if(knop){ knop.disabled = true; knop.textContent = PA_T('vragenLaden'); }
     laad(ms.map(function(m){ return m.id; })).then(function(){ begin(ms); }, function(){
-      alert('De vragen konden niet worden geladen. Controleer je internetverbinding en probeer het opnieuw.');
-      if(knop){ knop.disabled = false; knop.textContent = 'Start de toets'; }
+      alert(PA_T('ladenMislukt'));
+      if(knop){ knop.disabled = false; knop.textContent = PA_T('startToets'); }
     });
   }
 
@@ -145,18 +146,18 @@
   function uitlegLijst(v){
     return el('ul', {class:'uitleglijst'}, v.opties.map(function(o, k){
       return el('li', {class:(o.juist ? 'ok' : 'nok') + (k === v.keuze ? ' gekozen' : '')},
-        el('span', {class:'kop'}, (o.juist ? '✓ Goed: ' : '✗ Fout: ') + o.t + (k === v.keuze ? ' (jouw antwoord)' : '')),
+        el('span', {class:'kop'}, (o.juist ? PA_T('goed') : PA_T('fout')) + o.t + (k === v.keuze ? PA_T('jouwAntwoord') : '')),
         el('span', {class:'tekst'}, o.u));
     }));
   }
   // Twijfel over een vraag: vraag, antwoorden en uitleg direct naar DFO mailen
   function meldLink(v){
     var juist = v.opties.filter(function(o){ return o.juist; })[0];
-    var body = 'Module: Wft ' + v.module.naam + (v.term ? '\nToetsterm CDFD: ' + v.term : '') + '\n\nVraag:\n' + v.vraag + '\n\nAntwoorden:\n'
-      + v.opties.map(function(o, k){ return 'ABCD'[k] + '. ' + o.t + (o.juist ? '  [gegeven als juist]' : '') + (k === v.keuze ? '  [mijn antwoord]' : ''); }).join('\n')
-      + '\n\nUitleg bij het juiste antwoord:\n' + juist.u + '\n\nMijn twijfel:\n';
-    var href = 'mailto:info@dfobv.nl?subject=' + encodeURIComponent('check deze vraag op PA-WFT.nl') + '&body=' + encodeURIComponent(body);
-    return el('p', {class:'meld'}, el('a', {href:href, id:'meldVraag'}, 'Twijfel je over deze vraag of het antwoord? Mail hem direct naar DFO'));
+    var body = PA_T('meldModule', v.module.naam) + (v.term ? '\n' + PA_T('meldTerm', v.term) : '') + '\n\n' + PA_T('meldVraag') + '\n' + v.vraag + '\n\n' + PA_T('meldAntwoorden') + '\n'
+      + v.opties.map(function(o, k){ return 'ABCD'[k] + '. ' + o.t + (o.juist ? PA_T('meldGegevenJuist') : '') + (k === v.keuze ? PA_T('meldMijnAntwoord') : ''); }).join('\n')
+      + '\n\n' + PA_T('meldUitleg') + '\n' + juist.u + '\n\n' + PA_T('meldTwijfel') + '\n';
+    var href = 'mailto:info@dfobv.nl?subject=' + encodeURIComponent(PA_T('meldOnderwerp')) + '&body=' + encodeURIComponent(body);
+    return el('p', {class:'meld'}, el('a', {href:href, id:'meldVraag'}, PA_T('meldLink')));
   }
 
   function toonVraag(){
@@ -164,7 +165,7 @@
     var titel = el('h2', {id:'vraagtitel', tabindex:'-1'}, v.vraag);
     var opties = el('div', {class:'opties', role:'group', 'aria-labelledby':'vraagtitel'});
     var uitlegVak = el('div');
-    var volgende = el('button', {class:'btn', type:'button', id:'volgende', disabled:''}, stap < toets.length - 1 ? 'Volgende vraag' : 'Bekijk resultaat');
+    var volgende = el('button', {class:'btn', type:'button', id:'volgende', disabled:''}, stap < toets.length - 1 ? PA_T('volgende') : PA_T('bekijkResultaat'));
     volgende.addEventListener('click', function(){ if(stap < toets.length - 1){ stap++; toonVraag(); } else if(oefenen) oefenKlaar(); else resultaat(); });
     v.opties.forEach(function(o, k){
       var b = el('button', {class:'optie', type:'button'}, el('span', {class:'l', 'aria-hidden':'true'}, 'ABCD'[k]), el('span', null, o.t));
@@ -176,7 +177,7 @@
           if(v.opties[ci].juist) c.classList.add('goed'); else if(ci === k) c.classList.add('fout');
         });
         uitlegVak.replaceChildren(el('div', {class:'uitleg ' + (o.juist ? 'ok' : 'nok'), role:'status'},
-          el('strong', null, o.juist ? 'Goed!' : 'Helaas, dat is niet juist.'), uitlegLijst(v), meldLink(v)));
+          el('strong', null, o.juist ? PA_T('juistKop') : PA_T('onjuistKop')), uitlegLijst(v), meldLink(v)));
         volgende.disabled = false;
         volgende.focus();
       });
@@ -184,10 +185,10 @@
     });
     var pct = Math.round(stap / toets.length * 100);
     vul(el('div', {class:'vraag'},
-      el('div', {class:'voortgang'}, el('span', {id:'vraagKop'}, (oefenen ? 'Oefenronde · vraag ' : 'Vraag ') + (stap + 1) + ' van ' + toets.length), el('span', {class:'badge'}, 'Wft ' + v.module.naam + (v.term ? ' · toetsterm ' + v.term : ''))),
-      el('div', {class:'balk', role:'progressbar', 'aria-label':'Voortgang', 'aria-valuemin':'0', 'aria-valuemax':'100', 'aria-valuenow':String(pct)}, el('span', {style:'width:' + pct + '%'})),
+      el('div', {class:'voortgang'}, el('span', {id:'vraagKop'}, PA_T(oefenen ? 'oefenVraag' : 'vraagVan', stap + 1, toets.length)), el('span', {class:'badge'}, 'Wft ' + v.module.naam + (v.term ? PA_T('badgeTerm', v.term) : ''))),
+      el('div', {class:'balk', role:'progressbar', 'aria-label':PA_T('voortgang'), 'aria-valuemin':'0', 'aria-valuemax':'100', 'aria-valuenow':String(pct)}, el('span', {style:'width:' + pct + '%'})),
       titel, opties, uitlegVak,
-      el('div', {class:'acties'}, el('button', {class:'btn ghost', type:'button', onclick:function(){ if(confirm('Toets stoppen? Je antwoorden gaan verloren.')) startScherm(); }}, 'Stoppen'), volgende)
+      el('div', {class:'acties'}, el('button', {class:'btn ghost', type:'button', onclick:function(){ if(confirm(PA_T('stoppenVraag'))) startScherm(); }}, PA_T('stoppen')), volgende)
     ));
     titel.focus();
   }
@@ -212,12 +213,12 @@
     var nogFout = fouten(toets), goed = toets.length - nogFout.length;
     var kop = el('div', {class:'getal', id:'score', tabindex:'-1'}, goed + '/' + toets.length);
     vul(
-      el('div', {class:'score'}, kop, el('p', null, nogFout.length ? 'Oefenronde klaar. Een paar vragen zijn nog lastig: lees de uitleg en oefen ze nog een keer.' : 'Oefenronde klaar: nu alles goed.'),
-        el('p', {class:'klein'}, 'Een oefenronde telt niet mee voor je certificaat.')),
+      el('div', {class:'score'}, kop, el('p', null, PA_T(nogFout.length ? 'oefenKlaarFout' : 'oefenKlaarGoed')),
+        el('p', {class:'klein'}, PA_T('oefenTelt'))),
       el('div', {class:'acties', style:'justify-content:center'},
-        nogFout.length ? oefenKnop(nogFout, 'Oefen deze ' + (nogFout.length === 1 ? 'vraag' : nogFout.length + ' vragen') + ' nog een keer') : null,
-        hoofdtoets ? el('button', {class:'btn ghost', type:'button', id:'terugResultaat', onclick:function(){ oefenen = false; toets = hoofdtoets; resultaat(true); }}, 'Terug naar je resultaat en certificaat') : null,
-        el('button', {class:'btn ghost', type:'button', onclick:start}, 'Nieuwe toets')));
+        nogFout.length ? oefenKnop(nogFout, PA_T('oefenDeze', nogFout.length)) : null,
+        hoofdtoets ? el('button', {class:'btn ghost', type:'button', id:'terugResultaat', onclick:function(){ oefenen = false; toets = hoofdtoets; resultaat(true); }}, PA_T('terugResultaat')) : null,
+        el('button', {class:'btn ghost', type:'button', onclick:start}, PA_T('nieuweToets'))));
     kop.focus();
   }
 
@@ -225,26 +226,26 @@
     var goed = toets.filter(function(v){ return v.opties[v.keuze].juist; }).length, n = toets.length;
     var ms = gekozenModules();
     hoofdtoets = toets;
-    if(!terug || !laatste) laatste = {goed:goed, n:n, pct:Math.round(goed / n * 100), thema:keuzeLabel(), datum:PA_DATUM(vandaag()), nummer:certificaatnummer(),
+    if(!terug || !laatste) laatste = {goed:goed, n:n, pct:Math.round(goed / n * 100), thema:keuzeLabel(), themaKort:ms.length > 1 && ms.length < MODS.length ? PA_T('mijnPakket') : keuzeLabel(), datum:PA_DATUM(vandaag()), nummer:certificaatnummer(),
       bijgewerkt:PA_DATUM(ms.map(function(m){ return m.bijgewerkt; }).sort()[0]),
       modules:ms.map(function(m){ return 'Wft ' + m.naam; }),
       vanMods:MODS.map(function(m){ var n = toets.filter(function(v){ return v.module.id === m.id; }).length; return n ? m.naam + ' (' + n + ')' : null; }).filter(Boolean),
       vragen:toets.map(function(v){ var j = v.opties.filter(function(o){ return o.juist; })[0]; return {vraag:v.vraag, jouw:v.opties[v.keuze].t, juist:j.t, goed:v.opties[v.keuze].juist}; })};
     var geslaagd = goed / n >= 0.7; // geslaagd vanaf 70% goed
-    var oordeel = goed === n ? 'Foutloos. Uitstekend!' : goed / n >= 0.7 ? 'Goed gedaan, ruim voldoende.' : goed / n >= 0.5 ? 'Redelijk, maar er is ruimte voor verbetering.' : 'Dat kan beter. Lees de uitleg hieronder en probeer het opnieuw.';
+    var oordeel = PA_T(goed === n ? 'oordeel1' : goed / n >= 0.7 ? 'oordeel2' : goed / n >= 0.5 ? 'oordeel3' : 'oordeel4');
     var lijst = el('ol', {class:'overzicht'});
     toets.forEach(function(v){ lijst.append(el('li', {class:v.opties[v.keuze].juist ? 'ok' : 'nok'}, el('span', {class:'v'}, v.vraag), uitlegLijst(v), meldLink(v))); });
     vul(
-      el('div', {class:'score' + (geslaagd ? ' geslaagd' : '')}, geslaagd ? el('p', {class:'hoera', role:'status'}, 'HOERA, gefeliciteerd!') : null, el('div', {class:'getal', id:'score', tabindex:'-1'}, goed + '/' + n), el('p', null, oordeel)),
-      goed < n ? el('div', {class:'acties', style:'justify-content:center'}, oefenKnop(fouten(toets), 'Oefen je ' + (n - goed === 1 ? 'foute vraag' : (n - goed) + ' foute vragen') + ' opnieuw')) : null,
+      el('div', {class:'score' + (geslaagd ? ' geslaagd' : '')}, geslaagd ? el('p', {class:'hoera', role:'status'}, PA_T('hoera')) : null, el('div', {class:'getal', id:'score', tabindex:'-1'}, goed + '/' + n), el('p', null, oordeel)),
+      goed < n ? el('div', {class:'acties', style:'justify-content:center'}, oefenKnop(fouten(toets), PA_T('oefenFoute', n - goed))) : null,
       certificaatFormulier(),
       agendaBlok(),
       tipBlok(),
       el('div', {class:'acties', style:'justify-content:center'},
-        el('button', {class:'btn ghost', type:'button', onclick:start}, 'Nieuwe toets, zelfde module'),
-        el('button', {class:'btn ghost', type:'button', onclick:startScherm}, 'Andere module kiezen'),
-        el('button', {class:'btn ghost', type:'button', id:'printAntwoorden', onclick:printAntwoorden}, 'Print beantwoorde vragen')),
-      el('h3', {style:'margin-top:24px;font-size:17px'}, 'Overzicht met uitleg'),
+        el('button', {class:'btn ghost', type:'button', onclick:start}, PA_T('nieuweZelfde')),
+        el('button', {class:'btn ghost', type:'button', onclick:startScherm}, PA_T('andereModule')),
+        el('button', {class:'btn ghost', type:'button', id:'printAntwoorden', onclick:printAntwoorden}, PA_T('printAntwoorden'))),
+      el('h3', {style:'margin-top:24px;font-size:17px'}, PA_T('overzichtUitleg')),
       lijst);
     var sc = document.getElementById('score'); sc.focus({preventScroll:true}); sc.parentNode.scrollIntoView({block:'start'});
     if(geslaagd && !terug) feest();
@@ -294,41 +295,41 @@
     function gegevens(){ return {naam:naam.value.trim(), mail:mail.value.trim(), geb:geb.value, bedrijf:bedrijf.value.trim(), werkgever:werkgever.value.trim()}; }
     function controleer(metMail){
       var g = gegevens();
-      if(!g.naam){ status.textContent = 'Vul je naam in.'; naam.focus(); return null; }
-      if(g.geb && (!/^\d{4}-\d{2}-\d{2}$/.test(g.geb) || g.geb > vandaag() || g.geb < '1925-01-01')){ status.textContent = 'Vul een geldige geboortedatum in, of laat het veld leeg.'; geb.focus(); return null; }
-      if(metMail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g.mail)){ status.textContent = 'Vul een geldig e-mailadres in.'; mail.focus(); return null; }
-      if(g.werkgever && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g.werkgever)){ status.textContent = 'Vul een geldig e-mailadres van je werkgever in, of laat het veld leeg.'; werkgever.focus(); return null; }
+      if(!g.naam){ status.textContent = PA_T('vulNaam'); naam.focus(); return null; }
+      if(g.geb && (!/^\d{4}-\d{2}-\d{2}$/.test(g.geb) || g.geb > vandaag() || g.geb < '1925-01-01')){ status.textContent = PA_T('geldigGeb'); geb.focus(); return null; }
+      if(metMail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g.mail)){ status.textContent = PA_T('geldigMail'); mail.focus(); return null; }
+      if(g.werkgever && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(g.werkgever)){ status.textContent = PA_T('geldigWerkgever'); werkgever.focus(); return null; }
       return g;
     }
     var status = el('div', {class:'certstatus', id:'certStatus', 'aria-live':'polite'});
     var form = el('form', {class:'certform', id:'certForm', novalidate:''},
-      el('h3', null, 'Ontvang je certificaat'),
-      el('p', {class:'advies'}, 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.'),
-      el('p', null, 'Vul je gegevens in. Ze komen op het certificaat en blijven in je eigen browser: er gaat niets naar DFO en er wordt niets bewaard. Met "Mail met pdf-bijlage" maak je het certificaat als pdf en zet je het als bijlage in een mail aan jezelf.'),
-      el('div', {class:'veld'}, el('label', {for:'certnaam'}, 'Naam op het certificaat'), naam),
-      el('div', {class:'veld'}, el('label', {for:'certgeb'}, 'Geboortedatum (optioneel)'), geb),
-      el('div', {class:'veld'}, el('label', {for:'certmail'}, 'Je e-mailadres'), mail),
-      el('div', {class:'veld'}, el('label', {for:'certbedrijf'}, 'Bedrijf waar je werkt (optioneel)'), bedrijf),
-      el('div', {class:'veld'}, el('label', {for:'certwerkgever'}, 'E-mailadres werkgever, voor een kopie (optioneel)'), werkgever),
+      el('h3', null, PA_T('ontvangCert')),
+      el('p', {class:'advies'}, ADVIES),
+      el('p', null, PA_T('certUitleg')),
+      el('div', {class:'veld'}, el('label', {for:'certnaam'}, PA_T('labelNaam')), naam),
+      el('div', {class:'veld'}, el('label', {for:'certgeb'}, PA_T('labelGeb')), geb),
+      el('div', {class:'veld'}, el('label', {for:'certmail'}, PA_T('labelMail')), mail),
+      el('div', {class:'veld'}, el('label', {for:'certbedrijf'}, PA_T('labelBedrijf')), bedrijf),
+      el('div', {class:'veld'}, el('label', {for:'certwerkgever'}, PA_T('labelWerkgever')), werkgever),
       el('div', {class:'acties', style:'margin-top:12px'},
-        el('button', {class:'btn', type:'submit', id:'mailPdfKnop'}, 'Mail met pdf-bijlage'),
-        el('button', {class:'btn ghost', type:'button', id:'pdfKnop', onclick:function(){ status.className = 'certstatus'; var g = controleer(false); if(!g) return; g.uitgegeven = nu(); g.verstuurd = false; maakPdf(g).then(function(doc){ PA_PDF.download(doc.output('blob'), pdfNaam(), 'application/pdf'); status.className = 'certstatus klaar'; status.textContent = 'De pdf is gedownload: ' + pdfNaam() + '.'; }); }}, 'Download pdf'),
-        el('button', {class:'btn ghost', type:'button', id:'printKnop', onclick:function(){ status.className = 'certstatus'; var g = controleer(false); if(!g) return; g.uitgegeven = nu(); g.verstuurd = false; printCertificaat(g); }}, 'Bekijken of printen')),
-      el('p', {class:'klein', style:'margin-top:10px'}, el('a', {href:'#', id:'mailTekstLink', onclick:function(e){ e.preventDefault(); status.className = 'certstatus'; var g = controleer(true); if(!g) return; g.uitgegeven = nu(); g.verstuurd = true; var href = mailHref(g); form.setAttribute('data-mailto', href); window.location.href = href; }}, 'Of mail het certificaat als tekst, zonder bijlage')),
+        el('button', {class:'btn', type:'submit', id:'mailPdfKnop'}, PA_T('mailPdf')),
+        el('button', {class:'btn ghost', type:'button', id:'pdfKnop', onclick:function(){ status.className = 'certstatus'; var g = controleer(false); if(!g) return; g.uitgegeven = nu(); g.verstuurd = false; maakPdf(g).then(function(doc){ PA_PDF.download(doc.output('blob'), pdfNaam(), 'application/pdf'); status.className = 'certstatus klaar'; status.textContent = PA_T('pdfGedownload', pdfNaam()); }); }}, PA_T('downloadPdf')),
+        el('button', {class:'btn ghost', type:'button', id:'printKnop', onclick:function(){ status.className = 'certstatus'; var g = controleer(false); if(!g) return; g.uitgegeven = nu(); g.verstuurd = false; printCertificaat(g); }}, PA_T('bekijkPrint'))),
+      el('p', {class:'klein', style:'margin-top:10px'}, el('a', {href:'#', id:'mailTekstLink', onclick:function(e){ e.preventDefault(); status.className = 'certstatus'; var g = controleer(true); if(!g) return; g.uitgegeven = nu(); g.verstuurd = true; var href = mailHref(g); form.setAttribute('data-mailto', href); window.location.href = href; }}, PA_T('mailTekstLink'))),
       status);
     form.addEventListener('submit', function(e){
       e.preventDefault(); status.className = 'certstatus';
       var g = controleer(true); if(!g) return;
       g.uitgegeven = nu(); g.verstuurd = true;
       form.setAttribute('data-mailto', mailHref(g));
-      status.textContent = 'Het certificaat wordt gemaakt…';
+      status.textContent = PA_T('certMaken');
       maakPdf(g).then(function(doc){
         var blob = doc.output('blob'), naamPdf = pdfNaam(), onderwerp = mailOnderwerp(g), tekst = certTekst(g, false);
         var bestand = null; try{ bestand = new File([blob], naamPdf, {type:'application/pdf'}); }catch(e){}
         if(bestand && navigator.canShare && navigator.canShare({files:[bestand]})){
           // Mobiel en browsers met delen: de pdf gaat als bijlage naar de gekozen mail-app
-          navigator.share({files:[bestand], title:onderwerp, text:'Aan: ' + g.mail + (g.werkgever ? ' (kopie: ' + g.werkgever + ')' : '') + '\n\n' + tekst}).then(function(){
-            status.className = 'certstatus klaar'; status.textContent = 'Kies je mail-app; de pdf zit als bijlage in het bericht. Vul zo nodig ' + g.mail + (g.werkgever ? ' en ' + g.werkgever : '') + ' in als ontvanger.';
+          navigator.share({files:[bestand], title:onderwerp, text:PA_T('deelBericht', g.mail) + (g.werkgever ? PA_T('deelKopie', g.werkgever) : '') + '\n\n' + tekst}).then(function(){
+            status.className = 'certstatus klaar'; status.textContent = PA_T('deelKlaar', g.mail + (g.werkgever ? PA_T('en') + g.werkgever : ''));
           }).catch(function(){ emlDownload(doc, g, onderwerp, tekst, naamPdf); });
         } else emlDownload(doc, g, onderwerp, tekst, naamPdf);
       });
@@ -336,23 +337,21 @@
     return form;
   }
 
-  var ADVIES = 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Bewaar het certificaat in je personeelsdossier en lever het ook in bij je werkgever.';
-  var DISCLAIMER = 'Eigen verklaring van de deelnemer. De deelnemer heeft de oefentoets van Wft Permanent Actueel (PA-WFT.nl), een activiteit van DFO BV (KvK 32068727), De Wel 14–16, 3871 MV Hoevelaken, zelf gemaakt en de gegevens zelf ingevuld. DFO BV heeft identiteit en resultaat niet gecontroleerd en registreert niets. Het certificaat is geen Wft-diploma, geen PE-examen en levert geen PE-punten op.';
 
   function certTekst(g, metVragen){
     var r = laatste;
-    return 'Certificaat PA-toets — Wft Permanent Actueel\n\nNaam: ' + g.naam + (g.geb ? '\nGeboortedatum: ' + PA_DATUM(g.geb) : '') + '\nE-mailadres: ' + g.mail + (g.bedrijf ? '\nBedrijf: ' + g.bedrijf : '') + '\nVerstuurd op: ' + g.uitgegeven + '\nResultaat: ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%)\nModule: ' + r.thema + (r.modules.length > 1 ? '\nModules: ' + r.modules.join(', ') + '\nVragen uit: ' + r.vanMods.join(', ') : '') + '\nDatum: ' + r.datum + '\nVragenbank bijgewerkt: ' + r.bijgewerkt + '\nCertificaatnummer: ' + r.nummer + '\n\n'
-      + ADVIES + '\n\nDoe de toets opnieuw: https://pa-wft.nl/toets.html\nWft Permanent Actueel: https://pa-wft.nl/\n\n' + DISCLAIMER + '\n';
+    return PA_T('mailTitel') + '\n\n' + PA_T('mNaam') + g.naam + (g.geb ? '\n' + PA_T('mGeb') + PA_DATUM(g.geb) : '') + '\n' + PA_T('mMail') + g.mail + (g.bedrijf ? '\n' + PA_T('mBedrijf') + g.bedrijf : '') + '\n' + PA_T('mVerstuurd') + g.uitgegeven + '\n' + PA_T('mResultaat', r.goed, r.n, r.pct) + '\n' + PA_T('mModule') + r.thema + (r.modules.length > 1 ? '\n' + PA_T('mModules') + r.modules.join(', ') + '\n' + PA_T('mVragenUit') + r.vanMods.join(', ') : '') + '\n' + PA_T('mDatum') + r.datum + '\n' + PA_T('mBank') + r.bijgewerkt + '\n' + PA_T('mNummer') + r.nummer + '\n\n'
+      + ADVIES + '\n\n' + PA_T('mOpnieuw') + PA_URL('toets') + '\nWft Permanent Actueel: ' + PA_SITE + '\n\n' + DISCLAIMER + '\n';
   }
-  function mailOnderwerp(g){ return 'Certificaat PA-toets ' + laatste.nummer + ' — ' + g.naam + ' (' + laatste.goed + '/' + laatste.n + ')'; }
-  function pdfNaam(){ return 'Certificaat-PA-toets-' + laatste.nummer + '.pdf'; }
+  function mailOnderwerp(g){ return PA_T('mOnderwerp', laatste.nummer, g.naam, laatste.goed, laatste.n); }
+  function pdfNaam(){ return PA_T('pdfNaam', laatste.nummer); }
   function maakPdf(g){ return window.PA_PDF ? PA_PDF.maak(laatste, g, LOGO, STEMPEL, ADVIES, DISCLAIMER) : Promise.reject(new Error('pdf niet geladen')); }
   function emlDownload(doc, g, onderwerp, tekst, naamPdf){
-    var naamEml = 'Mail-certificaat-PA-toets-' + laatste.nummer + '.eml';
+    var naamEml = PA_T('emlNaam', laatste.nummer);
     PA_PDF.download(PA_PDF.eml(doc, g.mail, g.werkgever, onderwerp, tekst, naamPdf), naamEml, 'message/rfc822');
     var st = document.getElementById('certStatus');
     st.className = 'certstatus klaar';
-    st.textContent = 'Er is een mailconcept gedownload: ' + naamEml + '. Open het bestand: Outlook en Windows Mail openen een concept aan ' + g.mail + (g.werkgever ? ' met een kopie aan ' + g.werkgever : '') + ', met de pdf al als bijlage. Klik op Verzenden. Opent jouw mailprogramma het niet als concept? Gebruik dan "Download pdf" en voeg de pdf zelf toe.';
+    st.textContent = PA_T('emlKlaar', naamEml, g.mail, g.werkgever ? PA_T('emlKopie', g.werkgever) : '');
   }
   function mailHref(g){
     var onderwerp = mailOnderwerp(g);
@@ -360,7 +359,7 @@
     return basis + encodeURIComponent(certTekst(g, false));
   }
 
-  var STEMPEL = '<svg class="stempel" viewBox="0 0 200 200" aria-label="Stempel DFO BV" role="img"><defs><path id="cirkel" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>'
+  var STEMPEL = '<svg class="stempel" viewBox="0 0 200 200" aria-label="' + PA_T('stempelLabel') + '" role="img"><defs><path id="cirkel" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>'
     + '<g fill="none" stroke="#0E5AA7"><circle cx="100" cy="100" r="94" stroke-width="5"/><circle cx="100" cy="100" r="84" stroke-width="1.5"/><circle cx="100" cy="100" r="52" stroke-width="1.5"/></g>'
     + '<text font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="#0E5AA7" letter-spacing="1.6"><textPath href="#cirkel" startOffset="0" textLength="440" lengthAdjust="spacing">DFO BV • HOEVELAKEN • PERMANENT ACTUEEL •</textPath></text>'
     + '<text x="100" y="98" text-anchor="middle" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#0E5AA7">DFO</text>'
@@ -385,29 +384,29 @@
       + '@media (max-width:600px){.cert{padding:12px}.kader{padding:24px 18px}.voet{flex-direction:column;align-items:flex-start}}'
       + '@media print{.cert{padding:0}@page{size:A4;margin:12mm}.res div{-webkit-print-color-adjust:exact;print-color-adjust:exact}}';
     var body = '<div class="cert"><div class="kader">'
-      + '<div class="kop"><img src="' + LOGO + '" alt="DFO — dienstverlening voor financiële ondernemers"><div class="nr">Certificaatnummer<br><strong>' + r.nummer + '</strong><br>' + r.datum + '<br><a href="https://pa-wft.nl/" style="color:#0E5AA7;font-weight:700;text-decoration:none">PA-WFT.nl</a></div></div>'
-      + '<h1>Certificaat</h1><p class="sub">PA-toets · Wft Permanent Actueel</p>'
-      + '<div>Eigen verklaring van</div><div class="naam">' + esc(g.naam) + '</div>'
-      + '<dl class="pers">' + (g.geb ? '<dt>Geboortedatum</dt><dd>' + esc(PA_DATUM(g.geb)) + '</dd>' : '') + (g.mail ? '<dt>E-mailadres</dt><dd>' + esc(g.mail) + '</dd>' : '') + (g.bedrijf ? '<dt>Bedrijf</dt><dd>' + esc(g.bedrijf) + '</dd>' : '')
-      + '<dt>' + (g.verstuurd ? 'Verstuurd op' : 'Aangemaakt op') + '</dt><dd>' + esc(g.uitgegeven) + '</dd></dl>'
-      + '<div>de PA-toets heeft afgelegd met het volgende resultaat:</div>'
-      + '<div class="res"><div><strong>' + r.goed + ' / ' + r.n + '</strong>vragen goed</div><div><strong>' + r.pct + '%</strong>score</div><div><strong>' + esc(r.modules.length > 1 && r.thema.indexOf('Mijn pakket') === 0 ? 'Mijn pakket' : r.thema) + '</strong>' + (r.modules.length > 1 ? 'modules' : 'module') + '</div><div><strong>' + esc(r.bijgewerkt) + '</strong>vragenbank bijgewerkt</div></div>'
-      + (r.modules.length > 1 ? '<dl class="pers mods"><dt>Modules</dt><dd>' + esc(r.modules.join(', ')) + '</dd><dt>Vragen uit</dt><dd>' + esc(r.vanMods.join(', ')) + '</dd></dl>' : '')
-      + '<p class="advies">' + ADVIES + ' Doe de toets opnieuw op <a href="https://pa-wft.nl/toets.html">pa-wft.nl/toets.html</a>.</p>'
-      + '<div class="voet"><p>' + DISCLAIMER + '<br><a href="https://pa-wft.nl/" style="color:#0E5AA7;font-weight:700">PA-WFT.nl — https://pa-wft.nl/</a></p>' + STEMPEL + '</div>'
+      + '<div class="kop"><img src="' + LOGO + '" alt="' + PA_T('cLogoAlt') + '"><div class="nr">' + PA_T('cNummer') + '<br><strong>' + r.nummer + '</strong><br>' + r.datum + '<br><a href="' + PA_SITE + '" style="color:#0E5AA7;font-weight:700;text-decoration:none">PA-WFT.nl</a></div></div>'
+      + '<h1>' + PA_T('cTitel') + '</h1><p class="sub">' + PA_T('cSub') + '</p>'
+      + '<div>' + PA_T('cEigenVerklaring') + '</div><div class="naam">' + esc(g.naam) + '</div>'
+      + '<dl class="pers">' + (g.geb ? '<dt>' + PA_T('cGeb') + '</dt><dd>' + esc(PA_DATUM(g.geb)) + '</dd>' : '') + (g.mail ? '<dt>' + PA_T('cMail') + '</dt><dd>' + esc(g.mail) + '</dd>' : '') + (g.bedrijf ? '<dt>' + PA_T('cBedrijf') + '</dt><dd>' + esc(g.bedrijf) + '</dd>' : '')
+      + '<dt>' + PA_T(g.verstuurd ? 'cVerstuurd' : 'cAangemaakt') + '</dt><dd>' + esc(g.uitgegeven) + '</dd></dl>'
+      + '<div>' + PA_T('cAfgelegd') + '</div>'
+      + '<div class="res"><div><strong>' + r.goed + ' / ' + r.n + '</strong>' + PA_T('cGoed') + '</div><div><strong>' + r.pct + '%</strong>' + PA_T('cScore') + '</div><div><strong>' + esc(r.themaKort) + '</strong>' + PA_T(r.modules.length > 1 ? 'cModulesMv' : 'cModule') + '</div><div><strong>' + esc(r.bijgewerkt) + '</strong>' + PA_T('cBank') + '</div></div>'
+      + (r.modules.length > 1 ? '<dl class="pers mods"><dt>' + PA_T('cModulesLabel') + '</dt><dd>' + esc(r.modules.join(', ')) + '</dd><dt>' + PA_T('cVragenUit') + '</dt><dd>' + esc(r.vanMods.join(', ')) + '</dd></dl>' : '')
+      + '<p class="advies">' + ADVIES + PA_T('cOpnieuw') + '<a href="' + PA_URL('toets') + '">' + PA_URL('toets').replace('https://', '') + '</a>.</p>'
+      + '<div class="voet"><p>' + DISCLAIMER + '<br><a href="' + PA_SITE + '" style="color:#0E5AA7;font-weight:700">PA-WFT.nl — ' + PA_SITE + '</a></p>' + STEMPEL + '</div>'
       + '</div></div>';
-    return '<!doctype html><html lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Certificaat PA-toets — ' + esc(g.naam) + '</title><style>' + css + '</style></head><body>' + body
+    return '<!doctype html><html lang="' + PA_TAAL + '"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>' + esc(PA_T('cDocTitel', g.naam)) + '</title><style>' + css + '</style></head><body>' + body
       + '<script>window.onload=function(){setTimeout(function(){window.focus();window.print();},300);}<\/script></body></html>';
   }
 
   // Overzicht van alle beantwoorde vragen met uitleg, om te printen of als pdf op te slaan
   function printAntwoorden(){
     var r = laatste, w = window.open('', '_blank');
-    if(!w){ alert('Pop-up geblokkeerd. Sta pop-ups toe om de antwoorden te printen.'); return; }
+    if(!w){ alert(PA_T('popupAntw')); return; }
     var items = toets.map(function(v, i){
       var ok = v.opties[v.keuze].juist;
-      return '<li class="' + (ok ? 'ok' : 'nok') + '"><p class="kop"><span>Vraag ' + (i + 1) + ' · Wft ' + esc(v.module.naam) + (v.term ? ' · toetsterm CDFD ' + esc(v.term) : '') + '</span><strong>' + (ok ? '✓ Goed' : '✗ Fout') + '</strong></p><p class="v">' + esc(v.vraag) + '</p><ul>'
-        + v.opties.map(function(o, k){ return '<li class="' + (o.juist ? 'j' : 'f') + (k === v.keuze ? ' g' : '') + '"><b>' + 'ABCD'[k] + '. ' + esc(o.t) + (o.juist ? ' — juist antwoord' : '') + (k === v.keuze ? ' — jouw antwoord' : '') + '</b><br>' + esc(o.u) + '</li>'; }).join('') + '</ul></li>';
+      return '<li class="' + (ok ? 'ok' : 'nok') + '"><p class="kop"><span>' + esc(PA_T('aVraagNr', i + 1, v.module.naam)) + (v.term ? esc(PA_T('aTermCdfd', v.term)) : '') + '</span><strong>' + PA_T(ok ? 'aGoed' : 'aFout') + '</strong></p><p class="v">' + esc(v.vraag) + '</p><ul>'
+        + v.opties.map(function(o, k){ return '<li class="' + (o.juist ? 'j' : 'f') + (k === v.keuze ? ' g' : '') + '"><b>' + 'ABCD'[k] + '. ' + esc(o.t) + (o.juist ? PA_T('aJuist') : '') + (k === v.keuze ? PA_T('aJouw') : '') + '</b><br>' + esc(o.u) + '</li>'; }).join('') + '</ul></li>';
     }).join('');
     var css = 'body{font-family:"Segoe UI",Arial,sans-serif;color:#2C3A47;margin:24px;font-size:12.5px;line-height:1.45}h1{font-size:22px;color:#0E5AA7;margin:0 0 4px}.meta{color:#4A4A4A;margin:0 0 18px}'
       + 'ol{list-style:none;padding:0;margin:0}ol>li{border:1px solid #BBD3EA;border-left:5px solid #1B6B3A;padding:10px 14px;margin:0 0 12px;page-break-inside:avoid}ol>li.nok{border-left-color:#A52A21}'
@@ -415,9 +414,9 @@
       + 'ul{margin:0;padding:0;list-style:none}ul li{padding:4px 0 4px 10px;border-left:3px solid #E3C7C4;margin:0 0 4px}ul li.j{border-left-color:#1B6B3A}ul li.g{background:#F4F7FB}a{color:#0E5AA7}'
       + '@media print{body{margin:0}@page{size:A4;margin:14mm}}';
     w.document.open();
-    w.document.write('<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>Beantwoorde vragen PA-toets ' + r.nummer + '</title><style>' + css + '</style></head><body>'
-      + '<h1>Beantwoorde vragen — PA-toets</h1><p class="meta">' + esc(r.thema) + ' · ' + r.goed + ' van ' + r.n + ' goed (' + r.pct + '%) · ' + r.datum + ' · certificaatnummer ' + r.nummer + ' · <a href="https://pa-wft.nl/">PA-WFT.nl</a></p>'
-      + '<ol>' + items + '</ol><p class="meta">Wft Permanent Actueel is een activiteit van DFO BV. Oefentoets, geen PE-examen. Doe de toets opnieuw op https://pa-wft.nl/toets.html</p>'
+    w.document.write('<!doctype html><html lang="' + PA_TAAL + '"><head><meta charset="utf-8"><title>' + PA_T('aDocTitel', r.nummer) + '</title><style>' + css + '</style></head><body>'
+      + '<h1>' + PA_T('aKop') + '</h1><p class="meta">' + esc(PA_T('aMeta', r.thema, r.goed, r.n, r.pct, r.datum, r.nummer)) + '<a href="' + PA_SITE + '">PA-WFT.nl</a></p>'
+      + '<ol>' + items + '</ol><p class="meta">' + PA_T('aVoet', PA_URL('toets')) + '</p>'
       + '<script>window.onload=function(){setTimeout(function(){window.focus();window.print();},300);}<\/script></body></html>');
     w.document.close();
   }
@@ -425,7 +424,7 @@
   // Printen via een nieuw venster: window.print() wordt in een iframe (bijvoorbeeld Google Sites) geblokkeerd
   function printCertificaat(g){
     var w = window.open('', '_blank');
-    if(!w){ alert('Pop-up geblokkeerd. Sta pop-ups toe om het certificaat te openen.'); return; }
+    if(!w){ alert(PA_T('popupCert')); return; }
     w.document.open(); w.document.write(certificaatHTML(g)); w.document.close();
   }
 
@@ -434,7 +433,7 @@
   function oefenTerm(mid, term){
     var m = modById(mid);
     if(!m) return false;
-    vul(el('p', {class:'laden'}, 'Vragen laden…'));
+    vul(el('p', {class:'laden'}, PA_T('vragenLaden')));
     laad([mid]).then(function(){
       var lijst = (vragenVan(mid) || []).filter(function(q){ return q[2] === term; });
       if(!lijst.length){ keuze = [mid]; startScherm(); return; }

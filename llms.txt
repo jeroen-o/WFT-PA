@@ -37,6 +37,15 @@
 - 1 januari 2028: Uiterste datum overgang nieuw pensioenstelsel. Pensioenregelingen moeten zijn overgegaan naar het stelsel van de Wet toekomst pensioenen.
 - 31 maart 2028: Einde PE-periode 2025–2028. Uiterste datum om je PE-examen per beroepskwalificatie te halen.
 
+## English version
+
+- [English home](https://pa-wft.nl/en/): free Wft practice test for advisers, English convenience translation
+- [Quiz](https://pa-wft.nl/en/quiz.html)
+- [PE explained](https://pa-wft.nl/en/pe-explained.html)
+- [What’s new](https://pa-wft.nl/en/whats-new.html)
+- [Glossary](https://pa-wft.nl/en/glossary.html)
+- [Full text in English](https://pa-wft.nl/llms-full-en.txt)
+
 ## Informatie
 
 - [Begrippenlijst Wft](https://pa-wft.nl/begrippen.html): korte uitleg van de belangrijkste begrippen uit de Wft en permanente educatie

@@ -27,6 +27,12 @@ assets/js/vragen/<id>.js    vragenbank per module: [vraag, [[antwoord, uitleg] x
 tools/vragen-js.py          zet JSON-bestanden ({"vragen":[{"v","a","t"}]}) om naar assets/js/vragen/<id>.js
 assets/js/zoek.js           zoeken op de site (zoeken.html), volledig in de browser
 assets/js/zoekindex.js      zoekindex per sectie; wordt gegenereerd door tools/bouw-paginas.py
+en/                         Engelse versie (gegenereerd): index, quiz, module-<id>, whats-new, glossary, pe-explained, faq, about, privacy, terms, complaints, search
+tools/en-data.py            Engelse teksten (modules, begrippen, FAQ, PE-uitleg, datums); bij elke wijziging in de Nederlandse tekst hoort hier een wijziging
+tools/bouw-engels.py        bouwt de Engelse pagina's (wordt door bouw-paginas.py geladen)
+assets/js/taal.js           woordenboek nl/en voor alle JS, taalkeuze via <html lang>
+assets/js/modules-en.js     Engelse modulegegevens
+assets/js/vragen-en/<id>.js Engelse vragenbank (zelfde volgorde en toetstermen als de Nederlandse)
 og/                         deelafbeeldingen (1200×630) per module, toets, nieuw en begrippen; worden automatisch gekoppeld
 llms.txt / llms-full.txt    samenvatting en volledige tekst voor AI-assistenten (gegenereerd)
 assets/js/main.js           modulelijst + pakket-check
@@ -75,3 +81,8 @@ Lettertype: Poppins, lokaal in assets/fonts (OFL). Ontwerp in de stijl van de WF
 
 ## Inhoud aanpassen
 Moduleteksten staan bovenin `assets/js/main.js` (MODS). De koppeling diploma → module is nu 1-op-1; pas dat daar aan als de regels anders zijn.
+
+## Engelse versie
+De Engelse versie (/en/) is een hulpmiddel en geen officiële vertaling: wetgeving en examens zijn Nederlands. Pagina's zonder Engelse tegenhanger
+(wet- en regelgeving, DFO Compliance, DFO Opleidingen) staan alleen in het Nederlands. Na een wijziging in een Nederlandse vraag: pas dezelfde vraag (zelfde
+volgorde) aan in `assets/js/vragen-en/<id>.js`, of zet JSON om met `python3 tools/vragen-js.py <map> en`.

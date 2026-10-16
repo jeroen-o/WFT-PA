@@ -1,0 +1,1026 @@
+# Wft Permanent Actueel (PA-WFT.nl) — full text (English)
+
+> Free practice environment for financial advisers in the Netherlands by DFO BV. Reference date: 15 October 2026. Practice test, not a recognised PE exam and not advice. English convenience translation of the Dutch site; legislation and exams are in Dutch. Source: https://pa-wft.nl/en/
+
+
+## Wft Basic 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-basis.html
+
+Wft Basic: free practice questions with real-life cases and explanations, what’s new in 2026, important dates and exam terms. Practice test for advisers. The mandatory foundation for everyone with client contact in financial services. Practise for free with PE practice questions for Wft Basic, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Basic at a glance
+
+Who needs it: required for 7 professional qualifications: Mortgage Credit Adviser, Wealth Adviser, Pensions Adviser, Consumer Credit Adviser, Commercial Non-life Insurance Adviser, Personal Non-life Insurance Adviser, Income Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: EU anti-money laundering package (AMLR and AMLD6): it comes on top of the current Wwft, which will in time be replaced by an implementation act. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Wft framework and supervision by the AFM and DNB Licensing requirement and exemptions Professional competence and permanent education Duty of care and putting the client’s interest first Providing information and the services document (dienstverleningsdocument) Remuneration, the commission ban and conflicts of interest Kifid and complaint handling Wwft: customer due diligence and reporting GDPR and integrity, oath or promise Basic financial concepts, consumer law and social security in outline Sustainability preferences
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. EU anti-money laundering package (AMLR and AMLD6). It comes on top of the current Wwft, which will in time be replaced by an implementation act. The gatekeeper role of advisers changes accordingly. EU Anti-Money Laundering Regulation (AMLR) from 10 July 2027. The core customer due diligence rules will then sit in a directly applicable EU regulation. The new European anti-money laundering authority AMLA has been established and will directly supervise a limited number of large institutions; for advisory firms the national supervisor remains the point of contact. DORA has applied since 17 January 2025. The European rules on digital operational resilience apply to, among others, banks and insurers. Insurance intermediaries that are micro, small or medium-sized enterprises fall outside it, but they notice it through their suppliers and principals. The Wft requirement of controlled business operations still applies to ICT risks. AI Act. Phased application affects advisory firms through software, models and outsourcing.
+
+### Important dates
+
+Coming up 10 July 2027 EU Anti-Money Laundering Regulation (AMLR) applies. The core customer due diligence rules sit in a directly applicable EU regulation. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification. 17 January 2025 DORA applies. European rules on the digital operational resilience of financial institutions.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Informing and referring the client, entering into the financial relationship Managing the relationship and providing service in relation to financial services Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Basic
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1f.8 Sandra Mulder owns an advisory firm that advises on around two hundred mortgages a year. A lender phones her with an offer. If the firm places at least fifty mortgages with him this year, two advisers may go on a study trip to Lisbon free of charge. Sandra wonders whether she can accept. What is correct? This is not permitted, because a benefit in kind from the provider also falls under the commission ban This is permitted if the firm clearly states the trip in the services document This is permitted, as long as the firm's clients pay nothing extra for it This is permitted, because it concerns a trip and not a sum of money Show the answer and explanation Correct: This is not permitted, because a benefit in kind from the provider also falls under the commission ban. For mortgage credit an adviser may not receive commission from the provider, not even in kind. A trip that depends on the number of mortgages is moreover a strong incentive against the client's interest. This is permitted, because it concerns a trip and not a sum of money : The commission ban also applies to benefits in kind. This is permitted, as long as the firm's clients pay nothing extra for it : What matters is the incentive for the adviser, not what the client pays. This is permitted if the firm clearly states the trip in the services document : Transparency does not make a prohibited benefit permitted. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1d.13 Dennis Kuipers (34) started his own business as a carpenter three years ago. He works as a self-employed person without staff for various clients and has no employees. After a fall from scaffolding he realises he does not know what happens if he cannot work for a long time. He asks which statutory provision protects him. What is correct? As a self-employed person he does not in principle fall under the WIA and must cover this risk himself He automatically falls under the WIA as soon as he is registered with the Chamber of Commerce He is entitled to a WW (unemployment benefit) for as long as he cannot work He receives an AOW (state pension) benefit as soon as he becomes incapacitated for work Show the answer and explanation Correct: As a self-employed person he does not in principle fall under the WIA and must cover this risk himself. The WIA is an employee insurance. A self-employed person can cover the risk, for example, with disability insurance or a mutual self-employed support fund (broodfonds). He automatically falls under the WIA as soon as he is registered with the Chamber of Commerce : Registration with the Chamber of Commerce does not make him an employee; the WIA applies to employees. He receives an AOW (state pension) benefit as soon as he becomes incapacitated for work : The AOW is an old-age provision from the AOW age. He is entitled to a WW (unemployment benefit) for as long as he cannot work : The WW is an employee insurance for unemployment, not for incapacity for work. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1a.7 Willem Dijkstra (47) is married to Saskia. His best friend Paul wants to take out a €15,000.00 loan to buy a camper van. The bank wants Willem to stand personal surety for that loan. Willem wants to do so without involving Saskia. What applies in principle? Consent is not needed, because each spouse may perform legal acts independently Consent is only needed if Willem and Saskia are married in community of property He needs Saskia's consent; without that consent she can annul the suretyship Only Paul's bank has to approve the suretyship in advance Show the answer and explanation Correct: He needs Saskia's consent; without that consent she can annul the suretyship. A personal suretyship requires the consent of the spouse. If it is missing, Saskia can annul the suretyship. Consent is not needed, because each spouse may perform legal acts independently : For suretyship the law in fact makes an exception: the spouse's consent is needed for it. Consent is only needed if Willem and Saskia are married in community of property : The consent requirement applies regardless of the matrimonial property regime. Only Paul's bank has to approve the suretyship in advance : The bank assesses the surety, but that does not replace the spouse's consent. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.3 1a.4 1a.5 1a.6 1a.7 1a.8 1a.9 1a.10 1a.11 1a.12 1b.1 1b.3 1b.6 1b.7 1b.10 1b.13 1b.15 1b.17 1b.18 1b.19 1b.21 1b.22 1c.3 1c.4 1c.5 1c.8 1c.9 1c.10 1c.13 1c.15 1c.17 1c.19 1c.20 1c.21 1c.23 1c.26 1d.1 1d.2 1d.6 1d.7 1d.8 1d.9 1d.11 1d.13 1d.15 1d.19 1e.1 1e.6 1e.10 1e.11 1f.2 1f.3 1f.5 1f.7 1f.8 1f.12 1f.13 1f.14 1f.15 1f.17 1f.18 1f.19 1f.20 1f.21 1f.22 1f.25 1f.29 1f.32 1f.33 1f.35 1f.36 1f.37 1f.38 1f.39 1f.40 1g.1 1g.2 1g.5 1g.6 1g.10 1g.12 1g.13 1g.15 1g.16 1g.21 1g.23 2a.1 2b.1 2b.2 2d.1 3b.2 3c.1 4a.1 4a.2 4a.3 4a.4 4a.5
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 8 modules . Wft Wealth Wft Mortgage Credit Wft Pensions Wft Consumer Credit Wft Non-life Insurance (Personal) Wft Non-life Insurance (Commercial) Wft Income
+
+### Terms for this module
+
+AFM · DNB · CDFD · Wft · Professional qualification (beroepskwalificatie) · PE exam · PE period · PE points · Permanently up to date (permanent actueel) · Final objective and exam term (eindterm en toetsterm) · Duty of care (zorgplicht) · Client profile (klantprofiel) · Commission ban (provisieverbod) · Kifid · Wwft · AMLR · DORA · IDD
+
+### Changes
+
+16 October 2026 — New case-study questions and more up-to-date information on recent and upcoming changes, with key dates. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Regulation on final objectives and exam terms for Wft financial services exams Anti-Money Laundering and Counter-Terrorist Financing Act (Wwft) EU Anti-Money Laundering Regulation (AMLR) General Data Protection Regulation (GDPR/AVG) Insurance Distribution Directive (IDD) Kifid regulations EU AI Act
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Consumer Credit 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-consumptief-krediet.html
+
+Wft Consumer Credit: free practice questions with explanations, what’s new in 2026 and important dates. Practice test for advisers. For anyone who informs or advises on loans and credit. Practise for free with PE practice questions for Wft Consumer Credit, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Consumer Credit at a glance
+
+Who needs it: required for 1 professional qualification: Consumer Credit Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: CCD II from 20 November 2026: the revised Consumer Credit Directive will apply; the Dutch implementation act is still in preparation. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Types of credit: revolving credit, personal loan, private lease, BNPL, overdraft Creditworthiness assessment, lending standards and BKR registration Information: European standard information and APR (JKP) Right of withdrawal, early repayment and termination Maximum credit fee (principle) Wft and Wck framework Debt assistance and payment problems Duty of care, commission and refinancing Wwft and GDPR in credit
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. CCD II from 20 November 2026. The revised Consumer Credit Directive will apply; the Dutch implementation act is still in preparation. Among other things, BNPL and rent or lease with a purchase option come under the credit regime. Stricter creditworthiness assessment under CCD II. Credit may only be granted if the creditworthiness assessment shows that the consumer is likely to be able to meet their obligations. There will also be stricter requirements for advertising and pre-contractual information.
+
+### Important dates
+
+Coming up 20 November 2026 CCD II applies. The revised Consumer Credit Directive: stricter creditworthiness assessment, including BNPL and lease with a purchase option. 10 July 2027 EU Anti-Money Laundering Regulation (AMLR) applies. The core customer due diligence rules sit in a directly applicable EU regulation. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Drawing up the risk analysis for the advice Advising (and where applicable intermediating) a suitable solution Managing and keeping the advice up to date Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Consumer Credit
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1a.3 Gerrit Bos (58) has a revolving credit with a limit of €4,000.00. As a result of a series of unexpected expenses, €5,500.00 has been outstanding for well over two months. The lender has permitted the drawings above the limit. Gerrit has not yet received any notification about this. What must the lender do? Automatically raise the limit to the amount drawn Inform the consumer about the overrun, the interest and the costs Let the overrun continue tacitly without telling the consumer anything Report the credit and the overrun to the AFM immediately Show the answer and explanation Correct: Inform the consumer about the overrun, the interest and the costs. In the case of a significant overrun lasting longer than a month, the consumer must be informed without delay. Let the overrun continue tacitly without telling the consumer anything : The consumer must actually be informed in order to prevent further build-up of debt. Automatically raise the limit to the amount drawn : A limit increase requires a new creditworthiness assessment and cannot be done automatically. Report the credit and the overrun to the AFM immediately : Individual overruns are not reported to the AFM. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1h.5 Frank van Dijk (46) is divorced and pays €600.00 a month in spousal maintenance to his ex-wife. He rents an apartment and works full time as an IT administrator. He wants to borrow €10,000.00 to furnish his new home. He asks whether the maintenance is actually relevant to the application. How does the maintenance count in the assessment? As a fixed charge that reduces the room for a monthly instalment As extra income, because he can deduct the maintenance paid for tax purposes It does not, because maintenance is a private arrangement between the ex-partners Only if his ex-partner gives permission to use the data Show the answer and explanation Correct: As a fixed charge that reduces the room for a monthly instalment. He has to pay the maintenance every month; that amount is not available for interest and repayment. It does not, because maintenance is a private arrangement between the ex-partners : A private arrangement can still be a hard payment obligation that reduces his repayment capacity. As extra income, because he can deduct the maintenance paid for tax purposes : Any tax benefit does not turn an expense into income; on balance it remains a charge. Only if his ex-partner gives permission to use the data : He is the applicant; his own charges belong in the assessment, regardless of his ex-partner's permission. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1c.2 Nadia (39) is a single mother of two children and has been in an amicable debt assistance process via her municipality for six months. Her washing machine and fridge break down. She applies to an online provider for a €1,500.00 loan for new appliances. She has not informed her debt counsellor about it. What is correct? New credit runs counter to the process and can jeopardise the arrangement That is fine, because the amicable process is voluntary That is mandatory, so that creditors in the process can be paid faster The municipality must in that case provide the loan itself Show the answer and explanation Correct: New credit runs counter to the process and can jeopardise the arrangement. In a debt arrangement the debtor may as a rule not incur new debts; new credit undermines the agreement with creditors. That is mandatory, so that creditors in the process can be paid faster : New debts do not solve the problem and are not part of an amicable arrangement. That is fine, because the amicable process is voluntary : A voluntary arrangement also contains agreements that exclude new debts. The municipality must in that case provide the loan itself : The municipality has no duty to provide extra credit during the process. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.2 1a.3 1a.4 1b.1 1b.2 1b.3 1c.1 1c.2 1d.1 1d.2 1e.1 1e.5 1f.1 1f.2 1g.1 1h.1 1h.2 1h.3 1h.4 1h.5 1h.6 1h.7 1i.1 1i.2 1i.3 1i.4 1i.5 2a.2 2a.3 2a.5 2b.1 2c.1 2c.2 2c.3 2d.1 2d.2 2e.1 2e.2 2e.3 2f.1 3a.1 3a.2 3b.1 3b.2 3b.3 3c.1 3d.1 3e.1 3e.2 4a.1 4a.2 4a.3
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 2 modules . Wft Basic
+
+### Terms for this module
+
+CCD II · BKR
+
+### Changes
+
+16 October 2026 — New case-study questions and more up-to-date information on recent and upcoming changes, with key dates. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Consumer Credit Act (WCK) Revised Consumer Credit Directive (CCD II) Anti-Money Laundering and Counter-Terrorist Financing Act (Wwft) General Data Protection Regulation (GDPR/AVG)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Non-life Insurance (Personal): free practice questions
+Source: https://pa-wft.nl/en/module-schade-particulier.html
+
+Wft Non-life Insurance (Personal): free practice questions with explanations, what’s new in 2026 and important dates. Practice test for advisers. Personal non-life insurance: car, home, travel and more. Practise for free with PE practice questions for Wft Non-life Insurance (Personal), with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Non-life Insurance (Personal) at a glance
+
+Who needs it: required for 2 professional qualifications: Commercial Non-life Insurance Adviser, Personal Non-life Insurance Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. One exam term for this module was changed. Current: No major change in the law identified: the framework remains Book 7 of the Civil Code (insurance contract), the IDD and the Wft conduct rules. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Insurance law: duty of disclosure, premium, compensation, underinsurance, limitation Motor vehicles: WAM, third-party liability, comprehensive cover, no-claims bonus (bonus-malus) Home and contents: rebuilding value, replacement value, perils and exclusions Personal liability (AVP) Legal expenses, travel and cancellation Claims handling and expert assessment Terrorism risk, natural disasters and flooding Duty of care, IDD and Kifid
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Changed exam term. Exam term 1d.9 was changed on 1 April 2026: more room for questions about passenger accident insurance (OVI) and passenger damage insurance (SVI), the differences between the two, and which form fits the client’s needs. No major change in the law identified. The framework remains Book 7 of the Civil Code (insurance contract), the IDD and the Wft conduct rules. Policy conditions differ per insurer; always check the current conditions.
+
+### Important dates
+
+Coming up 9 December 2026 Transposition of the new Product Liability Directive. Deadline for the Dutch law; software counts as a product. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Drawing up the risk analysis for the advice Advising (and where applicable intermediating) a suitable solution, both financial and organisational Managing and keeping the advice up to date Supporting claims handling Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Non-life Insurance (Personal)
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1d.2 Mr Jansen has a four-year-old car, insured with WA and limited casco. While parking in a car park he drives into a concrete pillar. The bumper and a door are damaged and there is no counterparty. He asks his adviser whether his insurance covers the damage to his car. What is the correct answer? No, damage from a collision of one's own making is covered only under a full casco insurance. Only if he reported the damage to the police within 24 hours. Yes, limited casco covers all damage to one's own car for which no counterparty can be claimed against. Yes, the WA insurance covers the damage, because the pillar belongs to someone else. Show the answer and explanation Correct: No, damage from a collision of one's own making is covered only under a full casco insurance.. Limited casco covers, among other things, fire, theft, storm and windscreen damage, but not damage from a collision of one's own making. Yes, limited casco covers all damage to one's own car for which no counterparty can be claimed against. : Limited casco covers only the named events; a collision caused by one's own fault is not part of it. Yes, the WA insurance covers the damage, because the pillar belongs to someone else. : The WA insurance covers the damage to the pillar of the car park's owner, not the damage to his own car. Only if he reported the damage to the police within 24 hours. : A police report is not a condition for cover of collision damage, and limited casco does not cover this damage. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1d.5 Lars has a racing bike worth €3,500. The bike is co-insured on his home contents policy and he also has a separate bicycle insurance. Both policies provide that they offer no cover if the damage is also insured elsewhere. The bike is stolen from his locked shed. What applies? Lars receives the value twice, because he has paid premium twice. Neither insurer pays, because each refers to the other. Only the insurer with the oldest policy pays the full damage to Lars. The clauses cancel each other out; both insurers bear the damage together. Show the answer and explanation Correct: The clauses cancel each other out; both insurers bear the damage together.. If both policies contain such a clause, they cancel each other out; Lars has his damage reimbursed and the insurers divide it among themselves. Neither insurer pays, because each refers to the other. : The law prevents the insured from being left empty-handed by two clauses referring to each other. Only the insurer with the oldest policy pays the full damage to Lars. : A ranking by policy start date does not apply here; the insurers bear the damage together. Lars receives the value twice, because he has paid premium twice. : The indemnity principle prohibits the insured from profiting from damage; he has his damage reimbursed once. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1d.20 Jeroen (42) has a personal accident insurance. While moving a heavy cupboard he feels a sharp pain in his back; it later turns out he has a herniated disc. A month later he slips on a wet staircase and breaks his ankle, leaving him with permanent injury. He reports both events to his insurer. Which event most clearly meets the concept of accident in most accident policies? Both events, because both led to injury. Neither, because they took place in and around his own home. The fall on the staircase: sudden violence coming from outside, with medically determinable injury. The herniated disc, because it arose suddenly while lifting the cupboard. Show the answer and explanation Correct: The fall on the staircase: sudden violence coming from outside, with medically determinable injury.. In most policies an accident is a sudden, involuntary effect of external violence on the body with medically determinable injury; the fall meets that. The herniated disc, because it arose suddenly while lifting the cupboard. : A herniated disc as a rule has an internal cause; in most policies it is not an accident or is expressly excluded. Both events, because both led to injury. : Injury alone is not enough; there must be sudden violence coming from outside on the body. Neither, because they took place in and around his own home. : A personal accident insurance in most policies applies around the clock, so also at home. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.2 1a.4 1a.5 1a.6 1a.7 1a.8 1a.9 1a.10 1a.11 1a.12 1b.2 1c.1 1c.3 1c.4 1c.5 1c.6 1c.7 1c.9 1c.10 1c.11 1c.16 1c.17 1c.18 1d.2 1d.3 1d.4 1d.5 1d.6 1d.7 1d.8 1d.9 1d.11 1d.12 1d.13 1d.14 1d.15 1d.16 1d.17 1d.20 1e.1 1e.2 1f.1 1f.2 1f.4 1f.6 1f.7 1f.8 1g.1 1g.2 1h.1 1h.2 1h.3 1h.4 1h.6 1h.7 1h.9 1h.10 1h.11 1h.13 1h.14 1h.15 1h.16 1h.17 1h.20 1h.21 1h.22 1h.23 1h.24 1h.26 1h.28 1h.29 1h.31 2e.17
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 3 modules . Wft Basic Wft Non-life Insurance (Commercial)
+
+### Terms for this module
+
+IDD · OVI · SVI · Underinsurance (onderverzekering) · Duty of disclosure (mededelingsplicht)
+
+### Changes
+
+16 October 2026 — Key dates added to the module page. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Dutch Civil Code Book 7 (including the insurance contract) Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Insurance Distribution Directive (IDD) Kifid regulations General Data Protection Regulation (GDPR/AVG)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Non-life Insurance (Commercial): free practice questions
+Source: https://pa-wft.nl/en/module-schade-zakelijk.html
+
+Wft Non-life Insurance (Commercial): free practice questions with explanations, what’s new in 2026 and important dates. Practice test for advisers. Business and commercial non-life insurance. Practise for free with PE practice questions for Wft Non-life Insurance (Commercial), with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Non-life Insurance (Commercial) at a glance
+
+Who needs it: required for 1 professional qualification: Commercial Non-life Insurance Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: AI Act and DORA: they affect business clients and their insurance needs, including for cyber and IT risks. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Commercial risk inventory Fire, buildings, inventory and goods Business interruption and indemnity period Liability: AVB, product, employer, professional Directors’ liability (D&O) and CAR Transport, fleet and cyber Collective contracts, delegated authority, market policies and co-insurance Insurance law: duty of disclosure, first and second risk IDD, Wwft and sanctions legislation
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. AI Act and DORA. They affect business clients and their insurance needs, including for cyber and IT risks. New Product Liability Directive. EU Directive 2024/2853 must be transposed into Dutch law by 9 December 2026 and applies to products placed on the market after that date. Software, including AI systems, then counts as a product. Discuss with clients who make software or use it in their products whether their liability cover matches. Sanctions legislation. Remains a standing point of attention for business clients and foreign interests.
+
+### Important dates
+
+Coming up 9 December 2026 Transposition of the new Product Liability Directive. Deadline for the Dutch law; software counts as a product. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Drawing up the risk analysis for the advice Advising (and where applicable intermediating) a suitable solution, both financial and organisational Managing and keeping the advice up to date Supporting claims handling Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Non-life Insurance (Commercial)
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1i.24 Sanne de Boer is an account manager at wholesaler Verhoef in Breda, a company with sixty employees. She visits customers in her own car and receives a mileage allowance. On the way to a customer she is forced off the road by a driver who remains unknown, and suffers injury and damage to her car. Verhoef has not arranged accident or passenger insurance for such journeys. On what ground can Verhoef nevertheless be liable for her loss? Not at all, because for a business journey in her own car the employer is never liable for her loss. On the ground of good employership, because the employer must provide proper insurance. On the ground of product liability, because the car was used for Verhoef's work. On the ground of the WAM policy of the company cars, which also insures employees' own cars. Show the answer and explanation Correct: On the ground of good employership, because the employer must provide proper insurance.. According to established case law, the employer must provide suitable insurance for employees who take part in traffic for their work; if it is missing, the employer may have to bear the loss itself. On the ground of the WAM policy of the company cars, which also insures employees' own cars. : A WAM policy only covers the vehicles insured under it and moreover does not compensate the driver's own loss. On the ground of product liability, because the car was used for Verhoef's work. : Product liability concerns defective products and has no relevance here. Not at all, because for a business journey in her own car the employer is never liable for her loss. : Precisely for business journeys the employer can be liable on the ground of good employership, even in her own car. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1i.19 At printing firm Van Beek in Zutphen, with thirty employees, a fire breaks out on Sunday night in the paper store. The fire brigade extinguishes the fire, but the roof has partly collapsed and the extinguishing water stands among the printing presses. Still during the night, a salvage coordinator arrives on site at the fire brigade's request. Owner Harm van Beek asks what he is there to do and who pays for it. What is correct? He establishes whether the fire was caused by the owner's intent or negligence in the company. He sells the damaged stock immediately to secure the residual value for the insurer concerned. He takes measures on behalf of the insurers at once to limit further loss; the costs are as a rule theirs. He works on Harm's instructions, who must advance the costs himself and claim them later from the insurer. Show the answer and explanation Correct: He takes measures on behalf of the insurers at once to limit further loss; the costs are as a rule theirs.. Salvage provides first aid after the fire, such as covering, securing and protecting machines; the insurers as a rule bear these costs. He sells the damaged stock immediately to secure the residual value for the insurer concerned. : Salvage here is about limiting further loss after the fire, not about selling remnants. He establishes whether the fire was caused by the owner's intent or negligence in the company. : Investigation of the cause belongs to the loss adjuster's work and possibly the police, not to the salvage coordinator. He works on Harm's instructions, who must advance the costs himself and claim them later from the insurer. : The salvage service works for the insurers; the insured does not as a rule have to advance the costs. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1c.16 Machine builder Van der Meer in Heerenveen sells a packaging machine to a buyer in Germany. The contract is concluded on the basis of the Incoterm EXW (ex works). The German buyer has the machine collected by its own carrier. On the way the lorry tips over and the machine is badly damaged. Who has the main interest in a transport insurance during the carriage? Seller and buyer each half, because EXW divides the risk. The buyer, because the risk passes as soon as the machine is ready at the seller's premises. The carrier, which is the only one with an insurable interest in the cargo. The seller, because it remains owner until the machine has been delivered in Germany. Show the answer and explanation Correct: The buyer, because the risk passes as soon as the machine is ready at the seller's premises.. Under EXW the seller has fulfilled its obligations once the goods are made available at its premises; the transport risk lies with the buyer. The seller, because it remains owner until the machine has been delivered in Germany. : Under EXW the risk in fact already passes from the seller to the buyer. The carrier, which is the only one with an insurable interest in the cargo. : The carrier insures its liability; the interest in the cargo itself lies with the buyer. Seller and buyer each half, because EXW divides the risk. : A shared risk is not a feature of EXW. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.3 1b.1 1b.2 1c.1 1c.2 1c.3 1c.4 1c.5 1c.6 1c.7 1c.8 1c.9 1c.10 1c.12 1c.13 1c.15 1c.16 1c.17 1c.18 1c.19 1c.21 1c.24 1d.1 1e.1 1e.2 1e.3 1e.4 1e.5 1e.6 1e.7 1e.10 1e.11 1e.13 1e.17 1e.18 1e.19 1e.20 1e.21 1e.22 1e.23 1e.24 1e.27 1f.1 1g.1 1g.3 1h.1 1h.2 1h.4 1i.1 1i.2 1i.4 1i.6 1i.7 1i.9 1i.10 1i.11 1i.12 1i.13 1i.14 1i.15 1i.17 1i.18 1i.19 1i.20 1i.21 1i.22 1i.24 1i.25 1i.26 2b.1 2c.1 2d.2 2e.4 2e.6 2e.9 2e.10 2e.14 2f.1 2f.8 3b.1 3c.3 3e.1 4a.1 4a.2
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 3 modules . Wft Basic Wft Non-life Insurance (Personal)
+
+### Terms for this module
+
+IDD · Underinsurance (onderverzekering) · Duty of disclosure (mededelingsplicht) · AVB · Business interruption insurance (bedrijfsschadeverzekering) · Product liability (productaansprakelijkheid)
+
+### Changes
+
+16 October 2026 — New case-study questions and more up-to-date information on recent and upcoming changes, with key dates. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Dutch Civil Code Book 7 (including the insurance contract) Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Insurance Distribution Directive (IDD) Anti-Money Laundering and Counter-Terrorist Financing Act (Wwft) Digital Operational Resilience Act (DORA) EU AI Act
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Wealth 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-vermogen.html
+
+Wft Wealth: free practice questions with real-life cases and explanations, what’s new in 2026, important dates and exam terms. Practice test for advisers. Wealth accumulation, saving and investing. Practise for free with PE practice questions for Wft Wealth, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Wealth at a glance
+
+Who needs it: required for 3 professional qualifications: Mortgage Credit Adviser, Wealth Adviser, Pensions Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: Box 3: the Box 3 Transitional Act applies until a new system takes effect; legal redress following the “Christmas ruling” (Kerstarrest) is also under way. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Wealth accumulation and financial planning Saving and the deposit guarantee scheme Investing: shares, bonds, funds, risk and diversification Investment insurance, bank savings and annuities (lijfrente) Box 3 in outline Gifts and inheritance MiFID II: suitability, client classification, cost transparency PRIIPs and the key information document SFDR and sustainability preferences Duty of care and investor profile
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Box 3. The Box 3 Transitional Act applies until a new system takes effect; legal redress following the “Christmas ruling” (Kerstarrest) is also under way. Work with the rules of the relevant tax year. Crypto: MiCA and DAC8. Since 30 December 2024, providers of crypto services in the EU need a licence under the MiCA Regulation; in the Netherlands the AFM grants it. A licence does not protect against price losses and there is no investor compensation scheme for crypto. Since 1 January 2026, crypto service providers in the EU pass information about their clients to the tax authorities (DAC8). EU Anti-Money Laundering Regulation (AMLR) from 10 July 2027. The customer due diligence rules will sit in a directly applicable EU regulation.
+
+### Important dates
+
+Coming up 1 January 2027 Annual changes. New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts. 10 July 2027 EU Anti-Money Laundering Regulation (AMLR) applies. The core customer due diligence rules sit in a directly applicable EU regulation. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 January 2026 DAC8 applies. Crypto service providers in the EU pass client data to the tax authorities. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification. 30 December 2024 MiCA fully applicable. Providers of crypto services in the EU need a licence.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Drawing up the risk analysis for the advice Advising (and where applicable intermediating) a suitable solution, both financial and organisational Managing and keeping the advice up to date Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Wealth
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1k.5 Sandra Mulder (38) is single, works as a nurse and earns €3,900 gross per month. She wants to invest €250 per month for 25 years. Her bank offers an active fund with ongoing charges of 1.5% per year; a comparable index fund costs 0.2% per year. She thinks such a small difference makes little difference. With an equal gross return, what is the effect on her final capital? The active fund always yields more, because management pays for itself The costs affect the return only in the first year The effect is negligible because the percentages are small Through compound interest, the more expensive fund gives a considerably lower final capital Show the answer and explanation Correct: Through compound interest, the more expensive fund gives a considerably lower final capital. The cost difference is deducted every year and can then no longer earn a return; over 25 years this adds up considerably. The effect is negligible because the percentages are small : Small percentages per year have a large influence over 25 years because of the compounding effect. The active fund always yields more, because management pays for itself : There is no guarantee that active management earns back the higher costs; here the gross return is equal. The costs affect the return only in the first year : Ongoing charges are charged again every year. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1a.7 Mrs Van Rijn (56) is a State Secretary and wants to have €500,000 managed by a portfolio manager. She is married, has two adult children and wants to use the assets in due course to supplement her pension. According to her, the money comes from an inheritance and the sale of a home. The manager starts customer due diligence. What must the institution in any case do under the Wwft? Carry out enhanced customer due diligence, including the source of wealth and funds Only make and keep a copy of her passport Refuse her as a client, because a PEP may not become a client Settle for simplified due diligence because of her public office Show the answer and explanation Correct: Carry out enhanced customer due diligence, including the source of wealth and funds. A State Secretary is a politically exposed person; enhanced due diligence is then mandatory, including into the origin of wealth and funds. Refuse her as a client, because a PEP may not become a client : A PEP may become a client; stricter requirements do apply. Settle for simplified due diligence because of her public office : A public office actually increases the risk and calls for enhanced due diligence. Only make and keep a copy of her passport : Identification alone is insufficient; for a PEP more investigation is needed. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1m.7 Wouter (64) and Marjan (62) de Graaf have €900,000 in investments. They want to give their daughter Eva an amount as a gift in order to limit inheritance tax later, but want to keep the money themselves for the time being for their old age. They therefore opt for a gift on paper (schenking op papier). Eva agrees. What is needed for this acknowledgement of debt to be recognised for tax purposes? A notarial deed and interest of at least 6% actually paid annually A notarial deed; interest is not needed within the family A notification of the gift to Wouter and Marjan's bank A private letter, signed by the parents and Eva Show the answer and explanation Correct: A notarial deed and interest of at least 6% actually paid annually. A gift on paper is recognised if it is recorded by a notary and the parents genuinely pay at least 6% interest annually. A private letter, signed by the parents and Eva : A private deed is not sufficient for a gift on paper. A notarial deed; interest is not needed within the family : Without actually paid interest of at least 6%, the debt is not recognised on death. A notification of the gift to Wouter and Marjan's bank : A notification to the bank plays no role in the tax recognition. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.7 1a.8 1a.9 1b.1 1b.3 1b.7 1b.10 1b.13 1b.14 1b.15 1b.16 1c.1 1d.1 1d.2 1d.4 1d.5 1e.2 1e.3 1f.2 1f.4 1f.6 1f.7 1f.8 1f.9 1g.1 1g.3 1g.4 1g.8 1g.10 1g.11 1h.1 1h.2 1h.4 1i.1 1i.2 1i.4 1i.5 1i.6 1i.8 1i.11 1i.18 1i.19 1j.2 1j.5 1j.8 1k.1 1k.3 1k.4 1k.5 1l.2 1l.3 1l.4 1l.6 1l.7 1l.8 1l.9 1l.10 1l.12 1m.1 1m.2 1m.3 1m.4 1m.5 1m.6 1m.7 1m.8 1m.11 1n.1 1n.2 1n.4 1n.5 1o.1 1o.2 1p.1 1p.4 1p.5 2d.4 2g.2 2g.7 2g.13 2i.3 2i.4 3b.4 3c.3 3d.1 4a.2 4a.3 4b.1 4b.4 4b.5
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 4 modules . Wft Basic Wft Mortgage Credit Wft Pensions
+
+### Terms for this module
+
+Wwft · AMLR · Box 3 · MiCA · DAC8 · Risk profile (risicoprofiel)
+
+### Changes
+
+16 October 2026 — New case-study questions and more up-to-date information on recent and upcoming changes, with key dates. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Markets in Financial Instruments Directive (MiFID II) PRIIPs Regulation Sustainable Finance Disclosure Regulation (SFDR) Income Tax Act 2001 Box 3 Transitional Act Inheritance Tax Act 1956 Anti-Money Laundering and Counter-Terrorist Financing Act (Wwft)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Mortgage Credit 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-hypothecair-krediet.html
+
+Wft Mortgage Credit: free practice questions with explanations, what’s new in 2026 and important dates. Practice test for advisers. For mortgage advisers and mortgage support staff. Practise for free with PE practice questions for Wft Mortgage Credit, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Mortgage Credit at a glance
+
+Who needs it: required for 1 professional qualification: Mortgage Credit Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: TRHK and NHG Terms &amp; Standards: they change every year on 1 January. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Lending standards: debt-service ratio and loan-to-value Mortgage types and interest types Owner-occupied home rules: repayment requirement, deduction of borrowing, owner-occupied home reserve National Mortgage Guarantee (NHG) Valuation, notary and mortgage deed Compensation for early repayment ESIS and providing information Income and creditworthiness Risks in the advice: death, incapacity for work, unemployment, end of relationship, retirement Sustainability and energy label
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. TRHK and NHG Terms & Standards. They change every year on 1 January. Always work with the annual version. Mortgage acceptance 2026. The NHG cost limit is €470,000. Several lenders limit the interest-only part of new applications to 30% of the property value, and valuation reports must address foundation risks. Check the current criteria per lender.
+
+### Important dates
+
+Coming up 1 January 2027 Annual changes. New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts. 10 July 2027 EU Anti-Money Laundering Regulation (AMLR) applies. The core customer due diligence rules sit in a directly applicable EU regulation. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Drawing up the risk analysis for the advice Advising (and where applicable intermediating) a suitable solution, both financial and organisational Managing and keeping the advice up to date Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Mortgage Credit
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1h.4 Peter (58) and Annemiek (57) live in a detached house in Hilversum. Now that the children have left home, they are buying a holiday home in Zeeland, where they stay about ten weekends a year. They finance that home with a separate mortgage at their own bank. They hope to be able to deduct that interest too. What is correct? Both homes count as owner-occupied homes, because they both stay in them regularly and for longer periods For the holiday home they pay notional rental value instead of box 3 tax The holiday home and the loan fall in box 3; the interest is not deductible in box 1 The interest on the holiday home is deductible, but at a lower rate Show the answer and explanation Correct: The holiday home and the loan fall in box 3; the interest is not deductible in box 1. Only the main residence is an owner-occupied home; a second home falls in box 3 together with the debt. Both homes count as owner-occupied homes, because they both stay in them regularly and for longer periods : There can be only one owner-occupied home: the main residence. The interest on the holiday home is deductible, but at a lower rate : For a second home there is no interest deduction in box 1, not even at a lower rate. For the holiday home they pay notional rental value instead of box 3 tax : The notional rental value applies only to the owner-occupied home (the main residence). Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1i.4 Bas (35) is an account manager with €65,000 gross per year and Merel (34) is a part-time teacher with €30,000 gross per year. They want to buy a family home in Amersfoort. Merel has heard that the second income counts only partly for the mortgage. They ask their adviser how that works. How does Merel's income count towards the test income under the lending standards? For half, to absorb the risk of the second income dropping out, on the lender's side In full, like the highest income; the restriction on the second income has lapsed Not at all; only the highest income determines their maximum mortgage Only if both partners have a permanent contract of indefinite duration Show the answer and explanation Correct: In full, like the highest income; the restriction on the second income has lapsed. Since 2024 the income of the lower-earning partner counts in full towards the test income. For half, to absorb the risk of the second income dropping out, on the lender's side : Partial weighting applied in the past; since 2024 the second income counts in full. Not at all; only the highest income determines their maximum mortgage : The second income also counts towards the test income. Only if both partners have a permanent contract of indefinite duration : A permanent contract is not a condition for counting the second income. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1d.2 Stijn (35) is a teacher and is buying an apartment in Zwolle on his own with a fully annuity mortgage. He has used all his savings for the purchase costs and furnishing. His car is old and his central heating boiler will soon need replacing. He assumes he can pay for unexpected costs from his salary. What is an important point of attention in the advice? That he had better make the mortgage interest-only in order to build up assets faster That he is obliged to take out an investment insurance alongside the mortgage That his interest deduction lapses after ten years and his costs then rise The importance of building up a financial buffer for unexpected expenses Show the answer and explanation Correct: The importance of building up a financial buffer for unexpected expenses. Without a buffer a setback can lead directly to payment problems; the adviser should discuss this. That he had better make the mortgage interest-only in order to build up assets faster : An interest-only loan is not owner-occupied home debt and increases the risk at the end. That his interest deduction lapses after ten years and his costs then rise : The interest deduction runs for a maximum of thirty years, not ten. That he is obliged to take out an investment insurance alongside the mortgage : An investment insurance is never mandatory alongside an annuity mortgage. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.2 1a.3 1a.4 1a.6 1b.1 1b.2 1b.3 1b.4 1b.5 1b.6 1b.7 1b.8 1b.9 1c.1 1d.1 1d.2 1e.1 1e.2 1e.3 1e.4 1e.5 1e.6 1e.7 1e.8 1e.9 1e.10 1e.11 1e.12 1f.1 1f.2 1f.3 1f.4 1g.1 1g.2 1h.1 1h.2 1h.4 1h.6 1i.1 1i.2 1i.3 1i.4 1i.6 1j.1 1j.2 2c.2 2d.2 2e.2 2e.3 3c.4 3c.6 3e.3 3f.1 4a.1 4a.2
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 3 modules . Wft Basic Wft Wealth
+
+### Terms for this module
+
+Commission ban (provisieverbod) · BKR · NHG · Lending standards (leennormen) · Repayment requirement (aflossingseis)
+
+### Changes
+
+16 October 2026 — Key dates added to the module page. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Temporary Regulation on Mortgage Credit (TRHK) Mortgage Credit Directive (MCD) NHG Terms & Standards (National Mortgage Guarantee) Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Income Tax Act 2001 Anti-Money Laundering and Counter-Terrorist Financing Act (Wwft)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Income 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-inkomen.html
+
+Wft Income: free practice questions with real-life cases and explanations, what’s new in 2026, important dates and exam terms. Practice test for advisers. Absence due to illness, incapacity for work and income protection. Practise for free with PE practice questions for Wft Income, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Income at a glance
+
+Who needs it: required for 1 professional qualification: Income Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. One exam term for this module was changed. Current: Disability insurance for the self-employed: a compulsory basic insurance is in preparation. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Continued payment of wages during sickness and the Gatekeeper Improvement Act Sickness Benefits Act, WIA (WGA and IVA) and Wajong Unemployment (WW) and Anw in outline Disability insurance for the self-employed WGA gap, WIA excess and absence insurance Housing costs insurance and term life insurance Tax treatment of premiums and benefits Income analysis and duty of care GDPR and health data
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Changed exam term. Exam term 1h.8 moved from knowledge level to understanding level on 1 April 2026: you must not only be able to describe the legal frameworks for asking for medical information, medical examination limits and medical acceptance, but also explain and apply them in a concrete situation, such as hereditary conditions and a health declaration or medical examination. Disability insurance for the self-employed. A compulsory basic insurance is in preparation. Follow the status of the bill; the current rules remain in force until introduction. Enforcement against bogus self-employment since 1 January 2025. The Tax Administration enforces the assessment of employment relationships again. If a freelancer is in reality an employee, the employee insurances apply. Discuss with freelance clients how certain their status is; it affects their income risk and the choice of disability insurance.
+
+### Important dates
+
+Coming up 1 January 2027 Annual changes. New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification. 1 January 2025 Enforcement against bogus self-employment. The Tax Administration enforces the assessment of employment relationships again.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Analysing the client’s data for the advice Advising (and where applicable intermediating) a suitable solution, both financial and organisational Managing and keeping the advice up to date Supporting claims handling Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Income
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1i.2 Hans is a technical draughtsman and reaches the AOW age this year. He earned €3,800 gross per month and will receive a modest pension on top. His wife Ellen is eight years younger and has no income of her own. Their children already live independently. What is the starting point for their AOW? Ellen also receives AOW immediately because her husband receives AOW Hans receives a partner supplement from the SVB until Ellen receives AOW Hans receives an AOW for married people; there is no longer a partner supplement for Ellen Hans receives an AOW for single people until Ellen reaches the AOW age Show the answer and explanation Correct: Hans receives an AOW for married people; there is no longer a partner supplement for Ellen. The AOW partner supplement was abolished as of 2015; the household may therefore have an income gap until Ellen herself receives AOW. Hans receives an AOW for single people until Ellen reaches the AOW age : Married people receive the AOW for married people, even if the partner does not yet receive AOW. Ellen also receives AOW immediately because her husband receives AOW : AOW is a personal right that starts at one's own AOW age. Hans receives a partner supplement from the SVB until Ellen receives AOW : The partner supplement no longer exists for anyone who became entitled to AOW after 2014. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1i.8 Erik (37) works as a cook in a restaurant and earns €2,700 gross per month. He is married and has a four-year-old daughter. He is sick for four weeks with pneumonia, then works fully for three weeks and then drops out with back problems. His employer wonders whether the period for continued payment of wages starts again. How do these periods count for the continued payment of wages? A new period of 104 weeks starts, because the complaints are different The first period lapses, because Erik was reported fully recovered They are added together, because the interruption is shorter than four weeks They are only added together if the company doctor establishes the same cause Show the answer and explanation Correct: They are added together, because the interruption is shorter than four weeks. Periods of sickness that follow each other with an interruption of less than four weeks are added together, regardless of the cause. A new period of 104 weeks starts, because the complaints are different : The cause is irrelevant for adding together; only the length of the interruption counts. They are only added together if the company doctor establishes the same cause : Adding together does not depend on the same cause, but on an interruption shorter than four weeks. The first period lapses, because Erik was reported fully recovered : A recovery report only breaks the chain if the employee works again for at least four weeks. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1g.3 Karin (39) is a self-employed physiotherapist and makes €58,000 profit per year. She is married and has a six-year-old daughter. Her AOV has a threshold of 25% and pays out pro rata to the degree of incapacity for work. After a serious herniated neck disc the insurer determines that she is 60% incapacitated for work. What does she receive in principle? A benefit of 25% of the insured amount A benefit that corresponds to 60% incapacity for work, not the full amount Nothing, because she is not fully incapacitated for work The full insured amount, because she is well above the policy threshold of 25% Show the answer and explanation Correct: A benefit that corresponds to 60% incapacity for work, not the full amount. With pro rata payment the insured receives a part of the insured amount that corresponds to the degree of incapacity for work. The full insured amount, because she is well above the policy threshold of 25% : Paying out above the threshold does not automatically mean a full benefit. Nothing, because she is not fully incapacitated for work : The 25% threshold has been reached, so she is entitled to a benefit. A benefit of 25% of the insured amount : The threshold determines when a benefit is paid, not how much. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.2 1a.3 1a.4 1a.5 1a.6 1a.7 1a.8 1b.1 1b.4 1b.5 1b.6 1b.7 1c.1 1c.2 1d.1 1d.2 1d.3 1d.4 1d.5 1d.6 1e.1 1f.1 1f.2 1f.3 1f.7 1f.9 1g.1 1g.2 1g.3 1g.4 1g.5 1g.6 1g.8 1g.9 1g.10 1g.11 1g.12 1g.13 1g.14 1g.15 1g.16 1g.17 1g.19 1g.22 1h.1 1h.2 1h.4 1h.5 1h.7 1h.8 1h.9 1h.10 1i.1 1i.2 1i.3 1i.4 1i.5 1i.6 1i.7 1i.8 1i.9 1i.10 1i.11 1i.12 1i.13 1j.1 1j.3 1j.4 1k.1 1k.2 1k.4 1k.5 1k.7 1k.10 1k.13 1k.14 2e.1 4b.2 4b.3
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 2 modules . Wft Basic
+
+### Terms for this module
+
+Duty of disclosure (mededelingsplicht) · WIA · IVA · WGA · AOV · Bogus self-employment (schijnzelfstandigheid)
+
+### Changes
+
+16 October 2026 — New case-study questions and more up-to-date information on recent and upcoming changes, with key dates. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Work and Income according to Labour Capacity Act (WIA) Sickness Benefits Act Unemployment Insurance Act General Surviving Dependants Act (Anw) Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Insurance Distribution Directive (IDD) General Data Protection Regulation (GDPR/AVG)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Pensions 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-pensioen.html
+
+Wft Pensions: free practice questions with real-life cases and explanations, what’s new in 2026, important dates and exam terms. Practice test for advisers. For employees and advisers in pension services. Practise for free with PE practice questions for Wft Pensions, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Pensions at a glance
+
+Who needs it: required for 1 professional qualification: Pensions Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: Pension Transition Act: pension schemes must have moved to the new system by 1 January 2028 at the latest. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+The three pillars and the AOW Pensions Act: pension agreement, providers, information and transfer of value Pension Transition Act: defined contribution schemes, transition and transfer of accrued rights (invaren) Partner’s and orphan’s pension, Anw gap Tax framework (Witteveen) and annuities Pensions on divorce Pensions of directors-major shareholders (dga) and pensions in own management Duty of care and advice on choices
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Pension Transition Act. Pension schemes must have moved to the new system by 1 January 2028 at the latest. Watch transition moments, survivor cover and communication to participants.
+
+### Important dates
+
+Coming up 1 January 2027 Annual changes. New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts. 1 January 2028 Deadline for the transition to the new pension system. Pension schemes must have moved to the system of the Pension Transition Act. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Analysing the client’s data for the advice Advising (and where applicable intermediating) a suitable solution, both financial and organisational Managing and keeping the advice up to date Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Pensions
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 1b.1 Adviser Mirjam is preparing a new pension scheme at a bakery incorporated as a BV (private limited company). The manager wants to sign the pension agreement on behalf of the BV and says he 'always arranges that sort of thing'. Mirjam consults the Trade Register of the Chamber of Commerce. It shows that only the two directors together are authorised to represent the BV. What should Mirjam do? Have it signed by the directors who are authorised according to the Trade Register, or by someone with their power of attorney Have the agreement signed on behalf of the BV by the pension provider Have the signature confirmed by the works council, which can then represent the BV Nothing; a manager is always authorised to sign pension agreements on behalf of the BV Show the answer and explanation Correct: Have it signed by the directors who are authorised according to the Trade Register, or by someone with their power of attorney. Only someone who is authorised to represent the BV, or who has a power of attorney for it, can validly bind the BV. Nothing; a manager is always authorised to sign pension agreements on behalf of the BV : A manager is not automatically authorised to represent; that appears from the Trade Register or a power of attorney. Have the signature confirmed by the works council, which can then represent the BV : The works council has co-determination rights but does not represent the BV. Have the agreement signed on behalf of the BV by the pension provider : The provider is another party and cannot represent the BV. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1g.3 The metal company of Bart Kok (58) has an average-salary scheme with an insurer. Pension costs have risen sharply in recent years. Bart wants to unilaterally scale the scheme back to a contribution scheme. The pension agreement contains an amendment clause (wijzigingsbeding). When may he invoke that clause? Always, because the employer pays the premium and therefore decides on the content Never; a pension scheme cannot be amended once introduced, even with an amendment clause Only if the employees do not object within a month after written notice Only in the case of an interest so compelling that the employees' interest must reasonably yield Show the answer and explanation Correct: Only in the case of an interest so compelling that the employees' interest must reasonably yield. A unilateral amendment through the amendment clause is only possible in the case of such a compelling interest of the employer. Always, because the employer pays the premium and therefore decides on the content : Paying the premium gives the employer no unlimited right to amend unilaterally. Only if the employees do not object within a month after written notice : Silence on the part of employees is not a statutory standard for a unilateral amendment. Never; a pension scheme cannot be amended once introduced, even with an amendment clause : With an amendment clause amendment is possible, but only in the case of a compelling interest. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1h.18 Willem (54) and Saar (52) divorced two years ago. They reported the divorce to Willem's pension fund in time, so Saar is entitled to equalisation. Willem's pension scheme includes a partner's pension. Willem dies unexpectedly, well before his retirement date. What is Saar in principle entitled to? An Anw benefit as Willem's divorced partner Half of Willem's full old-age pension, payable from his retirement date Payment of the cash-in value of Willem's accrued pension The special partner's pension (bijzonder partnerpensioen), not part of Willem's old-age pension Show the answer and explanation Correct: The special partner's pension (bijzonder partnerpensioen), not part of Willem's old-age pension. Because Willem dies before his retirement date, no old-age pension is paid out; Saar is, however, entitled to the special partner's pension. Half of Willem's full old-age pension, payable from his retirement date : Equalisation follows Willem's old-age pension; if he dies before the retirement date, it is not paid out. An Anw benefit as Willem's divorced partner : A divorced partner is not a surviving dependant within the meaning of the Anw. Payment of the cash-in value of Willem's accrued pension : Cashing in the pension for the ex-partner is not a consequence of death. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.2 1a.4 1b.1 1b.6 1c.5 1c.6 1c.7 1c.11 1c.12 1d.2 1f.1 1f.2 1f.3 1f.4 1f.5 1g.3 1g.4 1g.5 1g.6 1g.8 1g.9 1g.10 1g.11 1g.12 1g.13 1h.2 1h.3 1h.4 1h.5 1h.7 1h.8 1h.11 1h.12 1h.13 1h.14 1h.15 1h.16 1h.18 1h.19 1h.20 1h.21 1h.22 1h.23 1i.1 1i.2 1i.3 1i.4 1i.5 1i.6 1i.8 1i.9 1i.11 1j.3 1j.5 1j.6 1j.15 1j.16 1j.19 1j.20 2a.5 2c.1 2j.4 4a.1 4a.4
+
+### Related modules
+
+These modules belong to the same professional qualifications. Practise them together in one quiz: quiz with all 3 modules . Wft Basic Wft Wealth
+
+### Terms for this module
+
+DNB · Wtp · Transfer of accrued rights (invaren) · UPO · AOW
+
+### Changes
+
+16 October 2026 — Key dates added to the module page. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Pensions Act Pension Transition Act (Wtp) General Old Age Pensions Act (AOW) General Surviving Dependants Act (Anw) Pension Rights (Equalisation on Divorce) Act Income Tax Act 2001 Financial Supervision Act (Wft) Insurance Distribution Directive (IDD)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft Health Insurance 2026: free PE practice questions
+Source: https://pa-wft.nl/en/module-zorgverzekering.html
+
+Wft Health Insurance: free practice questions with explanations, what’s new in 2026 and important dates. Practice test for advisers. (Supplementary) health insurance. Practise for free with PE practice questions for Wft Health Insurance, with an explanation for every answer. Last updated 16 October 2026 · legislation as at 15 October 2026 Take the quiz All modules
+
+### Wft Health Insurance at a glance
+
+Who needs it: required for 1 professional qualification: Health Insurance Adviser. PE: you take one PE exam per professional qualification within the PE period, which runs until 31 March 2028 inclusive. Exam terms: the final objectives and exam terms of the CDFD have been renewed for exams from 1 April 2026. Current: Annual changes on 1 January: premiums, the mandatory deductible, the basic package and the healthcare allowance are set anew each year. Practise: 7 multiple-choice questions with an explanation for every answer, free and without an account. Last updated 16 October 2026.
+
+### What is covered
+
+Health Insurance Act: insurance obligation, acceptance obligation, ban on premium differentiation Basic package and mandatory deductible Policy types: benefits in kind, reimbursement, combination, budget Switching insurer and supplementary insurance Income-related contribution and healthcare allowance Wlz and Wmo alongside the Zvw Care abroad Defaulters scheme and disputes GDPR and providing information
+
+### What’s new in 2026
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Annual changes on 1 January. Premiums, the mandatory deductible, the basic package and the healthcare allowance are set anew each year. Use the amounts of the relevant year.
+
+### Important dates
+
+Coming up 1 January 2027 Annual changes. New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts. 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification.
+
+### CDFD exam terms from 1 April 2026
+
+The final objectives and exam terms of the CDFD for this module are divided into tasks: Gathering the client’s data Drawing up the risk analysis for the advice Advising (and where applicable intermediating) a suitable solution Supporting the management of the health and/or medical expenses insurance(s) Supporting claims handling Source: final objectives and exam terms per module of the CDFD, applicable to exams from 1 April 2026 (in Dutch). The full documents are in the CDFD downloads .
+
+### Example questions Wft Health Insurance
+
+This is what the quiz questions look like. In the quiz the answers appear in random order. Example question 1 exam term 2e.4 Mrs Visser (52) is a lawyer in The Hague and has suffered from a herniated disc for years. She wants to be operated on by a specialist at a private clinic with which her current insurer has no contract. She currently has a benefits-in-kind policy and wants to change policy on 1 January. She wants to pay as little as possible herself for the operation. Which policy type best fits her wish? A benefits-in-kind policy A budget policy A policy with a voluntary deductible A reimbursement policy Show the answer and explanation Correct: A reimbursement policy. A reimbursement policy reimburses care from a provider of choice up to a market-conform tariff, even without a contract with the clinic. A budget policy : A budget policy has few contracts and often reimburses non-contracted care at a lower rate. A benefits-in-kind policy : With benefits in kind she generally receives a lower reimbursement for non-contracted care. A policy with a voluntary deductible : A voluntary deductible lowers the premium, but increases her own payment. Doubt about this question or answer? Email it straight to DFO Example question 2 exam term 1l.10 Mrs De Groot (70) is a widow and moves to an apartment on the Costa Blanca in Spain. She receives only AOW (state pension) and a Dutch pension. Because she no longer lives in the Netherlands, she is no longer insured under the Wlz and her insurance obligation under the Zvw lapses. She has rheumatism and wants to stay in treatment in Spain. How does she arrange her care? She is automatically insured in Spain, without paying a contribution She keeps her ordinary Dutch basic insurance She registers via the CAK as a treaty beneficiary (verdragsgerechtigde) and pays a treaty contribution She registers with the Benefits Administration (Dienst Toeslagen) for a healthcare contribution Show the answer and explanation Correct: She registers via the CAK as a treaty beneficiary (verdragsgerechtigde) and pays a treaty contribution. Treaty beneficiaries receive care in their country of residence at the expense of the Netherlands; the CAK arranges the registration and the contribution. She keeps her ordinary Dutch basic insurance : Without Wlz insurance she is no longer subject to the insurance obligation and cannot keep Zvw insurance. She is automatically insured in Spain, without paying a contribution : Because she has only a Dutch benefit, the Netherlands is responsible; for this she pays a contribution. She registers with the Benefits Administration (Dienst Toeslagen) for a healthcare contribution : The Benefits Administration implements allowances, not the registration of treaty beneficiaries. Doubt about this question or answer? Email it straight to DFO Example question 3 exam term 1l.13 Tim (37) has multiple sclerosis and receives physiotherapy that falls under his basic insurance. He has a reimbursement policy. After moving to Zwolle he chooses a physiotherapist who has no contract with his insurer. He wonders what that means for payment. What can happen to Tim in this situation? He may have to pay the invoice himself first and then claim it from his insurer He must first ask permission from the National Health Care Institute He must switch to a benefits-in-kind policy in order to be allowed to claim He receives nothing reimbursed, because the physiotherapist has no contract Show the answer and explanation Correct: He may have to pay the invoice himself first and then claim it from his insurer. With reimbursement Tim is free in his choice, but a non-contracted provider may send the invoice to him, which he then claims. He receives nothing reimbursed, because the physiotherapist has no contract : A reimbursement policy in fact also reimburses care from non-contracted providers, up to the market-conform tariff. He must first ask permission from the National Health Care Institute : The National Health Care Institute does not decide on individual reimbursements. He must switch to a benefits-in-kind policy in order to be allowed to claim : Claiming in fact belongs to the reimbursement policy. Doubt about this question or answer? Email it straight to DFO Keep practising in the quiz
+
+### Practise per exam term
+
+Practise only the questions about one exam term of the CDFD, for example a topic you find difficult. A practice round does not count towards the certificate. 1a.1 1a.2 1a.3 1a.4 1a.5 1a.6 1a.7 1a.8 1a.9 1a.10 1a.11 1a.12 1a.13 1a.14 1b.1 1b.3 1c.2 1c.3 1c.5 1c.6 1c.9 1d.1 1d.2 1d.4 1d.6 1d.7 1d.8 1e.1 1e.2 1f.2 1f.7 1f.8 1f.9 1f.11 1f.13 1f.15 1f.16 1f.17 1g.2 1g.4 1g.5 1g.6 1g.7 1h.1 1h.2 1i.1 1i.2 1i.3 1i.4 1i.5 1i.8 1i.9 1i.10 1i.11 1i.12 1j.1 1j.2 1j.3 1k.1 1k.2 1k.4 1k.5 1k.6 1k.8 1k.9 1l.1 1l.4 1l.7 1l.8 1l.9 1l.10 1l.11 1l.13 2e.4 2e.6 2e.7 3d.1 3d.2 4a.3
+
+### Terms for this module
+
+Mandatory deductible (eigen risico, Zvw) · Benefits-in-kind policy (naturapolis) · Reimbursement policy (restitutiepolis) · Acceptance obligation (acceptatieplicht)
+
+### Changes
+
+16 October 2026 — Key dates added to the module page. 15 October 2026 — Question bank revised: more practical case studies, every question linked to a CDFD exam term (as of 1 April 2026), new questions for exam terms that were still missing. 15 October 2026 — Question bank expanded: extra questions, including practical case studies, with an explanation for every answer. 15 October 2026 — First version: questions with explanations, regulatory reference date 15 October 2026.
+
+### Sources
+
+Health Insurance Act (Zvw) Healthcare Allowance Act General Act on Income-Related Schemes (AWIR) Financial Supervision Act (Wft) Financial Supervision (Conduct of Business) Decree (BGfo) Insurance Distribution Directive (IDD) General Data Protection Regulation (GDPR/AVG)
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not study material for a recognised PE exam. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## What’s new in the Wft: Q4 2026
+Source: https://pa-wft.nl/en/whats-new.html
+
+What’s new for financial advisers in Q4 2026: per Wft module the changes in legislation, exam terms and the market. What’s new for financial advisers in Q4 2026? Per Wft module the changes in legislation, exam terms and the market that you need to know to stay permanently up to date. Legislation as at 15 October 2026 Take the knowledge quiz
+
+### Important dates
+
+Coming up 20 November 2026 CCD II applies. The revised Consumer Credit Directive: stricter creditworthiness assessment, including BNPL and lease with a purchase option. Wft Consumer Credit 9 December 2026 Transposition of the new Product Liability Directive. Deadline for the Dutch law; software counts as a product. Wft Non-life Insurance (Commercial), Wft Non-life Insurance (Personal) 1 January 2027 Annual changes. New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts. Wft Mortgage Credit, Wft Health Insurance, Wft Wealth, Wft Income, Wft Pensions 10 July 2027 EU Anti-Money Laundering Regulation (AMLR) applies. The core customer due diligence rules sit in a directly applicable EU regulation. Wft Basic, Wft Wealth, Wft Mortgage Credit, Wft Consumer Credit 1 January 2028 Deadline for the transition to the new pension system. Pension schemes must have moved to the system of the Pension Transition Act. Wft Pensions 31 March 2028 End of the 2025–2028 PE period. Deadline for taking your PE exam per professional qualification. Recently took effect 1 April 2026 New CDFD exam terms. Renewed final objectives and exam terms for all Wft modules. 1 January 2026 DAC8 applies. Crypto service providers in the EU pass client data to the tax authorities. Wft Wealth 1 April 2025 Start of the 2025–2028 PE period. Within this period you take one PE exam per professional qualification. 17 January 2025 DORA applies. European rules on the digital operational resilience of financial institutions. Wft Basic 1 January 2025 Enforcement against bogus self-employment. The Tax Administration enforces the assessment of employment relationships again. Wft Income 30 December 2024 MiCA fully applicable. Providers of crypto services in the EU need a licence. Wft Wealth
+
+### Wft Basic
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. EU anti-money laundering package (AMLR and AMLD6). It comes on top of the current Wwft, which will in time be replaced by an implementation act. The gatekeeper role of advisers changes accordingly. EU Anti-Money Laundering Regulation (AMLR) from 10 July 2027. The core customer due diligence rules will then sit in a directly applicable EU regulation. The new European anti-money laundering authority AMLA has been established and will directly supervise a limited number of large institutions; for advisory firms the national supervisor remains the point of contact. DORA has applied since 17 January 2025. The European rules on digital operational resilience apply to, among others, banks and insurers. Insurance intermediaries that are micro, small or medium-sized enterprises fall outside it, but they notice it through their suppliers and principals. The Wft requirement of controlled business operations still applies to ICT risks. AI Act. Phased application affects advisory firms through software, models and outsourcing. Test your knowledge of Wft Basic →
+
+### Wft Consumer Credit
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. CCD II from 20 November 2026. The revised Consumer Credit Directive will apply; the Dutch implementation act is still in preparation. Among other things, BNPL and rent or lease with a purchase option come under the credit regime. Stricter creditworthiness assessment under CCD II. Credit may only be granted if the creditworthiness assessment shows that the consumer is likely to be able to meet their obligations. There will also be stricter requirements for advertising and pre-contractual information. Test your knowledge of Wft Consumer Credit →
+
+### Wft Non-life Insurance (Personal)
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Changed exam term. Exam term 1d.9 was changed on 1 April 2026: more room for questions about passenger accident insurance (OVI) and passenger damage insurance (SVI), the differences between the two, and which form fits the client’s needs. No major change in the law identified. The framework remains Book 7 of the Civil Code (insurance contract), the IDD and the Wft conduct rules. Policy conditions differ per insurer; always check the current conditions. Test your knowledge of Wft Non-life Insurance (Personal) →
+
+### Wft Non-life Insurance (Commercial)
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. AI Act and DORA. They affect business clients and their insurance needs, including for cyber and IT risks. New Product Liability Directive. EU Directive 2024/2853 must be transposed into Dutch law by 9 December 2026 and applies to products placed on the market after that date. Software, including AI systems, then counts as a product. Discuss with clients who make software or use it in their products whether their liability cover matches. Sanctions legislation. Remains a standing point of attention for business clients and foreign interests. Test your knowledge of Wft Non-life Insurance (Commercial) →
+
+### Wft Wealth
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Box 3. The Box 3 Transitional Act applies until a new system takes effect; legal redress following the “Christmas ruling” (Kerstarrest) is also under way. Work with the rules of the relevant tax year. Crypto: MiCA and DAC8. Since 30 December 2024, providers of crypto services in the EU need a licence under the MiCA Regulation; in the Netherlands the AFM grants it. A licence does not protect against price losses and there is no investor compensation scheme for crypto. Since 1 January 2026, crypto service providers in the EU pass information about their clients to the tax authorities (DAC8). EU Anti-Money Laundering Regulation (AMLR) from 10 July 2027. The customer due diligence rules will sit in a directly applicable EU regulation. Test your knowledge of Wft Wealth →
+
+### Wft Mortgage Credit
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. TRHK and NHG Terms & Standards. They change every year on 1 January. Always work with the annual version. Mortgage acceptance 2026. The NHG cost limit is €470,000. Several lenders limit the interest-only part of new applications to 30% of the property value, and valuation reports must address foundation risks. Check the current criteria per lender. Test your knowledge of Wft Mortgage Credit →
+
+### Wft Income
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Changed exam term. Exam term 1h.8 moved from knowledge level to understanding level on 1 April 2026: you must not only be able to describe the legal frameworks for asking for medical information, medical examination limits and medical acceptance, but also explain and apply them in a concrete situation, such as hereditary conditions and a health declaration or medical examination. Disability insurance for the self-employed. A compulsory basic insurance is in preparation. Follow the status of the bill; the current rules remain in force until introduction. Enforcement against bogus self-employment since 1 January 2025. The Tax Administration enforces the assessment of employment relationships again. If a freelancer is in reality an employee, the employee insurances apply. Discuss with freelance clients how certain their status is; it affects their income risk and the choice of disability insurance. Test your knowledge of Wft Income →
+
+### Wft Pensions
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Pension Transition Act. Pension schemes must have moved to the new system by 1 January 2028 at the latest. Watch transition moments, survivor cover and communication to participants. Test your knowledge of Wft Pensions →
+
+### Wft Health Insurance
+
+New CDFD exam terms from 1 April 2026. The final objectives and exam terms for this module have been renewed and apply to exams from 1 April 2026. The quiz questions are aligned with them. Annual changes on 1 January. Premiums, the mandatory deductible, the basic package and the healthcare allowance are set anew each year. Use the amounts of the relevant year. Test your knowledge of Wft Health Insurance →
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself. This overview helps you keep your knowledge up to date and is not advice. Always check amounts and standards in the applicable source. Spot an error? Email info@dfobv.nl .
+
+
+## Wft glossary: PE, exam terms and Wft modules explained
+Source: https://pa-wft.nl/en/glossary.html
+
+### Acceptance obligation (acceptatieplicht)
+
+The obligation of a health insurer to accept everyone for the basic insurance, without a premium difference based on health. Wft Health Insurance
+
+### AFM
+
+Netherlands Authority for the Financial Markets: the conduct supervisor. The AFM supervises how financial firms behave towards clients, grants licences to advisers and intermediaries and supervises professional competence. Wft Basic
+
+### AMLR
+
+The EU Anti-Money Laundering Regulation. From 10 July 2027 the core rules on customer due diligence sit in this directly applicable regulation. Wft Basic · Wft Wealth
+
+### AOV
+
+Disability insurance (arbeidsongeschiktheidsverzekering): a private insurance with which a self-employed person insures their income in the event of incapacity for work. Wft Income
+
+### AOW
+
+General Old Age Pensions Act (Algemene Ouderdomswet): the basic state pension from the state pension age. Wft Pensions
+
+### AVB
+
+Business liability insurance (aansprakelijkheidsverzekering voor bedrijven): covers damage to persons or property of others for which a business is liable. Wft Non-life Insurance (Commercial)
+
+### Benefits-in-kind policy (naturapolis)
+
+A health insurance under which the insurer makes agreements with care providers. With a non-contracted care provider the reimbursement can be lower. Wft Health Insurance
+
+### BKR
+
+Dutch credit registration bureau (Bureau Krediet Registratie): registers consumer credit. Lenders consult the register when assessing an application. Wft Consumer Credit · Wft Mortgage Credit
+
+### Bogus self-employment (schijnzelfstandigheid)
+
+When someone formally works as a freelancer but the working relationship is in reality an employment relationship. The Tax Administration has enforced this again since 1 January 2025. Wft Income
+
+### Box 3
+
+The box in income tax for income from savings and investments. A return on the assets on the reference date is taxed. Wft Wealth
+
+### Business interruption insurance (bedrijfsschadeverzekering)
+
+Compensates the loss of gross profit and continuing fixed costs if the business comes to a standstill after an insured event, such as fire, during the indemnity period. Wft Non-life Insurance (Commercial)
+
+### CCD II
+
+The revised European Consumer Credit Directive (2023/2225). It applies from 20 November 2026 and brings, among other things, buy now pay later via a third party and lease with a purchase option under the credit regime. Wft Consumer Credit
+
+### CDFD
+
+Dutch Financial Services Competence Board (College Deskundigheid Financiële Dienstverlening). The CDFD sets the final objectives and exam terms of the Wft exams and recognises the exam institutes that conduct Wft and PE exams. Wft Basic
+
+### Client profile (klantprofiel)
+
+The picture of the client that the adviser records: financial position, knowledge and experience, objectives and risk appetite. It is the basis for suitable advice. Wft Basic
+
+### Commission ban (provisieverbod)
+
+The ban on receiving commission from the provider for certain products, such as mortgages and complex products. The client then pays the adviser directly. Wft Basic · Wft Mortgage Credit
+
+### DAC8
+
+European rules under which, since 1 January 2026, crypto service providers pass data about their clients to the tax authorities. Wft Wealth
+
+### DNB
+
+De Nederlandsche Bank: the prudential supervisor. DNB monitors the financial soundness of banks, insurers and pension funds. Wft Basic · Wft Pensions
+
+### DORA
+
+Digital Operational Resilience Act: European rules on the digital resilience of financial institutions, applicable since 17 January 2025. Small and medium-sized insurance intermediaries fall outside it. Wft Basic
+
+### Duty of care (zorgplicht)
+
+The obligation of a financial service provider to act with due care and to take the client’s interests into account, among other things by giving suitable advice. Wft Basic
+
+### Duty of disclosure (mededelingsplicht)
+
+The legal duty of the policyholder to report, before the insurance is concluded, all facts they know that are relevant to the insurer’s decision. Wft Non-life Insurance (Personal) · Wft Non-life Insurance (Commercial) · Wft Income
+
+### Final objective and exam term (eindterm en toetsterm)
+
+Final objectives describe what a candidate must be able to do; exam terms elaborate these into testable knowledge and skills. The CDFD sets them; the current ones apply to exams from 1 April 2026. Wft Basic
+
+### IDD
+
+Insurance Distribution Directive: the European directive on the distribution of insurance, with requirements on, among other things, information, conflicts of interest and professional competence. Wft Basic · Wft Non-life Insurance (Personal) · Wft Non-life Insurance (Commercial)
+
+### IVA
+
+Income provision for fully incapacitated persons (Inkomensvoorziening volledig arbeidsongeschikten): the WIA benefit for those who are fully and permanently incapacitated for work. Wft Income
+
+### Kifid
+
+Dutch Financial Services Complaints Institute: handles complaints from consumers about financial service providers if they cannot resolve them with the provider itself. Wft Basic
+
+### Lending standards (leennormen)
+
+The rules that determine how much someone may borrow at most for an owner-occupied home: the debt-service ratio relative to income and the loan relative to the property value. They are set every year. Wft Mortgage Credit
+
+### Mandatory deductible (eigen risico, Zvw)
+
+The amount per calendar year that an insured person aged 18 or over pays themselves for care from the basic package, with exceptions such as the GP. The amount is set every year. Wft Health Insurance
+
+### MiCA
+
+Markets in Crypto-Assets: the European regulation for crypto services. Since 30 December 2024, providers of crypto services in the EU need a licence. Wft Wealth
+
+### NHG
+
+National Mortgage Guarantee (Nationale Hypotheek Garantie): a guarantee for mortgages up to a limit set each year. In a forced sale with a residual debt, the guarantee can take over that debt under conditions. Wft Mortgage Credit
+
+### OVI
+
+Passenger accident insurance (ongevallenverzekering inzittenden): pays a fixed amount on death or permanent disability of passengers after a traffic accident, regardless of who is at fault. Wft Non-life Insurance (Personal)
+
+### PE exam
+
+Exam for permanent education. Anyone who advises takes one PE exam per professional qualification within each PE period, at an exam institute recognised by the CDFD. It mainly tests current developments. Wft Basic
+
+### PE period
+
+The period within which you take your PE exams. The current PE period runs from 1 April 2025 to 31 March 2028 inclusive. Wft Basic
+
+### PE points
+
+A points system for permanent education that no longer exists under the Wft. Since 1 January 2014 you keep your advising authority valid with PE exams. Wft Basic
+
+### Permanently up to date (permanent actueel)
+
+The requirement that employees with substantive client contact keep their professional knowledge up to date and can apply it. It is an open standard: the firm decides how to implement it and is responsible for it. Wft Basic
+
+### Product liability (productaansprakelijkheid)
+
+The liability of a producer for damage caused by a defective product, without fault having to be proved. Under the new EU directive, software also counts as a product. Wft Non-life Insurance (Commercial)
+
+### Professional qualification (beroepskwalificatie)
+
+The combination of Wft modules you need to advise in a certain field, for example Mortgage Credit Adviser (Basic, Wealth and Mortgage Credit). Wft Basic
+
+### Reimbursement policy (restitutiepolis)
+
+A health insurance under which the insured chooses the care provider themselves and the costs are reimbursed up to a maximum market rate. Wft Health Insurance
+
+### Repayment requirement (aflossingseis)
+
+To qualify for mortgage interest relief on a mortgage taken out after 2012, the loan must be repaid at least on an annuity basis within a maximum of 30 years. Wft Mortgage Credit
+
+### Risk profile (risicoprofiel)
+
+The extent to which a client wants and is able to take risk when investing. The adviser determines it on the basis of objectives, financial position, knowledge and experience. Wft Wealth
+
+### SVI
+
+Passenger damage insurance (schadeverzekering inzittenden): compensates the actual damage of passengers after a traffic accident, such as personal injury and damage to belongings, regardless of who is at fault. Wft Non-life Insurance (Personal)
+
+### Transfer of accrued rights (invaren)
+
+Converting accrued pension rights to the new pension system of the Wtp. Wft Pensions
+
+### Underinsurance (onderverzekering)
+
+If the insured amount is lower than the actual value, the insurer compensates the damage proportionally, unless the policy gives a guarantee against underinsurance. Wft Non-life Insurance (Personal) · Wft Non-life Insurance (Commercial)
+
+### UPO
+
+Uniform Pension Overview (Uniform Pensioenoverzicht): the annual overview from the pension provider with the accrued and attainable pension rights. Wft Pensions
+
+### Wft
+
+Financial Supervision Act (Wet op het financieel toezicht): the main act for supervision of the financial sector, with rules on, among other things, licences, professional competence, provision of information and duty of care. Wft Basic
+
+### WGA
+
+Resumption of work by partially fit persons (Werkhervatting gedeeltelijk arbeidsgeschikten): the WIA scheme for those who are partially or not permanently incapacitated for work. Wft Income
+
+### WIA
+
+Work and Income according to Labour Capacity Act: the scheme for employees who are incapacitated for work after two years of sickness, with the IVA and the WGA. Wft Income
+
+### Wtp
+
+Pension Transition Act (Wet toekomst pensioenen): the new pension system with defined contribution schemes. Pension schemes must have moved by 1 January 2028 at the latest. Wft Pensions
+
+### Wwft
+
+Anti-Money Laundering and Counter-Terrorist Financing Act. Among other things, it requires customer due diligence and the reporting of unusual transactions. Wft Basic · Wft Wealth
+
+What is a PE exam, a professional qualification, OVI or the Wtp? The most important Wft terms briefly and clearly explained for financial advisers. The most important terms from the Wft, permanent education and the Wft modules, briefly explained. A handy memory aid while practising. Dutch terms are given in brackets. Legislation as at 15 October 2026 Test your knowledge in the quiz Search the site This explanation is simplified and is not advice. Amounts and limits change every year; always check the applicable source.
+
+
+## Frequently asked questions
+Source: https://pa-wft.nl/en/faq.html
+
+### What is permanent education (PE)?
+
+Anyone who advises in financial services must be and remain professionally competent. For that you need a Wft diploma and you keep your knowledge up to date with permanent education. Within each PE period you take one PE exam per professional qualification; the current period runs from 1 April 2025 to 31 March 2028 inclusive. You can find the current period and requirements at the CDFD .
+
+### Does this test count towards my PE?
+
+No. The PA test is a practice test. It helps you test and maintain your knowledge, but it is not a recognised PE exam and does not count towards the registration of your professional competence. You take your PE exam at an exam centre recognised by the CDFD.
+
+### Does the test earn PE points?
+
+No. Under the Wft there are no PE points any more: you keep your diplomas valid with PE exams. The PA test is a free practice test and earns no PE points or PE exam. Read more in PE points and Wft Permanent Actueel .
+
+### What does it cost?
+
+Nothing. All modules and the test are free for all advisers, without a subscription and without an account. Wft Permanent Actueel is an activity of DFO BV.
+
+### How does the test work?
+
+You choose one or more modules. With one module you get 7 random questions, and for each module you add, 5 extra: 2 modules give 12 questions, 3 modules 17, all 9 modules 47. After each answer you see the explanation. Afterwards you receive a certificate with your result, as a pdf in your mail or to print. You can take the test as often as you like; you get different questions each time.
+
+### How often should I take the test?
+
+Take the test every quarter, so you stay permanently up to date. On the homepage and in the test you set a reminder in your calendar with one click: every quarter, for the next 5 years, with a link to the test. Keep every certificate in your personnel file and also hand it to your employer. That shows you keep your knowledge up to date. The certificate does not replace your PE exam.
+
+### What is on the certificate?
+
+Your name, the module, your result, the date, the date on which the questions of that module were last updated and a certificate number. The certificate is not registered centrally anywhere.
+
+### Is anything about me stored?
+
+No. Your name and email address stay in your own browser and are only used to create the certificate. Mailing goes through your own mail programme. See the privacy statement .
+
+### Which modules do I need?
+
+That depends on your professional qualifications. A professional qualification consists of a combination of modules, for example Mortgage Credit Adviser: Basic, Wealth and Mortgage Credit. Choose your qualifications in the package check on the homepage and check the requirements that apply to you at the CDFD.
+
+### How up to date are the questions?
+
+For each module you can see when the questions were last updated. The reference date of the legislation is 15 October 2026. Amounts and percentages that change every year are deliberately not in the questions.
+
+### I see an error in a question. What now?
+
+We would like to hear about it. Email the question and what you think is wrong to info@dfobv.nl .
+
+Answers to frequently asked questions about the free Wft knowledge quiz, PE exams, PE points, staying permanently up to date and the certificate. 
+
+
+## PE points Wft and Permanent Actueel: how PE works in 2026
+Source: https://pa-wft.nl/en/pe-explained.html
+
+Do PE points still exist? How does PE work under the Wft and what is Wft Permanent Actueel? Explanation for financial advisers, plus free PE practice questions per module. Short answer: under the Wft there are no PE points any more. Since 1 January 2014 you keep your advising authority valid with one PE exam per professional qualification within each PE period; the current period runs until 31 March 2028 inclusive. Wft Permanent Actueel helps you practise for free; the quiz itself earns no PE points or PE exam. Practise for free Which modules do I need?
+
+### Do PE points still exist under the Wft?
+
+No. Since 1 January 2014, permanent education under the Wft no longer works with PE points. You keep your advising authority valid by taking the PE exam for each professional qualification you hold within each PE period. You may still encounter PE points with voluntary professional registers; which activities count there is decided by each register.
+
+### What is PE under the Wft?
+
+PE stands for permanent education. Anyone who advises on financial products must demonstrably be professionally competent: the right Wft diploma for every product-service combination in which you advise, and keeping that diploma valid with PE exams. You take the exams at an exam institute recognised by the CDFD. The AFM supervises the firm’s compliance with the diploma requirement.
+
+### What does the CDFD do?
+
+The Dutch Financial Services Competence Board (CDFD) supports the Minister of Finance with the professional competence requirements in the Wft. It has three core tasks: (1) each year mapping relevant developments in the field and advising the minister on the final objectives and exam terms, which the minister sets by ministerial regulation after consultation; (2) the substantive management of the central exam bank for the initial exams, the PE exams and the special exams, including drawing up and maintaining exam questions; and (3) the recognition of and supervision over exam institutes, which may only conduct exams after recognition. In addition, the CDFD recognises foreign professional qualifications from other EU member states and Switzerland. Via Mijn Wft (with DigiD) you can see which professional qualifications you hold and download your diplomas and certificates. According to the AFM, you can see on the DUO website which diplomas are registered and until which date they are valid.
+
+### How long is the PE period?
+
+According to the CDFD, the current PE period runs from 1 April 2025 to 31 March 2028 inclusive; the next runs from 1 April 2028 to 31 March 2031 inclusive. You take one PE exam per professional qualification within the period. When you do it is up to you, as long as it is before the end date. See When do I have to take the PE exam? (in Dutch)
+
+### What does a PE exam test?
+
+The PE exam tests recent developments in the field. The exam terms are updated every year on 1 April; on 1 April 2026 the PE exams were renewed. According to the CDFD, these are developments that fit the module, are relevant to the client’s interest and are definitively known in time. See the CDFD news item (in Dutch) .
+
+### Which developments appear in the PE exam?
+
+According to the CDFD, a development can appear in the PE exams if it fits the scope of the Wft module, is relevant from the client’s perspective and has an impact on advisory practice, is no older than about three years on 1 January 2026 (or is relevant again) and is definitively known on 1 January 2026; the effective date may be later. Grounds include national legislation, European regulations, ministry policy, official guidelines or codes of conduct (for example from the AFM or the Association of Insurers), company schemes of a general nature and case law or Kifid rulings. For a European directive whose national rules are not yet final, only the content of the directive is tested.
+
+### Does permanently up to date also apply to employees without an advisory diploma?
+
+Yes. The AFM distinguishes two layers. All client-facing employees with substantive client contact must be permanently up to date: they know the current developments in their field and can apply them. That also applies to back office staff and support staff who talk to clients about products. Anyone who advises also needs a valid professional qualification and keeps it valid with PE exams (the diploma requirement). The obligation to be permanently up to date is an open standard: the firm decides how to implement it, and the licence holder is responsible for it. For employees without a diploma requirement, the firm arranges professional competence through its business operations, for example with training that fits their work. See the AFM professional competence requirements (in Dutch) .
+
+### How do you demonstrate that you are permanently up to date?
+
+The firm describes in its business processes (AO/IC) how professional competence is arranged. According to the AFM, it helps to record for each employee which knowledge they have gained and whether they apply it in practice. A competence file per employee contains, for example, the role, the professional qualifications and PE exams, training followed with date and subject, and an annual evaluation. You can keep the PA test certificate in it as evidence that you keep your knowledge up to date; it does not replace the PE exam. In an investigation the AFM can ask for the AO/IC description, the overview of diplomas and PE and the evidence of staying permanently up to date.
+
+### Is exemption from the diploma requirement possible?
+
+The AFM has an exemption policy for the diploma requirement in specific situations. Read that policy at the AFM before you rely on it.
+
+### What does Wft Permanent Actueel (PA) mean?
+
+Permanent Actueel means that your professional knowledge stays up to date after your Wft diploma. PE exams mainly test what has changed in legislation and in the market. Wft Permanent Actueel (PA-WFT.nl) is a free practice environment from DFO BV where you practise per Wft module.
+
+### Which PE exams do I need?
+
+That depends on your professional qualifications. The system is modular: you take an initial exam per module, and a combination of modules gives a professional qualification. According to the AFM these are: Health Insurance Adviser (Health Insurance), Consumer Credit Adviser (Basic, Consumer Credit), Personal Non-life Insurance Adviser (Basic, Non-life Insurance Personal), Wealth Adviser (Basic, Wealth), Income Adviser (Basic, Income), Commercial Non-life Insurance Adviser (Basic, Non-life Insurance Commercial, Non-life Insurance Personal), Mortgage Credit Adviser (Basic, Mortgage Credit, Wealth) and Pensions Adviser (Basic, Pension Insurance, Wealth). See the AFM professional competence requirements (in Dutch) and the CDFD advising authorities ; the package check calculates it for you.
+
+### What happens if I do not complete my PE in time?
+
+Then your advising authority for that professional qualification lapses. You restore it by passing a special exam or by retaking the initial module exams. Until then you may not advise independently in that field. So do not plan your PE exam at the last moment: towards the end of a period the exam institutes are busy.
+
+### Does a PE training count?
+
+For the statutory advising authority only the PE exam you have passed counts; a training without an exam does not keep your diploma valid. Training can help you stay permanently up to date and sometimes counts towards register titles.
+
+### Does the PA test earn PE points or a PE exam?
+
+No. The PA test is a practice test. You get a certificate with your result, but that is not evidence of professional competence and does not count towards your PE.
+
+### How do I practise for my PE exam for free?
+
+On PA-WFT.nl there are multiple-choice questions with explanations per Wft module. A test on one module has 7 questions; each extra module adds 5. You can also make a mix of all modules in your own package. Free for all advisers, without an account.
+
+### Practise per Wft module
+
+Wft Basic : PE practice questions Wft Consumer Credit : PE practice questions Wft Non-life Insurance (Personal) : PE practice questions Wft Non-life Insurance (Commercial) : PE practice questions Wft Wealth : PE practice questions Wft Mortgage Credit : PE practice questions Wft Income : PE practice questions Wft Pensions : PE practice questions Wft Health Insurance : PE practice questions
+
+### Sources
+
+CDFD — Dutch Financial Services Competence Board CDFD — advising authorities (in Dutch) CDFD — when do I have to take the PE exam? (in Dutch) CDFD — Mijn Wft CDFD — downloads: final objectives and exam terms per module (in Dutch) Establishment and mandate decree of the Dutch Financial Services Competence Board (Wft, in Dutch) AFM — professional competence requirements (in Dutch) AFM — diploma requirement (in Dutch) Regulation on final objectives and exam terms for Wft financial services exams Financial Supervision Act (Wft) Reference date 15 October 2026. General information, not advice. The requirements that apply to you exactly can be found at the CDFD.
+
+
+## Privacy
+Source: https://pa-wft.nl/en/privacy.html
+
+Wft Permanent Actueel does not collect or store personal data. No cookies, no tracking. Wft Permanent Actueel does not collect or store personal data.
+
+### Who is responsible
+
+DFO BV, De Wel 14–16, 3871 MV Hoevelaken, the Netherlands. Privacy questions: info@dfobv.nl .
+
+### The quiz and the certificate
+
+For the certificate you enter your name, optionally your date of birth, your email address and, if you wish, the company you work for and your employer’s email address for a copy. That data stays in your own browser and is only used to display the certificate on your screen. Nothing is sent to us or stored. If you choose to mail it, your own mail programme opens; you send the message yourself. If you close the tab, the data is gone.
+
+### Cookies and measuring
+
+We do not use cookies, analytics or advertising services, or trackers. The font is hosted on our own site, so no data goes to external parties.
+
+### Hosting
+
+This site does not place cookies, not even to remember choices. The site is hosted via GitHub Pages (GitHub, Inc.). Like any web server, GitHub processes technical data such as your IP address to deliver and secure the pages. See the GitHub privacy statement .
+
+### Your rights
+
+Because we do not store personal data, there is nothing to view, change or delete. If you do have a question or complaint, email info@dfobv.nl . You can also file a complaint with the Dutch Data Protection Authority . Last updated: 15 October 2026.
+
+
+## DFO BV and Wft Permanent Actueel: about and accountability
+Source: https://pa-wft.nl/en/about.html
+
+Who is behind Wft Permanent Actueel, what the quiz is and is not, and how the questions are made. Wft Permanent Actueel is a free practice environment for financial advisers: per Wft module practice questions with explanations, to test and maintain your knowledge.
+
+### Who is behind it
+
+Wft Permanent Actueel is an activity of DFO BV, services for financial entrepreneurs. DFO BV, De Wel 14–16, 3871 MV Hoevelaken, the Netherlands, telephone +31 33 258 04 60 , email info@dfobv.nl , contact page . KvK (Dutch Chamber of Commerce) 32068727, VAT number NL806480828B01. Get to know our team .
+
+### What it is and is not
+
+It is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate confirms your result on the practice test and is not registered centrally. The content is general information and not advice. Always check legislation in the applicable source. This English version is a convenience translation of the Dutch site. Dutch legislation and the exams of the CDFD are in Dutch; where the translation differs, the Dutch text and the official sources prevail.
+
+### How the questions are made
+
+The questions were drawn up with the help of AI, based on public legislation and the final objectives and exam terms of the Wft exams. Reference date: 15 October 2026. Amounts and percentages that change every year are deliberately not in the questions; the quiz is about principles and fixed concepts. For each module you can see the date on which the questions were last updated.
+
+### Spotted an error?
+
+Email the question and what you think is wrong to info@dfobv.nl . We will adjust the question and update the date of the module.
+
+
+## Terms of use
+Source: https://pa-wft.nl/en/terms.html
+
+Terms for the free use of PA-WFT.nl: practice test, no advice, rights to the content. These terms apply to the use of PA-WFT.nl. By using the site you agree to them.
+
+### Free and without an account
+
+Wft Permanent Actueel is an activity of DFO BV. Use of the modules, the quiz and the certificate is free for all advisers. You do not need an account or a subscription.
+
+### What the quiz is
+
+The PA test is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate only confirms your result on the practice test and is not registered centrally. Do not use it as evidence of professional competence.
+
+### No advice, no guarantee
+
+The content is general information, with 15 October 2026 as the reference date. Despite our care, a question or explanation may be incorrect or outdated. Always check legislation in the applicable source before relying on it in your practice. DFO BV is not liable for damage arising from the use of this site, to the extent the law allows. The English version is a convenience translation; the Dutch version prevails.
+
+### Rights to the content
+
+The questions, explanations, texts and design belong to DFO BV. You may use them for your own knowledge. Copying or distributing them, including in part, is only allowed with the permission of DFO BV.
+
+### Changes
+
+DFO BV may change these terms and the content of the site. The version on this page applies.
+
+### Other services of DFO
+
+The paid services of DFO BV are subject to DFO’s general terms of delivery; see www.dfobv.nl . Last updated: 15 October 2026.
+
+
+## Complaints
+Source: https://pa-wft.nl/en/complaints.html
+
+Not satisfied with Wft Permanent Actueel or the knowledge quiz? How to file a complaint with DFO BV and how we handle it. Not satisfied with Wft Permanent Actueel? Let us know and we will look for a solution together.
+
+### How to file a complaint
+
+Email your complaint to info@dfobv.nl or call +31 33 258 04 60 . State your name, your email address and what your complaint is about. If it is about a quiz question, state the module and the question. We will confirm that we have received your complaint, investigate it and let you know what we do with it.
+
+### Error in a question
+
+An error in a question is not a complaint but a report, and it is welcome. In the quiz, every question has the link “Doubt about this question? Email it straight to DFO”.
+
+### Can’t work it out together?
+
+See the complaints procedure of DFO BV at www.dfobv.nl . Last updated: 15 October 2026.
+
+
+## Wft Permanent Actueel: free PE practice test for advisers
+Source: https://pa-wft.nl/en/
+
+Wft Permanent Actueel: free for all advisers. PE practice questions with explanations for all 9 Wft modules, from Basic to Pensions. With certificate. 
+
+### Free for all advisers
+
+Wft Permanent Actueel helps you keep your professional knowledge up to date. Practise with PE practice questions for exactly the Wft modules that match your diplomas and client contact, with an explanation for every answer. Free, without a subscription and without an account. Take the quiz every quarter , so you stay permanently up to date. Keep the certificate in your personnel file and also hand it to your employer. This English version is a convenience translation. Dutch legislation and the exams of the CDFD are in Dutch. Start the knowledge quiz View the 9 modules Put the quiz in your calendar every quarter for the next 5 years
+
+### Wft, PE and Permanent Actueel
+
+As a financial adviser in the Netherlands you must remain professionally competent: you hold a Wft diploma and keep your knowledge up to date with permanent education (PE). PE points no longer exist under the Wft; since 1 January 2014 you take one PE exam per professional qualification within each PE period, at an exam institute recognised by the CDFD. The current PE period runs until 31 March 2028 inclusive. The PA test is a practice test and earns no PE points or PE exam. According to the AFM, staying permanently up to date applies to all employees with substantive client contact, including back office and support staff. Record which knowledge you have gained: keep your certificates in your competence or personnel file. Read how PE, PE points and Permanent Actueel work · AFM professional competence requirements (in Dutch)
+
+### The 9 modules
+
+Per module practice questions with explanations, with the date on which the questions were last updated.
+
+### Which modules do I need?
+
+Choose your professional qualifications. You see which modules belong to them and take a quiz on exactly those modules. Within each PE period you take one PE exam per professional qualification. Source: AFM professional competence requirements and the CDFD, consulted October 2026. A tool, not advice. 0 Your PA package Quiz on my package
+
+### How it works
+
+01 Choose your modules Per professional qualification, or all modules mixed. 02 Practise and learn 7 questions per module, 5 extra per module you add, with an explanation for all four answers. 03 Certificate Keep it in your personnel file and hand it to your employer. 04 Every quarter Take the quiz every quarter, so you stay permanently up to date. Tip your colleagues Send your colleagues an invitation to the free knowledge quiz: email a colleague .
+
+### Stay up to date
+
+Stay up to date with the latest news. Subscribe to the newsletters of DFO (in Dutch). DFO Signalen Weekly signals from the market, model texts and practical analyses for the advisory firm, with an archive going back years. In Dutch. Subscribe to DFO Signalen Nieuwsbrief Wft On average once a week, the latest developments in legislation and supervision, explained briefly and practically for financial service providers. In Dutch. Subscribe to the Nieuwsbrief Wft Subscribing is done on the DFO website. Wft Permanent Actueel does not store any data itself.
+
+### Practise all modules in your package this year. Free.
+
+Start the knowledge quiz
+
+
+## Free Wft knowledge quiz with explanations
+Source: https://pa-wft.nl/en/quiz.html
+
+### How many questions do I get?
+
+With one module you get 7 multiple-choice questions. For each module you add, 5 more come in: 2 modules give 12 questions, 3 modules 17. The questions are chosen anew each time.
+
+### Is the test free?
+
+Yes. The test and all modules are free for all advisers, without an account and without a subscription.
+
+### Does the test count towards my PE?
+
+No. It is a practice test. It earns no PE points or PE exam. You keep your advising authority valid with a PE exam per professional qualification at a recognised exam institute.
+
+### What is on the certificate?
+
+Your name, the modules, your score and the date, stating that it is a self-declaration for a practice test. Keep it in your personnel file and hand it to your employer.
+
+### Can I practise a specific topic?
+
+Yes. On each module page you choose an exam term of the CDFD and practise only the questions about it. After the test you can also practise your wrong questions again.
+
+### How often should I take the test?
+
+Take the test every quarter, so you stay permanently up to date. Set a reminder in your calendar with one click.
+
+Free Wft knowledge quiz for advisers: 7 questions per module, 5 extra per added module, different every time. With explanations and certificate. Please enable JavaScript to take the quiz.
+
+### How the Wft knowledge quiz works
+
+Choose one or more Wft modules, or your whole package per professional qualification. Answer the multiple-choice questions: many are real-life cases, aligned with the exam terms of the CDFD from 1 April 2026. After each answer you read why each of the four answers is right or wrong. Afterwards you receive a certificate as a pdf, and you can practise your wrong questions again.
+
+### Modules in the quiz
+
+Wft Basic Wft Consumer Credit Wft Non-life Insurance (Personal) Wft Non-life Insurance (Commercial) Wft Wealth Wft Mortgage Credit Wft Income Wft Pensions Wft Health Insurance
+
+### Frequently asked questions about the quiz
+
+Want to know more? Read how PE works , see the glossary or what’s new . The questions are about Dutch legislation; this English version is a convenience translation.
+

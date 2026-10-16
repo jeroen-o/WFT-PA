@@ -15,5 +15,6 @@ User-agent: CCBot
 Allow: /
 Disallow: /tools/
 Disallow: /assets/js/vragen/
+Disallow: /assets/js/vragen-en/
 
 Sitemap: https://pa-wft.nl/sitemap.xml
