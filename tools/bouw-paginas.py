@@ -37,7 +37,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
-    '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
+    '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
     '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
     '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
@@ -456,6 +456,9 @@ inh = f'''<div class="paneel page" id="uitleg">
       <div class="step"><span class="num">04</span><h3>Elk kwartaal</h3><p>Doe de toets elk kwartaal, zo blijf je permanent actueel.</p></div>
     </div>
 </div>
+<div class="paneel" id="tip">
+    <div data-tip><h3>Tip je collega’s</h3><p>Stuur je collega’s een uitnodiging voor de gratis kennistoets: <a href="mailto:?subject=Tip%3A%20test%20gratis%20je%20Wft-kennis%20op%20PA-WFT.nl&amp;body=https%3A%2F%2Fpa-wft.nl%2Ftoets.html">mail een collega</a>.</p></div>
+</div>
 </div>
 <section class="poster"><div class="wrap"><h2>Oefen dit jaar alle modules uit je pakket. Gratis.</h2><a class="btn btn-white" href="toets.html">Start de kennistoets</a></div></section>
 <div class="wrap">'''
@@ -469,7 +472,7 @@ pagina('index.html', 'Wft Permanent Actueel: gratis PE-oefentoets voor adviseurs
        'Wft Permanent Actueel', 'Een activiteit van DFO BV', inh, actief='index.html', ld=ld_home,
        intro='Kennis actueel, elk kwartaal weer. Oefen per Wft-module met vragen over wat er actueel is, met uitleg bij elk antwoord.',
        mast_extra='    <p class="gratis"><strong>Gratis voor alle adviseurs.</strong> Alle modules en de kennistoets, zonder kosten.</p>\n    ' + MARK.replace('<svg ', '<svg class="hero-mark" ', 1) + '\n',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>\n<script src="assets/js/agenda.js"></script>')
+       scripts='\n<script src="assets/js/modules.js"></script>\n<script src="assets/js/main.js"></script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>')
 s = open(R + 'index.html', encoding='utf-8').read()
 s = s.replace('<meta name="theme-color" content="#1462ad">', '<meta name="google-site-verification" content="3JKf334ow3hOt0pa1YDk1TUvE6EaKzWpUMmtlkBD6fo">\n<meta name="theme-color" content="#1462ad">', 1)
 open(R + 'index.html', 'w', encoding='utf-8').write(s)
@@ -481,7 +484,7 @@ pagina('toets.html', 'Gratis Wft-kennistoets: 7 PE-oefenvragen met uitleg | Perm
        'Wft-kennistoets', 'Wft Permanent Actueel', inh, actief='toets.html',
        intro=f'Zeven vragen bij één module, vijf extra voor elke module die je toevoegt, elke keer anders, over de {len(MODS)} Wft-modules. Bij elk antwoord lees je waarom het goed of fout is, en na afloop ontvang je een certificaat.',
        extra='\n<link rel="stylesheet" href="assets/css/toets.css">',
-       scripts='\n<script src="assets/js/modules.js"></script>\n<script>window.PA_VRAGEN_V=' + json.dumps(VRAGEN_V, separators=(',', ':')) + ';</script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
+       scripts='\n<script src="assets/js/modules.js"></script>\n<script>window.PA_VRAGEN_V=' + json.dumps(VRAGEN_V, separators=(',', ':')) + ';</script>\n<script src="assets/js/agenda.js"></script>\n<script src="assets/js/tip.js"></script>\n<script src="assets/js/vendor/jspdf.umd.min.js"></script>\n<script src="assets/js/certpdf.js"></script>\n<script src="assets/js/toets.js"></script>')
 
 # ---------- Wet- en regelgeving ----------
 bron = open(R + 'tools/wetgeving-bron.md', encoding='utf-8').read()
