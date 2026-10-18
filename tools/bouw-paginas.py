@@ -457,6 +457,7 @@ DATUMS = [
     ('2026-11-20', 'CCD II gaat gelden', 'De herziene richtlijn consumentenkrediet: strengere kredietwaardigheidstoets, ook BNPL en lease met koopoptie.', ['consumptief-krediet']),
     ('2026-12-09', 'Omzetting nieuwe richtlijn productaansprakelijkheid', 'Uiterste datum voor de Nederlandse wet; software telt als product.', ['schade-zakelijk', 'schade-particulier']),
     ('2027-01-01', 'Jaarlijkse wijzigingen', 'Nieuwe jaarversies van onder meer de leennormen, NHG-normen, zorgpremies en eigen risico, en fiscale bedragen.', ['hypothecair-krediet', 'zorgverzekering', 'vermogen', 'inkomen', 'pensioen']),
+    ('2027-04-01', 'PE-examens opnieuw geactualiseerd', 'Het CDFD actualiseert de PE-examens elk jaar per 1 april en liet ontwikkelingen voor de examens vanaf 1 april 2027 aanmelden.', ALLE),
     ('2027-07-10', 'EU-witwasverordening (AMLR) gaat gelden', 'De kernregels voor cliëntenonderzoek komen in een rechtstreeks werkende EU-verordening.', ['basis', 'vermogen', 'hypothecair-krediet', 'consumptief-krediet']),
     ('2028-01-01', 'Uiterste datum overgang nieuw pensioenstelsel', 'Pensioenregelingen moeten zijn overgegaan naar het stelsel van de Wet toekomst pensioenen.', ['pensioen']),
     ('2028-03-31', 'Einde PE-periode 2025–2028', 'Uiterste datum om je PE-examen per beroepskwalificatie te halen.', ALLE),

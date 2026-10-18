@@ -12,15 +12,15 @@
 
 ## Modules
 
-- [Wft Basis](https://pa-wft.nl/module-basis.html): De verplichte fundering voor iedereen met klantcontact in de financiële dienstverlening. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Consumptief Krediet](https://pa-wft.nl/module-consumptief-krediet.html): Voor wie informeert of adviseert over leningen en kredieten. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Schadeverzekering Particulier](https://pa-wft.nl/module-schade-particulier.html): Particuliere schadeverzekeringen: auto, woon, reis en meer. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Schadeverzekering Zakelijk](https://pa-wft.nl/module-schade-zakelijk.html): Bedrijfsmatige en zakelijke schadeverzekeringen. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Vermogen](https://pa-wft.nl/module-vermogen.html): Vermogensopbouw, sparen en beleggen. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Hypothecair Krediet](https://pa-wft.nl/module-hypothecair-krediet.html): Voor hypotheekadviseurs en -ondersteuners. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Inkomen](https://pa-wft.nl/module-inkomen.html): Verzuim, arbeidsongeschiktheid en inkomensvoorzieningen. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Pensioen](https://pa-wft.nl/module-pensioen.html): Voor medewerkers en adviseurs in de pensioendienstverlening. Laatst bijgewerkt 16 oktober 2026.
-- [Wft Zorgverzekering](https://pa-wft.nl/module-zorgverzekering.html): (Aanvullende) zorgverzekeringen. Laatst bijgewerkt 16 oktober 2026.
+- [Wft Basis](https://pa-wft.nl/module-basis.html): De verplichte fundering voor iedereen met klantcontact in de financiële dienstverlening. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Consumptief Krediet](https://pa-wft.nl/module-consumptief-krediet.html): Voor wie informeert of adviseert over leningen en kredieten. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Schadeverzekering Particulier](https://pa-wft.nl/module-schade-particulier.html): Particuliere schadeverzekeringen: auto, woon, reis en meer. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Schadeverzekering Zakelijk](https://pa-wft.nl/module-schade-zakelijk.html): Bedrijfsmatige en zakelijke schadeverzekeringen. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Vermogen](https://pa-wft.nl/module-vermogen.html): Vermogensopbouw, sparen en beleggen. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Hypothecair Krediet](https://pa-wft.nl/module-hypothecair-krediet.html): Voor hypotheekadviseurs en -ondersteuners. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Inkomen](https://pa-wft.nl/module-inkomen.html): Verzuim, arbeidsongeschiktheid en inkomensvoorzieningen. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Pensioen](https://pa-wft.nl/module-pensioen.html): Voor medewerkers en adviseurs in de pensioendienstverlening. Laatst bijgewerkt 18 oktober 2026.
+- [Wft Zorgverzekering](https://pa-wft.nl/module-zorgverzekering.html): (Aanvullende) zorgverzekeringen. Laatst bijgewerkt 18 oktober 2026.
 
 ## Belangrijke datums
 
@@ -33,6 +33,7 @@
 - 20 november 2026: CCD II gaat gelden. De herziene richtlijn consumentenkrediet: strengere kredietwaardigheidstoets, ook BNPL en lease met koopoptie.
 - 9 december 2026: Omzetting nieuwe richtlijn productaansprakelijkheid. Uiterste datum voor de Nederlandse wet; software telt als product.
 - 1 januari 2027: Jaarlijkse wijzigingen. Nieuwe jaarversies van onder meer de leennormen, NHG-normen, zorgpremies en eigen risico, en fiscale bedragen.
+- 1 april 2027: PE-examens opnieuw geactualiseerd. Het CDFD actualiseert de PE-examens elk jaar per 1 april en liet ontwikkelingen voor de examens vanaf 1 april 2027 aanmelden.
 - 10 juli 2027: EU-witwasverordening (AMLR) gaat gelden. De kernregels voor cliëntenonderzoek komen in een rechtstreeks werkende EU-verordening.
 - 1 januari 2028: Uiterste datum overgang nieuw pensioenstelsel. Pensioenregelingen moeten zijn overgegaan naar het stelsel van de Wet toekomst pensioenen.
 - 31 maart 2028: Einde PE-periode 2025–2028. Uiterste datum om je PE-examen per beroepskwalificatie te halen.
