@@ -311,19 +311,21 @@ pagina_e('pe-explained.html', 'PE points Wft and Permanent Actueel: how PE works
          'PE points, PE exams and Wft Permanent Actueel', 'PE explained', inh, actief='pe-explained.html', ld=ld, kruimel='PE explained')
 
 # ---------- Privacy, About, Terms, Complaints ----------
-inh = f'''    <p class="lead">Wft Permanent Actueel does not collect or store personal data.</p>
+inh = f'''    <p class="lead">Wft Permanent Actueel uses no cookies and no trackers. We only use your details to create your result and certificate; a copy of the certificate goes to DFO BV.</p>
     <h2>Who is responsible</h2>
     <p>DFO BV, De Wel 14–16, 3871 MV Hoevelaken, the Netherlands. Privacy questions: <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>
     <h2>The quiz and the certificate</h2>
-    <p>For the certificate you enter your name, optionally your date of birth, your email address and, if you wish, the company you work for and your employer’s email address for a copy. That data stays in your own browser and is only used to display the certificate on your screen. Nothing is sent to us or stored. If you choose to mail it, your own mail programme opens; you send the message yourself. If you close the tab, the data is gone.</p>
+    <p>To see your result you enter your name and email address and, if you wish, your date of birth, the company you work for and your employer’s email address for an extra copy. In doing so you agree to a copy of your certificate going to DFO BV. Your browser uses that data to create the certificate; PA-WFT.nl does not store it itself and does not send it to a server automatically. The certificate is prepared as a pdf in an email to yourself, with a copy to DFO BV (info@dfobv.nl). You send that message yourself from your email programme: if you do not send it, DFO BV receives nothing and you do not get the certificate in your mailbox. Practice rounds, such as practising your wrong questions again or practising per exam term, do not ask for any details. If you close the tab, the data is gone from your browser.</p>
+    <h2>What DFO BV does with the copy</h2>
+    <p>DFO BV receives the copy in the mailbox info@dfobv.nl. That is the data on the certificate: your name, email address, the result, the modules and the date, plus your date of birth, company and your employer’s email address if you entered them. The legal basis is your consent: you tick the box to agree to the copy. DFO BV does not keep the email longer than necessary and does not use the data for purposes other than confirming your participation in the practice test.</p>
     <h2>Cookies and measuring</h2>
     <p>We do not use cookies, analytics or advertising services, or trackers. The font is hosted on our own site, so no data goes to external parties.</p>
     <h2>Hosting</h2>
     <p>This site does not place cookies, not even to remember choices. The site is hosted via GitHub Pages (GitHub, Inc.). Like any web server, GitHub processes technical data such as your IP address to deliver and secure the pages. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub privacy statement</a>.</p>
     <h2>Your rights</h2>
-    <p>Because we do not store personal data, there is nothing to view, change or delete. If you do have a question or complaint, email <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>. You can also file a complaint with the <a href="https://www.autoriteitpersoonsgegevens.nl/en" target="_blank" rel="noopener">Dutch Data Protection Authority</a>.</p>
+    <p>You can ask DFO BV to let you view, correct or delete the copy it has received from you: email <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>. If you have a question or complaint, email the same address. You can also file a complaint with the <a href="https://www.autoriteitpersoonsgegevens.nl/en" target="_blank" rel="noopener">Dutch Data Protection Authority</a>.</p>
     <p class="klein">Last updated: {PEIL_EN}.</p>'''
-pagina_e('privacy.html', 'Privacy — Wft Permanent Actueel', 'Wft Permanent Actueel does not collect or store personal data. No cookies, no tracking.', 'Privacy statement', 'Privacy', inh)
+pagina_e('privacy.html', 'Privacy — Wft Permanent Actueel', 'How Wft Permanent Actueel handles your data: no cookies, no tracking, and a copy of your certificate goes to DFO BV.', 'Privacy statement', 'Privacy', inh)
 
 inh = f'''    <p class="lead">Wft Permanent Actueel is a free practice environment for financial advisers: per Wft module practice questions with explanations, to test and maintain your knowledge.</p>
     <h2>Who is behind it</h2>
@@ -331,7 +333,7 @@ inh = f'''    <p class="lead">Wft Permanent Actueel is a free practice environme
     <h2>What it is and is not</h2>
     <ul>
       <li>It is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence.</li>
-      <li>The certificate confirms your result on the practice test and is not registered centrally.</li>
+      <li>The certificate confirms your result on the practice test. A copy goes to DFO BV when you send the email message.</li>
       <li>The content is general information and not advice. Always check legislation in the applicable source.</li>
       <li>This English version is a convenience translation of the Dutch site. Dutch legislation and the exams of the CDFD are in Dutch; where the translation differs, the Dutch text and the official sources prevail.</li>
     </ul>
@@ -343,9 +345,9 @@ pagina_e('about.html', 'DFO BV and Wft Permanent Actueel: about and accountabili
 
 inh = f'''    <p class="lead">These terms apply to the use of PA-WFT.nl. By using the site you agree to them.</p>
     <h2>Free and without an account</h2>
-    <p>Wft Permanent Actueel is an activity of DFO BV. Use of the modules, the quiz and the certificate is free for all advisers. You do not need an account or a subscription.</p>
+    <p>Wft Permanent Actueel is an activity of DFO BV. Use of the modules, the quiz and the certificate is free for all advisers. You do not need an account or a subscription. To see your result you enter your details; see the <a href="privacy.html">privacy statement</a>.</p>
     <h2>What the quiz is</h2>
-    <p>The PA test is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate only confirms your result on the practice test and is not registered centrally. Do not use it as evidence of professional competence.</p>
+    <p>The PA test is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate only confirms your result on the practice test; a copy goes to DFO BV when you send the email message. Do not use it as evidence of professional competence.</p>
     <h2>No advice, no guarantee</h2>
     <p>The content is general information, with {PEIL_EN} as the reference date. Despite our care, a question or explanation may be incorrect or outdated. Always check legislation in the applicable source before relying on it in your practice. DFO BV is not liable for damage arising from the use of this site, to the extent the law allows. The English version is a convenience translation; the Dutch version prevails.</p>
     <h2>Rights to the content</h2>

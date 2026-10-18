@@ -564,11 +564,15 @@ Doe de toets elk kwartaal, zo blijf je permanent actueel. Op de homepage en in d
 
 ### Wat staat er op het certificaat?
 
-Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.
+Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Een kopie van het certificaat gaat naar DFO BV (info@dfobv.nl) zodra jij het mailbericht verstuurt.
 
-### Wordt er iets van mij bewaard?
+### Waarom moet ik mijn gegevens invullen om mijn uitslag te zien?
 
-Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de privacyverklaring .
+Zo zetten we je certificaat als pdf klaar in een mail aan jezelf, met een kopie aan DFO BV (info@dfobv.nl). Je vult je naam en e-mailadres in en gaat akkoord met die kopie; geboortedatum, bedrijf en e-mailadres van je werkgever zijn optioneel. Oefenrondes, zoals je foute vragen opnieuw oefenen of oefenen per toetsterm, vragen geen gegevens.
+
+### Wat gebeurt er met mijn gegevens?
+
+PA-WFT.nl zelf slaat niets op en stuurt niets automatisch naar een server: je browser maakt het certificaat. Het certificaat staat klaar in een mail aan jezelf met een kopie aan DFO BV (info@dfobv.nl); jij verstuurt dat bericht zelf vanuit je mailprogramma. Zie de privacyverklaring .
 
 ### Welke modules heb ik nodig?
 
@@ -588,7 +592,7 @@ Antwoorden op veelgestelde vragen over de gratis Wft-kennistoets, PE-examens, PE
 ## Privacy
 Bron: https://pa-wft.nl/privacy.html
 
-Wft Permanent Actueel verzamelt en bewaart geen persoonsgegevens. Geen cookies, geen tracking. Wft Permanent Actueel verzamelt en bewaart geen persoonsgegevens.
+Hoe Wft Permanent Actueel met je gegevens omgaat: geen cookies, geen tracking, en een kopie van je certificaat gaat naar DFO BV. Wft Permanent Actueel gebruikt geen cookies en geen trackers. Je gegevens gebruiken we alleen om je uitslag en certificaat te maken; een kopie van het certificaat gaat naar DFO BV.
 
 ### Wie is verantwoordelijk
 
@@ -596,7 +600,11 @@ DFO BV, De Wel 14–16, 3871 MV Hoevelaken. Vragen over privacy: info@dfobv.nl .
 
 ### De toets en het certificaat
 
-Voor het certificaat vul je je naam, geboortedatum en e-mailadres in, en desgewenst het bedrijf waar je werkt en het e-mailadres van je werkgever voor een kopie. Die gegevens blijven in je eigen browser en worden alleen gebruikt om het certificaat op je scherm te zetten. Er wordt niets naar ons verstuurd of opgeslagen. Kies je voor mailen, dan opent je eigen mailprogramma; jij verstuurt het bericht zelf. Sluit je het tabblad, dan zijn de gegevens weg.
+Om je uitslag te zien vul je je naam en e-mailadres in, en desgewenst je geboortedatum, het bedrijf waar je werkt en het e-mailadres van je werkgever voor een extra kopie. Je gaat daarbij akkoord met een kopie van je certificaat aan DFO BV. Je browser gebruikt die gegevens om het certificaat te maken; PA-WFT.nl slaat ze niet zelf op en stuurt ze niet automatisch naar een server. Het certificaat wordt als pdf klaargezet in een mail aan jezelf, met een kopie aan DFO BV (info@dfobv.nl). Jij verstuurt dat bericht zelf vanuit je mailprogramma: verstuur je het niet, dan ontvangt DFO BV niets en krijg je het certificaat niet in je mailbox. Oefenrondes, zoals je foute vragen opnieuw oefenen of oefenen per toetsterm, vragen geen gegevens. Sluit je het tabblad, dan zijn de gegevens uit je browser weg.
+
+### Wat DFO BV met de kopie doet
+
+DFO BV ontvangt de kopie in de mailbox info@dfobv.nl. Dat zijn de gegevens op het certificaat: je naam, e-mailadres, het resultaat, de modules en de datum, plus je geboortedatum, bedrijf en e-mailadres van je werkgever als je die hebt ingevuld. De grondslag is je toestemming: je vinkt aan dat je akkoord gaat met de kopie. DFO BV bewaart de mail niet langer dan nodig en gebruikt de gegevens niet voor andere doeleinden dan het bevestigen van je deelname aan de oefentoets.
 
 ### Cookies en meten
 
@@ -608,7 +616,7 @@ Deze site plaatst geen cookies, ook niet voor het onthouden van keuzes. De site 
 
 ### Je rechten
 
-Omdat we geen persoonsgegevens bewaren, is er niets in te zien, te wijzigen of te verwijderen. Heb je toch een vraag of klacht, mail dan info@dfobv.nl . Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens . Laatst bijgewerkt: 15 oktober 2026.
+Je kunt DFO BV vragen de kopie die het van je heeft ontvangen in te zien, te verbeteren of te verwijderen: mail info@dfobv.nl . Heb je een vraag of klacht, mail dan hetzelfde adres. Je kunt ook een klacht indienen bij de Autoriteit Persoonsgegevens . Laatst bijgewerkt: 15 oktober 2026.
 
 
 ## DFO BV en Wft Permanent Actueel: over en verantwoording
@@ -622,7 +630,7 @@ Wft Permanent Actueel is een activiteit van DFO BV, dienstverlening voor financi
 
 ### Wat het wel en niet is
 
-Het is een oefentoets. Het is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Het certificaat bevestigt je resultaat op de oefentoets en wordt niet centraal geregistreerd. De inhoud is algemene informatie en geen advies. Controleer wet- en regelgeving altijd in de geldende bron.
+Het is een oefentoets. Het is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Het certificaat bevestigt je resultaat op de oefentoets. Een kopie gaat naar DFO BV als je het mailbericht verstuurt. De inhoud is algemene informatie en geen advies. Controleer wet- en regelgeving altijd in de geldende bron.
 
 ### Hoe de vragen tot stand komen
 
@@ -640,11 +648,11 @@ Voorwaarden voor het gratis gebruik van PA-WFT.nl: oefentoets, geen advies, rech
 
 ### Gratis en zonder account
 
-Wft Permanent Actueel is een activiteit van DFO BV. Het gebruik van de modules, de toets en het certificaat is gratis voor alle adviseurs. Je hebt geen account of abonnement nodig.
+Wft Permanent Actueel is een activiteit van DFO BV. Het gebruik van de modules, de toets en het certificaat is gratis voor alle adviseurs. Je hebt geen account of abonnement nodig. Om je uitslag te zien vul je je gegevens in; zie de privacyverklaring .
 
 ### Wat de toets is
 
-De PA-toets is een oefentoets. Hij is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Het certificaat bevestigt alleen je resultaat op de oefentoets en wordt niet centraal geregistreerd. Gebruik het niet als bewijs van vakbekwaamheid.
+De PA-toets is een oefentoets. Hij is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Het certificaat bevestigt alleen je resultaat op de oefentoets; een kopie gaat naar DFO BV als je het mailbericht verstuurt. Gebruik het niet als bewijs van vakbekwaamheid.
 
 ### Geen advies, geen garantie
 

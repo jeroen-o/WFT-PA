@@ -64,7 +64,7 @@ Adviseurs krijgen het advies de toets elk kwartaal te doen. Dan moet er ook elk 
 | Bij een foutmelding | Vraag controleren en aanpassen; datum en log van de module bijwerken |
 | Jaarlijks | Externe links controleren (ook cdfd.nl en dfobv.nl); privacyverklaring, gebruiksvoorwaarden en de samenstelling van de beroepskwalificaties in `assets/js/main.js` nalezen |
 
-Er is bewust geen database: de site is statisch, er wordt niets opgeslagen en certificaten worden niet centraal geregistreerd.
+Er is bewust geen database: de site is statisch, er wordt niets opgeslagen en de site slaat zelf niets op. Voor de uitslag vult de deelnemer gegevens in; het certificaat wordt als mailconcept klaargezet met een kopie aan info@dfobv.nl (de deelnemer verstuurt het zelf).
 
 ## Logo's
 | Bestand | Gebruik |

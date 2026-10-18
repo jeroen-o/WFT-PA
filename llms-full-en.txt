@@ -758,11 +758,15 @@ Take the test every quarter, so you stay permanently up to date. On the homepage
 
 ### What is on the certificate?
 
-Your name, the module, your result, the date, the date on which the questions of that module were last updated and a certificate number. The certificate is not registered centrally anywhere.
+Your name, the module, your result, the date, the date on which the questions of that module were last updated and a certificate number. A copy of the certificate goes to DFO BV (info@dfobv.nl) as soon as you send the email message.
 
-### Is anything about me stored?
+### Why do I have to enter my details to see my result?
 
-No. Your name and email address stay in your own browser and are only used to create the certificate. Mailing goes through your own mail programme. See the privacy statement .
+This lets us prepare your certificate as a pdf in an email to yourself, with a copy to DFO BV (info@dfobv.nl). You enter your name and email address and agree to that copy; date of birth, company and your employer’s email address are optional. Practice rounds, such as practising your wrong questions again or practising per exam term, do not ask for any details.
+
+### What happens to my data?
+
+PA-WFT.nl itself stores nothing and sends nothing to a server automatically: your browser creates the certificate. The certificate is prepared in an email to yourself with a copy to DFO BV (info@dfobv.nl); you send that message yourself from your email programme. See the privacy statement .
 
 ### Which modules do I need?
 
@@ -856,7 +860,7 @@ CDFD — Dutch Financial Services Competence Board CDFD — advising authorities
 ## Privacy
 Source: https://pa-wft.nl/en/privacy.html
 
-Wft Permanent Actueel does not collect or store personal data. No cookies, no tracking. Wft Permanent Actueel does not collect or store personal data.
+How Wft Permanent Actueel handles your data: no cookies, no tracking, and a copy of your certificate goes to DFO BV. Wft Permanent Actueel uses no cookies and no trackers. We only use your details to create your result and certificate; a copy of the certificate goes to DFO BV.
 
 ### Who is responsible
 
@@ -864,7 +868,11 @@ DFO BV, De Wel 14–16, 3871 MV Hoevelaken, the Netherlands. Privacy questions: 
 
 ### The quiz and the certificate
 
-For the certificate you enter your name, optionally your date of birth, your email address and, if you wish, the company you work for and your employer’s email address for a copy. That data stays in your own browser and is only used to display the certificate on your screen. Nothing is sent to us or stored. If you choose to mail it, your own mail programme opens; you send the message yourself. If you close the tab, the data is gone.
+To see your result you enter your name and email address and, if you wish, your date of birth, the company you work for and your employer’s email address for an extra copy. In doing so you agree to a copy of your certificate going to DFO BV. Your browser uses that data to create the certificate; PA-WFT.nl does not store it itself and does not send it to a server automatically. The certificate is prepared as a pdf in an email to yourself, with a copy to DFO BV (info@dfobv.nl). You send that message yourself from your email programme: if you do not send it, DFO BV receives nothing and you do not get the certificate in your mailbox. Practice rounds, such as practising your wrong questions again or practising per exam term, do not ask for any details. If you close the tab, the data is gone from your browser.
+
+### What DFO BV does with the copy
+
+DFO BV receives the copy in the mailbox info@dfobv.nl. That is the data on the certificate: your name, email address, the result, the modules and the date, plus your date of birth, company and your employer’s email address if you entered them. The legal basis is your consent: you tick the box to agree to the copy. DFO BV does not keep the email longer than necessary and does not use the data for purposes other than confirming your participation in the practice test.
 
 ### Cookies and measuring
 
@@ -876,7 +884,7 @@ This site does not place cookies, not even to remember choices. The site is host
 
 ### Your rights
 
-Because we do not store personal data, there is nothing to view, change or delete. If you do have a question or complaint, email info@dfobv.nl . You can also file a complaint with the Dutch Data Protection Authority . Last updated: 15 October 2026.
+You can ask DFO BV to let you view, correct or delete the copy it has received from you: email info@dfobv.nl . If you have a question or complaint, email the same address. You can also file a complaint with the Dutch Data Protection Authority . Last updated: 15 October 2026.
 
 
 ## DFO BV and Wft Permanent Actueel: about and accountability
@@ -890,7 +898,7 @@ Wft Permanent Actueel is an activity of DFO BV, services for financial entrepren
 
 ### What it is and is not
 
-It is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate confirms your result on the practice test and is not registered centrally. The content is general information and not advice. Always check legislation in the applicable source. This English version is a convenience translation of the Dutch site. Dutch legislation and the exams of the CDFD are in Dutch; where the translation differs, the Dutch text and the official sources prevail.
+It is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate confirms your result on the practice test. A copy goes to DFO BV when you send the email message. The content is general information and not advice. Always check legislation in the applicable source. This English version is a convenience translation of the Dutch site. Dutch legislation and the exams of the CDFD are in Dutch; where the translation differs, the Dutch text and the official sources prevail.
 
 ### How the questions are made
 
@@ -908,11 +916,11 @@ Terms for the free use of PA-WFT.nl: practice test, no advice, rights to the con
 
 ### Free and without an account
 
-Wft Permanent Actueel is an activity of DFO BV. Use of the modules, the quiz and the certificate is free for all advisers. You do not need an account or a subscription.
+Wft Permanent Actueel is an activity of DFO BV. Use of the modules, the quiz and the certificate is free for all advisers. You do not need an account or a subscription. To see your result you enter your details; see the privacy statement .
 
 ### What the quiz is
 
-The PA test is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate only confirms your result on the practice test and is not registered centrally. Do not use it as evidence of professional competence.
+The PA test is a practice test. It is not a recognised PE exam and does not count towards the registration of your professional competence. The certificate only confirms your result on the practice test; a copy goes to DFO BV when you send the email message. Do not use it as evidence of professional competence.
 
 ### No advice, no guarantee
 

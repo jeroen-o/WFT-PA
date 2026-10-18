@@ -17,6 +17,7 @@
   }
   var ADVIES = PA_T('advies'), DISCLAIMER = PA_T('disclaimer');
   var paneel = document.getElementById('paneel');
+  var DFO_MAIL = 'info@dfobv.nl', deelnemer = null; // gegevens uit het formulier voor de uitslag; alleen in het geheugen van deze pagina
   var keuze = ['basis'], toets = [], stap = 0, laatste = null, gehad = {}, hoofdtoets = null, oefenen = false; // keuze: id's van de gekozen modules
 
   function el(tag, props){
@@ -166,7 +167,7 @@
     var opties = el('div', {class:'opties', role:'group', 'aria-labelledby':'vraagtitel'});
     var uitlegVak = el('div');
     var volgende = el('button', {class:'btn', type:'button', id:'volgende', disabled:''}, stap < toets.length - 1 ? PA_T('volgende') : PA_T('bekijkResultaat'));
-    volgende.addEventListener('click', function(){ if(stap < toets.length - 1){ stap++; toonVraag(); } else if(oefenen) oefenKlaar(); else resultaat(); });
+    volgende.addEventListener('click', function(){ if(stap < toets.length - 1){ stap++; toonVraag(); } else if(oefenen) oefenKlaar(); else gegevensScherm(); });
     v.opties.forEach(function(o, k){
       var b = el('button', {class:'optie', type:'button'}, el('span', {class:'l', 'aria-hidden':'true'}, 'ABCD'[k]), el('span', null, o.t));
       b.addEventListener('click', function(){
@@ -222,6 +223,45 @@
     kop.focus();
   }
 
+  // Uitslag pas na het invullen van je gegevens; een kopie van het certificaat gaat naar DFO BV (via het mailconcept dat jij verstuurt)
+  function gegevensScherm(){
+    var d = deelnemer || {};
+    var naam = el('input', {type:'text', id:'gatenaam', autocomplete:'name', required:'', maxlength:'80', value:d.naam || ''});
+    var mail = el('input', {type:'email', id:'gatemail', autocomplete:'email', required:'', maxlength:'120', value:d.mail || ''});
+    var geb = el('input', {type:'date', id:'gategeb', autocomplete:'bday', max:vandaag(), min:'1925-01-01', value:d.geb || ''});
+    var bedrijf = el('input', {type:'text', id:'gatebedrijf', autocomplete:'organization', maxlength:'100', value:d.bedrijf || ''});
+    var werkgever = el('input', {type:'email', id:'gatewerkgever', maxlength:'120', value:d.werkgever || ''});
+    var akkoord = el('input', {type:'checkbox', id:'gateakkoord', required:''});
+    var status = el('div', {class:'certstatus', id:'gateStatus', 'aria-live':'polite'});
+    var geldig = function(m){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m); };
+    var form = el('form', {class:'certform gate', id:'gateForm', novalidate:''},
+      el('h2', null, PA_T('gateTitel')),
+      el('p', null, PA_T('gateUitleg')),
+      el('div', {class:'veld'}, el('label', {for:'gatenaam'}, PA_T('labelNaam')), naam),
+      el('div', {class:'veld'}, el('label', {for:'gatemail'}, PA_T('labelMail')), mail),
+      el('div', {class:'veld'}, el('label', {for:'gategeb'}, PA_T('labelGeb')), geb),
+      el('div', {class:'veld'}, el('label', {for:'gatebedrijf'}, PA_T('labelBedrijf')), bedrijf),
+      el('div', {class:'veld'}, el('label', {for:'gatewerkgever'}, PA_T('labelWerkgever')), werkgever),
+      el('label', {class:'vink', for:'gateakkoord'}, akkoord, el('span', null, PA_T('gateAkkoord') + ' ', el('a', {href:PA_PAGINA('privacy'), target:'_blank', rel:'noopener'}, PA_T('gatePrivacy')))),
+      el('div', {class:'acties', style:'margin-top:12px'}, el('button', {class:'btn', type:'submit', id:'gateKnop'}, PA_T('gateKnop'))),
+      el('p', {class:'klein'}, PA_T('gateNoot')),
+      status);
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      var g = {naam:naam.value.trim(), mail:mail.value.trim(), geb:geb.value, bedrijf:bedrijf.value.trim(), werkgever:werkgever.value.trim()};
+      if(!g.naam){ status.textContent = PA_T('vulNaam'); naam.focus(); return; }
+      if(!geldig(g.mail)){ status.textContent = PA_T('geldigMail'); mail.focus(); return; }
+      if(g.geb && (!/^\d{4}-\d{2}-\d{2}$/.test(g.geb) || g.geb > vandaag() || g.geb < '1925-01-01')){ status.textContent = PA_T('geldigGeb'); geb.focus(); return; }
+      if(g.werkgever && !geldig(g.werkgever)){ status.textContent = PA_T('geldigWerkgever'); werkgever.focus(); return; }
+      if(!akkoord.checked){ status.textContent = PA_T('gateAkkoordFout'); akkoord.focus(); return; }
+      deelnemer = g;
+      resultaat(false);
+    });
+    hoofdtoets = toets;
+    vul(form);
+    naam.focus();
+  }
+
   function resultaat(terug){
     var goed = toets.filter(function(v){ return v.opties[v.keuze].juist; }).length, n = toets.length;
     var ms = gekozenModules();
@@ -238,7 +278,7 @@
     vul(
       el('div', {class:'score' + (geslaagd ? ' geslaagd' : '')}, geslaagd ? el('p', {class:'hoera', role:'status'}, PA_T('hoera')) : null, el('div', {class:'getal', id:'score', tabindex:'-1'}, goed + '/' + n), el('p', null, oordeel)),
       goed < n ? el('div', {class:'acties', style:'justify-content:center'}, oefenKnop(fouten(toets), PA_T('oefenFoute', n - goed))) : null,
-      certificaatFormulier(),
+      certificaatFormulier(deelnemer),
       agendaBlok(),
       tipBlok(),
       el('div', {class:'acties', style:'justify-content:center'},
@@ -249,6 +289,9 @@
       lijst);
     var sc = document.getElementById('score'); sc.focus({preventScroll:true}); sc.parentNode.scrollIntoView({block:'start'});
     if(geslaagd && !terug) feest();
+    // Certificaat meteen klaarzetten: pdf als bijlage in een mail aan jezelf, met een kopie aan DFO BV
+    var cf = document.getElementById('certForm');
+    if(cf && !terug && deelnemer) setTimeout(function(){ if(cf.requestSubmit) cf.requestSubmit(); else cf.dispatchEvent(new Event('submit', {cancelable:true})); }, 400);
   }
 
   // Confetti bij geslaagd; niet bij "beperk beweging" in de systeeminstellingen
@@ -286,12 +329,15 @@
     requestAnimationFrame(stap);
   }
 
-  function certificaatFormulier(){
-    var naam = el('input', {type:'text', id:'certnaam', autocomplete:'name', required:'', maxlength:'80'});
-    var mail = el('input', {type:'email', id:'certmail', autocomplete:'email', required:'', maxlength:'120'});
-    var geb = el('input', {type:'date', id:'certgeb', autocomplete:'bday', max:vandaag(), min:'1925-01-01'});
-    var bedrijf = el('input', {type:'text', id:'certbedrijf', autocomplete:'organization', maxlength:'100'});
-    var werkgever = el('input', {type:'email', id:'certwerkgever', maxlength:'120'});
+  function kopieAdressen(g){ return [g.werkgever, DFO_MAIL].filter(Boolean).join(', '); } // werkgever (optioneel) en DFO BV
+
+  function certificaatFormulier(vooraf){
+    vooraf = vooraf || {};
+    var naam = el('input', {type:'text', id:'certnaam', autocomplete:'name', required:'', maxlength:'80', value:vooraf.naam || ''});
+    var mail = el('input', {type:'email', id:'certmail', autocomplete:'email', required:'', maxlength:'120', value:vooraf.mail || ''});
+    var geb = el('input', {type:'date', id:'certgeb', autocomplete:'bday', max:vandaag(), min:'1925-01-01', value:vooraf.geb || ''});
+    var bedrijf = el('input', {type:'text', id:'certbedrijf', autocomplete:'organization', maxlength:'100', value:vooraf.bedrijf || ''});
+    var werkgever = el('input', {type:'email', id:'certwerkgever', maxlength:'120', value:vooraf.werkgever || ''});
     function gegevens(){ return {naam:naam.value.trim(), mail:mail.value.trim(), geb:geb.value, bedrijf:bedrijf.value.trim(), werkgever:werkgever.value.trim()}; }
     function controleer(metMail){
       var g = gegevens();
@@ -328,8 +374,8 @@
         var bestand = null; try{ bestand = new File([blob], naamPdf, {type:'application/pdf'}); }catch(e){}
         if(bestand && navigator.canShare && navigator.canShare({files:[bestand]})){
           // Mobiel en browsers met delen: de pdf gaat als bijlage naar de gekozen mail-app
-          navigator.share({files:[bestand], title:onderwerp, text:PA_T('deelBericht', g.mail) + (g.werkgever ? PA_T('deelKopie', g.werkgever) : '') + '\n\n' + tekst}).then(function(){
-            status.className = 'certstatus klaar'; status.textContent = PA_T('deelKlaar', g.mail + (g.werkgever ? PA_T('en') + g.werkgever : ''));
+          navigator.share({files:[bestand], title:onderwerp, text:PA_T('deelBericht', g.mail) + PA_T('deelKopie', kopieAdressen(g)) + '\n\n' + tekst}).then(function(){
+            status.className = 'certstatus klaar'; status.textContent = PA_T('deelKlaar', g.mail, kopieAdressen(g));
           }).catch(function(){ emlDownload(doc, g, onderwerp, tekst, naamPdf); });
         } else emlDownload(doc, g, onderwerp, tekst, naamPdf);
       });
@@ -348,14 +394,14 @@
   function maakPdf(g){ return window.PA_PDF ? PA_PDF.maak(laatste, g, LOGO, STEMPEL, ADVIES, DISCLAIMER) : Promise.reject(new Error('pdf niet geladen')); }
   function emlDownload(doc, g, onderwerp, tekst, naamPdf){
     var naamEml = PA_T('emlNaam', laatste.nummer);
-    PA_PDF.download(PA_PDF.eml(doc, g.mail, g.werkgever, onderwerp, tekst, naamPdf), naamEml, 'message/rfc822');
+    PA_PDF.download(PA_PDF.eml(doc, g.mail, kopieAdressen(g), onderwerp, tekst, naamPdf), naamEml, 'message/rfc822');
     var st = document.getElementById('certStatus');
     st.className = 'certstatus klaar';
-    st.textContent = PA_T('emlKlaar', naamEml, g.mail, g.werkgever ? PA_T('emlKopie', g.werkgever) : '');
+    st.textContent = PA_T('emlKlaar', naamEml, g.mail, PA_T('emlKopie', kopieAdressen(g)));
   }
   function mailHref(g){
     var onderwerp = mailOnderwerp(g);
-    var basis = 'mailto:' + encodeURIComponent(g.mail) + '?' + (g.werkgever ? 'cc=' + encodeURIComponent(g.werkgever) + '&' : '') + 'subject=' + encodeURIComponent(onderwerp) + '&body=';
+    var basis = 'mailto:' + encodeURIComponent(g.mail) + '?' + 'cc=' + encodeURIComponent(kopieAdressen(g)) + '&' + 'subject=' + encodeURIComponent(onderwerp) + '&body=';
     return basis + encodeURIComponent(certTekst(g, false));
   }
 
