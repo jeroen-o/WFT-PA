@@ -542,8 +542,9 @@ FAQ = [
  ('Wat kost het?', 'Niets. Alle modules en de toets zijn gratis voor alle adviseurs, zonder abonnement en zonder account. Wft Permanent Actueel is een activiteit van DFO BV.'),
  ('Hoe werkt de toets?', 'Je kiest een of meer modules. Bij één module krijg je 7 willekeurige vragen, en voor elke module die je toevoegt 5 extra: 2 modules geven 12 vragen, 3 modules 17, alle 9 modules 47. Na elk antwoord zie je de uitleg. Daarna ontvang je een certificaat met je resultaat, als pdf in je mail of om te printen. Je kunt de toets zo vaak doen als je wilt; je krijgt steeds andere vragen.'),
  ('Hoe vaak doe ik de toets?', 'Doe de toets elk kwartaal, zo blijf je permanent actueel. Op de homepage en in de toets zet je met één klik een herinnering in je agenda: elk kwartaal, de komende 5 jaar, met een link naar de toets. Bewaar elk certificaat in je personeelsdossier en lever het ook in bij je werkgever. Zo laat je zien dat je je kennis bijhoudt. Het certificaat vervangt je PE-examen niet.'),
- ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Het certificaat wordt nergens centraal geregistreerd.'),
- ('Wordt er iets van mij bewaard?', 'Nee. Je naam en e-mailadres blijven in je eigen browser en worden alleen gebruikt om het certificaat te maken. Mailen gaat via je eigen mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
+ ('Wat staat er op het certificaat?', 'Je naam, de module, je resultaat, de datum, de datum waarop de vragen van die module voor het laatst zijn bijgewerkt en een certificaatnummer. Een kopie van het certificaat gaat naar DFO BV (info@dfobv.nl) zodra jij het mailbericht verstuurt.'),
+ ('Waarom moet ik mijn gegevens invullen om mijn uitslag te zien?', 'Zo zetten we je certificaat als pdf klaar in een mail aan jezelf, met een kopie aan DFO BV (info@dfobv.nl). Je vult je naam en e-mailadres in en gaat akkoord met die kopie; geboortedatum, bedrijf en e-mailadres van je werkgever zijn optioneel. Oefenrondes, zoals je foute vragen opnieuw oefenen of oefenen per toetsterm, vragen geen gegevens.'),
+ ('Wat gebeurt er met mijn gegevens?', 'PA-WFT.nl zelf slaat niets op en stuurt niets automatisch naar een server: je browser maakt het certificaat. Het certificaat staat klaar in een mail aan jezelf met een kopie aan DFO BV (info@dfobv.nl); jij verstuurt dat bericht zelf vanuit je mailprogramma. Zie de <a href="privacy.html">privacyverklaring</a>.'),
  ('Welke modules heb ik nodig?', 'Dat hangt af van je beroepskwalificaties. Een beroepskwalificatie bestaat uit een combinatie van modules, bijvoorbeeld Adviseur Hypothecair krediet: Basis, Vermogen en Hypothecair krediet. Kies je kwalificaties in de <a href="index.html#check">pakketcheck</a> op de homepage en controleer de eisen die voor jou gelden bij het CDFD.'),
  ('Hoe actueel zijn de vragen?', 'Per module zie je wanneer de vragen voor het laatst zijn bijgewerkt. De peildatum van de regelgeving is ' + PEIL + '. Bedragen en percentages die elk jaar wijzigen, zitten bewust niet in de vragen.'),
  ('Ik zie een fout in een vraag. Wat nu?', 'Graag horen we het. Mail de vraag en wat er volgens jou niet klopt naar <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.'),
@@ -554,19 +555,21 @@ pagina('vragen.html', 'Veelgestelde vragen — Wft Permanent Actueel', 'Antwoord
        'Veelgestelde vragen', 'Vragen', inh, actief='vragen.html', ld=ld)
 
 # ---------- Privacy ----------
-inh = f'''    <p class="lead">Wft Permanent Actueel verzamelt en bewaart geen persoonsgegevens.</p>
+inh = f'''    <p class="lead">Wft Permanent Actueel gebruikt geen cookies en geen trackers. Je gegevens gebruiken we alleen om je uitslag en certificaat te maken; een kopie van het certificaat gaat naar DFO BV.</p>
     <h2>Wie is verantwoordelijk</h2>
     <p>DFO BV, De Wel 14–16, 3871 MV Hoevelaken. Vragen over privacy: <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</p>
     <h2>De toets en het certificaat</h2>
-    <p>Voor het certificaat vul je je naam, geboortedatum en e-mailadres in, en desgewenst het bedrijf waar je werkt en het e-mailadres van je werkgever voor een kopie. Die gegevens blijven in je eigen browser en worden alleen gebruikt om het certificaat op je scherm te zetten. Er wordt niets naar ons verstuurd of opgeslagen. Kies je voor mailen, dan opent je eigen mailprogramma; jij verstuurt het bericht zelf. Sluit je het tabblad, dan zijn de gegevens weg.</p>
+    <p>Om je uitslag te zien vul je je naam en e-mailadres in, en desgewenst je geboortedatum, het bedrijf waar je werkt en het e-mailadres van je werkgever voor een extra kopie. Je gaat daarbij akkoord met een kopie van je certificaat aan DFO BV. Je browser gebruikt die gegevens om het certificaat te maken; PA-WFT.nl slaat ze niet zelf op en stuurt ze niet automatisch naar een server. Het certificaat wordt als pdf klaargezet in een mail aan jezelf, met een kopie aan DFO BV (info@dfobv.nl). Jij verstuurt dat bericht zelf vanuit je mailprogramma: verstuur je het niet, dan ontvangt DFO BV niets en krijg je het certificaat niet in je mailbox. Oefenrondes, zoals je foute vragen opnieuw oefenen of oefenen per toetsterm, vragen geen gegevens. Sluit je het tabblad, dan zijn de gegevens uit je browser weg.</p>
+    <h2>Wat DFO BV met de kopie doet</h2>
+    <p>DFO BV ontvangt de kopie in de mailbox info@dfobv.nl. Dat zijn de gegevens op het certificaat: je naam, e-mailadres, het resultaat, de modules en de datum, plus je geboortedatum, bedrijf en e-mailadres van je werkgever als je die hebt ingevuld. De grondslag is je toestemming: je vinkt aan dat je akkoord gaat met de kopie. DFO BV bewaart de mail niet langer dan nodig en gebruikt de gegevens niet voor andere doeleinden dan het bevestigen van je deelname aan de oefentoets.</p>
     <h2>Cookies en meten</h2>
     <p>We gebruiken geen cookies, geen analyse- of advertentiediensten en geen trackers. Het lettertype staat op onze eigen site, zodat er geen gegevens naar externe partijen gaan.</p>
     <h2>Hosting</h2>
     <p>Deze site plaatst geen cookies, ook niet voor het onthouden van keuzes. De site wordt gehost via GitHub Pages (GitHub, Inc.). Zoals elke webserver verwerkt GitHub technische gegevens zoals je IP-adres om de pagina’s te kunnen leveren en te beveiligen. Zie de <a href="https://docs.github.com/nl/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">privacyverklaring van GitHub</a>.</p>
     <h2>Je rechten</h2>
-    <p>Omdat we geen persoonsgegevens bewaren, is er niets in te zien, te wijzigen of te verwijderen. Heb je toch een vraag of klacht, mail dan <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>. Je kunt ook een klacht indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl/" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
+    <p>Je kunt DFO BV vragen de kopie die het van je heeft ontvangen in te zien, te verbeteren of te verwijderen: mail <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>. Heb je een vraag of klacht, mail dan hetzelfde adres. Je kunt ook een klacht indienen bij de <a href="https://www.autoriteitpersoonsgegevens.nl/" target="_blank" rel="noopener">Autoriteit Persoonsgegevens</a>.</p>
     <p class="klein">Laatst bijgewerkt: {PEIL}.</p>'''
-pagina('privacy.html', 'Privacy — Wft Permanent Actueel', 'Wft Permanent Actueel verzamelt en bewaart geen persoonsgegevens. Geen cookies, geen tracking.', 'Privacyverklaring', 'Privacy', inh)
+pagina('privacy.html', 'Privacy — Wft Permanent Actueel', 'Hoe Wft Permanent Actueel met je gegevens omgaat: geen cookies, geen tracking, en een kopie van je certificaat gaat naar DFO BV.', 'Privacyverklaring', 'Privacy', inh)
 
 # ---------- Over en verantwoording ----------
 inh = f'''    <p class="lead">Wft Permanent Actueel is een gratis oefenomgeving voor financieel adviseurs: per Wft-module oefenvragen met uitleg, om je kennis te testen en bij te houden.</p>
@@ -575,7 +578,7 @@ inh = f'''    <p class="lead">Wft Permanent Actueel is een gratis oefenomgeving 
     <h2>Wat het wel en niet is</h2>
     <ul>
       <li>Het is een oefentoets. Het is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid.</li>
-      <li>Het certificaat bevestigt je resultaat op de oefentoets en wordt niet centraal geregistreerd.</li>
+      <li>Het certificaat bevestigt je resultaat op de oefentoets. Een kopie gaat naar DFO BV als je het mailbericht verstuurt.</li>
       <li>De inhoud is algemene informatie en geen advies. Controleer wet- en regelgeving altijd in de geldende bron.</li>
     </ul>
     <h2>Hoe de vragen tot stand komen</h2>
@@ -596,9 +599,9 @@ open(R + '404.html', 'w', encoding='utf-8').write(s)
 # ---------- Gebruiksvoorwaarden ----------
 inh = f'''    <p class="lead">Deze voorwaarden gelden voor het gebruik van PA-WFT.nl. Door de site te gebruiken, ga je ermee akkoord.</p>
     <h2>Gratis en zonder account</h2>
-    <p>Wft Permanent Actueel is een activiteit van DFO BV. Het gebruik van de modules, de toets en het certificaat is gratis voor alle adviseurs. Je hebt geen account of abonnement nodig.</p>
+    <p>Wft Permanent Actueel is een activiteit van DFO BV. Het gebruik van de modules, de toets en het certificaat is gratis voor alle adviseurs. Je hebt geen account of abonnement nodig. Om je uitslag te zien vul je je gegevens in; zie de <a href="privacy.html">privacyverklaring</a>.</p>
     <h2>Wat de toets is</h2>
-    <p>De PA-toets is een oefentoets. Hij is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Het certificaat bevestigt alleen je resultaat op de oefentoets en wordt niet centraal geregistreerd. Gebruik het niet als bewijs van vakbekwaamheid.</p>
+    <p>De PA-toets is een oefentoets. Hij is geen erkend PE-examen en telt niet mee voor de registratie van je vakbekwaamheid. Het certificaat bevestigt alleen je resultaat op de oefentoets; een kopie gaat naar DFO BV als je het mailbericht verstuurt. Gebruik het niet als bewijs van vakbekwaamheid.</p>
     <h2>Geen advies, geen garantie</h2>
     <p>De inhoud is algemene informatie, met als peildatum {PEIL}. Ondanks de zorg die we eraan besteden, kan een vraag of uitleg onjuist of verouderd zijn. Controleer wet- en regelgeving altijd in de geldende bron voordat je erop vertrouwt in je praktijk. DFO BV is niet aansprakelijk voor schade die ontstaat door het gebruik van deze site, voor zover de wet dat toelaat.</p>
     <h2>Rechten op de inhoud</h2>
