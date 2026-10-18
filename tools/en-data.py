@@ -95,6 +95,7 @@ EN_DATUMS = {
  '2026-11-20': ('CCD II applies', 'The revised Consumer Credit Directive: stricter creditworthiness assessment, including BNPL and lease with a purchase option.'),
  '2026-12-09': ('Transposition of the new Product Liability Directive', 'Deadline for the Dutch law; software counts as a product.'),
  '2027-01-01': ('Annual changes', 'New annual versions of, among others, the lending standards, NHG standards, health premiums and deductible, and tax amounts.'),
+ '2027-04-01': ('PE exams updated again', 'The CDFD updates the PE exams every year on 1 April and invited developments to be submitted for the exams from 1 April 2027.'),
  '2027-07-10': ('EU Anti-Money Laundering Regulation (AMLR) applies', 'The core customer due diligence rules sit in a directly applicable EU regulation.'),
  '2028-01-01': ('Deadline for the transition to the new pension system', 'Pension schemes must have moved to the system of the Pension Transition Act.'),
  '2028-03-31': ('End of the 2025–2028 PE period', 'Deadline for taking your PE exam per professional qualification.'),
