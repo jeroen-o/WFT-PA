@@ -21,7 +21,7 @@ MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 
         '<circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
         '<text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg>')
 
-NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('wetgeving.html', 'Wet- en regelgeving'),
+NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('kennis.html', 'Kennis'), ('wetgeving.html', 'Wet- en regelgeving'),
        ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV'), ('zoeken.html', 'Zoeken')]
 
 def header(actief='', pad=''):
@@ -47,7 +47,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
-    '<li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="begrippen.html">Begrippenlijst</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
+    '<li><a href="kennis.html">Kennis</a></li><li><a href="wft.html">Wft uitgelegd</a></li><li><a href="bgfo.html">BGfo</a></li><li><a href="trhk.html">TRHK</a></li><li><a href="permanent-actueel.html">Permanent actueel</a></li><li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="begrippen.html">Begrippenlijst</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
     '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
     '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfosignalen.nl/"' + EXT + '>DFO Signalen</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
@@ -97,8 +97,8 @@ def link_cdfd(html_tekst):
     for i, d in enumerate(delen):
         if d.startswith('<'):
             t = d[1:].split(None, 1)[0].lower().rstrip('>') if len(d) > 2 else ''
-            if t == 'a': in_a += 1
-            elif t == '/a': in_a -= 1
+            if t in ('a', 'summary'): in_a += 1
+            elif t in ('/a', '/summary'): in_a -= 1
             elif t in ('script', 'style', 'title'): in_script += 1
             elif t in ('/script', '/style', '/title'): in_script -= 1
         elif not in_a and not in_script and 'CDFD' in d:
@@ -118,12 +118,17 @@ NIEUWSBRIEVEN = ('<section class="nieuwsbrieven" id="nieuwsbrief" aria-labelledb
     '    <p class="klein">Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op.</p>\n'
     '  </section>\n')
 
+def wrap_tabellen(h):
+    """Tabellen in een horizontaal scrollbare wrapper, zodat brede tabellen op mobiel de pagina niet breder maken."""
+    return re.sub(r'(<div class="tabelwrap">)?(<table\b.*?</table>)', lambda m: m.group(0) if m.group(1) else '<div class="tabelwrap">' + m.group(2) + '</div>', h, flags=re.S)
+
 def pagina(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='', ld=None, intro='', scripts='', mast_extra='', datum=None, kaal=False, og_beeld='og-image.png', og_type='website', kruimel=None):
     datum = datum or BIJGEWERKT.get(pad, PEIL_ISO)
     if og_beeld == 'og-image.png' and os.path.exists(R + 'og/' + pad.replace('.html', '.png')): og_beeld = 'og/' + pad.replace('.html', '.png')
     if pad not in GEEN_INDEX:
         ld = ld_aanvullen(ld, pad, titel, omschrijving, datum, kruimel or re.sub(r'<[^>]+>', '', kop), og_beeld)
     if ld: extra += '\n<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>'
+    inhoud = wrap_tabellen(inhoud)
     if not kaal and not inhoud.lstrip().startswith('<div class="paneel'):
         inhoud = '<div class="paneel page">\n' + inhoud + '\n</div>'
     s = (head(titel, omschrijving, pad, extra, og_beeld, og_type) + '\n' + header(actief, pad) + '\n' + masthead(kicker, kop, intro, mast_extra, datum)
@@ -322,6 +327,12 @@ VRAGEN = json.loads(subprocess.check_output(['node', '-e', "global.window={};for
                                             + [R + f'assets/js/vragen/{m["id"]}.js' for m in MODS]))
 VRAGEN_V = {m['id']: hashlib.sha1(open(R + f'assets/js/vragen/{m["id"]}.js', 'rb').read()).hexdigest()[:8] for m in MODS}
 
+VERDIEPING = {'basis': ['wft.html', 'bgfo.html', 'permanent-actueel.html'], 'consumptief-krediet': ['bgfo.html', 'eba-glom.html', 'wft.html'], 'hypothecair-krediet': ['trhk.html', 'bgfo.html', 'eba-glom.html', 'wft.html'],
+              'schade-particulier': ['wft.html', 'bgfo.html'], 'schade-zakelijk': ['wft.html', 'bgfo.html'], 'vermogen': ['wft.html', 'bgfo.html'], 'inkomen': ['wft.html', 'bgfo.html'], 'pensioen': ['wft.html'], 'zorgverzekering': ['wft.html']}
+VERDIEPING_TITEL = {'wft.html': 'De Wft uitgelegd', 'bgfo.html': 'BGfo: de gedragsregels', 'trhk.html': 'TRHK: de leennormen', 'eba-glom.html': 'EBA-richtsnoeren leningverstrekking (GLOM)', 'permanent-actueel.html': 'Permanent actueel: de gids'}
+def verdieping_html(mid):
+    return '    <h2>Verdieping: de regelgeving uitgelegd</h2>\n    <ul>' + ''.join(f'<li><a href="{p_}">{html.escape(VERDIEPING_TITEL[p_])}</a></li>' for p_ in VERDIEPING[mid]) + '</ul>\n'
+
 def voorbeelden(mid, n=3):
     """Vaste voorbeeldvragen per module voor de modulepagina: bij voorkeur casussen, verspreid over de vragenbank."""
     vs = VRAGEN.get(mid, [])
@@ -415,6 +426,10 @@ BEGRIPPEN = [
  ('Naturapolis', 'Een zorgverzekering waarbij de verzekeraar afspraken maakt met zorgaanbieders. Bij een niet-gecontracteerde zorgaanbieder kan de vergoeding lager zijn.', ['zorgverzekering']),
  ('Restitutiepolis', 'Een zorgverzekering waarbij de verzekerde zelf de zorgaanbieder kiest en de kosten worden vergoed, tot maximaal een marktconform tarief.', ['zorgverzekering']),
  ('Acceptatieplicht', 'De plicht van een zorgverzekeraar om iedereen te accepteren voor de basisverzekering, zonder premieverschil op basis van gezondheid.', ['zorgverzekering']),
+ ('TRHK', 'Tijdelijke regeling hypothecair krediet: de ministeriële regeling met de wettelijke leennormen voor hypotheken. De regeling wordt elk jaar per 1 januari herzien; lees de uitleg op <a href="trhk.html">TRHK uitgelegd</a>.', ['hypothecair-krediet']),
+ ('BGfo', 'Besluit Gedragstoezicht financiële ondernemingen Wft: de algemene maatregel van bestuur met de gedragsregels voor onder meer zorgplicht, informatieverstrekking, beloning en bedrijfsvoering. Lees meer op <a href="bgfo.html">BGfo uitgelegd</a>.', ['basis', 'hypothecair-krediet']),
+ ('GLOM', 'EBA-richtsnoeren inzake leningverstrekking en -monitoring (EBA/GL/2020/06, guidelines on loan origination and monitoring). Ze richten zich op kredietinstellingen en kredietgevers; lees de uitleg op <a href="eba-glom.html">EBA GLOM uitgelegd</a>.', ['hypothecair-krediet', 'consumptief-krediet']),
+ ('AO/IC', 'Administratieve organisatie en interne controle: de beschrijving van de bedrijfsprocessen van een onderneming, waaronder hoe vakbekwaamheid en permanent actueel blijven zijn geregeld.', ['basis'])
 ]
 
 NIEUW = {}
@@ -497,6 +512,7 @@ for i, mod in enumerate(MODS, 1):
            + f'    <div class="acties"><a class="btn" href="toets.html#{mid}">Oefen verder in de toets</a></div>\n'
            + termen_html(mid)
            + verwant_html(mid)
+           + verdieping_html(mid)
            + ('    <h2>Begrippen bij deze module</h2>\n    <p>' + ' · '.join(f'<a href="begrippen.html#begrip-{slug(b[0])}">{html.escape(b[0])}</a>' for b in BEGRIPPEN if mid in b[2]) + '</p>\n' if any(mid in b[2] for b in BEGRIPPEN) else '')
            + '    <h2>Wijzigingen</h2>\n    <ul class="log">' + ''.join(f'<li><strong>{nl(dt)}</strong> — {html.escape(t)}</li>' for dt, t in mod['log']) + '</ul>\n'
            '    <h2>Bronnen</h2>\n    <ul class="bronnen">' + ''.join(f'<li><a href="{B[b][1]}" target="_blank" rel="noopener">{B[b][0]}</a></li>' for b in d['bronnen']) + '</ul>\n'
@@ -820,6 +836,9 @@ pagina('opleidingen.html', 'DFO Opleidingen voor financieel adviseurs',
        'DFO Opleidingen', 'DFO BV', inh, actief='opleidingen.html',
        intro='Opleidingen en bijeenkomsten voor medewerkers van het advieskantoor, en kennis om je vak bij te houden.')
 
+# ---------- Kennispagina's (Wft, TRHK, BGfo, EBA GLOM, gids, dossier, overzicht) ----------
+exec(open(R + 'tools/bouw-kennis.py', encoding='utf-8').read())
+
 # ---------- llms.txt ----------
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '> Gratis oefenomgeving voor financieel adviseurs in Nederland: per Wft-module meerkeuzevragen met uitleg, een toets van 7 vragen (5 extra per toegevoegde module) en een certificaat om naar jezelf te mailen. Een activiteit van DFO BV, Hoevelaken. Geen erkend PE-examen en geen advies. Peildatum regelgeving: ' + PEIL + '.', '',
@@ -828,6 +847,7 @@ llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
         '## Modules', '']
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
 llms += ['', '## Belangrijke datums', ''] + [f'- {nl(d[0])}: {d[1]}. {d[2]}' for d in DATUMS]
+llms += ['', '## Kennis', ''] + [f'- [{KENNIS_TITEL[k]}]({SITE}{k}): {KENNIS_BESCHRIJVING[k]}' for k in ['kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] if k in KENNIS_TITEL]
 llms += ['', '## English version', '', f'- [English home]({SITE}en/): free Wft practice test for advisers, English convenience translation', f'- [Quiz]({SITE}en/quiz.html)', f'- [PE explained]({SITE}en/pe-explained.html)', f'- [What’s new]({SITE}en/whats-new.html)', f'- [Glossary]({SITE}en/glossary.html)', f'- [Full text in English]({SITE}llms-full-en.txt)']
 llms += ['', '## Informatie', '', f'- [Begrippenlijst Wft]({SITE}begrippen.html): korte uitleg van de belangrijkste begrippen uit de Wft en permanente educatie', f'- [Zoeken]({SITE}zoeken.html?q=): doorzoek de site', f'- [Volledige tekst voor taalmodellen]({SITE}llms-full.txt)', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
          '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
@@ -883,7 +903,7 @@ open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n
 exec(open(R + 'tools/bouw-engels.py', encoding='utf-8').read())
 
 # ---------- sitemap en robots ----------
-paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
+paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 def sm_url(loc, lastmod, alt):
     x = f'  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod>'
     for taal, u in alt: x += f'<xhtml:link rel="alternate" hreflang="{taal}" href="{u}"/>'

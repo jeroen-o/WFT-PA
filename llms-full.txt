@@ -40,9 +40,13 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 8 modules . Wft Vermogen Wft Hypothecair Krediet Wft Pensioen Wft Consumptief Krediet Wft Schadeverzekering Particulier Wft Schadeverzekering Zakelijk Wft Inkomen
 
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd BGfo: de gedragsregels Permanent actueel: de gids
+
 ### Begrippen bij deze module
 
-AFM · DNB · CDFD · Wft · Beroepskwalificatie · PE-examen · PE-periode · PE-punten · Permanent actueel · Eindterm en toetsterm · Zorgplicht · Klantprofiel · Provisieverbod · Kifid · Wwft · AMLR · DORA · IDD
+AFM · DNB · CDFD · Wft · Beroepskwalificatie · PE-examen · PE-periode · PE-punten · Permanent actueel · Eindterm en toetsterm · Zorgplicht · Klantprofiel · Provisieverbod · Kifid · Wwft · AMLR · DORA · IDD · BGfo · AO/IC
 
 ### Wijzigingen
 
@@ -94,9 +98,13 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 2 modules . Wft Basis
 
+### Verdieping: de regelgeving uitgelegd
+
+BGfo: de gedragsregels EBA-richtsnoeren leningverstrekking (GLOM) De Wft uitgelegd
+
 ### Begrippen bij deze module
 
-CCD II · BKR
+CCD II · BKR · GLOM
 
 ### Wijzigingen
 
@@ -147,6 +155,10 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 ### Verwante modules
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 3 modules . Wft Basis Wft Schadeverzekering Zakelijk
+
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd BGfo: de gedragsregels
 
 ### Begrippen bij deze module
 
@@ -202,6 +214,10 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 3 modules . Wft Basis Wft Schadeverzekering Particulier
 
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd BGfo: de gedragsregels
+
 ### Begrippen bij deze module
 
 IDD · Onderverzekering · Mededelingsplicht · AVB · Bedrijfsschadeverzekering · Productaansprakelijkheid
@@ -255,6 +271,10 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 ### Verwante modules
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 4 modules . Wft Basis Wft Hypothecair Krediet Wft Pensioen
+
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd BGfo: de gedragsregels
 
 ### Begrippen bij deze module
 
@@ -310,9 +330,13 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 3 modules . Wft Basis Wft Vermogen
 
+### Verdieping: de regelgeving uitgelegd
+
+TRHK: de leennormen BGfo: de gedragsregels EBA-richtsnoeren leningverstrekking (GLOM) De Wft uitgelegd
+
 ### Begrippen bij deze module
 
-Provisieverbod · BKR · NHG · Leennormen · Aflossingseis
+Provisieverbod · BKR · NHG · Leennormen · Aflossingseis · TRHK · BGfo · GLOM
 
 ### Wijzigingen
 
@@ -363,6 +387,10 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 ### Verwante modules
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 2 modules . Wft Basis
+
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd BGfo: de gedragsregels
 
 ### Begrippen bij deze module
 
@@ -418,6 +446,10 @@ Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderw
 
 Deze modules horen bij dezelfde beroepskwalificaties. Oefen ze samen in één toets: toets met alle 3 modules . Wft Basis Wft Vermogen
 
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd
+
 ### Begrippen bij deze module
 
 DNB · Wtp · Invaren · UPO · AOW
@@ -467,6 +499,10 @@ Zo zien de vragen in de toets eruit. In de toets staan de antwoorden in willekeu
 ### Oefen per toetsterm
 
 Oefen alleen de vragen bij één toetsterm van het CDFD, bijvoorbeeld een onderwerp dat je lastig vindt. Een oefenronde telt niet mee voor het certificaat. 1a.1 1a.2 1a.3 1a.4 1a.5 1a.6 1a.7 1a.8 1a.9 1a.10 1a.11 1a.12 1a.13 1a.14 1b.1 1b.3 1c.2 1c.3 1c.5 1c.6 1c.9 1d.1 1d.2 1d.4 1d.6 1d.7 1d.8 1e.1 1e.2 1f.2 1f.7 1f.8 1f.9 1f.11 1f.13 1f.15 1f.16 1f.17 1g.2 1g.4 1g.5 1g.6 1g.7 1h.1 1h.2 1i.1 1i.2 1i.3 1i.4 1i.5 1i.8 1i.9 1i.10 1i.11 1i.12 1j.1 1j.2 1j.3 1k.1 1k.2 1k.4 1k.5 1k.6 1k.8 1k.9 1l.1 1l.4 1l.7 1l.8 1l.9 1l.10 1l.11 1l.13 2e.4 2e.6 2e.7 3d.1 3d.2 4a.3
+
+### Verdieping: de regelgeving uitgelegd
+
+De Wft uitgelegd
 
 ### Begrippen bij deze module
 
@@ -937,6 +973,516 @@ Wft Serviceabonnement kennis en praktijk Nieuwsbrief Wft plus e-mailhelpdesk voo
 Met de Wft-kennistoets van Wft Permanent Actueel oefen je per module met vragen met uitleg. Gratis voor alle adviseurs. De toets is een oefentoets en geen erkend PE-examen.
 
 
+## Wft uitgelegd: Wet op het financieel toezicht
+Bron: https://pa-wft.nl/wft.html
+
+### Wat is de Wft en sinds wanneer geldt ze?
+
+De Wet op het financieel toezicht (Wft) is de Nederlandse basiswet voor het toezicht op financiële markten en ondernemingen. Ze regelt markttoegang (vergunningen), prudentieel toezicht en gedragstoezicht. Volgens de AFM is de Wft sinds 1 januari 2007 van kracht; ze verving acht eerdere toezichtwetten.
+
+### Wie is toezichthouder voor adviseurs: AFM of DNB?
+
+Voor adviseurs en bemiddelaars is de AFM zowel vergunningverlener als gedragstoezichthouder. DNB houdt prudentieel toezicht, gericht op de soliditeit van financiële ondernemingen zoals banken en verzekeraars. Beide taken staan in de Wft, de AFM-taak in artikel 1:25 en de DNB-taak in artikel 1:24.
+
+### Heb ik een vergunning nodig om te adviseren of te bemiddelen?
+
+In principe wel. Zonder AFM-vergunning adviseren over andere financiële producten dan financiële instrumenten (art. 2:75) of bemiddelen (art. 2:80) is verboden. De Vrijstellingsregeling Wft bevat uitzonderingen met eigen voorwaarden. Toets daarom altijd of een vrijstelling op jouw situatie van toepassing is.
+
+### Wat is de diplomaplicht?
+
+Volgens de AFM moet een klantmedewerker die adviseert een geldig diploma hebben voor de product-dienstcombinatie waarin hij adviseert, en dat diploma geldig houden met periodieke PE-examens (PE staat voor permanente educatie). Alle klantmedewerkers met inhoudelijk klantcontact moeten daarnaast permanent actueel vakbekwaam zijn.
+
+### Hoe lang loopt de huidige PE-periode?
+
+Volgens het CDFD loopt de huidige PE-periode van 1 april 2025 tot en met 31 maart 2028. Je legt in elke PE-periode het PE-examen af om adviesbevoegd te blijven. Haal je het examen niet op tijd, dan vervalt je adviesbevoegdheid. Controleer altijd de actuele termijnen op cdfd.nl.
+
+### Mag ik provisie ontvangen voor hypotheekadvies?
+
+Volgens artikel 86c van het BGfo verschaft of ontvangt een financiëledienstverlener geen provisie voor het bemiddelen of adviseren van onder meer hypothecair krediet. Er zijn uitzonderingen, bijvoorbeeld voor een vergoeding die de consument rechtstreeks betaalt. Lees het artikel voor de voorwaarden.
+
+### Welke sancties kan de toezichthouder opleggen?
+
+De Wft kent onder meer de aanwijzing (art. 1:75), de last onder dwangsom (art. 1:79) en de bestuurlijke boete (art. 1:80 en 1:81). Het wettelijk maximum van de boete is 20 miljoen euro per overtreding, en bij herhaling binnen vijf jaar 40 miljoen euro.
+
+### Wat verandert er met CCD II?
+
+De herziene richtlijn consumentenkrediet (EU 2023/2225) is volgens de AFM per 20 november 2026 van toepassing. De implementatiewet is op 6 oktober 2026 door de Tweede Kamer aangenomen; de Eerste Kamer moet nog besluiten. Onder meer buy now, pay later komt onder de Wft.
+
+De Wft uitgelegd voor adviseurs: toezicht door AFM en DNB, vergunning, vakbekwaamheid en PE, zorgplicht, provisie, handhaving en actuele ontwikkelingen. Kort antwoord: De Wet op het financieel toezicht (Wft) is de Nederlandse basiswet voor toezicht op financiële markten en ondernemingen en is sinds 1 januari 2007 van kracht. De AFM houdt gedragstoezicht en verleent de vergunning voor adviseurs en bemiddelaars; DNB doet het prudentiële toezicht. Als adviseur heb je een vergunning of vrijstelling, vakbekwaamheid (diploma plus PE) en zorgplicht in het belang van de klant te borgen. Laatst bijgewerkt 20 oktober 2026 · peildatum regelgeving 15 oktober 2026 Test je kennis PE uitgelegd
+
+### Wat is de Wft en sinds wanneer geldt ze?
+
+De Wet op het financieel toezicht (Wft) is de basiswet voor het toezicht op de Nederlandse financiële markten. Ze is vastgesteld bij wet van 28 september 2006 en volgens de AFM sinds 1 januari 2007 van kracht. De wet regelt wie een financiële onderneming mag zijn, hoe die onderneming zich moet gedragen en wie daar toezicht op houdt. Zie de geldende tekst op Wft (wetten.overheid.nl) . De Wft vervangt acht eerdere toezichtwetten. Volgens de Eerste Kamer gaat het onder meer om de Wet toezicht kredietwezen 1992, de Wet toezicht verzekeringsbedrijf 1993, de Wet toezicht effectenverkeer 1995, de Wet assurantiebemiddelingsbedrijf en de Wet op het consumentenkrediet. Het uitgangspunt was een functioneel toezicht: de regels volgen de activiteit (bijvoorbeeld adviseren of krediet verstrekken) en niet meer de soort instelling. Ook de Wet financiële dienstverlening zou volgens het wetsvoorstel uiteindelijk onderdeel van de Wft worden. Wat betekent dit voor jou als adviseur? Vakbekwaamheid, zorgplicht en provisie hebben hun wortel in de Wft of in een besluit daaronder. De Wft wijzigt regelmatig: de wettenbank meldt al meerdere toekomstige wijzigingen, de eerste op 1 januari 2027.
+
+### Wie houdt toezicht? AFM en DNB
+
+Het toezicht is verdeeld over twee toezichthouders, vaak aangeduid als het twin peaks -model. De Wft zegt het zelf in twee artikelen: De Nederlandsche Bank (DNB) doet het prudentiële toezicht (art. 1:24): gericht op de soliditeit van financiële ondernemingen en de stabiliteit van het financiële stelsel. Denk aan kapitaal, solvabiliteit en liquiditeit van banken en verzekeraars. De Autoriteit Financiële Markten (AFM) doet het gedragstoezicht (art. 1:25): gericht op ordelijke en transparante financiëlemarktprocessen, zuivere verhoudingen tussen marktpartijen en zorgvuldige behandeling van cliënten. Beide toezichthouders beslissen ook over de toelating tot de markt. Bij het adviseren en bemiddelen gaat dat om de AFM: zij verleent de vergunning (art. 2:75 en 2:80). Volgens de AFM werken beide samen, onder meer bij vergunningen. Zie de AFM-pagina Rol- en taakverdeling . Wat betekent dit voor jou als adviseur? Als adviseur of bemiddelaar heb je vooral met de AFM te maken: vergunning, vakbekwaamheid en zorgplicht.
+
+### Hoe is de Wft opgebouwd?
+
+De geldende tekst op wetten.overheid.nl kent zeven delen. Dit is de indeling op hoofdlijnen: Deel Onderwerp Artikelen 1 Algemeen deel: definities, toezichthouders, handhaving, beloningsbeleid 1:1 - 1:130 2 Markttoegang financiële ondernemingen: vergunningen en vrijstellingen 2:1 - 2:130 3 Prudentieel toezicht financiële ondernemingen (met afwikkeling van banken en verzekeraars) 3:1 - 3:306 en 3a:1 - 3a:146 4 Gedragstoezicht financiële ondernemingen: o.a. geschiktheid en vakbekwaamheid, klachten, zorgvuldige dienstverlening, informatie 4:1 - 4:104 5 Gedragstoezicht financiële markten (o.a. effecten, openbaar bod) 5:1 - 5:89i 6 Bijzondere maatregelen stabiliteit financiële stelsel 6:1 - 6:13 7 Slotbepalingen 7:1 - 7:3 Artikel 4:24a is artikel 24a in deel 4. De AFM-website noemt nog een oudere indeling met vier delen; deze tabel volgt de wettenbank. Wat betekent dit voor jou als adviseur? Voor jouw werk zijn vooral deel 2 (de vergunning) en deel 4 (het gedrag) van belang, aangevuld met artikelen uit deel 1 over toezicht en handhaving.
+
+### Onderliggende regelgeving: besluiten en regelingen
+
+De Wft is een kaderwet; veel details staan in gedelegeerde regelgeving. De belangrijkste voor adviseurs: Regeling Doel Besluit Gedragstoezicht financiële ondernemingen Wft (BGfo) Gedragsregels: vakbekwaamheid (hoofdstuk 2), klachtenafhandeling, informatieverstrekking en zorgvuldige dienstverlening, waaronder het provisieverbod. Zie bgfo.html . Nadere regeling gedragstoezicht financiële ondernemingen Wft (Nrgfo) Uitwerking van het BGfo door de AFM, bijvoorbeeld over precontractuele informatie en de vergelijkingskaart. Besluit prudentiële regels Wft Prudentiële eisen aan financiële ondernemingen, zoals solvabiliteit, liquiditeit en beheerste bedrijfsvoering. Vooral relevant voor banken en verzekeraars. Vrijstellingsregeling Wft Ministeriële regeling met vrijstellingen van onder meer de vergunningplicht voor adviseren en bemiddelen. Besluit bestuurlijke boetes financiële sector Stelt de bestuurlijke boetes per overtreding vast. Tijdelijke regeling hypothecair krediet (TRHK) Regels voor de hoogte van een hypothecair krediet. Zie trhk.html ; de bedragen en percentages wijzigen per jaar. Over de Europese richtsnoeren voor kredietverlening en monitoring lees je meer op eba-glom.html . Wat betekent dit voor jou als adviseur? Lees nooit alleen de Wft: de concrete norm staat vaak in het BGfo of de Nrgfo. Controleer de geldende versie.
+
+### Vergunningplicht en vrijstellingen voor adviseren en bemiddelen
+
+Het uitgangspunt is een verbod met vergunningplicht. De Wft kent aparte verboden: Adviseren over andere financiële producten dan financiële instrumenten zonder AFM-vergunning is verboden (art. 2:75). Onder adviseren verstaat de wet het in de uitoefening van beroep of bedrijf aanbevelen van een of meer specifieke producten aan een bepaalde consument (art. 1:1). Bemiddelen zonder AFM-vergunning is verboden (art. 2:80). Bemiddelen is het als tussenpersoon tot stand brengen van een overeenkomst tussen een consument en een aanbieder. Krediet aanbieden kent een eigen vergunningplicht (art. 2:60). Voor een bemiddelingsvergunning toon je onder meer geschiktheid, vakbekwaamheid, betrouwbaarheid en integere bedrijfsvoering aan; bij hypothecair krediet en verzekeringen komt een beroepsaansprakelijkheidsverzekering of vergelijkbare voorziening erbij (art. 2:83). Vrijstellingen staan in de Vrijstellingsregeling Wft . Voor bemiddelaars noemt die bijvoorbeeld bemiddeling voor consumenten die bij de bemiddelaar werken, of bemiddeling in producten die een verbonden onderneming volledig verantwoordelijk mag aanbieden. De voorwaarden verschillen per vrijstelling. Een individuele ontheffing van art. 2:80 lid 2 is bij het bemiddelen in verzekeringen en hypothecair krediet niet mogelijk (lid 5 en 6). Wat betekent dit voor jou als adviseur? Ga niet uit van een vrijstelling zonder de voorwaarden te toetsen; het hangt af van de definities en de feiten.
+
+### Vakbekwaamheid en diplomaplicht
+
+De Wft verplicht de financiëledienstverlener te zorgen voor de vakbekwaamheid van werknemers en andere personen die onder zijn verantwoordelijkheid financiële diensten verlenen (art. 4:9 lid 2). De uitwerking staat in hoofdstuk 2 van het BGfo. De AFM onderscheidt twee niveaus ( AFM: vakbekwaamheid en diplomaplicht ): Permanent actueel vakbekwaam : alle klantmedewerkers met inhoudelijk klantcontact moeten vakbekwaam zijn, op de hoogte zijn van actuele ontwikkelingen en die kunnen toepassen. Dit is een open norm; de onderneming bepaalt zelf hoe ze die invult. Diplomaplicht : medewerkers die adviseren hebben bovendien een geldig diploma nodig voor de product-dienstcombinatie waarin ze adviseren. Modules en beroepskwalificaties Het CDFD (College Deskundigheid Financiële Dienstverlening) onderscheidt acht beroepskwalificaties, modulair opgebouwd uit één tot drie modules. Je behaalt de modules via examens bij erkende exameninstituten en krijgt dan het diploma. De combinaties volgens de AFM: Zorgverzekering: module Zorgverzekeringen Consumptief krediet: Basis en Consumptief krediet Schadeverzekering particulier: Basis en Schadeverzekeringen particulier Schadeverzekering zakelijk: Basis, Schadeverzekeringen particulier en Schadeverzekeringen zakelijk Vermogen: Basis en Vermogen Inkomen: Basis en Inkomen Hypothecair krediet: Basis, Vermogen en Hypothecair krediet Pensioen: Basis, Pensioen en Vermogen PE en adviesbevoegdheid PE staat voor permanente educatie. Om adviesbevoegd te blijven leg je in elke PE-periode het PE-examen af (BGfo art. 11). Volgens het CDFD loopt de huidige PE-periode van 1 april 2025 tot en met 31 maart 2028; de volgende loopt van 1 april 2028 tot en met 31 maart 2031. Haal je het PE-examen niet op tijd, dan vervalt je adviesbevoegdheid; die kun je herstellen met een Bijzonder Examen. Zie voor de actuele termijnen de pagina Wanneer moet ik PE-examen doen? . Wat betekent dit voor jou als adviseur? Houd de einddatum van je PE-periode zelf in de gaten.
+
+### Zorgplicht, klantbelang en provisieverbod
+
+Deel 4 van de Wft bevat de regels voor zorgvuldige dienstverlening. De kern voor adviseurs: Informatie die je verstrekt, ook in reclame, is correct, duidelijk en niet misleidend, en het commerciële oogmerk is herkenbaar (art. 4:19). Precontractuele informatie : voor het advies of het sluiten van de overeenkomst geef je de informatie die redelijkerwijs relevant is voor een adequate beoordeling (art. 4:20). Zorgplicht en klantbelang : een financiëledienstverlener neemt op zorgvuldige wijze de gerechtvaardigde belangen van de consument in acht, en een financiëledienstverlener die adviseert handelt in het belang van de consument (art. 4:24a). De AFM past art. 1:75 hierbij slechts toe bij evidente misstanden (lid 3). Het provisieverbod Art. 4:71e Wft maakt regels over provisie mogelijk; de uitwerking staat in art. 86c BGfo. Een financiëledienstverlener verschaft of ontvangt volgens dat artikel geen provisie voor het bemiddelen of adviseren van onder meer een betalingsbeschermer, complex product, hypothecair krediet, individuele arbeidsongeschiktheidsverzekering, overlijdensrisicoverzekering, premiepensioenvordering of uitvaartverzekering. Er zijn uitzonderingen, bijvoorbeeld voor provisie die rechtstreeks door de consument wordt betaald (tenzij kennelijk onredelijk hoog) en voor relatiegeschenken tot € 100 per jaar. Wat betekent dit voor jou als adviseur? Leg vast hoe je het klantbelang hebt gewogen en hoe je beloning is opgebouwd. Dit is algemene informatie, geen advies.
+
+### Handhaving en aanpalende regels (Kifid, Wwft)
+
+De toezichthouder (AFM of DNB) heeft in deel 1 van de Wft meerdere instrumenten om overtredingen aan te pakken: Aanwijzing (art. 1:75): verplicht tot een bepaalde gedragslijn binnen een redelijke termijn. Last onder dwangsom (art. 1:79). Bestuurlijke boete (art. 1:80 en 1:81): de hoogte staat per overtreding in het Besluit bestuurlijke boetes financiële sector. Wettelijk maximum: € 20 miljoen per overtreding, bij herhaling binnen vijf jaar € 40 miljoen. Wat betekent dit voor jou als adviseur? Bij een onderzoek of voornemen tot handhaving: reageer tijdig, houd je dossiers op orde en schakel zo nodig een jurist in. Op deze pagina geven we geen advies over individuele zaken. Kifid en Wwft Wwft en Sanctiewet. De Wet ter voorkoming van witwassen en financieren van terrorisme (Wwft) staat los van de Wft. Volgens de AFM geeft de Wwft financiële ondernemingen een poortwachtersrol: cliëntenonderzoek, doorlopende controle en melden van ongebruikelijke transacties bij FIU-Nederland ( AFM: Wwft ). Of de Wwft voor jouw onderneming geldt, hangt af van je activiteiten. Kifid. De Wft verplicht financiële ondernemingen een adequate klachtenbehandeling te hebben: een interne klachtenprocedure én aansluiting bij een door de minister erkende geschilleninstantie (art. 4:17). Kifid is zo'n erkend klachteninstituut. Consumenten zien in het dienstverlenersregister of een dienstverlener bindend is aangesloten. Wat betekent dit voor jou als adviseur? Zorg dat je klachtenprocedure op orde is, je aansluiting bij Kifid actueel is en je weet of de Wwft voor jouw dienstverlening geldt.
+
+### Europese regelgeving en ontwikkelingen
+
+Veel Wft-regels voeren Europese richtlijnen uit; verordeningen werken rechtstreeks. Eén regel per instrument ( EUR-Lex ): IDD (richtlijn (EU) 2016/97): verzekeringsdistributie. MCD (richtlijn 2014/17/EU): kredietovereenkomsten voor consumenten voor woonvastgoed, dus hypothecair krediet. MiFID II (richtlijn 2014/65/EU): markten voor financiële instrumenten. Solvency II (richtlijn 2009/138/EG): toegang tot en uitoefening van het verzekerings- en herverzekeringsbedrijf. CRD (richtlijn 2013/36/EU) en CRR (verordening 575/2013): toegang en prudentiële vereisten voor banken en beleggingsondernemingen. PRIIPs (verordening 1286/2014): essentiële-informatiedocumenten voor verpakte retailbeleggingsproducten en verzekeringsgebaseerde beleggingsproducten. SFDR (verordening (EU) 2019/2088): informatieverschaffing over duurzaamheid in de financiëledienstensector. DORA (verordening (EU) 2022/2554): digitale operationele weerbaarheid van de financiële sector; van toepassing vanaf 17 januari 2025. Recente en komende ontwikkelingen CCD II (richtlijn (EU) 2023/2225 over kredietovereenkomsten voor consumenten): de Nederlandse implementatiewet wijzigt onder meer de Wft en Boek 7 BW. De Tweede Kamer nam het wetsvoorstel op 6 oktober 2026 aan; de Eerste Kamer plant de inbreng op 27 oktober 2026 ( dossier 36.924 ). Volgens de AFM komt onder meer 'buy now, pay later' per 20 november 2026 onder de Wft ( AFM, 18 juni 2026 ). Wtp (Wet toekomst pensioenen): in 2023 door de Eerste Kamer aangenomen ( dossier 36.067 ). Volgens het ministerie blijft de uiterste transitiedatum 1 januari 2028 ( Rijksoverheid, 22 januari 2026 ). AMLR (verordening (EU) 2024/1624): voorkoming van witwassen en terrorismefinanciering; volgens de tekst van toepassing met ingang van 10 juli 2027. DORA : de verordening geldt sinds 17 januari 2025; de Implementatiewet digitale operationele weerbaarheid wijzigt de Wft ( dossier 36.482 ). Een officieel aangekondigde herziening van de Wft-structuur troffen we niet aan. Zie ook nieuw.html . Wat betekent dit voor jou als adviseur? Volg wetswijzigingen in de bron en pas je procedures tijdig aan. Wat voor de consumptief krediet- of pensioenadvisering verandert, zie je terug in de PE-onderwerpen.
+
+### De Wft in de negen Wft-modules
+
+De negen Wft-modules vormen de opbouw van de diploma's (zie het kopje over vakbekwaamheid). De Wft komt er op deze manier in terug: Basis : kader, toezichthouders en zorgplicht. Consumptief krediet : kredietverlening en bemiddeling. Hypothecair krediet : hypotheekadvies, provisieverbod en leennormen ( TRHK ). Schade particulier en Schade zakelijk : verzekeringsdistributie. Vermogen , Inkomen en Pensioen : advisering over vermogen, inkomen en pensioen. Zorgverzekering : advisering over zorgverzekeringen. Wat betekent dit voor jou als adviseur? Kijk welke modules bij jouw beroepskwalificatie horen. Je kennis oefenen kan met de PA-toets (geen PE-examen, geen PE-punten).
+
+### De Wft in 10 begrippen
+
+Financiële onderneming : onderneming die onder de Wft valt, zoals een bank, verzekeraar of financiëledienstverlener. Financiëledienstverlener : wie een ander financieel product dan een financieel instrument aanbiedt, daarover adviseert of daarin bemiddelt. Adviseren : een specifiek product aan een bepaalde consument aanbevelen. Bemiddelen : als tussenpersoon een overeenkomst tot stand brengen. Prudentieel toezicht : toezicht op soliditeit (DNB). Gedragstoezicht : toezicht op zorgvuldig gedrag naar klanten (AFM). Vergunning : toestemming van de AFM om te adviseren of te bemiddelen. Zorgplicht : handelen in het belang van de consument (art. 4:24a). Vakbekwaamheid en PE : diploma plus periodiek PE-examen; permanent actueel vakbekwaam. Bestuurlijke boete : financiële sanctie bij overtreding van Wft-voorschriften. Meer begrippen vind je op begrippen.html .
+
+### Zo blijf je als adviseur permanent actueel
+
+Permanent actueel blijven bestaat uit twee dingen: formeel je adviesbevoegdheid behouden, en inhoudelijk je kennis bijhouden. Volg je PE-periode en haal het PE-examen vóór de einddatum (zie pe-punten-wft.html ). Houd wijzigingen in Wft, BGfo en andere regelingen bij in de bron en op de AFM- en CDFD-websites. Op nieuw.html staat wat er verandert. Test je kennis met de PA-toets . Die is bedoeld om te oefenen; het is geen PE-examen. Wat betekent dit voor jou als adviseur? Plan een vast moment per kwartaal voor wetswijzigingen en plan je PE ruim voor de einddatum.
+
+### Bronnen
+
+Wet op het financieel toezicht (wetten.overheid.nl) Besluit Gedragstoezicht financiële ondernemingen Wft (wetten.overheid.nl) Nadere regeling gedragstoezicht financiële ondernemingen Wft (wetten.overheid.nl) Besluit prudentiële regels Wft (wetten.overheid.nl) Vrijstellingsregeling Wft (wetten.overheid.nl) Besluit bestuurlijke boetes financiële sector (wetten.overheid.nl) Tijdelijke regeling hypothecair krediet (wetten.overheid.nl) Wet op het financieel toezicht, wetsvoorstel 29.708 (Eerste Kamer) Wet op het financieel toezicht (AFM) Rol- en taakverdeling (AFM) Vakbekwaamheid (AFM) Diplomaplicht: waar moet je als dienstverlener aan voldoen? (AFM) Adviseurs in de financiële dienstverlening (CDFD) Wanneer moet ik PE-examen doen? (CDFD) Examens (CDFD) Aansluiten bij Kifid (Kifid) Wwft achtergrond (AFM) Herziene richtlijn consumentenkrediet: vergunning aanvragen kan nu al (AFM, 18 juni 2026) Implementatiewet herziene richtlijn consumentenkrediet, 36.924 (Eerste Kamer) Implementatiewet digitale operationele weerbaarheid, 36.482 (Eerste Kamer) Wet toekomst pensioenen, 36.067 (Eerste Kamer) Pensioenen dankzij nieuwe stelsel flink omhoog (Rijksoverheid, 22 januari 2026) Richtlijn (EU) 2016/97 verzekeringsdistributie (EUR-Lex) Richtlijn 2014/17/EU hypothecair krediet (EUR-Lex) Richtlijn 2014/65/EU MiFID II (EUR-Lex) Richtlijn 2009/138/EG Solvabiliteit II (EUR-Lex) Richtlijn 2013/36/EU CRD (EUR-Lex) Verordening (EU) nr. 575/2013 CRR (EUR-Lex) Verordening (EU) nr. 1286/2014 PRIIPs (EUR-Lex) Verordening (EU) 2019/2088 SFDR (EUR-Lex) Verordening (EU) 2022/2554 DORA (EUR-Lex) Verordening (EU) 2024/1624 AMLR (EUR-Lex) Richtlijn (EU) 2023/2225 consumentenkrediet, CCD II (EUR-Lex)
+
+### Verder lezen
+
+BGfo: de gedragsregels De gedragsregels voor adviseurs en aanbieders: zorgplicht, informatie, beloning en bedrijfsvoering. TRHK: de leennormen De wettelijke leennormen voor hypotheken: financieringslast, loan-to-value en de jaarlijkse wijzigingen. EBA-richtsnoeren leningverstrekking (GLOM) De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs. Permanent actueel: de gids De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt. PE uitgelegd Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is. Begrippenlijst De belangrijkste Wft-begrippen kort en helder uitgelegd.
+
+### Blijf op de hoogte
+
+Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO. DFO Signalen Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat. Meld je aan voor DFO Signalen Nieuwsbrief Wft Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners. Meld je aan voor de Nieuwsbrief Wft Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op. Algemene informatie, geen advies. Controleer regels en bedragen altijd in de geldende bron. Zie je een fout? Mail info@dfobv.nl .
+
+
+## TRHK: leennormen hypotheek uitgelegd
+Bron: https://pa-wft.nl/trhk.html
+
+### Wat is de TRHK?
+
+De Tijdelijke regeling hypothecair krediet is een ministeriële regeling met de leennormen voor hypotheken: de maximale financieringslast ten opzichte van het inkomen en de maximale lening ten opzichte van de woningwaarde. Ze geldt sinds 1 januari 2013 en wordt jaarlijks op onderdelen herzien, na advies van een onafhankelijk adviesinstituut.
+
+### Wanneer wijzigt de TRHK?
+
+De inkomenstabellen worden jaarlijks vastgesteld en gelden voor een heel kalenderjaar. Wijzigingen gaan in op 1 januari. De Wijzigingsregeling 2026 is op 31 oktober 2025 in de Staatscourant gepubliceerd. Voor 2027 hebben wij op 20 oktober 2026 nog geen definitieve publicatie gevonden.
+
+### Hoe wordt de financieringslast berekend?
+
+Als het bruto jaarlijkse bedrag aan rente en aflossing, berekend alsof het krediet annuïtair over dertig jaar wordt afgelost (of over de looptijd als die korter is), ongeacht de vorm van het krediet. Dit bedrag mag niet hoger zijn dan de toegestane financieringslast uit bijlage 1.
+
+### Wat is de toetsrente?
+
+Voor kredieten met een rentevaste periode korter dan tien jaar rekent de aanbieder met de door de AFM gepubliceerde rente, of met de geoffreerde rente als die hoger is. De AFM publiceert de toetsrente elk kwartaal. Voor het vierde kwartaal van 2026 is dat 5 procent.
+
+### Hoeveel mag je lenen ten opzichte van de woningwaarde?
+
+Maximaal honderd procent van de waarde van de woning (artikel 5 TRHK). Er zijn afgebakende uitzonderingen, zoals meefinanciering van een restschuld, oversluiten bij hetzelfde onderpand en energiebesparende voorzieningen tot ten hoogste 106 procent. De voorwaarden per uitzondering staan in artikel 5 zelf.
+
+### Telt het energielabel mee in de leennormen?
+
+Ja. De aanbieder mag per energielabel bepaalde bedragen buiten beschouwing laten bij de financieringslast. In 2026 loopt dat van € 0 (label E, F, G) tot € 30.000 (A++++) en € 40.000 (A++++ met energieprestatiegarantie). Extra ruimte geldt voor energiebesparende voorzieningen, zie artikel 4.
+
+### Mag een aanbieder afwijken van de TRHK?
+
+Ja, onder voorwaarden. Voor afwijking van de maximale financieringslast moet de afwijking worden gemotiveerd, onderbouwd, de gegevens moeten zijn gecontroleerd en de situatie moet bestendig zijn (artikel 4, eerste lid). Daarnaast noemt de regeling specifieke situaties, zoals oversluiten en overbruggingskredieten. Een geldverstrekker mag in zijn eigen beleid strenger zijn.
+
+### Wat is het verschil tussen de TRHK en NHG-normen?
+
+NHG is een apart stelsel met eigen Voorwaarden en normen. Die verwijzen voor de financieringslast naar artikel 3 TRHK, maar laten de TRHK-uitzonderingen alleen toe als NHG dat vermeldt, en voegen aanvullende regels toe, onder meer voor het toetsinkomen. NHG volgt de TRHK dus, maar is geen onderdeel ervan.
+
+De Tijdelijke regeling hypothecair krediet (TRHK) uitgelegd voor adviseurs: financieringslast, LTV, toetsrente, energielabel, maatwerk en wijzigingen 2026. Kort antwoord: De Tijdelijke regeling hypothecair krediet (TRHK) bevat de wettelijke leennormen voor hypotheken: een maximale financieringslast ten opzichte van het inkomen en een maximale lening van honderd procent van de woningwaarde, met afgebakende uitzonderingen. De regeling is gebaseerd op artikel 115 Bgfo en wordt elk jaar per 1 januari herzien na advies van een onafhankelijk adviesinstituut. Geldverstrekkers mogen strengere acceptatienormen hanteren. Laatst bijgewerkt 20 oktober 2026 · peildatum regelgeving 15 oktober 2026 Test je kennis PE uitgelegd
+
+### Wat is de TRHK, waarom heet ze tijdelijk en wat is de basis?
+
+De Tijdelijke regeling hypothecair krediet (TRHK) is een ministeriële regeling met de leennormen voor hypotheken: de maximale hoogte van het krediet ten opzichte van het inkomen (financieringslast, ook loan-to-income of LTI) en ten opzichte van de woningwaarde (loan-to-value of LTV). Ze geldt sinds 1 januari 2013. 'Tijdelijk' zit in de officiële naam. In de praktijk wordt de regeling elk jaar op onderdelen herzien, na advies van een onafhankelijk adviesinstituut voor budgetvoorlichting. Waarom de naam 'tijdelijk' is gekozen, staat niet in de bronnen die wij raadpleegden. Volgens de toelichting bij de eerste versie (Staatscourant 2012, 26433) legde de regeling inkomenscriteria vast die eerder in de Gedragscode Hypothecaire Financieringen stonden, en bevat ze minimumnormen. De basis is artikel 115, derde lid, van het Besluit Gedragstoezicht financiële ondernemingen Wft (Bgfo): bij ministeriële regeling worden de inkomenscriteria en de maximale hoogte van het krediet in verhouding tot de woningwaarde vastgesteld. Volgens artikel 115, vierde en vijfde lid, past de aanbieder de inkomenscriteria toe en houdt hij rekening met het maximale krediet ten opzichte van de woningwaarde. De Autoriteit Financiële Markten (AFM) is de gedragstoezichthouder en publiceert elk kwartaal de toetsrente. Lees de tekst van de TRHK (toestand 1 januari 2026) zelf. Wat betekent dit voor jou als adviseur? Raadpleeg altijd de tekst en tabellen van het jaar waarin je werkt.
+
+### Jaarlijkse wijziging per 1 januari en publicatie
+
+De inkomenstabellen worden jaarlijks vastgesteld en gelden steeds voor een heel kalenderjaar. Wijzigingen treden daarom in werking op 1 januari (Staatscourant 2025, 36471, toelichting bij artikel II). Dat adviesinstituut adviseert vooraf; dat advies is volgens het ministerie tot nu toe altijd gevolgd. De Wijzigingsregelingen voor 2024, 2025 en 2026 verschenen op 1 november 2023, 5 november 2024 en 31 oktober 2025 in de Staatscourant (nummers 30022, 35962 en 36471). De concept-regeling gaat doorgaans in de zomer in internetconsultatie. Voor 2026 liep die van 7 juli tot 19 augustus 2025. De definitieve regeling verscheen de afgelopen jaren eind oktober of begin november. Wat betekent dit voor jou als adviseur? Plan eind oktober tot begin november in voor het bijwerken van je rekenmodel en kennis. Controleer in het najaar of de nieuwe Staatscourant-publicatie er al is.
+
+### Norm 1: de maximale financieringslast
+
+De kern van de TRHK is artikel 3, eerste lid: de financieringslast van een hypothecair krediet mag niet hoger zijn dan de toegestane financieringslast. De toegestane financieringslast bepaal je met het toetsinkomen van de consument en het financieringslastpercentage uit bijlage 1 van de regeling (artikel 3, vijfde lid). Het financieringslastpercentage is het deel van het bruto inkomen dat maximaal naar hypotheeklasten mag. Ze hangen af van het toetsinkomen en de toetsrente. Bijlage 1 bevat vier tabellen: consumenten die de AOW-leeftijd nog niet hebben bereikt; consumenten die de AOW-leeftijd wel hebben bereikt; twee tabellen voor gedeelten van het krediet waarvan de rente niet fiscaal aftrekbaar is (voor beide groepen). Voor 2026 zijn de percentages volgens de toelichting afgerond op 0,1 procent in plaats van 0,5 procent, op advies van dat instituut. De percentages zijn voor de meeste inkomens iets lager dan in 2025. Door de verwachte loonstijging (CPB: 4,1 procent in 2026) stijgt de maximale hypotheek volgens de toelichting toch voor alle huishoudens. Wat betekent dit voor jou als adviseur? Gebruik de tabel van het juiste kalenderjaar en de juiste groep (AOW of niet, aftrekbaar of niet). Neem geen percentages over uit oude overzichten.
+
+### Hoe bereken je de financieringslast?
+
+De regeling schrijft de berekening voor, ongeacht de vorm van het krediet (artikel 3, tweede lid): Bruto jaarbedrag: het berekende bruto jaarlijkse bedrag aan debetrente en aflossing. Annuïtair over 30 jaar: je rekent alsof het krediet annuïtair wordt afgelost over dertig jaar. Heeft het krediet een kortere looptijd, dan reken je met die looptijd. Bij een kortere looptijd mag je onder voorwaarden rekening houden met opgebouwd spaartegoed, of toch met 30 jaar rekenen als dat verantwoord is (lid 2 en 3). Maandelijks achteraf: rente en aflossing worden maandelijks achteraf betaald gedacht (lid 4). Meerdere leningdelen: je rekent met het gewogen gemiddelde van de rentes, rekening houdend met hoofdsom en resterende looptijd (lid 11). De toetsrente De rente waarmee je rekent hangt af van de rentevaste periode (lid 9): Rentevaste periode van tien jaar of langer: de geoffreerde debetrente. Korter dan tien jaar en het krediet is aan het einde van die periode afgelost: ook de geoffreerde debetrente. Korter dan tien jaar in andere gevallen: de door de AFM gepubliceerde rente, of de geoffreerde rente als die hoger is. De AFM publiceert de toetsrente ten minste 14 dagen voor het begin van elk kwartaal. Het is een naar marktaandeel gewogen gemiddelde van de rente van ten minste vijf van de zes grootste aanbieders voor een annuïtair krediet met tien jaar rentevast tot de maximale LTV. De regeling bepaalt dat dit gemiddelde ten minste vijf procent bedraagt (lid 10). Voor het vierde kwartaal van 2026 is de toetsrente 5 procent (bron: AFM). Wat betekent dit voor jou als adviseur? Leg vast welke rente je hebt gebruikt en waarom. Check bij een korte rentevaste periode elk kwartaal de AFM-publicatie.
+
+### Toetsinkomen, partners, flexibel inkomen, studieschuld en andere leningen
+
+Het toetsinkomen is het inkomen waarvan de aanbieder uitgaat bij het bepalen van het maximale krediet (artikel 1). De uitwerking staat in artikel 2 en 3. Vast en bestendig inkomen De aanbieder houdt rekening met de huidige vaste en bestendige inkomsten. Daarnaast mag hij onder voorwaarden rekening houden met toekomstige inkomsten uit vrij beschikbaar vermogen en met een te verwachten structurele inkomensstijging binnen een redelijke termijn (artikel 2, vierde lid). Flexibel inkomen Zijn de inkomsten niet vast, dan kan de aanbieder uitgaan van het gemiddelde over de laatste drie kalenderjaren of 36 maanden. Is er in een of meer van die jaren geen vast inkomen maar wel minimaal twaalf maanden inkomen, dan kan de aanbieder uitgaan van het huidige inkomen als een deskundige het arbeidsmarktperspectief onderbouwt (artikel 2, tweede en derde lid). Pensioenleeftijd binnen tien jaar Bereikt de consument binnen tien jaar na het aangaan van het krediet de pensioengerechtigde leeftijd van de Algemene Ouderdomswet, dan houdt de aanbieder mede rekening met het verwachte inkomen en de inkomsten uit vrij beschikbaar vermogen op die leeftijd (artikel 2, vijfde lid). Partners Bij meerdere consumenten gebruik je het financieringslastpercentage dat hoort bij het gezamenlijke toetsinkomen (artikel 3, zesde lid). Dat is sinds 2023 zo; eerder werd het lagere inkomen gedeeltelijk meegeteld. Is een van de partners AOW-gerechtigd en de ander niet, dan gebruik je de tabel van de partner met het hoogste toetsinkomen (lid 7). Alleenstaanden In 2026 mag de aanbieder bij een alleenstaande een bedrag tot € 17.000 buiten beschouwing laten bij de financieringslast, als het toetsinkomen hoger is dan € 30.000 (niet AOW-gerechtigd) of € 29.000 (AOW-gerechtigd) (artikel 3, achtste lid, na wijziging per 2026). Studieschuld Voor studieleningen gebruik je het termijnbedrag voor rente en aflossing dat de consument verschuldigd is (artikel 3a). Bij een hypotheek met geheel of gedeeltelijk aftrekbare rente bruteer je dat bedrag met een bruteringsfactor uit een tabel; in 2026 loopt die van 1,05 tot 1,40, afhankelijk van de toetsrente. Is nog geen termijnbedrag verschuldigd, is een aflosvrije periode ingezet of is het bedrag verlaagd door de draagkrachtmeting, dan reken je met de actuele restschuld, actuele rente en resterende looptijd. Andere financiële verplichtingen Andere verplichtingen tel je op bij de financieringslast of trek je af van de toegestane financieringslast (artikel 3, twaalfde lid). Wat betekent dit voor jou als adviseur? Inventariseer alle verplichtingen en documenteer hoe je het inkomen hebt bepaald, zeker bij flexibele inkomens.
+
+### Norm 2: de maximale lening ten opzichte van de woningwaarde (LTV)
+
+Artikel 5 bepaalt dat het hypothecair krediet maximaal honderd procent van de waarde van de woning bedraagt. Dit percentage is in het verleden stapsgewijs afgebouwd: de oorspronkelijke regeling van 2012 stelde 105 procent vanaf 1 januari 2013, dalend met een procentpunt per jaar tot 101 procent in 2017 en 100 procent vanaf 1 januari 2018. Wat telt als waarde van de woning, staat in artikel 115, zesde lid, Bgfo, bijvoorbeeld de koopsom of aanneemsom, of de marktwaarde volgens een taxatierapport dat niet ouder is dan een jaar. Afwijkingen van de LTV (artikel 5, tweede tot en met vierde lid) een restschuld na verkoop van de woning mag worden meegefinancierd; kosten van energiebesparende voorzieningen mogen worden meegefinancierd tot ten hoogste 106 procent van de woningwaarde; oversluiten naar een nieuw krediet met hetzelfde onderpand, als de consument blijft wonen en de nieuwe hoofdsom niet hoger is dan het af te lossen bedrag plus de kosten; noodzakelijke woningverbetering, onder voorwaarden, en kredieten tot € 25.000 voor aardgasvrij maken of energiebesparing met dekking via het Nationaal Warmtefonds; achterstallige betalingen aan de Vereniging van Eigenaren, onder voorwaarden; een financieringslast die substantieel lager ligt dan de toegestane financieringslast. Wat betekent dit voor jou als adviseur? Ga bij elke LTV-overschrijding na welke uitzondering van toepassing is en of je aan alle voorwaarden voldoet.
+
+### Energielabel en energiebesparende voorzieningen
+
+De leennormen houden rekening met de energiezuinigheid van de woning. Een zuinige woning heeft lagere energielasten, dus er is meer ruimte voor hypotheeklasten. Dat werkt via bedragen die de aanbieder buiten beschouwing mag laten bij het vaststellen van de financieringslast (artikel 4, derde tot en met vijfde lid). De bedragen staan hieronder voor 2026. Energielabel Buiten beschouwing (artikel 4, lid 3, 2026) Extra bij energiebesparende voorzieningen (lid 4, 2026) E, F, G € 0 € 20.000 C, D € 5.000 € 15.000 A, B € 10.000 € 10.000 A+, A++ € 20.000 € 10.000 A+++ € 25.000 € 0 A++++ € 30.000 € 0 A++++ met energieprestatiegarantie van ten minste tien jaar € 40.000 € 0 Heeft de woning geen of geen geldig energielabel, dan kan voor energiebesparende voorzieningen maximaal € 10.000 buiten beschouwing worden gelaten (lid 5). Welke voorzieningen tellen, staat in artikel 1 van de regeling (onder meer isolatie, HR++-beglazing, warmtepompen en zonnecellen). De bedragen voor A+++ en A++++ zijn per 2026 verlaagd, en het extra bedrag van € 10.000 voor A+++ is vervallen, omdat zonnepanelen minder opbrengen door terugleverkosten en de voorgenomen afschaffing van de salderingsregeling (bron: Staatscourant 2025, 36471 en Rijksoverheid). Wat betekent dit voor jou als adviseur? Leg het energielabel vast met de registratiedatum en controleer of het label geldig is. Gebruik de bedragen van het jaar waarin je werkt.
+
+### Maatwerk, NHG en acceptatiebeleid
+
+Een aanbieder mag onder voorwaarden afwijken van de maximale financieringslast (artikel 4, eerste lid). Alle vier onderstaande voorwaarden gelden tegelijk: het toetsinkomen, de financieringslast en de toegestane financieringslast zijn volgens de regeling bepaald; de motivering van de afwijking is vastgelegd en onderbouwd met documenten en berekeningen, en geeft aan waarom het krediet in de specifieke situatie verantwoord is; de aanbieder kan aantonen dat hij de juistheid van de gegevens heeft gecontroleerd; de aanbieder heeft aantoonbaar beoordeeld dat de aanleiding voor de afwijking een bestendige situatie is. Daarnaast noemt artikel 4 specifieke situaties, zoals oversluiten bij hetzelfde onderpand en overbruggingskredieten voor een nog niet verkochte woning (lid 2 en 6). De CDFD noemt in de toetsterm de 'limitatieve afwijkingsgronden': de regeling kent dus een afgebakende lijst. Maatwerk is geen uitweg bij een tekort Het vraagt dossieropbouw: onderbouwing, controle van gegevens en een beoordeling van de bestendigheid. NHG De Nationale Hypotheek Garantie (NHG) is een apart stelsel met eigen Voorwaarden en normen. Voor de financieringslast verwijzen die naar de TRHK: bij een lening met NHG pas je artikel 3 TRHK toe, maar de uitzonderingen uit de TRHK mag je niet gebruiken, tenzij NHG dat vermeldt (zo mag je artikel 4, lid 3 tot en met 6 TRHK voor energie wel toepassen). NHG voegt aanvullende regels toe, onder meer voor het toetsinkomen. De NHG-grens is in 2026 € 470.000 (bron: NHG). Acceptatiebeleid De TRHK bevat minimumnormen. Een geldverstrekker mag strenger zijn in zijn acceptatiebeleid. Voldoen aan de TRHK betekent dus niet dat een aanvraag wordt geaccepteerd. Het omgekeerde geldt ook: een afwijking die de TRHK toestaat, hoeft een geldverstrekker niet te accepteren. Eigenwoningregeling en aflossingseis De TRHK rekent met een annuïtaire aflossing over 30 jaar, ongeacht de vorm van het krediet, en kent aparte tabellen voor gedeelten waarvan de rente niet aftrekbaar is. De fiscale regels voor renteaftrek en aflossingseis vallen onder een ander kader. Raadpleeg daarvoor de Belastingdienst. Wat betekent dit voor jou als adviseur? Controleer eerst wat het beleid van de geldverstrekker is, en bij NHG ook de NHG-voorwaarden. De TRHK is de ondergrens, niet de uitkomst.
+
+### Wat is er nieuw voor 2026 en 2027?
+
+2026 Voor 2026 zijn de energiebedragen voor A+++ en A++++ verlaagd (zie hierboven), zijn nieuwe financieringslastpercentages vastgesteld (afgerond op 0,1 procent) en gelden voor alleenstaanden nieuwe inkomensgrenzen voor het bedrag van € 17.000. Bronnen: Staatscourant 2025, 36471 , de internetconsultatie 2026 en het nieuwsbericht van de Rijksoverheid . 2027 Op 20 oktober 2026 hebben wij geen gepubliceerde Wijzigingsregeling voor 2027 gevonden. In een door het ministerie openbaar gemaakte nota van 16 juni 2026 staat dat het adviesinstituut adviseert om voor 2027 geen beleidswijzigingen door te voeren, dat daarom dit jaar geen zomerconsultatie nodig is en dat het voorlopige beeld is dat de leenruimte in 2027 voor alle huishoudens stijgt. Dat kan nog worden bijgesteld. De minister kondigt in oktober een Kamerbrief over de leennormen voor het komende jaar aan. Zie ook de nota op tweedekamer.nl . Wacht op de definitieve publicatie in de Staatscourant. Wat betekent dit voor jou als adviseur? Gebruik voor 2027 pas cijfers na de officiële publicatie. Vóór die tijd zijn berichten over 2027 voorlopig.
+
+### De TRHK in opleiding en toets
+
+In de eindtermen en toetstermen van het CDFD voor de module Hypothecair krediet (geldend voor examens vanaf 1 april 2026) staat toetsterm 1a.2: de kandidaat kan de standaardvoorwaarden en normen van de maximale hypotheekverstrekking, inclusief de limitatieve afwijkingsgronden en -mogelijkheden uit de Tijdelijke regeling hypothecair krediet, benoemen (kennisniveau K). De TRHK is dus onderdeel van de module. Een aparte toetsterm over de jaarlijkse wijziging hebben wij niet gevonden. Wat Permanent Actueel (PA) betekent en hoe PE (permanente educatie) zich verhoudt tot deze site, lees je op PE-punten Wft . Zie ook de module Hypothecair krediet en de begrippen . Wat betekent dit voor jou als adviseur? Weet in elk geval dat de normen bestaan, welke afwijkingen de regeling toelaat, en dat de tabellen jaarlijks wijzigen. Gebruik de actuele regeling als je rekent.
+
+### Veelgemaakte fouten bij het toepassen van de normen
+
+Aandachtspunten die volgen uit de regeltekst, niet uit onderzoek. Tabel van het verkeerde jaar of de verkeerde groep. Tabellen gelden per kalenderjaar en verschillen per groep (AOW, wel of niet aftrekbaar). De verkeerde rente. Bij een rentevaste periode korter dan tien jaar rekent de aanbieder met de AFM-toetsrente, of de geoffreerde rente als die hoger is. Studieschuld te licht meewegen. Vergeet niet te bruteren en let op aanloopfase, aflosvrije periode en draagkrachtmeting. Andere verplichtingen vergeten. Tel ze op bij de financieringslast of trek ze af van de toegestane last. Flexibel inkomen zonder onderbouwing. Het huidige inkomen vraagt een deskundige onderbouwing van het arbeidsmarktperspectief. Afwijking onvoldoende vastleggen. Alle vier voorwaarden van artikel 4, eerste lid, moeten aantoonbaar zijn. NHG en TRHK door elkaar halen. Voor NHG gelden aanvullende regels en minder uitzonderingen. Wat betekent dit voor jou als adviseur? Maak een controlelijst per aanvraag met jaar, tabel, rente, inkomensbepaling, verplichtingen en eventuele afwijkingen.
+
+### Bronnen
+
+Tijdelijke regeling hypothecair krediet, geconsolideerde tekst (Ministerie van Financiën) Wijzigingsregeling hypothecair krediet 2026, Staatscourant 2025, 36471 Wijzigingsregeling hypothecair krediet 2025, Staatscourant 2024, 35962 Wijzigingsregeling hypothecair krediet 2024, Staatscourant 2023, 30022 Wijzigingsregeling hypothecair krediet 2023, Staatscourant 2022, 28829 Wijzigingsregeling hypothecair krediet 2021, Staatscourant 2020, 55946 Tijdelijke regeling hypothecair krediet, oorspronkelijke tekst, Staatscourant 2012, 26433 Besluit Gedragstoezicht financiële ondernemingen Wft, artikel 115 (Ministerie van Financiën) Toetsrente hypotheken vierde kwartaal 2026 (AFM) Leennormen 2026: hypotheek kan iets omhoog (Rijksoverheid) Kamerbrief over Leennormen Hypothecair Krediet 2026 (Rijksoverheid) Leennormen voor hypotheken (Volkshuisvesting Nederland) Consultatie Wijzigingsregeling hypothecair krediet 2026 (internetconsultatie.nl) Nota Directie Wonen, leennormen 2027, 16 juni 2026 (Tweede Kamer) Voorwaarden en normen 2026-1 (Nationale Hypotheek Garantie) NHG-grens in 2026 vastgesteld op € 470.000 (Nationale Hypotheek Garantie) Eindtermen en toetstermen Hypothecair krediet, geldend vanaf 1 april 2026 (CDFD)
+
+### Verder lezen
+
+De Wft uitgelegd De Wet op het financieel toezicht: opbouw, toezicht door AFM en DNB, vergunning, vakbekwaamheid en gedragsregels. BGfo: de gedragsregels De gedragsregels voor adviseurs en aanbieders: zorgplicht, informatie, beloning en bedrijfsvoering. EBA-richtsnoeren leningverstrekking (GLOM) De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs. Permanent actueel: de gids De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt. PE uitgelegd Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is. Begrippenlijst De belangrijkste Wft-begrippen kort en helder uitgelegd.
+
+### Blijf op de hoogte
+
+Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO. DFO Signalen Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat. Meld je aan voor DFO Signalen Nieuwsbrief Wft Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners. Meld je aan voor de Nieuwsbrief Wft Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op. Algemene informatie, geen advies. Controleer regels en bedragen altijd in de geldende bron. Zie je een fout? Mail info@dfobv.nl .
+
+
+## BGfo uitgelegd: Besluit gedragstoezicht Wft
+Bron: https://pa-wft.nl/bgfo.html
+
+### Wat is het BGfo?
+
+Het BGfo is het Besluit Gedragstoezicht financiële ondernemingen Wft: een algemene maatregel van bestuur die de gedragsregels uit deel 4 van de Wft uitwerkt. Het regelt onder meer informatieverstrekking, provisieregels, klachtenafhandeling en vakbekwaamheid. De AFM houdt toezicht op de naleving.
+
+### Wat is het verschil tussen de Wft, het BGfo en de Nrgfo?
+
+De Wft bevat de wettelijke normen. Het BGfo is een algemene maatregel van bestuur die die normen per onderwerp uitwerkt. De Nrgfo is een ministeriële regeling met technische details, zoals de vorm en inhoud van de vergelijkingskaart. Gebruik ze naast elkaar.
+
+### Is het dienstverleningsdocument nog verplicht?
+
+In de huidige tekst van het BGfo en de Nrgfo komt het begrip dienstverleningsdocument niet voor. Voor advies en bemiddeling in producten onder het provisieverbod geldt de vergelijkingskaart (art. 86f BGfo). Volgens de AFM is die sinds 1 oktober 2023 verplicht voor wie eronder valt.
+
+### Hoe lang moet ik adviesdossiers bewaren?
+
+Volgens art. 32d BGfo bewaar je de ingewonnen informatie en de gegevens over het aanbevolen product ten minste vijf jaar vanaf het advies, als dat tot een overeenkomst leidt. Voor wie uitsluitend een gestandaardiseerde, voor de AFM verifieerbare procedure volgt, geldt een uitzondering.
+
+### Wat zegt het BGfo over permanente educatie?
+
+Volgens art. 11 BGfo mag de diplomahouder alleen adviseren als hij in elke PE-periode een PE-examen haalt, met uitzondering van de periode waarin het diploma is behaald. Een PE-periode duurt drie jaar. Het CDFD noemt als huidige periode 1 april 2025 tot en met 31 maart 2028.
+
+### Moet ik als adviseur aangesloten zijn bij Kifid?
+
+Volgens art. 4:17 Wft moet een financiëledienstverlener zijn aangesloten bij een door de minister aangewezen geschilleninstantie, tenzij er geen zodanige instantie is. Daarnaast heb je een interne klachtenprocedure nodig, met een klachtenadministratie en de termijnen uit hoofdstuk 7 van het BGfo.
+
+### Welke recente wijzigingen zijn er voor advieskantoren?
+
+Sinds 24 juli 2026 gelden uitbestedingsregels voor financiëledienstverleners: een overzicht van uitbestede werkzaamheden en een schriftelijke overeenkomst met de derde (art. 38l BGfo). Per 28 augustus 2026 zijn de regels voor overeenkomsten op afstand aangepast, op basis van Richtlijn (EU) 2023/2673. Controleer de actuele tekst voor de details.
+
+### Hoe handhaaft de AFM het BGfo?
+
+De AFM houdt gedragstoezicht en gebruikt volgens eigen informatie vooral normoverdragende instrumenten. Zwaardere maatregelen zijn een aanwijzing, last onder dwangsom of bestuurlijke boete op grond van de Wft. De hoogte van een boete hangt af van de zwaarte van de overtreding en volgt uit de wet en onderliggende regelgeving.
+
+Wat is het BGfo? Uitleg voor adviseurs: zorgplicht, informatie, provisieverbod, POG, klachten, vakbekwaamheid en toezicht door de AFM. Kort antwoord: Het BGfo is de algemene maatregel van bestuur waarin de gedragsregels uit deel 4 van de Wft zijn uitgewerkt: van informatieverstrekking en provisieverbod tot productontwikkeling, klachten en vakbekwaamheid. De AFM houdt toezicht op naleving. De technische uitwerking staat in de Nrgfo, en veel regels zijn de Nederlandse vertaling van Europese richtlijnen zoals IDD, MCD en MiFID II. Laatst bijgewerkt 20 oktober 2026 · peildatum regelgeving 15 oktober 2026 Test je kennis PE uitgelegd
+
+### Wat is het BGfo en hoe verhoudt het zich tot de Wft?
+
+Het Besluit Gedragstoezicht financiële ondernemingen Wft (BGfo) is een algemene maatregel van bestuur (AMvB), in werking sinds 2007 en regelmatig gewijzigd. De Wft bevat de kaders; het BGfo vult die in. Bij elke paragraaf staat aan welk wetsartikel de bepalingen uitvoering geven. Zie de actuele tekst op wetten.overheid.nl . De lagen op een rij Wft, deel 4 (Gedragstoezicht financiële ondernemingen) : de wettelijke normen. Zie de Wft . BGfo : de AMvB met de uitwerking per onderwerp. Nrgfo (Nadere regeling gedragstoezicht financiële ondernemingen Wft): een ministeriële regeling met technische details, onder meer over de vergelijkingskaart. Zie de Nrgfo . EU-regelgeving : het BGfo verwijst naar de richtlijn verzekeringsdistributie (IDD), de hypotheekrichtlijn (MCD), MiFID II en de PRIIPs-verordening. Wie krijgt ermee te maken? Vooral financiëledienstverleners : adviseurs, bemiddelaars, gevolmachtigde agenten en aanbieders. Daarnaast zijn er bepalingen voor beleggingsondernemingen en beheerders van beleggingsinstellingen en icbe’s. Welke artikelen gelden, hangt af van je vergunning en producten. Wat betekent dit voor jou als adviseur? Kijk niet alleen in de Wft, maar ook in het BGfo en de Nrgfo; de uitwerking staat meestal daar.
+
+### Zo is het BGfo opgebouwd
+
+Het besluit is verdeeld in hoofdstukken per thema (globale indeling; de actuele tekst is leidend): Hoofdstuk Onderwerp 1 Inleidende bepalingen en definities 2 Vakbekwaamheid van medewerkers (diploma’s, permanente educatie) 3 Betrouwbaarheid 4 Integere uitoefening van het bedrijf 5 Beheerste uitoefening van het bedrijf, met een paragraaf over gedragsaspecten 6 Uitbesteden van werkzaamheden 7 Klachtenafhandeling en de aangewezen geschilleninstantie 8 Zorgvuldige dienstverlening: informatieverstrekking en overige regels, waaronder de provisieregels 9 Meldingsplichten 10 en 11 Aanvullende regels voor aanbieden en bemiddelen 12 t/m 15 Onder meer beleggingsdiensten, kredietservicers en slotbepalingen Voor een adviseur of bemiddelaar zijn vooral de hoofdstukken 2, 4, 5, 7, 8 en 11 van belang. Wat betekent dit voor jou als adviseur? Lees niet het hele besluit, maar de paragrafen die over “financiëledienstverleners” gaan.
+
+### Zorgplicht, klantbelang en integere bedrijfsvoering
+
+De zorgplicht staat centraal. Volgens de Wft neemt een financiëledienstverlener de gerechtvaardigde belangen van de consument zorgvuldig in acht en handelt een adviseur in het belang van de consument (art. 4:24a Wft). Voor de beheerste en integere bedrijfsvoering (in de praktijk vaak AO/IC genoemd: administratieve organisatie en interne controle) staat de norm voor financiëledienstverleners in art. 4:15 Wft. Het BGfo is voor deze groep beperkt in detail. Het regelt: betrouwbaarheid van medewerkers: een verklaring omtrent het gedrag en geen faillissement (art. 28); vastleggen en afhandelen van incidenten, en de AFM onverwijld informeren (art. 29); uitbesteding: niet toegestaan als dat adequaat toezicht belemmert (art. 37). De uitgebreide organisatieregels in hoofdstuk 5 gelden vooral voor andere financiële ondernemingen, zoals beleggingsondernemingen en beheerders van icbe’s. Belangenconflicten De Wft biedt de basis voor regels over belangenconflicten (art. 4:15, derde lid). De uitgewerkte BGfo-regels gelden vooral voor beleggingsondernemingen en beheerders van icbe’s; voor adviseurs spelen de beloningsregels en de informatieplicht over beloning een rol. Wat betekent dit voor jou als adviseur? Leg vast hoe je kantoor incidenten registreert en wie de AFM informeert.
+
+### Informatie aan de klant: precontractueel en daarna
+
+De Wft verplicht tot informatie die relevant is voor een adequate beoordeling van dienst of product (art. 4:20). Die informatie is correct, duidelijk en niet misleidend (art. 4:19). Hoofdstuk 8 van het BGfo werkt dit uit. Basisinformatie over de dienstverlener (art. 57): naam en adres, aard van de dienstverlening, klachtenprocedure en geschilleninstantie, en je inschrijving in het AFM-register. Totale prijs bij complexe producten en hypothecair krediet, zonder advies- en distributiekosten (art. 59a). Informatiedocumenten , zoals het essentiële-informatiedocument voor derdepijlerpensioenproducten (art. 65) en het informatiedocument voor schadeverzekeringen (art. 65b). Advies bij hypothecair krediet op papier of duurzame drager (art. 63c); bij schadeverzekeringen een uitleg waarom de verzekering past bij de wensen en behoeften (art. 63b). Vergelijkingskaart en het dienstverleningsdocument Voor advies over en bemiddeling in producten waarvoor het provisieverbod geldt, moet je een vergelijkingskaart verstrekken (art. 86f BGfo). De Nrgfo bepaalt vorm en inhoud, met vier dienstverleningsvragen: hypotheek, risico’s afdekken, vermogen opbouwen en pensioen werkgever (art. 4:1 Nrgfo). Volgens de AFM verstrek je de kaart vroeg en is hij goed vindbaar; sinds 1 oktober 2023 is hij verplicht voor wie eronder valt (zie de AFM-pagina over de vergelijkingskaart ). Het begrip “dienstverleningsdocument” komt in de huidige tekst van het BGfo en de Nrgfo niet voor. Wat betekent dit voor jou als adviseur? Controleer met het reikwijdteschema van de AFM of je een vergelijkingskaart nodig hebt en houd hem actueel.
+
+### Advies, inventarisatie en passendheid
+
+Wie adviseert, moet volgens de Wft (art. 4:23) in het belang van de consument of cliënt informatie inwinnen over diens financiële positie, kennis, ervaring, doelstellingen en risicobereidheid , voor zover relevant voor het advies. Het advies moet, voor zover redelijkerwijs mogelijk, mede op die informatie zijn gebaseerd. Bij producten die geen financiële instrumenten zijn, licht je de overwegingen achter het advies toe voor zover nodig. In de praktijk spreek je van het klantprofiel. Verzekeringen : je stelt vooraf de wensen en behoeften van de cliënt vast en geeft alleen informatie over verzekeringen die daarbij aansluiten (art. 4:22a Wft). Passendheid : zonder advies beoordeel je of het product past bij kennis en ervaring van de klant en waarschuw je als dat niet zo is (art. 4:24 Wft). Het BGfo noemt onder meer betalingsbeschermers, complexe producten, hypothecair krediet en individuele arbeidsongeschiktheidsverzekeringen (art. 80e). Omvang : evenredig aan de aard en complexiteit van het product; je mag op de informatie van de klant vertrouwen, tenzij die kennelijk gedateerd of onjuist is (art. 80f). Geautomatiseerd advies : eisen aan verantwoordelijke personen, tests vooraf en periodieke controles (art. 32da). Wat betekent dit voor jou als adviseur? Laat je inventarisatie aansluiten op het product en leg vast wat de klant vertelt en wat je adviseert.
+
+### Beloning en provisieverbod
+
+De Wft biedt de grondslag voor regels over beloning en voor een verbod op bepaalde provisies (art. 4:25a). Het BGfo werkt dat uit in art. 86c e.v. Het provisieverbod Een financiëledienstverlener verschaft of ontvangt geen provisie voor het bemiddelen of adviseren van een betalingsbeschermer, complex product, hypothecair krediet, individuele arbeidsongeschiktheidsverzekering, overlijdensrisicoverzekering, premiepensioenvordering, uitvaartverzekering of een bij ministeriële regeling aangewezen product (art. 86c, eerste lid). Het artikel kent uitzonderingen, bijvoorbeeld voor provisie die de klant zelf rechtstreeks betaalt (tenzij kennelijk onredelijk). Volgens de uitgangspunten van de AFM betaalt de klant zijn adviseur rechtstreeks en passen constructies via een opslag op rente of premie niet (zie AFM: uitgangspunten provisieverbod ). Schadeverzekeringen Voor schadeverzekeringen (niet de producten uit het provisieverbod) is provisie onder voorwaarden toegestaan. De adviseur of bemiddelaar moet de consument kosteloos en begrijpelijk informeren over het bestaan, de aard en het bedrag van de provisie (art. 86d). De huidige versie geldt voor overeenkomsten van 1 juli 2024 of later. De adviseur informeert de cliënt uiterlijk bij het advies ook over de wijze van beloning (art. 86i). Voor bemiddeling in consumptief krediet bevat hoofdstuk 11 aparte provisieregels (art. 153 e.v.). Wat betekent dit voor jou als adviseur? Controleer per product welk regime geldt en maak je beloning concreet in offerte en vergelijkingskaart.
+
+### Productontwikkeling en productgoedkeuring (POG)
+
+POG staat voor product oversight and governance: de eisen aan het ontwikkelen, goedkeuren en distribueren van financiële producten. Aanbieders en samenstellers beschikken over procedures die waarborgen dat de belangen van de klant evenwichtig worden meegewogen. De doelgroep moet zijn afgebakend, het product wordt in verschillende scenario’s geanalyseerd en de procedures worden periodiek gecontroleerd (art. 32). Schaadt een product de doelgroep, dan past de onderneming het aan of stopt zij. Verzekeringen : de aanbieder informeert de distributeur over kenmerken, doelgroep en distributiestrategie; de distributeur heeft procedures om dit te verkrijgen (art. 32e). Betaalrekeningen, krediet en spaarrekeningen : vergelijkbare eisen (art. 32aa en 32ab). Wat betekent dit voor jou als adviseur? Vraag aanbieders om doelgroepinformatie en gebruik die bij je productselectie.
+
+### Klachtenbehandeling en aansluiting bij Kifid
+
+Volgens de Wft draagt een financiëledienstverlener zorg voor adequate klachtenbehandeling. Hij beschikt over een interne klachtenprocedure en is aangesloten bij een door de minister aangewezen geschilleninstantie (art. 4:17 Wft). Volgens Kifid ontvangt een onderneming die in het AFM-register staat in de regel automatisch een uitnodiging om aan te sluiten ( Kifid: aansluiten ). Hoofdstuk 7 van het BGfo bevat de uitwerking voor de interne procedure: een administratie met naam en adres van de klager, de klacht met ontvangstdatum, een omschrijving en de wijze van behandeling, die minimaal een jaar na afhandeling wordt bewaard (art. 41); bij gehele of gedeeltelijke afwijzing: informeren over de mogelijkheid van de geschilleninstantie, de termijnen en de mogelijkheid van de burgerlijke rechter (art. 42); ontvangstbevestiging en bericht binnen twee weken over de afhandelingstermijn; de klager kan vanaf zes weken na de ontvangstbevestiging of acht weken na indiening naar de geschilleninstantie (art. 43). Wat betekent dit voor jou als adviseur? Zorg dat iedere medewerker de procedure kent, registreer elke klacht en bewaak de termijnen.
+
+### Vakbekwaamheid, permanente educatie en de rol van CDFD en AFM
+
+De Wft verplicht een financiëledienstverlener om te zorgen voor de vakbekwaamheid van medewerkers die rechtstreeks financiële diensten verlenen (art. 4:9, tweede lid). Hoofdstuk 2 van het BGfo werkt dit uit: Voor advisering over onderwerpen als hypothecair krediet, pensioen, vermogen en schadeverzekeringen is een diploma nodig, opgebouwd uit modules zoals Basis (art. 7 en 9). Wie een diploma heeft, mag alleen adviseren als hij in elke PE-periode een PE-examen (permanente educatie) haalt. Dat staat in art. 11. Een PE-periode duurt drie jaar (vanaf 1 april 2019 telkens drie jaar). Herstel van een vervallen bevoegdheid kan via een bijzonder examen (art. 11, vierde lid). Het CDFD (College Deskundigheid Financiële Dienstverlening) adviseert en ondersteunt de minister van Financiën over vakbekwaamheid. Volgens het CDFD loopt de huidige PE-periode van 1 april 2025 tot en met 31 maart 2028 ( CDFD: adviesbevoegdheden ). De toetstermen en dit besluit Wft en BGfo bepalen dát je vakbekwaam moet zijn; de toetstermen van het CDFD leggen vast wat getoetst wordt. In de toetstermen van de module Basis (voor examens vanaf 1 april 2026) staan onder meer: vormen van toezicht, zorgplicht en de rol van de AFM, het provisieverbod voor complexe producten, informatiedocumenten (essentiële-informatiedocument, verzekeringskaart, vergelijkingskaart), klachtenregelingen en klantendossiers. Zie cdfd.nl . De PA-toets van deze site is geen PE-examen en levert geen PE op; hij helpt alleen om je kennis te oefenen (zie de toets en module Basis ). Wat betekent dit voor jou als adviseur? Bewaak per medewerker de datum van het diploma en de PE-periode, en plan het PE-examen ruim voor het einde van de periode.
+
+### Vastleggen, dossier en toezicht door de AFM
+
+Vastleggingsverplichtingen Een adviseur, bemiddelaar of aanbieder die adviseert, bewaart de informatie die hij bij de inventarisatie heeft ingewonnen en de gegevens over het aanbevolen product. Dat doet hij ten minste vijf jaar vanaf het advies, als het advies tot een overeenkomst leidt (art. 32d). Voor wie uitsluitend een gestandaardiseerde, voor de AFM verifieerbare procedure volgt, geldt een uitzondering. Klachten bewaar je minimaal een jaar na afhandeling (art. 41). Toezicht en handhaving De AFM houdt gedragstoezicht op basis van de Wft en het BGfo. Volgens de AFM gebruikt ze het meest normoverdragende instrumenten ( AFM: toezicht ). De Wft geeft de toezichthouder de bevoegdheid tot een aanwijzing (art. 1:75), een last onder dwangsom (art. 1:79) en een bestuurlijke boete (art. 1:80). De hoogte van boetes hangt af van de zwaarte van de overtreding. Wat betekent dit voor jou als adviseur? Richt je dossiers in alsof de AFM ze morgen opvraagt.
+
+### Recente wijzigingen in het BGfo
+
+De geraadpleegde geconsolideerde BGfo-tekst heeft de toestand van 29 september 2026. Relevant voor advieskantoren (peildatum 20 oktober 2026): Uitbesteding door financiëledienstverleners (Wijzigingsbesluit financiële markten 2026, Stb. 2026, 223 , in werking per 24 juli 2026): adviseurs, bemiddelaars en gevolmachtigde agenten houden een overzicht van uitbestede werkzaamheden bij en leggen de overeenkomst met de derde schriftelijk vast, inclusief rechten, plichten en beëindiging (art. 38l). Overeenkomsten op afstand ( Stb. 2026, 251 , uitgegeven op 27 augustus 2026, BGfo-tekst geldend per 28 augustus 2026): implementatie van Richtlijn (EU) 2023/2673. Het gaat onder meer om een kosteloze toelichting (art. 77a), een herinnering aan het herroepingsrecht bij te late informatie (art. 77c), menselijke tussenkomst bij online-instrumenten (art. 77d) en regels tegen misleidende online-interfaces (art. 81.0a). Eerder : sinds 1 juli 2024 gelden de huidige regels voor provisietransparantie bij schadeverzekeringen (art. 86d) en geautomatiseerd advies (art. 32da), via Stb. 2024, 10 . Meer in Nieuw . Wat betekent dit voor jou als adviseur? Controleer je uitbestedingsoverzicht en overeenkomsten, en je klantinformatie als je op afstand overeenkomsten sluit.
+
+### Praktische checklist en veelgemaakte fouten
+
+Checklist voor een advieskantoor Vergunning, registratie en aansluiting bij een erkende geschilleninstantie (zoals Kifid) zijn actueel. Per medewerker is bekend welk diploma nodig is en wanneer het PE-examen is gehaald. De vergelijkingskaart is actueel, juist en goed vindbaar op je website. Basisinformatie (art. 57) en productinformatie worden tijdig verstrekt. De inventarisatie past bij het product; het advies en de onderbouwing zijn vastgelegd en worden ten minste vijf jaar bewaard. Beloning en afspraken met aanbieders zijn getoetst aan de provisieregels. Klachtenprocedure, -register en termijnbewaking werken. Incidenten en uitbestede werkzaamheden zijn vastgelegd, met een schriftelijke overeenkomst voor uitbesteding. Veelgemaakte fouten Een vergelijkingskaart hebben, maar niet actueel of moeilijk vindbaar (de AFM noemt “Juridische informatie” als voorbeeld van moeilijk vindbaar). Advieskosten alleen in rekening brengen als er een product wordt afgesloten. Een dossier zonder onderbouwing van het advies. Uitbesteden zonder schriftelijke overeenkomst. Dit is algemene informatie, geen juridisch advies. De wettekst en de AFM zijn leidend.
+
+### Bronnen
+
+Besluit Gedragstoezicht financiële ondernemingen Wft, geconsolideerde tekst (Ministerie van Financiën, wetten.overheid.nl) Nadere regeling gedragstoezicht financiële ondernemingen Wft (Ministerie van Financiën, wetten.overheid.nl) Wet op het financieel toezicht, deel 4 Gedragstoezicht (wetten.overheid.nl) Staatsblad 2026, 223 - Wijzigingsbesluit financiële markten 2026 (officielebekendmakingen.nl) Staatsblad 2026, 251 - Implementatiebesluit op afstand gesloten overeenkomsten financiële diensten (officielebekendmakingen.nl) Staatsblad 2024, 10 - Wijzigingsbesluit financiële markten 2023 (officielebekendmakingen.nl) Richtlijn (EU) 2016/97 verzekeringsdistributie (EUR-Lex) Richtlijn 2014/17/EU hypothecair krediet (EUR-Lex) Richtlijn 2014/65/EU markten voor financiële instrumenten (EUR-Lex) Verordening (EU) nr. 1286/2014 essentiële-informatiedocumenten PRIIP's (EUR-Lex) Richtlijn (EU) 2023/2673 op afstand gesloten overeenkomsten financiële diensten (EUR-Lex) Vergelijkingskaart (Autoriteit Financiële Markten) Uitgangspunten provisieverbod (Autoriteit Financiële Markten) Toezicht op adviseurs, bemiddelaars en gevolmachtigde agenten (Autoriteit Financiële Markten) Adviesbevoegdheden en PE-examens (CDFD) Aansluiten bij Kifid (Kifid)
+
+### Verder lezen
+
+De Wft uitgelegd De Wet op het financieel toezicht: opbouw, toezicht door AFM en DNB, vergunning, vakbekwaamheid en gedragsregels. TRHK: de leennormen De wettelijke leennormen voor hypotheken: financieringslast, loan-to-value en de jaarlijkse wijzigingen. EBA-richtsnoeren leningverstrekking (GLOM) De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs. Permanent actueel: de gids De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt. PE uitgelegd Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is. Begrippenlijst De belangrijkste Wft-begrippen kort en helder uitgelegd.
+
+### Blijf op de hoogte
+
+Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO. DFO Signalen Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat. Meld je aan voor DFO Signalen Nieuwsbrief Wft Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners. Meld je aan voor de Nieuwsbrief Wft Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op. Algemene informatie, geen advies. Controleer regels en bedragen altijd in de geldende bron. Zie je een fout? Mail info@dfobv.nl .
+
+
+## EBA-richtsnoeren leningverstrekking (GLOM)
+Bron: https://pa-wft.nl/eba-glom.html
+
+### Wat zijn de EBA-richtsnoeren inzake leningverstrekking en -monitoring (GLOM)?
+
+GLOM (Guidelines on Loan Origination and Monitoring, EBA/GL/2020/06) zijn richtsnoeren van de Europese Bankautoriteit over hoe banken en andere kredietgevers leningen beoordelen, verstrekken, prijzen en volgen. Ze bevatten ook uitwerking van de kredietwaardigheidsbeoordeling van consumenten onder de MCD en CCD. Ze gelden sinds 30 juni 2021.
+
+### Zijn de EBA-richtsnoeren bindend?
+
+Richtsnoeren zijn geen wet. Bevoegde autoriteiten en financiële instellingen moeten volgens de EBA-verordening wel 'every effort' doen om eraan te voldoen. Toezichthouders melden of zij ze naleven (pas-toe-of-leg-uit). In Nederland geldt dat DNB en de AFM de richtsnoeren in hun toezicht toepassen, ieder voor zijn deel.
+
+### Gelden de GLOM rechtstreeks voor hypotheekadviseurs?
+
+Volgens de scope van de richtsnoeren zijn instellingen en kredietgevers de adressaten, niet adviseurs of bemiddelaars. Indirect heb je er wel mee te maken: verstrekkers vragen om gegevens en bewijsstukken, en de AFM wijst erop dat de huishoudtoets in Nederland bij de adviseur ligt. Maak hierover afspraken met je verstrekkers.
+
+### Sinds wanneer gelden de GLOM?
+
+De toepassingsdatum is 30 juni 2021. Onderdelen 5 en 6 gelden voor leningen die daarna zijn verstrekt, onderdeel 8 voor daarna verstrekte kredietfaciliteiten. Voor ontbrekende monitoringgegevens van oudere leningen gold een overgang tot 30 juni 2024. De AFM hanteerde voor enkele hypotheekparagrafen een overgang tot 1 januari 2022.
+
+### Welke toezichthouder past de GLOM toe in Nederland?
+
+Volgens de nalevingstabel van de EBA is de AFM bevoegd voor de onderdelen 5.1 tot en met 5.2.4 (kredietverstrekking aan consumenten), behalve par. 86. DNB is bevoegd voor de overige onderdelen. DNB meldde naleving per 18 augustus 2020; de AFM gaf aan voornemens te zijn te voldoen.
+
+### Wat zeggen de GLOM over onderpand bij de kredietwaardigheidsbeoordeling?
+
+Onderpand mag op zichzelf geen doorslaggevend criterium zijn en kan een kredietverlening niet op zichzelf rechtvaardigen. Het is de tweede uitweg bij wanbetaling, niet de primaire bron van aflossing (par. 97). Uitzondering: als de lening bedoeld is om af te lossen uit de verkoop van het onderpand of uit liquide zekerheid.
+
+### Wat is de relatie tussen GLOM en CCD II?
+
+CCD II (Richtlijn (EU) 2023/2225) vervangt de CCD per 20 november 2026 en verwijst in overweging 55 naar de EBA-richtsnoeren van 29 mei 2020. Artikel 18 verplicht de kredietbemiddelaar de verkregen informatie nauwgezet aan de kredietgever te verstrekken. In Nederland ligt de Implementatiewet bij de Eerste Kamer.
+
+### Komen de GLOM voor in de CDFD-toetstermen?
+
+In de toetstermen Hypothecair krediet en Consumptief krediet (versie 1 april 2026) staat geen aparte toetsterm over de GLOM. Verwante onderwerpen, zoals het voorkomen van overkreditering en het BKR, komen er wel in voor. Zie de pagina over de toets .
+
+EBA-richtsnoeren leningverstrekking en -monitoring (GLOM, EBA/GL/2020/06): status, scope, data, inhoud en wat het betekent voor hypotheekadviseurs. Kort antwoord: GLOM (Guidelines on Loan Origination and Monitoring, EBA/GL/2020/06) zijn richtsnoeren van de Europese Bankautoriteit over verantwoord verstrekken en volgen van leningen. Ze zijn geen wet maar worden via pas-toe-of-leg-uit door DNB en de AFM toegepast sinds 30 juni 2021, en richten zich op banken en andere kredietgevers, niet rechtstreeks op adviseurs. Voor jou zijn ze vooral relevant door de eisen aan gegevens, bewijs en kredietwaardigheidsbeoordeling. Laatst bijgewerkt 20 oktober 2026 · peildatum regelgeving 15 oktober 2026 Test je kennis PE uitgelegd
+
+### Wat is GLOM? Definitie en afkorting
+
+GLOM staat voor Guidelines on Loan Origination and Monitoring : in het Nederlands de EBA-richtsnoeren inzake de initiëring (verstrekking) en monitoring van leningen. Het officiële kenmerk is EBA/GL/2020/06. De EBA publiceerde de definitieve tekst op 29 mei 2020. De AFM gebruikt in haar eigen mededelingen ook de afkorting EBA-GLOM. De richtsnoeren beschrijven hoe kredietgevers (vooral banken) leningen horen te beoordelen, te verstrekken, te prijzen en daarna te volgen. Voor consumenten bevatten ze ook uitwerking van de kredietwaardigheidsbeoordeling uit de Hypothekenrichtlijn (MCD) en de richtlijn consumentenkrediet (CCD). Daardoor raken ze indirect ook jouw dagelijkse werk als adviseur. Wat betekent dit voor jou als adviseur? Je werkt niet rechtstreeks met GLOM, maar de geldverstrekker voor wie je aanvragen indient, moet zich eraan houden. Wie de achtergrond kent, begrijpt beter waarom een verstrekker bepaalde gegevens en bewijsstukken vraagt.
+
+### De EBA en de juridische status van richtsnoeren
+
+De Europese Bankautoriteit (EBA) is een onafhankelijke EU-autoriteit die de integriteit en stabiliteit van de bankensector bewaakt. Volgens DNB is de EBA opgericht per 1 januari 2011 en gevestigd in Parijs; DNB is lid van de Board of Supervisors. De EBA stelt onder meer technische standaarden en richtsnoeren op ( DNB, factsheet EBA ). Richtsnoeren (guidelines) zijn geen wet. De GLOM zijn uitgegeven op grond van artikel 16 van Verordening (EU) nr. 1093/2010 (de EBA-verordening). Volgens de tekst moeten bevoegde autoriteiten en financiële instellingen 'every effort' doen om eraan te voldoen. Bevoegde autoriteiten melden aan de EBA of zij de richtsnoeren naleven of van plan zijn dat te doen, en zo niet, waarom niet. Dat heet pas-toe-of-leg-uit ( comply or explain ) ( EBA, Final Report EBA/GL/2020/06 ). DNB legt het zo uit: toezichthouders en financiële ondernemingen moeten zich tot het uiterste inspannen om richtsnoeren na te leven, en bij afwijking stellen zij de EBA in kennis met redenen ( DNB, toepassing richtsnoeren van de ESA-autoriteiten ). In de praktijk werken richtsnoeren door via het toezicht: een toezichthouder die ze toepast, verwacht dat verstrekkers zich eraan houden. Wat betekent dit voor jou als adviseur? Zeg niet dat GLOM 'wet' is, en ook niet dat ze 'vrijblijvend' zijn. Ze zijn de uitleg van de EBA over goede praktijk, die de Nederlandse toezichthouders gebruiken bij hun toezicht op geldverstrekkers.
+
+### Aanleiding en doel: het NPL-actieplan
+
+De aanleiding is het actieplan van de Raad van de EU van juli 2017 om het hoge aantal non-performing loans (NPL's: leningen waarop niet of nauwelijks wordt terugbetaald) aan te pakken. De Raad vroeg de EBA 'gedetailleerde richtsnoeren' op te stellen over leningverstrekking, monitoring en interne governance van banken, onder meer over transparantie en de beoordeling van betaalbaarheid voor de lener. Eerdere EBA-initiatieven richtten zich op leningen die al noodlijdend waren. GLOM wil voorkomen dat nieuw verstrekte, goed lopende leningen later alsnog noodlijdend worden. Het doel is dat banken degelijke en prudente standaarden hanteren, dat nieuwe leningen van hoge kwaliteit zijn en dat hun praktijk past bij consumentenbescherming en eerlijke behandeling van consumenten ( EBA, Final Report ). Wat betekent dit voor jou als adviseur? Het verbod op overkreditering is niet alleen een consumentenregel; het is ook een risicoregel voor de verstrekker. Die dubbele motivatie verklaart waarom verstrekkers streng zijn op inkomen, lasten en bewijsstukken.
+
+### Voor wie gelden de richtsnoeren? Scope en adviseurs
+
+Volgens de richtsnoeren (par. 6) gelden ze voor instellingen in de zin van de Kapitaalvereistenverordening (CRR), dus in de kern kredietinstellingen en beleggingsondernemingen. Voor leningen die onder de MCD of de CCD vallen, geldt onderdeel 5 (kredietverstrekking) voor kredietgevers in de zin van die richtlijnen. De richtsnoeren zijn gericht aan bevoegde autoriteiten en financiële instellingen. Onderdelen 4 en 8 (governance en monitoring) gelden voor alle kredietrisico van instellingen, behalve schuldpapier, derivaten en effectenfinancieringstransacties. Onderdelen 5 en 6 (kredietverstrekking en prijsstelling) gelden voor leningen aan consumenten en ondernemingen, niet voor leningen aan onder meer banken, verzekeraars, centrale banken en overheden, en niet voor noodlijdende of geherstructureerde leningen. Bevoegde autoriteiten mogen de onderdelen 6 en 7 ook toepassen op kredietgevers die geen kredietinstelling zijn (par. 10). Adviseurs en bemiddelaars worden in de scope niet als rechtstreekse adressaat genoemd. Dat blijkt uit de tekst van par. 6 en 13, die kredietgevers en instellingen noemen. Toch komen ze er op meerdere manieren mee in aanraking: De richtsnoeren verwijzen zelf naar de credit intermediary : documentatie moet zo zijn ontworpen dat onjuiste weergave van informatie door de lener, de bemiddelaar of medewerkers van de instelling wordt voorkomen (par. 193). De AFM schrijft dat in Nederland de verplichting om op huishoudniveau uitgaven en gevoeligheden te toetsen bij de vergunninghoudende hypotheekadviseur ligt en niet bij de kredietgever. Voert een adviseur dit uit, dan moet de kredietgever volgens de AFM beleid en schriftelijke afspraken hebben en blijft hij verantwoordelijk en monitort hij de uitvoering periodiek ( AFM, verwachtingen kredietgevers ). Wat betekent dit voor jou als adviseur? Je valt niet zelf onder GLOM, maar kunt er contractueel of via de werkwijze van de verstrekker mee te maken krijgen. Controleer bij je geldverstrekkers welke afspraken zij hierover met je maken.
+
+### Wanneer gelden ze? Toepassingsdata en overgangsregeling
+
+De EBA vermeldt op haar pagina dat de richtsnoeren in werking zijn, met een toepassingsdatum van 30 juni 2021 ( EBA, pagina GLOM ). De uitwerking staat in onderdeel 3 van de richtsnoeren: De richtsnoeren gelden vanaf 30 juni 2021. Onderdelen 5 en 6 gelden voor leningen die na 30 juni 2021 zijn verstrekt. Onderdeel 5 geldt ook voor bestaande leningen als de voorwaarden na 30 juni 2022 zijn gewijzigd, na een specifiek kredietbesluit en voor zover er een nieuwe overeenkomst of addendum nodig is. Onderdeel 7 (waardering van zekerheden) geldt voor elke waardering, monitoring en herwaardering na 30 juni 2021. Onderdeel 8 (monitoring) geldt voor kredietfaciliteiten die na 30 juni 2021 zijn verstrekt. Overgang: ontbreekt informatie die onderdeel 8 vraagt voor bestaande leningen van vóór de toepassingsdatum, dan moet de instelling die verzamelen tot 30 juni 2024, via de reguliere kredietreview. Wat betekent dit voor jou als adviseur? Alle nieuwe hypotheek- en kredietaanvragen vallen sinds 30 juni 2021 onder de tekst. Het gaat dus niet meer om 'komende' regels.
+
+### De hoofdonderdelen van de richtsnoeren
+
+De richtsnoeren zijn ingedeeld in acht onderdelen met drie bijlagen ( EBA, Final Report ): Onderdeel Inhoud 1. Compliance en rapportage Status, pas-toe-of-leg-uit, meldplicht voor bevoegde autoriteiten 2. Onderwerp, scope, definities Wie en wat, proportionaliteit, definities 3. Implementatie Toepassingsdatum, overgang, intrekking oude richtsnoeren 4. Interne governance Governance en risicocultuur, risicobereidheid en limieten, kredietbeleid en procedures (o.a. witwassen, technologie en modellen, ESG, data), kredietbesluitvorming, risicobeheer en interne controle, middelen en vaardigheden, beloning 5. Leningverstrekking Informatie en documentatie, kredietwaardigheidsbeoordeling (consumenten en bedrijven), kredietbesluit en overeenkomst 6. Prijsstelling Risicogebaseerde prijsstelling 7. Waardering van onroerend en roerend goed Waardering bij verstrekking, monitoring en herwaardering, criteria voor taxateurs en modellen 8. Monitoring Monitoringraamwerk, kredietreview, covenants, vroegsignalering en watchlists Wat betekent dit voor jou als adviseur? Voor jouw praktijk zijn vooral onderdeel 5.1 en 5.2.1 tot en met 5.2.4 relevant. De overige onderdelen gaan over de inrichting van de bank zelf.
+
+### Kredietwaardigheidsbeoordeling van consumenten (onderdeel 5)
+
+Dit is het onderdeel met de meeste raakvlakken met jouw werk. De kern in vogelvlucht: Informatie en bewijs (5.1) De kredietgever heeft voldoende, juiste en actuele gegevens voor de beoordeling (par. 84). Bij consumenten gaat het minimaal om: doel van de lening, werk, bron van aflossingscapaciteit, samenstelling van het huishouden en personen ten laste, financiële verplichtingen en lasten, regelmatige uitgaven, zekerheid en eventuele andere risicobeperkers, ondersteund door passend bewijs (par. 85). Bij twijfel over juistheid doet de kredietgever navraag en controleert redelijkerwijs (par. 89). Er komt een single customer view : een samenhangend overzicht van alle bezittingen, schulden en verplichtingen van de klant bij die kredietgever (par. 90 en definities). De onderbouwing van het kredietbesluit wordt vastgelegd en bewaard, in elk geval zolang de lening loopt (par. 94). Beoordeling (5.2.1 tot en met 5.2.4) Beoordeeld wordt of de lener de verplichtingen kan en naar verwachting zal nakomen, met oog voor aard, looptijd en rente (par. 96). Onderpand mag nooit op zichzelf de reden zijn om een lening te verstrekken; het is een tweede uitweg (par. 97). Er moet rekening worden gehouden met andere verplichtingen en betaalgedrag, en 'undue hardship' (onevenredige druk) en overkreditering moeten worden vermeden (par. 98). Bij gezamenlijke aanvragers wordt uitgegaan van de gezamenlijke aflossingscapaciteit (par. 99). Bij woningfinanciering: extra navraag bij zelfstandigen en wisselend inkomen; aandacht voor aflossingscapaciteit als de looptijd na de pensionering doorloopt; geen uitgaan van een sterke inkomensstijging zonder bewijs; rekening houden met vaste en niet-discretionaire uitgaven en levensonderhoud; gevoeligheidsanalyses voor inkomensdaling en rentestijging bij variabele rente (par. 103 tot en met 107). Wat betekent dit voor jou als adviseur? Goed bewijs, een volledig beeld van het huishouden en uitgaven die kloppen met de werkelijkheid zijn geen formaliteit. Ze volgen rechtstreeks uit wat een verstrekker volgens deze richtsnoeren moet kunnen aantonen.
+
+### Prijsstelling, zekerheden, monitoring, vroegsignalering en ESG
+
+Naast kredietwaardigheid bevatten de richtsnoeren onderdelen die vooral de bank betreffen: Prijsstelling (6): een prijsmodel dat past bij risicobereidheid en strategie, met aandacht voor kosten van kapitaal, financiering, bedrijfsvoering en kredietrisico. Voor consumenten en kleine ondernemingen is de prijsstelling meer portefeuille- en productgebaseerd. De EBA schrijft geen specifieke prijsstrategie voor (par. 199 en 200). Waardering van zekerheden (7): waardering bij verstrekking door een interne of externe taxateur met volledige bezichtiging; voor woningen in rijpe markten mag onder voorwaarden een desktop-taxatie met een statistisch model als hulpmiddel. Taxateurs moeten deskundig en onafhankelijk zijn van het kredietbesluit, en belangenconflicten moeten worden beperkt (par. 209, 210, 231 en 232). Waar relevant houdt de waardering rekening met ESG-factoren, zoals de energie-efficiëntie van gebouwen (par. 208). Vroegsignalering (8.5): banken moeten kwantitatieve en kwalitatieve early warning indicators hebben met triggers en escalatieprocedures, kunnen leningen op een watchlist plaatsen en bij contact met een lener in betalingsproblemen rekening houden met diens omstandigheden (par. 269 tot en met 273). Genoemde signalen zijn onder meer een forse stijging van schulden of lastenratio's en een verslechterende verhouding tussen lening en waarde van het onderpand (par. 274). ESG (4.3.5 en 4.3.6): instellingen nemen ESG-risico's, met name klimaatrisico's, op in risicobereidheid, beleid en procedures. Banken die duurzame leningen verstrekken, hebben specifiek beleid, onder meer over welke projecten in aanmerking komen en controle op het gebruik van de opbrengst (par. 56 tot en met 59). Wat betekent dit voor jou als adviseur? Vroegsignalering gebeurt bij de verstrekker, niet bij jou. Wel is het goed te weten dat de richtsnoeren bij de waardering van onderpand ook ESG-factoren noemen, zoals de energie-efficiëntie van gebouwen.
+
+### Hoe passen DNB en AFM de richtsnoeren toe?
+
+Volgens de nalevingstabel van de EBA (bijgewerkt in juli 2025) meldde DNB dat zij de richtsnoeren naleeft, met ingang van 18 augustus 2020. De AFM gaf aan voornemens te zijn de richtsnoeren na te leven. Reden: de kredietwaardigheidsbeoordeling van de garantsteller moet nog worden ingepast in de Wft. De tabel verdeelt het toezicht: De AFM is gedragstoezichthouder voor de onderdelen 5.1 tot en met 5.2.4, behalve par. 86, omdat zij geen mandaat heeft voor het toezicht op leningen aan het mkb. DNB is bevoegd voor de overige onderdelen. De tabel verwijst voor de kredietwaardigheidsbeoordeling naar artikel 4:34 Wft. ( EBA, nalevingstabel EBA/GL/2020/06 ). DNB noemt de richtsnoeren in haar overzicht van toegepaste richtsnoeren, met als grondslag de artikelen 74(1) en 79 van de kapitaalvereistenrichtlijn en 30-06-2021 als datum ( DNB, overzicht ). De AFM stelt dat zij de richtsnoeren vanaf 30 juni 2021 toepast. Volgens de AFM geven de richtsnoeren verdere invulling aan de informatie-inwinningsverplichting en het verbod op overkreditering ( AFM, bericht augustus 2020 ). Voor enkele paragrafen waar de Nederlandse hypotheekpraktijk niet geheel op aansloot, gold een overgangsperiode tot 1 januari 2022: par. 85 sub d (huishoudsamenstelling), 85 sub f (regelmatige uitgaven), 104 (inkomen na pensionering) en 107 (gevoeligheidsanalyses) ( AFM, verwachtingen kredietgevers ). Per 13 mei 2024 concludeert de AFM dat het Nederlandse stelsel van regels rond hypothecaire kredieten voldoende invulling geeft aan deze paragrafen ( AFM, bericht juni 2021, met update mei 2024 ). Wat betekent dit voor jou als adviseur? De AFM past de consumentgerichte delen toe in haar toezicht op kredietgevers. Haar toelichting laat zien dat de adviseur in Nederland een eigen rol heeft bij de huishoudtoets.
+
+### Relatie met Wft, BGfo, TRHK, MCD en CCD
+
+De richtsnoeren vervangen de wet niet, maar geven uitleg bij Europese regels die in Nederland zijn omgezet: MCD (Richtlijn 2014/17/EU): de richtsnoeren specificeren de kredietwaardigheidsbeoordeling en verificatie van consumenteninformatie uit de artikelen 18 en 20 MCD. CCD (Richtlijn 2008/48/EG): de richtsnoeren werken artikel 8 CCD uit voor ongedekt consumentenkrediet. Wft: de AFM en de EBA-tabel verwijzen voor de kredietwaardigheidsbeoordeling naar artikel 4:34 Wft. Zie de pagina over de Wft . BGfo en TRHK: de AFM wijst op de leennormen in de Tijdelijke regeling hypothecair krediet, die uitgaan van één standaard huishoudtype, en op de Nederlandse praktijk waarin huishoudniveau-uitgaven bij de adviseur liggen. Zie TRHK en BGfo . Eerdere EBA-richtsnoeren: GLOM namen de EBA-richtsnoeren over kredietwaardigheidsbeoordeling (EBA/GL/2015/11) volledig over en trokken ze in. Kredietgevers die onder CRD, MCD en CCD vallen, hoeven daardoor één set richtsnoeren te volgen (EBA, Final Report, achtergrond par. 10 en 11). Wat betekent dit voor jou als adviseur? Je normenkader blijft de Wft met onderliggende regelgeving. GLOM verklaart vooral de achtergrond van wat verstrekkers van je vragen.
+
+### Wat betekent dit praktisch voor hypotheekadviseurs en kredietbemiddelaars?
+
+Een voorzichtige samenvatting, op basis van de bronnen: Zorgplicht en inventarisatie: de richtsnoeren vragen om inkomen, lasten, huishoudsamenstelling en regelmatige uitgaven, met bewijs. De AFM schrijft dat het huishoudniveau in Nederland bij de adviseur ligt. Een zorgvuldig klantprofiel past daarbij. Kwaliteit van aangeleverde gegevens: verstrekkers moeten onjuiste weergave door lener, bemiddelaar of eigen medewerkers kunnen herkennen en voorkomen (par. 193). Lever dus juiste, volledige en actuele gegevens aan, en documenteer wat je hebt gevraagd en gecontroleerd. Gevoeligheidsanalyses: inkomensdaling en rentestijging horen onderdeel van de beoordeling te zijn (par. 107). Betalingsproblemen: verstrekkers moeten signalen opvolgen en rekening houden met de omstandigheden van de klant (par. 273). Klanten die zorgen hebben over het kunnen betalen, doen er goed aan dat tijdig met de verstrekker te bespreken. Afspraken met verstrekkers: voert jij onderdelen uit voor de kredietgever, kijk dan naar schriftelijke afspraken en hoe de kredietgever dat monitort (AFM). Wat betekent dit voor jou als adviseur? Vooral dit: behandel de intake en de dossiervorming als de basis waarop de verstrekker zijn eigen verplichtingen kan nakomen.
+
+### Opvolging: CCD II en eventuele wijzigingen, en CDFD-toetstermen
+
+Geen bevestigde herziening. Op de EBA-pagina staat EBA/GL/2020/06 als 'in force'. Ik vond bij EBA, DNB en AFM geen bevestigd voorstel of definitieve tekst om de richtsnoeren te wijzigen of te vervangen. Controleer de EBA-pagina voor de actuele stand ( EBA, pagina GLOM ). CCD II. Richtlijn (EU) 2023/2225 (CCD II) vervangt de CCD per 20 november 2026 en moet vanaf die datum worden toegepast. Artikel 18 bevat een grondige kredietwaardigheidsbeoordeling vóór het sluiten van de overeenkomst. Lid 2 bepaalt dat de kredietbemiddelaar de van de consument verkregen informatie nauwgezet aan de kredietgever verstrekt. Overweging 55 verwijst naar de EBA-richtsnoeren van 29 mei 2020 voor de categorieën gegevens die gebruikt kunnen worden ( EUR-Lex, Richtlijn (EU) 2023/2225 ). In Nederland is de Implementatiewet herziene richtlijn consumentenkrediet (Kamerstuk 36924) op 6 oktober 2026 aangenomen door de Tweede Kamer en ligt bij de Eerste Kamer; de inwerkingtreding gebeurt bij koninklijk besluit ( Wetgevingskalender, Implementatiewet ). Een AFM-uitvoeringstoets van 13 mei 2025 beschrijft de beoogde bepalingen, waaronder een regel over het vroegtijdig signaleren van betalingsproblemen ( AFM, uitvoeringstoets ). De uiteindelijke tekst en datum van inwerkingtreding kun je het beste in het Staatsblad nalezen. CDFD-toetstermen. In de toetstermen Hypothecair krediet en Consumptief krediet (versie 1 april 2026) komt GLOM niet voor: geen aparte toetsterm. Verwante onderwerpen staan er wel in, zoals het voorkomen van overkreditering, het BKR en het omgaan met betalingsproblemen. Zie de module Hypothecair krediet en de module Consumptief krediet . PA-WFT is geen PE-examen en levert geen PE-punten op. Wat betekent dit voor jou als adviseur? Volg de invoering van CCD II. De rol van de bemiddelaar bij het aanleveren van informatie krijgt daarin een eigen wettelijke plek.
+
+### Bronnen
+
+EBA, Guidelines on loan origination and monitoring (pagina met status en documenten) EBA, Final Report EBA/GL/2020/06 (29 mei 2020) EBA, Compliance table EBA/GL/2020/06 (bijgewerkt juli 2025) AFM, Toepassing EBA richtsnoeren over initiëring en monitoring van kredieten (29 juni 2021, update 13 mei 2024) AFM, EBA deelt richtsnoeren over initiëring en monitoring van leningen (21 augustus 2020) AFM, Verwachtingen richting kredietgevers over toepassing richtsnoeren AFM, Uitvoeringstoets Implementatiewet herziene richtlijn consumentenkrediet (13 mei 2025) DNB, De toepassing door DNB van de richtsnoeren en aanbevelingen van de ESA's (juli 2026) DNB, Factsheet European Banking Authority (EBA) EUR-Lex, Richtlijn (EU) 2023/2225 inzake kredietovereenkomsten voor consumenten Overheid.nl Wetgevingskalender, Implementatiewet herziene richtlijn consumentenkrediet
+
+### Verder lezen
+
+De Wft uitgelegd De Wet op het financieel toezicht: opbouw, toezicht door AFM en DNB, vergunning, vakbekwaamheid en gedragsregels. BGfo: de gedragsregels De gedragsregels voor adviseurs en aanbieders: zorgplicht, informatie, beloning en bedrijfsvoering. TRHK: de leennormen De wettelijke leennormen voor hypotheken: financieringslast, loan-to-value en de jaarlijkse wijzigingen. Permanent actueel: de gids De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt. PE uitgelegd Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is. Begrippenlijst De belangrijkste Wft-begrippen kort en helder uitgelegd.
+
+### Blijf op de hoogte
+
+Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO. DFO Signalen Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat. Meld je aan voor DFO Signalen Nieuwsbrief Wft Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners. Meld je aan voor de Nieuwsbrief Wft Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op. Algemene informatie, geen advies. Controleer regels en bedragen altijd in de geldende bron. Zie je een fout? Mail info@dfobv.nl .
+
+
+## Permanent actueel: de complete gids voor adviseurs
+Bron: https://pa-wft.nl/permanent-actueel.html
+
+### Wat is permanent actueel?
+
+Permanent actueel zijn betekent dat je de actuele ontwikkelingen in je vakgebied kent en kunt toepassen in je werk. Volgens de AFM geldt dit voor alle medewerkers met inhoudelijk klantcontact. Het is een open norm: de onderneming bepaalt zelf hoe ze het invult en de vergunninghouder is er verantwoordelijk voor.
+
+### Is permanent actueel hetzelfde als een PE-examen?
+
+Nee. Het PE-examen is de diplomaplicht voor wie adviseert: per beroepskwalificatie haal je binnen de PE-periode één PE-examen. Permanent actueel zijn is breder en geldt ook voor medewerkers zonder diplomaplicht. Een training of een oefentoets vervangt het PE-examen niet.
+
+### Hoe vaak moet ik mijn kennis bijhouden?
+
+Er is geen wettelijk aantal uren of moment vastgelegd: het is een open norm. Veel ondernemingen kiezen een vast ritme, bijvoorbeeld elk kwartaal een toets of een teamoverleg, aangevuld met een jaarlijkse evaluatie. Leg je keuze vast in je bedrijfsprocessen (AO/IC).
+
+### Wat moet ik vastleggen?
+
+De AFM noemt dat het helpt om per medewerker vast te leggen welke kennis die heeft opgedaan en of die in de praktijk wordt toegepast. Denk aan functie, beroepskwalificaties en PE-examens, gevolgde trainingen met datum en onderwerp, en een jaarlijkse evaluatie. Met het vakbekwaamheidsdossier van PA-WFT.nl maak je dat dossier zelf.
+
+### Levert het certificaat van de PA-toets PE-punten of een PE-examen op?
+
+Nee. De PA-toets is een gratis oefentoets. Het certificaat is een eigen verklaring en geen bewijs van vakbekwaamheid; je kunt het wel in het dossier bewaren als aanvullend bewijs dat je je kennis bijhoudt.
+
+### Wat gebeurt er als ik mijn PE-examen niet op tijd haal?
+
+Dan vervalt je adviesbevoegdheid voor die beroepskwalificatie. Je herstelt die met een bijzonder examen of door de initiële module-examens opnieuw te doen. De lopende PE-periode loopt van 1 april 2025 tot en met 31 maart 2028.
+
+Wat betekent permanent actueel voor adviseurs en klantmedewerkers? Wat verwacht de AFM, een stappenplan, kwartaalritme, checklist en vakbekwaamheidsdossier. Kort antwoord: permanent actueel betekent dat iedereen met inhoudelijk klantcontact de actuele ontwikkelingen in het vakgebied kent en kan toepassen. Het is een open norm: de onderneming bepaalt hoe, en de vergunninghouder is verantwoordelijk. Wie adviseert, houdt daarnaast de beroepskwalificatie geldig met PE-examens. Laatst bijgewerkt 20 oktober 2026 · volgens de AFM en het CDFD, geraadpleegd oktober 2026 Maak een vakbekwaamheidsdossier Doe de kennistoets
+
+### Wat betekent permanent actueel?
+
+Volgens de vakbekwaamheidseisen van de AFM moeten medewerkers met inhoudelijk klantcontact permanent actueel vakbekwaam zijn: ze kennen de actuele ontwikkelingen in hun vakgebied en kunnen die toepassen. Dat gaat verder dan een diploma. Het is een open norm : de wet schrijft geen aantal uren of vaste opleidingen voor. De onderneming bepaalt zelf hoe ze dit invult, en de vergunninghouder is ervoor verantwoordelijk.
+
+### Permanent actueel en PE-examens: twee lagen
+
+Permanent actueel PE-examen (diplomaplicht) Voor wie Alle medewerkers met inhoudelijk klantcontact, ook binnendienst en ondersteuners Wie adviseert en een beroepskwalificatie heeft Wat Actuele ontwikkelingen kennen en toepassen Eén PE-examen per beroepskwalificatie binnen de PE-periode Hoe Open norm; de onderneming kiest de invulling Examen bij een door het CDFD erkend examen-instituut Bewijs Eigen vastlegging, bijvoorbeeld een dossier Het behaalde PE-examen (zichtbaar bij DUO en Mijn Wft) Lees meer in PE-punten, PE-examens en Wft Permanent Actueel .
+
+### Wat verwacht de AFM?
+
+De onderneming beschrijft in haar bedrijfsprocessen (AO/IC) hoe vakbekwaamheid is geregeld. Volgens de AFM helpt het om per medewerker vast te leggen welke kennis die heeft opgedaan en of die de kennis in de praktijk toepast. Bij een onderzoek kan de AFM vragen naar de AO/IC-beschrijving, het overzicht van diploma’s en PE, en het bewijs van permanent actueel blijven. Een vakbekwaamheidsdossier per medewerker is daarvoor een praktische vorm.
+
+### Stappenplan: zo richt je het in
+
+Breng de functies in kaart. Zet per functie op een rij wie inhoudelijk klantcontact heeft: adviseurs, maar ook binnendienst en ondersteuners die met klanten over producten spreken. Leg kwalificaties en einddata vast. Noteer per adviseur de beroepskwalificaties en de einddatum van de PE-periode (de lopende periode eindigt op 31 maart 2028). Bewaak de einddatum, want de examen-instituten zijn richting het einde druk. Bepaal de onderwerpen per functie. Gebruik de Wft-modules en de toetstermen van het CDFD als houvast voor welke kennis bij welke functie hoort. Medewerkers zonder diplomaplicht kiezen onderwerpen die passen bij hun werk. Kies een vast ritme. Bijvoorbeeld elk kwartaal een toets of casusbespreking, en jaarlijks een evaluatie. Een vast moment maakt het vol te houden en laat zien dat het structureel gebeurt. Leg het vast. Bewaar per medewerker wat er is gedaan, met datum en onderwerp, in een dossier. Gebruik het hulpmiddel op deze site of je eigen systeem. Evalueer en pas toe. Bespreek jaarlijks of de kennis in de praktijk wordt toegepast en pas het plan aan. Beschrijf de werkwijze in je bedrijfsprocessen (AO/IC).
+
+### Voorbeeld van een kwartaalritme
+
+Dit is een voorbeeld en geen wettelijke eis; kies wat bij je kantoor past. Elk kwartaal: doe de kennistoets over je modules, bespreek de ontwikkelingen uit Wat is er nieuw en leg het vast. Elk jaar rond 1 januari: controleer de jaarlijkse wijzigingen, zoals leennormen ( TRHK ), NHG-normen en zorgpremies. Elk jaar rond 1 april: het CDFD actualiseert de PE-examens en toetstermen per 1 april; neem de wijzigingen door. Jaarlijks: evalueer per medewerker en werk het dossier en de AO/IC-beschrijving bij. Ruim voor 31 maart 2028: plan de PE-examens van de lopende PE-periode.
+
+### Wat leg je vast?
+
+Naam, functie en beroepskwalificaties PE-examens met datum en einde van de PE-periode Kennisactiviteiten: datum, soort, onderwerp en uren Certificaten van oefentoetsen, als aanvullend bewijs De jaarlijkse evaluatie: is de kennis toegepast? Open het hulpmiddel voor het vakbekwaamheidsdossier : je vult het in, print het of bewaart het als bestand. Er wordt niets opgeslagen op onze site.
+
+### Checklist voor je kantoor
+
+Alle medewerkers met inhoudelijk klantcontact zijn in kaart gebracht Per adviseur staan beroepskwalificaties en einddatum PE-periode vast De werkwijze voor permanent actueel staat beschreven in de bedrijfsprocessen (AO/IC) Er is een vast ritme (bijvoorbeeld elk kwartaal) met een eigenaar Per medewerker is een vakbekwaamheidsdossier met datum en onderwerp van de kennisactiviteiten Er is een jaarlijkse evaluatie waarin staat of de kennis in de praktijk wordt toegepast Nieuwe ontwikkelingen (bijvoorbeeld uit "Wat is er nieuw") worden besproken in het team Medewerkers zonder diplomaplicht hebben passende onderwerpen en bewijs De PE-examens zijn ruim voor de einddatum gepland
+
+### Veelgemaakte fouten
+
+Een training zien als vervanging van het PE-examen. Voor de adviesbevoegdheid telt alleen het behaalde PE-examen. Binnendienst en ondersteuners vergeten, terwijl zij ook met klanten over producten spreken. De einddatum van de PE-periode niet bewaken en te laat een examen plannen. Alleen opleidingen noteren, en niet vastleggen of de kennis in de praktijk wordt toegepast. Het certificaat van een oefentoets presenteren als bewijs van vakbekwaamheid.
+
+### Bronnen
+
+AFM — vakbekwaamheidseisen AFM — diplomaplicht CDFD CDFD — wanneer moet ik PE-examen doen?
+
+### Verder lezen
+
+De Wft uitgelegd De Wet op het financieel toezicht: opbouw, toezicht door AFM en DNB, vergunning, vakbekwaamheid en gedragsregels. BGfo: de gedragsregels De gedragsregels voor adviseurs en aanbieders: zorgplicht, informatie, beloning en bedrijfsvoering. TRHK: de leennormen De wettelijke leennormen voor hypotheken: financieringslast, loan-to-value en de jaarlijkse wijzigingen. EBA-richtsnoeren leningverstrekking (GLOM) De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs. PE uitgelegd Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is. Begrippenlijst De belangrijkste Wft-begrippen kort en helder uitgelegd.
+
+### Blijf op de hoogte
+
+Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO. DFO Signalen Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat. Meld je aan voor DFO Signalen Nieuwsbrief Wft Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners. Meld je aan voor de Nieuwsbrief Wft Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op. Algemene informatie, geen advies. De eisen die precies voor jouw onderneming gelden, vind je bij de AFM en het CDFD.
+
+
+## Vakbekwaamheidsdossier maken: gratis hulpmiddel
+Bron: https://pa-wft.nl/vakbekwaamheidsdossier.html
+
+Gratis hulpmiddel om per medewerker kwalificaties, PE-examens en kennisactiviteiten vast te leggen. Print of bewaar het dossier; er wordt niets opgeslagen. Leg per medewerker vast welke kennis is opgedaan en of die wordt toegepast. Vul het formulier in, print het of bewaar het als bestand voor het personeelsdossier. Er wordt niets opgeslagen of verzonden : alles blijft in je browser. Dit is een eigen vastlegging en vervangt geen diploma of PE-examen. Lees eerst Permanent actueel: de gids .
+
+### Medewerker
+
+Naam Functie Onderneming Verslagperiode (bijvoorbeeld 2026)
+
+### PE-examens
+
+De lopende PE-periode loopt van 1 april 2025 tot en met 31 maart 2028. Beroepskwalificatie PE-examen behaald op PE-periode tot en met
+
+### Kennisactiviteiten
+
+Datum Soort Onderwerp Uren
+
+### Toepassing in de praktijk
+
+Hoe is de opgedane kennis toegepast in het werk?
+
+### Evaluatie
+
+Datum evaluatie Evaluatie door Conclusie en afspraken Dit hulpmiddel werkt met JavaScript.
+
+
+## Kennis: Wft, BGfo, TRHK en permanent actueel
+Bron: https://pa-wft.nl/kennis.html
+
+Kennisbank voor adviseurs: de Wft, het BGfo, de TRHK en de EBA-richtsnoeren uitgelegd, plus de gids permanent actueel en hulpmiddelen. Alles wat je nodig hebt om permanent actueel te blijven op het gebied van de Wft: uitleg van de wet en de regelingen eronder, de gids voor permanent actueel, hulpmiddelen en de actuele ontwikkelingen. Gratis voor alle adviseurs.
+
+### De regelgeving uitgelegd
+
+De Wft uitgelegd De Wet op het financieel toezicht: opbouw, toezicht door AFM en DNB, vergunning, vakbekwaamheid en gedragsregels. BGfo: de gedragsregels De gedragsregels voor adviseurs en aanbieders: zorgplicht, informatie, beloning en bedrijfsvoering. TRHK: de leennormen De wettelijke leennormen voor hypotheken: financieringslast, loan-to-value en de jaarlijkse wijzigingen. EBA-richtsnoeren leningverstrekking (GLOM) De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs. Wet- en regelgeving Doorzoekbare bibliotheek van wet- en regelgeving met links naar de officiële tekst. Begrippenlijst De belangrijkste Wft-begrippen kort en helder uitgelegd.
+
+### Permanent actueel en PE
+
+Permanent actueel: de gids De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt. Vakbekwaamheidsdossier (hulpmiddel) Hulpmiddel: leg per medewerker kwalificaties, PE-examens en kennisactiviteiten vast en print of bewaar het dossier. PE uitgelegd Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is. Wat is er nieuw Per Wft-module de wijzigingen van dit kwartaal en de belangrijke datums.
+
+### Oefenen per module
+
+Wft Basis Wft Consumptief Krediet Wft Schadeverzekering Particulier Wft Schadeverzekering Zakelijk Wft Vermogen Wft Hypothecair Krediet Wft Inkomen Wft Pensioen Wft Zorgverzekering
+
+### Blijf op de hoogte
+
+Zo blijf je op de hoogte van het actuele nieuws. Meld je aan voor de nieuwsbrieven van DFO. DFO Signalen Wekelijks signalen uit de markt, modelteksten en praktijkanalyses voor het advieskantoor, met een archief dat jaren teruggaat. Meld je aan voor DFO Signalen Nieuwsbrief Wft Gemiddeld één keer per week de actuele ontwikkelingen in wet- en regelgeving en toezicht, kort en praktisch uitgelegd voor financieel dienstverleners. Meld je aan voor de Nieuwsbrief Wft Aanmelden gaat via de website van DFO. Wft Permanent Actueel slaat zelf geen gegevens op.
+
+
 ## Begrippenlijst Wft: PE, toetstermen en Wft-modules uitgelegd
 Bron: https://pa-wft.nl/begrippen.html
 
@@ -955,6 +1501,10 @@ Autoriteit Financiële Markten: de gedragstoezichthouder. De AFM houdt toezicht 
 ### AMLR
 
 De EU-anti-witwasverordening. Vanaf 10 juli 2027 staan de kernregels voor cliëntenonderzoek in deze rechtstreeks werkende verordening. Wft Basis · Wft Vermogen
+
+### AO/IC
+
+Administratieve organisatie en interne controle: de beschrijving van de bedrijfsprocessen van een onderneming, waaronder hoe vakbekwaamheid en permanent actueel blijven zijn geregeld. Wft Basis
 
 ### AOV
 
@@ -975,6 +1525,10 @@ Vergoedt het verlies aan brutowinst en doorlopende vaste kosten als het bedrijf 
 ### Beroepskwalificatie
 
 De combinatie van Wft-modules die je nodig hebt om in een bepaald domein te adviseren, bijvoorbeeld Adviseur Hypothecair krediet (Basis, Vermogen en Hypothecair krediet). Wft Basis
+
+### BGfo
+
+Besluit Gedragstoezicht financiële ondernemingen Wft: de algemene maatregel van bestuur met de gedragsregels voor onder meer zorgplicht, informatieverstrekking, beloning en bedrijfsvoering. Lees meer op <a href="bgfo.html">BGfo uitgelegd</a>. Wft Basis · Wft Hypothecair Krediet
 
 ### BKR
 
@@ -1011,6 +1565,10 @@ Het verplichte bedrag per kalenderjaar dat een verzekerde van 18 jaar of ouder z
 ### Eindterm en toetsterm
 
 Eindtermen beschrijven wat een kandidaat moet kunnen; toetstermen werken dat uit in toetsbare kennis en vaardigheden. Het CDFD stelt ze vast; de huidige gelden voor examens vanaf 1 april 2026. Wft Basis
+
+### GLOM
+
+EBA-richtsnoeren inzake leningverstrekking en -monitoring (EBA/GL/2020/06, guidelines on loan origination and monitoring). Ze richten zich op kredietinstellingen en kredietgevers; lees de uitleg op <a href="eba-glom.html">EBA GLOM uitgelegd</a>. Wft Hypothecair Krediet · Wft Consumptief Krediet
 
 ### IDD
 
@@ -1099,6 +1657,10 @@ Als iemand formeel als zzp’er werkt, maar de arbeidsrelatie in werkelijkheid e
 ### SVI
 
 Schadeverzekering inzittenden: vergoedt de werkelijke schade van inzittenden bij een verkeersongeval, zoals letselschade en schade aan spullen, ongeacht wie schuld heeft. Wft Schadeverzekering Particulier
+
+### TRHK
+
+Tijdelijke regeling hypothecair krediet: de ministeriële regeling met de wettelijke leennormen voor hypotheken. De regeling wordt elk jaar per 1 januari herzien; lees de uitleg op <a href="trhk.html">TRHK uitgelegd</a>. Wft Hypothecair Krediet
 
 ### UPO
 
