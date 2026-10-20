@@ -279,3 +279,38 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .taalknop{position:absolute;top:18px;right:var(--pad,24px);display:flex;align-items:center;justify-content:center;min-width:48px;height:48px;border:2px solid var(--ink,#201e1d);font-weight:800;text-decoration:none;color:var(--ink,#201e1d);letter-spacing:.03em}
 .taalknop:hover,.taalknop:focus{background:var(--ink,#201e1d);color:#fff}
 @media (max-width:700px){.zoekknop{right:calc(var(--pad) + 58px)!important}}
+
+/* Kennispagina's, gids en dossier */
+.kaarten{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:12px 0 22px}
+.kaart{border:2px solid var(--blue);border-top-width:6px;padding:16px 18px;background:#fff}
+.kaart h3{margin:0 0 6px;font-size:18px}
+.kaart p{margin:0;font-size:15px}
+.inhoud{background:#f2f6fb;border-left:6px solid var(--blue);padding:14px 20px;margin:18px 0 26px}
+.inhoud-kop{margin:0 0 6px;font-weight:800}
+.inhoud ol{margin:0;padding-left:22px;columns:2 260px}
+.inhoud li{margin:3px 0}
+.stappen li{margin:8px 0}
+.checklist{display:grid;gap:4px;margin:10px 0}
+.checklist .vink,.kwallijst .vink{display:flex;gap:10px;align-items:flex-start;min-height:44px;font-weight:400;padding:6px 0}
+.checklist input,.kwallijst input{width:22px;height:22px;flex:0 0 auto;margin-top:2px}
+.kwallijst{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 18px}
+.dossier .veld{margin:0 0 14px}
+.dossier label{display:block;font-weight:700;margin:0 0 4px}
+.dossier input[type=text],.dossier input[type=date],.dossier input[type=number],.dossier select,.dossier textarea{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--ink,#201e1d);border-radius:0;background:#fff;min-height:44px}
+.dossier textarea{min-height:110px}
+.dossier :focus-visible{outline:3px solid var(--blue);outline-offset:1px}
+.tabelwrap{overflow-x:auto}
+.invul{border-collapse:collapse;width:100%}
+.invul th{text-align:left;font-size:14px;padding:6px 8px 6px 0}
+.invul td{padding:4px 8px 4px 0;vertical-align:top}
+@media (max-width:700px){
+  .invul thead{display:none}
+  .invul tr{display:block;border:1px solid #bbd3ea;padding:8px;margin:0 0 10px}
+  .invul td{display:block;padding:4px 0}
+  .invul td[data-label]:before{content:attr(data-label);display:block;font-size:13px;font-weight:700;margin-bottom:2px}
+}
+.tabelwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0 18px}
+.tabelwrap table{min-width:520px;border-collapse:collapse}
+.tabelwrap th,.tabelwrap td{border:1px solid #bbd3ea;padding:6px 10px;text-align:left;vertical-align:top}
+.tabelwrap th{background:#edf3fa}
+.invul.tabelwrap table,.tabelwrap .invul{min-width:0}

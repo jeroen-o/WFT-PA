@@ -42,7 +42,7 @@ These modules belong to the same professional qualifications. Practise them toge
 
 ### Terms for this module
 
-AFM · DNB · CDFD · Wft · Professional qualification (beroepskwalificatie) · PE exam · PE period · PE points · Permanently up to date (permanent actueel) · Final objective and exam term (eindterm en toetsterm) · Duty of care (zorgplicht) · Client profile (klantprofiel) · Commission ban (provisieverbod) · Kifid · Wwft · AMLR · DORA · IDD
+AFM · DNB · CDFD · Wft · Professional qualification (beroepskwalificatie) · PE exam · PE period · PE points · Permanently up to date (permanent actueel) · Final objective and exam term (eindterm en toetsterm) · Duty of care (zorgplicht) · Client profile (klantprofiel) · Commission ban (provisieverbod) · Kifid · Wwft · AMLR · DORA · IDD · BGfo · AO/IC
 
 ### Changes
 
@@ -96,7 +96,7 @@ These modules belong to the same professional qualifications. Practise them toge
 
 ### Terms for this module
 
-CCD II · BKR
+CCD II · BKR · GLOM
 
 ### Changes
 
@@ -312,7 +312,7 @@ These modules belong to the same professional qualifications. Practise them toge
 
 ### Terms for this module
 
-Commission ban (provisieverbod) · BKR · NHG · Lending standards (leennormen) · Repayment requirement (aflossingseis)
+Commission ban (provisieverbod) · BKR · NHG · Lending standards (leennormen) · Repayment requirement (aflossingseis) · TRHK · BGfo · GLOM
 
 ### Changes
 
@@ -550,6 +550,10 @@ Netherlands Authority for the Financial Markets: the conduct supervisor. The AFM
 
 The EU Anti-Money Laundering Regulation. From 10 July 2027 the core rules on customer due diligence sit in this directly applicable regulation. Wft Basic · Wft Wealth
 
+### AO/IC
+
+Administrative organisation and internal control (administratieve organisatie en interne controle): the description of a firm’s business processes, including how professional competence and staying permanently up to date are arranged. Wft Basic
+
 ### AOV
 
 Disability insurance (arbeidsongeschiktheidsverzekering): a private insurance with which a self-employed person insures their income in the event of incapacity for work. Wft Income
@@ -565,6 +569,10 @@ Business liability insurance (aansprakelijkheidsverzekering voor bedrijven): cov
 ### Benefits-in-kind policy (naturapolis)
 
 A health insurance under which the insurer makes agreements with care providers. With a non-contracted care provider the reimbursement can be lower. Wft Health Insurance
+
+### BGfo
+
+Financial Supervision (Conduct of Business) Decree: the general administrative order with the conduct rules on, among other things, duty of care, provision of information, remuneration and business operations. Wft Basic · Wft Mortgage Credit
 
 ### BKR
 
@@ -621,6 +629,10 @@ The legal duty of the policyholder to report, before the insurance is concluded,
 ### Final objective and exam term (eindterm en toetsterm)
 
 Final objectives describe what a candidate must be able to do; exam terms elaborate these into testable knowledge and skills. The CDFD sets them; the current ones apply to exams from 1 April 2026. Wft Basic
+
+### GLOM
+
+EBA Guidelines on loan origination and monitoring (EBA/GL/2020/06). They are aimed at credit institutions and lenders. Wft Mortgage Credit · Wft Consumer Credit
 
 ### IDD
 
@@ -697,6 +709,10 @@ Passenger damage insurance (schadeverzekering inzittenden): compensates the actu
 ### Transfer of accrued rights (invaren)
 
 Converting accrued pension rights to the new pension system of the Wtp. Wft Pensions
+
+### TRHK
+
+Temporary Regulation on Mortgage Credit (Tijdelijke regeling hypothecair krediet): the ministerial regulation with the statutory lending standards for mortgages. It is revised every year on 1 January. Wft Mortgage Credit
 
 ### Underinsurance (onderverzekering)
 

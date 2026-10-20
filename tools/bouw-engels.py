@@ -125,6 +125,7 @@ def pagina_e(pad, titel, omschrijving, kop, kicker, inhoud, actief='', extra='',
     if os.path.exists(R + 'og/en/' + pad.replace('.html', '.png')): og_beeld = 'og/en/' + pad.replace('.html', '.png')
     if pad != 'search.html': ld = ld_aanvullen_e(ld, pad, titel, omschrijving, datum, kruimel or re.sub(r'<[^>]+>', '', kop), og_beeld)
     if ld: extra += '\n<script type="application/ld+json">' + json.dumps(ld, ensure_ascii=False) + '</script>'
+    inhoud = wrap_tabellen(inhoud)
     if not inhoud.lstrip().startswith('<div class="paneel'): inhoud = '<div class="paneel page">\n' + inhoud + '\n</div>'
     s = (head_e(titel, omschrijving, pad, extra, og_beeld, og_type) + '\n' + header_e(actief, pad) + '\n' + masthead_e(kicker, kop, intro, mast_extra, datum)
          + '\n<main id="inhoud">\n  <div class="wrap">\n' + inhoud + '\n' + MELDING_E + '\n  </div>\n</main>\n' + FOOTER_E + scripts + '\n</body>\n</html>\n')

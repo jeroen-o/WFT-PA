@@ -148,6 +148,10 @@ EN_BEGRIPPEN = {
  'Eigen risico (Zvw)': ('Mandatory deductible (eigen risico, Zvw)', 'The amount per calendar year that an insured person aged 18 or over pays themselves for care from the basic package, with exceptions such as the GP. The amount is set every year.'),
  'Naturapolis': ('Benefits-in-kind policy (naturapolis)', 'A health insurance under which the insurer makes agreements with care providers. With a non-contracted care provider the reimbursement can be lower.'),
  'Restitutiepolis': ('Reimbursement policy (restitutiepolis)', 'A health insurance under which the insured chooses the care provider themselves and the costs are reimbursed up to a maximum market rate.'),
+ 'TRHK': ('TRHK', 'Temporary Regulation on Mortgage Credit (Tijdelijke regeling hypothecair krediet): the ministerial regulation with the statutory lending standards for mortgages. It is revised every year on 1 January.'),
+ 'BGfo': ('BGfo', 'Financial Supervision (Conduct of Business) Decree: the general administrative order with the conduct rules on, among other things, duty of care, provision of information, remuneration and business operations.'),
+ 'GLOM': ('GLOM', 'EBA Guidelines on loan origination and monitoring (EBA/GL/2020/06). They are aimed at credit institutions and lenders.'),
+ 'AO/IC': ('AO/IC', 'Administrative organisation and internal control (administratieve organisatie en interne controle): the description of a firm’s business processes, including how professional competence and staying permanently up to date are arranged.'),
  'Acceptatieplicht': ('Acceptance obligation (acceptatieplicht)', 'The obligation of a health insurer to accept everyone for the basic insurance, without a premium difference based on health.'),
 }
 

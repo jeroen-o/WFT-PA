@@ -38,6 +38,15 @@
 - 1 januari 2028: Uiterste datum overgang nieuw pensioenstelsel. Pensioenregelingen moeten zijn overgegaan naar het stelsel van de Wet toekomst pensioenen.
 - 31 maart 2028: Einde PE-periode 2025–2028. Uiterste datum om je PE-examen per beroepskwalificatie te halen.
 
+## Kennis
+
+- [De Wft uitgelegd](https://pa-wft.nl/wft.html): De Wet op het financieel toezicht: opbouw, toezicht door AFM en DNB, vergunning, vakbekwaamheid en gedragsregels.
+- [TRHK: de leennormen](https://pa-wft.nl/trhk.html): De wettelijke leennormen voor hypotheken: financieringslast, loan-to-value en de jaarlijkse wijzigingen.
+- [BGfo: de gedragsregels](https://pa-wft.nl/bgfo.html): De gedragsregels voor adviseurs en aanbieders: zorgplicht, informatie, beloning en bedrijfsvoering.
+- [EBA-richtsnoeren leningverstrekking (GLOM)](https://pa-wft.nl/eba-glom.html): De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs.
+- [Permanent actueel: de gids](https://pa-wft.nl/permanent-actueel.html): De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt.
+- [Vakbekwaamheidsdossier (hulpmiddel)](https://pa-wft.nl/vakbekwaamheidsdossier.html): Hulpmiddel: leg per medewerker kwalificaties, PE-examens en kennisactiviteiten vast en print of bewaar het dossier.
+
 ## English version
 
 - [English home](https://pa-wft.nl/en/): free Wft practice test for advisers, English convenience translation
