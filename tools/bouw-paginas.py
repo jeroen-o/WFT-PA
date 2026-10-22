@@ -43,10 +43,10 @@ MELDING = ('<div class="melding" role="note"><strong>Let op.</strong> De PA-toet
            'Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
 EXT = ' target="_blank" rel="noopener"'
-PARTNERS = [('Blinqx Verzekering & Hypotheek', 'blinqx.png', 471, 160), ('Turien & Co Assuradeuren', 'turien.png', 409, 160), ('Lloyds', 'lloyds.png', 558, 160)]
+PARTNERS = [('Blinqx Verzekering & Hypotheek', 'blinqx.png', 471, 160, 'https://blinqx.ai/'), ('Turien & Co Assuradeuren', 'turien.png', 409, 160, 'https://www.turien.nl/'), ('Lloyds', 'lloyds.png', 558, 160, 'https://www.lloydsbank.com/')]
 def partnerband(koptekst, pre=''):
     return ('<section class="partners" aria-labelledby="partners-kop"><div class="wrap"><h2 id="partners-kop">' + koptekst + '</h2><ul class="partner-logos">'
-            + ''.join(f'<li><img src="{pre}assets/partners/{f}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{n.replace("&", "&amp;")}"></li>' for n, f, w, h in PARTNERS) + '</ul></div></section>\n')
+            + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener" aria-label="{n.replace("&", "&amp;")} (opent in een nieuw tabblad)"><img src="{pre}assets/partners/{f}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{n.replace("&", "&amp;")}"></a></li>' for n, f, w, h, u in PARTNERS) + '</ul></div></section>\n')
 
 FOOTER = (partnerband('Onze partners') + '<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
