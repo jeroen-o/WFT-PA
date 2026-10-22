@@ -21,7 +21,7 @@ MARK = ('<svg viewBox="0 0 120 120" aria-hidden="true"><g transform="rotate(-87 
         '<circle cx="60" cy="60" r="48" fill="none" stroke="#0b3d73" stroke-width="14" stroke-dasharray="28.5 273.09"/></g>'
         '<text x="60" y="72" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="34" fill="#1462ad">PA</text></svg>')
 
-NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('kennis.html', 'Kennis'), ('wetgeving.html', 'Wet- en regelgeving'),
+NAV = [('index.html', 'Home'), ('toets.html', 'Kennistoets'), ('index.html#modules', 'Modules'), ('pe-punten-wft.html', 'PE uitgelegd'), ('kennis.html', 'Kennis'), ('nieuws.html', 'Nieuws'), ('wetgeving.html', 'Wet- en regelgeving'),
        ('compliance.html', 'DFO Compliance'), ('opleidingen.html', 'DFO Opleidingen'), ('over.html', 'DFO BV'), ('zoeken.html', 'Zoeken')]
 
 def header(actief='', pad=''):
@@ -47,7 +47,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
-    '<li><a href="kennis.html">Kennis</a></li><li><a href="wft.html">Wft uitgelegd</a></li><li><a href="bgfo.html">BGfo</a></li><li><a href="trhk.html">TRHK</a></li><li><a href="permanent-actueel.html">Permanent actueel</a></li><li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="begrippen.html">Begrippenlijst</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
+    '<li><a href="kennis.html">Kennis</a></li><li><a href="wft.html">Wft uitgelegd</a></li><li><a href="bgfo.html">BGfo</a></li><li><a href="trhk.html">TRHK</a></li><li><a href="permanent-actueel.html">Permanent actueel</a></li><li><a href="nieuws.html">Nieuws per maand</a></li><li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="begrippen.html">Begrippenlijst</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
     '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
     '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfosignalen.nl/"' + EXT + '>DFO Signalen</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
@@ -97,8 +97,8 @@ def link_cdfd(html_tekst):
     for i, d in enumerate(delen):
         if d.startswith('<'):
             t = d[1:].split(None, 1)[0].lower().rstrip('>') if len(d) > 2 else ''
-            if t in ('a', 'summary'): in_a += 1
-            elif t in ('/a', '/summary'): in_a -= 1
+            if t in ('a', 'summary', 'h1', 'h2', 'h3'): in_a += 1
+            elif t in ('/a', '/summary', '/h1', '/h2', '/h3'): in_a -= 1
             elif t in ('script', 'style', 'title'): in_script += 1
             elif t in ('/script', '/style', '/title'): in_script -= 1
         elif not in_a and not in_script and 'CDFD' in d:
@@ -838,6 +838,7 @@ pagina('opleidingen.html', 'DFO Opleidingen voor financieel adviseurs',
 
 # ---------- Kennispagina's (Wft, TRHK, BGfo, EBA GLOM, gids, dossier, overzicht) ----------
 exec(open(R + 'tools/bouw-kennis.py', encoding='utf-8').read())
+exec(open(R + 'tools/bouw-nieuws.py', encoding='utf-8').read())
 
 # ---------- llms.txt ----------
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
@@ -848,6 +849,7 @@ llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
 llms += [f"- [Wft {m['naam']}]({SITE}module-{m['id']}.html): {m['tekst']} Laatst bijgewerkt {nl(m['bijgewerkt'])}." for m in MODS]
 llms += ['', '## Belangrijke datums', ''] + [f'- {nl(d[0])}: {d[1]}. {d[2]}' for d in DATUMS]
 llms += ['', '## Kennis', ''] + [f'- [{KENNIS_TITEL[k]}]({SITE}{k}): {KENNIS_BESCHRIJVING[k]}' for k in ['kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] if k in KENNIS_TITEL]
+llms += ['', '## Nieuws per maand', ''] + [f'- [Wft-nieuws {maandnaam(m["maand"])}]({SITE}{maandpad(m["maand"])}): {m["samenvatting"]}' for m in NIEUWS] + [f'- [Atom-feed]({SITE}nieuws.xml)']
 llms += ['', '## English version', '', f'- [English home]({SITE}en/): free Wft practice test for advisers, English convenience translation', f'- [Quiz]({SITE}en/quiz.html)', f'- [PE explained]({SITE}en/pe-explained.html)', f'- [What’s new]({SITE}en/whats-new.html)', f'- [Glossary]({SITE}en/glossary.html)', f'- [Full text in English]({SITE}llms-full-en.txt)']
 llms += ['', '## Informatie', '', f'- [Begrippenlijst Wft]({SITE}begrippen.html): korte uitleg van de belangrijkste begrippen uit de Wft en permanente educatie', f'- [Zoeken]({SITE}zoeken.html?q=): doorzoek de site', f'- [Volledige tekst voor taalmodellen]({SITE}llms-full.txt)', f'- [Wat is er nieuw]({SITE}nieuw.html): per Wft-module de actuele wijzigingen van dit kwartaal', f'- [Wet- en regelgeving]({SITE}wetgeving.html): overzicht van Wft, Wwft, krediet, fiscaal, pensioen en sociale zekerheid met links naar de officiële tekst', f'- [DFO Compliance]({SITE}compliance.html)', f'- [DFO Opleidingen]({SITE}opleidingen.html)', f'- [Veelgestelde vragen]({SITE}vragen.html)', f'- [Over en verantwoording]({SITE}over.html)', f'- [Gebruiksvoorwaarden]({SITE}gebruiksvoorwaarden.html)', f'- [Klachten]({SITE}klachten.html)', f'- [Privacy]({SITE}privacy.html)', '',
          '## Contact', '', '- DFO BV, De Wel 14–16, 3871 MV Hoevelaken, 033 258 04 60, info@dfobv.nl, https://www.dfobv.nl/contact/ — KvK 32068727, btw NL806480828B01']
@@ -903,7 +905,7 @@ open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n
 exec(open(R + 'tools/bouw-engels.py', encoding='utf-8').read())
 
 # ---------- sitemap en robots ----------
-paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
+paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + [maandpad(m['maand']) for m in NIEUWS] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 def sm_url(loc, lastmod, alt):
     x = f'  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod>'
     for taal, u in alt: x += f'<xhtml:link rel="alternate" hreflang="{taal}" href="{u}"/>'

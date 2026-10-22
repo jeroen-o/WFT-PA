@@ -16,13 +16,14 @@ KENNIS_BESCHRIJVING = {
     'permanent-actueel.html': 'De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt.',
     'vakbekwaamheidsdossier.html': 'Hulpmiddel: leg per medewerker kwalificaties, PE-examens en kennisactiviteiten vast en print of bewaar het dossier.',
     'pe-punten-wft.html': 'Hoe PE onder de Wft werkt: PE-examens, de PE-periode en wat de PA-toets wel en niet is.',
+    'nieuws.html': 'Elke maand het actuele nieuws over Wft, BGfo, TRHK, PE en examens, met officiële bron.',
     'nieuw.html': 'Per Wft-module de wijzigingen van dit kwartaal en de belangrijke datums.',
     'begrippen.html': 'De belangrijkste Wft-begrippen kort en helder uitgelegd.',
     'wetgeving.html': 'Doorzoekbare bibliotheek van wet- en regelgeving met links naar de officiële tekst.',
 }
 KENNIS_TITEL = {'wft.html': 'De Wft uitgelegd', 'trhk.html': 'TRHK: de leennormen', 'bgfo.html': 'BGfo: de gedragsregels', 'eba-glom.html': 'EBA-richtsnoeren leningverstrekking (GLOM)',
                 'permanent-actueel.html': 'Permanent actueel: de gids', 'vakbekwaamheidsdossier.html': 'Vakbekwaamheidsdossier (hulpmiddel)', 'pe-punten-wft.html': 'PE uitgelegd',
-                'nieuw.html': 'Wat is er nieuw', 'begrippen.html': 'Begrippenlijst', 'wetgeving.html': 'Wet- en regelgeving'}
+                'nieuws.html': 'Wft-nieuws per maand', 'nieuw.html': 'Wat is er nieuw', 'begrippen.html': 'Begrippenlijst', 'wetgeving.html': 'Wet- en regelgeving'}
 
 def kennis_kaarten(paden, h='h3'):
     return '<div class="kaarten">' + ''.join(f'<article class="kaart"><{h}><a href="{p}">{html.escape(KENNIS_TITEL[p])}</a></{h}><p>{html.escape(KENNIS_BESCHRIJVING[p])}</p></article>' for p in paden) + '</div>\n'
@@ -152,7 +153,7 @@ KENNIS_PAGINAS.append('vakbekwaamheidsdossier.html')
 # ---------- Kennisoverzicht ----------
 inh = ('    <p class="lead">Alles wat je nodig hebt om permanent actueel te blijven op het gebied van de Wft: uitleg van de wet en de regelingen eronder, de gids voor permanent actueel, hulpmiddelen en de actuele ontwikkelingen. Gratis voor alle adviseurs.</p>\n'
        '    <h2>De regelgeving uitgelegd</h2>\n    ' + kennis_kaarten(['wft.html', 'bgfo.html', 'trhk.html', 'eba-glom.html', 'wetgeving.html', 'begrippen.html'])
-       + '    <h2>Permanent actueel en PE</h2>\n    ' + kennis_kaarten(['permanent-actueel.html', 'vakbekwaamheidsdossier.html', 'pe-punten-wft.html', 'nieuw.html'])
+       + '    <h2>Permanent actueel en PE</h2>\n    ' + kennis_kaarten(['permanent-actueel.html', 'vakbekwaamheidsdossier.html', 'pe-punten-wft.html', 'nieuws.html', 'nieuw.html'])
        + '    <h2>Oefenen per module</h2>\n    <ul class="kolommen">' + ''.join(f'<li><a href="module-{m["id"]}.html">Wft {html.escape(m["naam"])}</a></li>' for m in MODS) + '</ul>\n'
        + '  ' + NIEUWSBRIEVEN)
 BIJGEWERKT['kennis.html'] = PE_KENNIS_DATUM
