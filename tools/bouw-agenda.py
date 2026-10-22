@@ -41,13 +41,6 @@ for _f, _a in (('index.html', '<section class="nieuwsbrieven"'), ('opleidingen.h
     _i = _s.find(_a, _s.find('<main'))
     if _i > 0: open(R + _f, 'w', encoding='utf-8').write(_s[:_i] + _blok + _s[_i:])
 
-# partners
-PARTNERS = [('Blinqx Verzekering & Hypotheek', 'assets/partners/blinqx.png', 471, 160), ('Turien & Co Assuradeuren', 'assets/partners/turien.png', 409, 160), ('Lloyds', 'assets/partners/lloyds.png', 558, 160)]
-_pb = ('<section class="partners" aria-labelledby="partners-kop"><h2 id="partners-kop">Partners</h2><ul class="partner-logos">'
-       + ''.join(f'<li><img src="{p}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{html.escape(n)}"></li>' for n, p, w, h in PARTNERS) + '</ul></section>\n')
-_s = open(R + 'index.html', encoding='utf-8').read()
-if 'class="partners"' not in _s:
-    _i = _s.find('<section class="nieuwsbrieven"'); open(R + 'index.html', 'w', encoding='utf-8').write(_s[:_i] + _pb + _s[_i:])
 KENNIS_PAGINAS.append('dfo-agenda.html')
 KENNIS_TITEL['dfo-agenda.html'] = 'Agenda DFO'
 KENNIS_BESCHRIJVING['dfo-agenda.html'] = 'Trainingen, workshops, webinars en opleidingen van DFO voor adviseurs.'
