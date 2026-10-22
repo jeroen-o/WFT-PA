@@ -314,3 +314,16 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .tabelwrap th,.tabelwrap td{border:1px solid #bbd3ea;padding:6px 10px;text-align:left;vertical-align:top}
 .tabelwrap th{background:#edf3fa}
 .invul.tabelwrap table,.tabelwrap .invul{min-width:0}
+
+/* Nieuws per maand */
+.nb-item{border-top:1px solid var(--lijn,#d5dde8);padding:18px 0}
+.nb-item h2,.nb-item h3{margin:4px 0 8px}
+.nb-meta{margin:0;font-size:14px;color:#46566b}
+.nb-label{display:inline-block;background:#e6f0fa;color:#0b3d73;font-weight:700;border-radius:4px;padding:1px 8px;margin-right:6px}
+.nb-praktijk{background:#f3f7fb;border-left:4px solid #1462ad;padding:8px 12px;border-radius:4px}
+.nb-bron,.nb-mods{font-size:14px;margin:6px 0 0}
+.nb-blader{display:flex;justify-content:space-between;gap:12px;margin:24px 0;flex-wrap:wrap}
+.nb-home{margin:0 0 24px}
+.nb-home ul{list-style:none;padding:0;margin:0 0 8px}
+.nb-home li{padding:6px 0;border-top:1px solid #d5dde8}
+.nb-home time{color:#46566b;font-size:14px;margin-right:8px}

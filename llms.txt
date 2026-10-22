@@ -46,6 +46,17 @@
 - [EBA-richtsnoeren leningverstrekking (GLOM)](https://pa-wft.nl/eba-glom.html): De Europese richtsnoeren voor kredietverlening en -monitoring en wat ze betekenen voor hypotheek- en kredietadviseurs.
 - [Permanent actueel: de gids](https://pa-wft.nl/permanent-actueel.html): De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt.
 - [Vakbekwaamheidsdossier (hulpmiddel)](https://pa-wft.nl/vakbekwaamheidsdossier.html): Hulpmiddel: leg per medewerker kwalificaties, PE-examens en kennisactiviteiten vast en print of bewaar het dossier.
+- [Wft-nieuws per maand](https://pa-wft.nl/nieuws.html): Elke maand het actuele nieuws over Wft, BGfo, TRHK, PE en examens, met officiële bron.
+
+## Nieuws per maand
+
+- [Wft-nieuws oktober 2026](https://pa-wft.nl/nieuws-2026-10.html): De Tweede Kamer nam de Implementatiewet CCD II aan en het CDFD publiceerde de examenstatistieken over april tot en met september 2026.
+- [Wft-nieuws september 2026](https://pa-wft.nl/nieuws-2026-09.html): De AFM stelde de toetsrente voor het vierde kwartaal vast en de Tweede Kamer hield het wetgevingsoverleg over CCD II.
+- [Wft-nieuws augustus 2026](https://pa-wft.nl/nieuws-2026-08.html): Nieuwe regels in het BGfo voor op afstand gesloten overeenkomsten over financiële diensten.
+- [Wft-nieuws juli 2026](https://pa-wft.nl/nieuws-2026-07.html): Uitbestedingsregels voor financiëledienstverleners in het BGfo in werking en nieuwe examenstatistieken van het CDFD.
+- [Wft-nieuws juni 2026](https://pa-wft.nl/nieuws-2026-06.html): Het CDFD vroeg om input voor de PE-examens vanaf 1 april 2027.
+- [Wft-nieuws april 2026](https://pa-wft.nl/nieuws-2026-04.html): Nieuwe eind- en toetstermen en vernieuwde PE-examens per 1 april; het CCD II-wetsvoorstel ging naar de Tweede Kamer.
+- [Atom-feed](https://pa-wft.nl/nieuws.xml)
 
 ## English version
 
