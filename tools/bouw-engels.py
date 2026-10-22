@@ -51,7 +51,7 @@ MELDING_E = ('<div class="melding" role="note"><strong>Please note.</strong> The
              'DFO BV is not responsible for the accuracy and completeness of all questions and answers; rules change. This English version is a convenience translation: legislation, exams and official sources are in Dutch. Want to be sure? '
              'Contact <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> on <a href="tel:+31332580460">+31 33 258 04 60</a> or <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
-FOOTER_E = (partnerband('Our partners', '/') + '<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
+FOOTER_E = (partnerband('Our partners', '/').replace('(opent in een nieuw tabblad)', '(opens in a new tab)') + '<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Free practice test for advisers and client-facing employees. Knowledge up to date, every quarter again.</p>'
     '<p><a class="btn btn-white" href="quiz.html">Start the quiz</a></p></div>\n'
     '      <nav aria-label="Quiz and knowledge"><p class="foot-kop">Quiz and knowledge</p><ul><li><a href="quiz.html">Quiz</a></li><li><a href="index.html#modules">Modules</a></li>'
