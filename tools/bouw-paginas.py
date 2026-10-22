@@ -43,7 +43,12 @@ MELDING = ('<div class="melding" role="note"><strong>Let op.</strong> De PA-toet
            'Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
 EXT = ' target="_blank" rel="noopener"'
-FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
+PARTNERS = [('Blinqx Verzekering & Hypotheek', 'blinqx.png', 471, 160), ('Turien & Co Assuradeuren', 'turien.png', 409, 160), ('Lloyds', 'lloyds.png', 558, 160)]
+def partnerband(koptekst, pre=''):
+    return ('<section class="partners" aria-labelledby="partners-kop"><div class="wrap"><h2 id="partners-kop">' + koptekst + '</h2><ul class="partner-logos">'
+            + ''.join(f'<li><img src="{pre}assets/partners/{f}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{n.replace("&", "&amp;")}"></li>' for n, f, w, h in PARTNERS) + '</ul></div></section>\n')
+
+FOOTER = (partnerband('Onze partners') + '<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
@@ -905,11 +910,6 @@ open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n
 
 # ---------- Engelse versie (/en/) ----------
 exec(open(R + 'tools/bouw-engels.py', encoding='utf-8').read())
-# partnerlogo's op de Engelse homepage (na het bouwen van /en/)
-_s = open(R + 'en/index.html', encoding='utf-8').read()
-if 'class="partners"' not in _s:
-    _pe = _pb.replace('>Partners<', '>Partners<').replace('src="assets/', 'src="/assets/')
-    _i = _s.find('<section class="nieuwsbrieven"'); open(R + 'en/index.html', 'w', encoding='utf-8').write(_s[:_i] + _pe + _s[_i:])
 
 # ---------- sitemap en robots ----------
 paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + [maandpad(m['maand']) for m in NIEUWS] + [modpad(m['id']) for m in MODS if modulenieuws(m['id'])] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
