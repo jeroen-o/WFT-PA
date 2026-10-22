@@ -330,3 +330,18 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .nb-lijst{list-style:none;padding:0;margin:0 0 8px}
 .nb-lijst li{padding:6px 0;border-top:1px solid #d5dde8}
 .nb-lijst time{color:#46566b;font-size:14px;margin-right:8px}
+
+/* DFO-agenda en partners */
+.ag-lijst{list-style:none;padding:0;margin:8px 0 16px}
+.ag-item{display:flex;gap:14px;align-items:center;padding:10px 0;border-top:1px solid #d5dde8}
+.ag-item[hidden]{display:none}
+.ag-datum{flex:0 0 56px;text-align:center;background:#e6f0fa;color:#0b3d73;border-radius:6px;padding:6px 0;line-height:1.1}
+.ag-dag{display:block;font-size:22px;font-weight:800}
+.ag-mnd{display:block;font-size:13px;text-transform:uppercase;letter-spacing:.04em}
+.ag-info a{font-weight:700}
+.ag-meta{display:block;font-size:14px;color:#46566b}
+.ag-home{margin:0 0 24px}
+.partners{margin:32px 0 8px;text-align:center}
+.partner-logos{list-style:none;padding:0;margin:12px 0;display:flex;flex-wrap:wrap;gap:20px 40px;justify-content:center;align-items:center}
+.partner-logos img{display:block;height:48px;width:auto;max-width:100%}
+.ag-info{min-width:0;overflow-wrap:anywhere}

@@ -48,7 +48,7 @@ FOOTER = ('<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kol
     '<p><a class="btn btn-white" href="toets.html">Start de kennistoets</a></p></div>\n'
     '      <nav aria-label="Toets en kennis"><p class="foot-kop">Toets en kennis</p><ul><li><a href="toets.html">Kennistoets</a></li><li><a href="index.html#modules">Modules</a></li>'
     '<li><a href="kennis.html">Kennis</a></li><li><a href="wft.html">Wft uitgelegd</a></li><li><a href="bgfo.html">BGfo</a></li><li><a href="trhk.html">TRHK</a></li><li><a href="permanent-actueel.html">Permanent actueel</a></li><li><a href="nieuws.html">Nieuws per maand</a></li><li><a href="nieuw.html">Wat is er nieuw</a></li><li><a href="begrippen.html">Begrippenlijst</a></li><li><a href="index.html#tip">Tip je collega’s</a></li><li><a href="index.html#check">Welke modules heb ik nodig?</a></li><li><a href="pe-punten-wft.html">PE uitgelegd</a></li><li><a href="wetgeving.html">Wet- en regelgeving</a></li><li><a href="vragen.html">Veelgestelde vragen</a></li></ul></nav>\n'
-    '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li>'
+    '      <nav aria-label="DFO"><p class="foot-kop">DFO</p><ul><li><a href="compliance.html">DFO Compliance</a></li><li><a href="opleidingen.html">DFO Opleidingen</a></li><li><a href="dfo-agenda.html">Agenda DFO</a></li>'
     '<li><a href="https://www.dfobv.nl/ons-team/"' + EXT + '>Ons team</a></li><li><a href="https://www.dfosignalen.nl/"' + EXT + '>DFO Signalen</a></li><li><a href="https://www.dfobv.nl/product/nieuwsbrief-wft/"' + EXT + '>Nieuwsbrief Wft</a></li><li><a href="https://kennisbank.dfobv.nl/"' + EXT + '>DFO Kennisbank</a></li></ul></nav>\n'
     '      <div><p class="foot-kop">Contact</p><address>DFO BV<br>De Wel 14–16<br>3871 MV Hoevelaken<br><a href="tel:+31332580460">033 258 04 60</a><br><a href="mailto:info@dfobv.nl">info@dfobv.nl</a><br>'
     '<a href="https://www.dfobv.nl/contact/"' + EXT + '>Contactpagina</a></address><p class="foot-klein">KvK 32068727 · btw NL806480828B01</p></div>\n'
@@ -840,6 +840,7 @@ pagina('opleidingen.html', 'DFO Opleidingen voor financieel adviseurs',
 # ---------- Kennispagina's (Wft, TRHK, BGfo, EBA GLOM, gids, dossier, overzicht) ----------
 exec(open(R + 'tools/bouw-kennis.py', encoding='utf-8').read())
 exec(open(R + 'tools/bouw-nieuws.py', encoding='utf-8').read())
+exec(open(R + 'tools/bouw-agenda.py', encoding='utf-8').read())
 
 # ---------- llms.txt ----------
 llms = ['# Wft Permanent Actueel (PA-WFT.nl)', '',
@@ -904,6 +905,11 @@ open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n
 
 # ---------- Engelse versie (/en/) ----------
 exec(open(R + 'tools/bouw-engels.py', encoding='utf-8').read())
+# partnerlogo's op de Engelse homepage (na het bouwen van /en/)
+_s = open(R + 'en/index.html', encoding='utf-8').read()
+if 'class="partners"' not in _s:
+    _pe = _pb.replace('>Partners<', '>Partners<').replace('src="assets/', 'src="/assets/')
+    _i = _s.find('<section class="nieuwsbrieven"'); open(R + 'en/index.html', 'w', encoding='utf-8').write(_s[:_i] + _pe + _s[_i:])
 
 # ---------- sitemap en robots ----------
 paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + [maandpad(m['maand']) for m in NIEUWS] + [modpad(m['id']) for m in MODS if modulenieuws(m['id'])] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']

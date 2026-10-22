@@ -48,6 +48,7 @@
 - [Permanent actueel: de gids](https://pa-wft.nl/permanent-actueel.html): De complete gids: wat de AFM verwacht, een stappenplan, een kwartaalritme en wat je vastlegt.
 - [Vakbekwaamheidsdossier (hulpmiddel)](https://pa-wft.nl/vakbekwaamheidsdossier.html): Hulpmiddel: leg per medewerker kwalificaties, PE-examens en kennisactiviteiten vast en print of bewaar het dossier.
 - [Wft-nieuws per maand](https://pa-wft.nl/nieuws.html): Elke maand het actuele nieuws over Wft, BGfo, TRHK, PE en examens, met officiële bron.
+- [Agenda DFO](https://pa-wft.nl/dfo-agenda.html): Trainingen, workshops, webinars en opleidingen van DFO voor adviseurs.
 
 ## Nieuws per maand
 
