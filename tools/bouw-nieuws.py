@@ -83,3 +83,35 @@ _s = open(R + 'index.html', encoding='utf-8').read()
 _a = '<section class="nieuwsbrieven"'
 if _a in _s and 'nb-home' not in _s: open(R + 'index.html', 'w', encoding='utf-8').write(_s.replace(_a, blok + _a, 1))
 KENNIS_PAGINAS.append('nieuws.html')
+
+# ---------- nieuws per module ----------
+def modulenieuws(mid):
+    return [i for m in NIEUWS for i in m['items'] if mid in i.get('modules', [])]
+def modpad(mid): return f'nieuws-module-{mid}.html'
+for mod in MODS:
+    mid, naam = mod['id'], mod['naam']; its = modulenieuws(mid); pad = modpad(mid)
+    if not its: continue
+    BIJGEWERKT[pad] = max(i['datum'] for i in its)
+    inh = (f'    <p class="lead">Het actuele nieuws voor de module Wft {html.escape(naam)}: wetgeving, toezicht, PE en examens, met officiële bron. Nieuws dat alle modules raakt staat er ook tussen.</p>\n'
+           f'    <p class="meta-regel">{len(its)} {"bericht" if len(its) == 1 else "berichten"} · <a href="module-{mid}.html">Naar de module en de oefenvragen</a></p>\n')
+    huidige = ''
+    for i in its:
+        if i['datum'][:7] != huidige:
+            huidige = i['datum'][:7]; inh += f'    <h2>{maandnaam(huidige).capitalize()}</h2>\n'
+        inh += item_html(i, 'h3')
+    inh += ('    <h2>Nieuws van een andere module</h2>\n    <ul class="kolommen">' + ''.join(f'<li><a href="{modpad(x["id"])}">Wft {html.escape(x["naam"])}</a></li>' for x in MODS if x['id'] != mid and modulenieuws(x['id']))
+            + '</ul>\n    <p><a href="nieuws.html">Alle nieuws per maand</a></p>\n  ' + NIEUWSBRIEVEN + NB_NOOT)
+    t = f'Wft {naam}: nieuws en wijzigingen'
+    o = f'Het actuele nieuws voor de module Wft {naam}, per maand en met officiële bron.'
+    pagina(pad, t, o, f'Nieuws Wft {html.escape(naam)}', 'Nieuws per module', inh, actief='nieuws.html', ld=ld_nieuws(pad, t, o, its, BIJGEWERKT[pad]), kruimel=f'Nieuws {naam}')
+    p_ = R + f'module-{mid}.html'; s_ = open(p_, encoding='utf-8').read()
+    blok_ = (f'<h2 id="nieuws-{mid}">Nieuws voor deze module</h2>\n<ul class="nb-lijst">'
+             + ''.join(f'<li><time datetime="{i["datum"]}">{nl(i["datum"])}</time> <a href="{maandpad(i["datum"][:7])}#{item_id(i)}">{html.escape(i["titel"])}</a></li>' for i in its[:4])
+             + f'</ul>\n<p><a href="{pad}">Al het nieuws voor Wft {html.escape(naam)}</a></p>\n')
+    ank = re.search(r'<h2 id="toetstermen-cdfd', s_)
+    if ank and 'nb-lijst' not in s_: open(p_, 'w', encoding='utf-8').write(s_[:ank.start()] + blok_ + s_[ank.start():])
+
+_h = open(R + 'nieuws.html', encoding='utf-8').read()
+_k = ('<h2 id="nieuws-per-module">Nieuws per module</h2>\n<ul class="kolommen">' + ''.join(f'<li><a href="{modpad(x["id"])}">Wft {html.escape(x["naam"])}</a> ({len(modulenieuws(x["id"]))})</li>' for x in MODS if modulenieuws(x['id'])) + '</ul>\n')
+_a = re.search(r'<h2 id="nieuws-per-maand"', _h)
+if _a and 'nieuws-per-module' not in _h: open(R + 'nieuws.html', 'w', encoding='utf-8').write(_h[:_a.start()] + _k + _h[_a.start():])

@@ -906,7 +906,7 @@ open(R + 'llms-full.txt', 'w', encoding='utf-8').write('\n'.join(volledig) + '\n
 exec(open(R + 'tools/bouw-engels.py', encoding='utf-8').read())
 
 # ---------- sitemap en robots ----------
-paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + [maandpad(m['maand']) for m in NIEUWS] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
+paden = ['', 'toets.html', 'nieuw.html', 'begrippen.html', 'pe-punten-wft.html', 'kennis.html'] + [k for k in KENNIS_PAGINAS if k != 'kennis.html'] + [maandpad(m['maand']) for m in NIEUWS] + [modpad(m['id']) for m in MODS if modulenieuws(m['id'])] + ['wetgeving.html', 'compliance.html', 'opleidingen.html'] + [f'module-{m["id"]}.html' for m in MODS] + ['vragen.html', 'over.html', 'gebruiksvoorwaarden.html', 'klachten.html', 'privacy.html']
 def sm_url(loc, lastmod, alt):
     x = f'  <url><loc>{loc}</loc><lastmod>{lastmod}</lastmod>'
     for taal, u in alt: x += f'<xhtml:link rel="alternate" hreflang="{taal}" href="{u}"/>'

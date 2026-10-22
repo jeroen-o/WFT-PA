@@ -327,3 +327,6 @@ body.breed .kopieer{padding:6px 8px;min-height:28px}
 .nb-home ul{list-style:none;padding:0;margin:0 0 8px}
 .nb-home li{padding:6px 0;border-top:1px solid #d5dde8}
 .nb-home time{color:#46566b;font-size:14px;margin-right:8px}
+.nb-lijst{list-style:none;padding:0;margin:0 0 8px}
+.nb-lijst li{padding:6px 0;border-top:1px solid #d5dde8}
+.nb-lijst time{color:#46566b;font-size:14px;margin-right:8px}
