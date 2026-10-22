@@ -266,7 +266,7 @@ M = {
    onderwerpen=['Soorten krediet: doorlopend krediet, persoonlijke lening, private lease, BNPL, roodstand', 'Kredietwaardigheidstoets, leennormen en BKR-registratie',
                 'Informatie: Europese standaardinformatie en JKP', 'Herroepingsrecht, vervroegd aflossen en opzeggen', 'Maximale kredietvergoeding (principe)',
                 'Wft- en Wck-kader', 'Schuldhulp en betalingsproblemen', 'Zorgplicht, provisie en oversluiten', 'Wwft en AVG bij krediet'],
-   actueel=['<strong>CCD II per 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Nederlandse implementatiewet is nog in voorbereiding. Onder meer BNPL en huur of lease met koopoptie komen onder het kredietregime.',
+   actueel=['<strong>CCD II per 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Tweede Kamer nam de Nederlandse implementatiewet op 6 oktober 2026 aan; de Eerste Kamer is nu aan zet en de inwerkingtreding volgt bij koninklijk besluit. Onder meer BNPL en huur of lease met koopoptie komen onder het kredietregime.',
             '<strong>Strengere kredietwaardigheidstoets onder CCD II.</strong> Krediet mag alleen worden verstrekt als uit de kredietwaardigheidsbeoordeling blijkt dat de consument waarschijnlijk aan zijn verplichtingen kan voldoen. Daarnaast komen er strengere eisen aan reclame en aan de informatie vooraf.'],
    bronnen=['wft', 'bgfo', 'wck', 'ccd2', 'wwft', 'avg']),
  'schade-particulier': dict(
@@ -469,6 +469,7 @@ DATUMS = [
     ('2025-04-01', 'Start PE-periode 2025–2028', 'Binnen deze periode haal je per beroepskwalificatie één PE-examen.', ALLE),
     ('2026-01-01', 'DAC8 van toepassing', 'Cryptodienstverleners in de EU geven klantgegevens door aan de belastingdienst.', ['vermogen']),
     ('2026-04-01', 'Nieuwe toetstermen CDFD', 'Vernieuwde eind- en toetstermen voor alle Wft-modules.', ALLE),
+    ('2026-10-27', 'CCD II in de Eerste Kamer', 'De commissie voor Financiën van de Eerste Kamer houdt de inbreng voor het verslag over de implementatiewet CCD II.', ['consumptief-krediet']),
     ('2026-11-20', 'CCD II gaat gelden', 'De herziene richtlijn consumentenkrediet: strengere kredietwaardigheidstoets, ook BNPL en lease met koopoptie.', ['consumptief-krediet']),
     ('2026-12-09', 'Omzetting nieuwe richtlijn productaansprakelijkheid', 'Uiterste datum voor de Nederlandse wet; software telt als product.', ['schade-zakelijk', 'schade-particulier']),
     ('2027-01-01', 'Jaarlijkse wijzigingen', 'Nieuwe jaarversies van onder meer de leennormen, NHG-normen, zorgpremies en eigen risico, en fiscale bedragen.', ['hypothecair-krediet', 'zorgverzekering', 'vermogen', 'inkomen', 'pensioen']),
@@ -777,7 +778,7 @@ for regel in bron.split('\n'):
             m = re.match(r'- (.+?): (.*?) \(directe verwijzing nog te verifiëren\)', regel)
             if m: huidig[1].append((m.group(1), 'https://wetten.overheid.nl/zoeken?keyword=' + m.group(1).split(' (')[0].replace(' ', '+'), m.group(2), True))
 VERANDERT = [
- '<strong>CCD II — 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Nederlandse implementatiewet is nog in voorbereiding. Aanbieders van BNPL, uitgestelde-betaalkaarten en huur of lease met koopoptie moeten toetsen of zij vergunningplichtig worden.',
+ '<strong>CCD II — 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Tweede Kamer nam de Nederlandse implementatiewet op 6 oktober 2026 aan; de Eerste Kamer is nu aan zet en de inwerkingtreding volgt bij koninklijk besluit. Aanbieders van BNPL, uitgestelde-betaalkaarten en huur of lease met koopoptie moeten toetsen of zij vergunningplichtig worden.',
  '<strong>EU-witwaspakket (AMLR en AMLD6).</strong> Komt boven op de huidige Wwft; de Wwft wordt op termijn vervangen door een implementatiewet bij het Europese pakket. De poortwachtersrol van adviseurs verandert mee.',
  '<strong>Hypotheekacceptatie 2026.</strong> De NHG-kostengrens is € 470.000. Meerdere geldverstrekkers beperken het aflossingsvrije deel bij nieuwe aanvragen tot 30% van de woningwaarde, en taxatierapporten moeten ingaan op funderingsrisico.',
  '<strong>AI-verordening en DORA.</strong> Gefaseerde toepassing raakt advieskantoren via software, modellen en uitbesteding.',
