@@ -6,7 +6,7 @@ AGENDA = json.load(open(R + 'tools/dfo-agenda.json', encoding='utf-8'))
 AGENDA.sort(key=lambda e: (e['datum'], e['start']))
 DAGEN = ['maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag']
 AGENDA_BRON = 'https://www.dfobv.nl/agenda/'
-AGENDA_STAND = '2026-10-22'
+AGENDA_STAND = '2026-11-27'
 
 def ag_rij(e):
     d = datetime.date.fromisoformat(e['datum'])

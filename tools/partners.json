@@ -1,0 +1,346 @@
+[
+ {
+  "naam": "Blinqx Verzekering & Hypotheek",
+  "bestand": "blinqx.png",
+  "w": 420,
+  "h": 143,
+  "url": "https://blinqx.ai/",
+  "groep": "partner"
+ },
+ {
+  "naam": "Turien & Co Assuradeuren",
+  "bestand": "turien.png",
+  "w": 415,
+  "h": 160,
+  "url": "https://www.turien.nl/",
+  "groep": "partner"
+ },
+ {
+  "naam": "Lloyds Bank Hypotheken",
+  "bestand": "lloyds-bank.png",
+  "w": 261,
+  "h": 160,
+  "url": "https://www.lloydsbank.nl/",
+  "groep": "partner"
+ },
+ {
+  "naam": "Argenta",
+  "bestand": "argenta.png",
+  "w": 300,
+  "h": 52,
+  "url": "https://www.argenta.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Build Finance",
+  "bestand": "build-finance.png",
+  "w": 279,
+  "h": 120,
+  "url": "https://build-finance.com/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Clarian Wonen",
+  "bestand": "clarian-wonen.png",
+  "w": 300,
+  "h": 116,
+  "url": "https://www.clarianwonen.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "De Nederlandse",
+  "bestand": "de-nederlandse.png",
+  "w": 174,
+  "h": 120,
+  "url": "https://www.denederlandse.com/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Handelsbanken",
+  "bestand": "handelsbanken.png",
+  "w": 300,
+  "h": 31,
+  "url": "https://www.handelsbanken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Holland Woont",
+  "bestand": "holland-woont.png",
+  "w": 300,
+  "h": 118,
+  "url": "https://www.hollandwoont.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Impact Hypotheken",
+  "bestand": "impact-hypotheken.png",
+  "w": 300,
+  "h": 98,
+  "url": "https://www.impacthypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "IQWoon",
+  "bestand": "iqwoon.png",
+  "w": 171,
+  "h": 120,
+  "url": "https://www.iqwoon.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Jens Onderlinge Hypotheken",
+  "bestand": "jens.png",
+  "w": 244,
+  "h": 120,
+  "url": "https://jens.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Groene Hart Hypotheken",
+  "bestand": "groene-hart.png",
+  "w": 91,
+  "h": 120,
+  "url": "https://www.groenehart.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "ING",
+  "bestand": "ing.png",
+  "w": 300,
+  "h": 75,
+  "url": "https://www.ing.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Obvion",
+  "bestand": "obvion.png",
+  "w": 300,
+  "h": 75,
+  "url": "https://obvion.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "ASN Bank",
+  "bestand": "asn-bank.png",
+  "w": 300,
+  "h": 57,
+  "url": "https://www.asnbank.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "ABN AMRO",
+  "bestand": "abn-amro.png",
+  "w": 300,
+  "h": 74,
+  "url": "https://www.abnamro.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Florius",
+  "bestand": "florius.png",
+  "w": 300,
+  "h": 45,
+  "url": "https://www.florius.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Triodos Bank",
+  "bestand": "triodos.png",
+  "w": 300,
+  "h": 91,
+  "url": "https://www.triodos.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Vista Hypotheken",
+  "bestand": "vista.png",
+  "w": 300,
+  "h": 95,
+  "url": "https://www.vistahypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "bunq",
+  "bestand": "bunq.png",
+  "w": 120,
+  "h": 120,
+  "url": "https://www.bunq.com/nl-nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Tulp Hypotheken",
+  "bestand": "tulp.png",
+  "w": 300,
+  "h": 38,
+  "url": "https://tulphypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Allianz",
+  "bestand": "allianz.png",
+  "w": 300,
+  "h": 74,
+  "url": "https://www.allianz.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "NIBC",
+  "bestand": "nibc.png",
+  "w": 300,
+  "h": 48,
+  "url": "https://nibc.com/nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "bijBouwe",
+  "bestand": "bijbouwe.png",
+  "w": 300,
+  "h": 86,
+  "url": "https://www.bijbouwe.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Knab",
+  "bestand": "knab.png",
+  "w": 300,
+  "h": 99,
+  "url": "https://www.knab.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Lot Hypotheken",
+  "bestand": "lot.png",
+  "w": 138,
+  "h": 120,
+  "url": "https://www.lothypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Munt Hypotheken",
+  "bestand": "munt.png",
+  "w": 300,
+  "h": 94,
+  "url": "https://www.munthypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Nationale-Nederlanden",
+  "bestand": "nationale-nederlanden.png",
+  "w": 300,
+  "h": 92,
+  "url": "https://www.nn.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Venn Hypotheken",
+  "bestand": "venn.png",
+  "w": 300,
+  "h": 93,
+  "url": "https://www.vennhypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Robuust Hypotheken",
+  "bestand": "robuust.png",
+  "w": 300,
+  "h": 83,
+  "url": "https://www.robuusthypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Attens Hypotheken",
+  "bestand": "attens.png",
+  "w": 276,
+  "h": 120,
+  "url": "https://www.attens.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "a.s.r.",
+  "bestand": "asr.png",
+  "w": 300,
+  "h": 97,
+  "url": "https://www.asr.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Syntrus Achmea",
+  "bestand": "syntrus-achmea.png",
+  "w": 300,
+  "h": 62,
+  "url": "https://www.syntrusachmea.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Rabobank",
+  "bestand": "rabobank.png",
+  "w": 300,
+  "h": 54,
+  "url": "https://www.rabobank.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Merius Hypotheken",
+  "bestand": "merius.png",
+  "w": 300,
+  "h": 106,
+  "url": "https://www.meriushypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Orange Credit",
+  "bestand": "orange-credit.png",
+  "w": 300,
+  "h": 49,
+  "url": "https://orangecredit.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Socio Hypotheken",
+  "bestand": "socio.png",
+  "w": 300,
+  "h": 108,
+  "url": "",
+  "groep": "lender"
+ },
+ {
+  "naam": "Solid Briq",
+  "bestand": "solid-briq.png",
+  "w": 300,
+  "h": 81,
+  "url": "https://www.solidbriq.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Van Lanschot Kempen",
+  "bestand": "van-lanschot-kempen.png",
+  "w": 300,
+  "h": 65,
+  "url": "https://www.vanlanschotkempen.com/nl-nl",
+  "groep": "lender"
+ },
+ {
+  "naam": "Vandaag Hypotheken",
+  "bestand": "vandaag.png",
+  "w": 300,
+  "h": 107,
+  "url": "https://www.vandaaghypotheken.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Centraal Beheer",
+  "bestand": "centraal-beheer.png",
+  "w": 279,
+  "h": 120,
+  "url": "https://www.centraalbeheer.nl/",
+  "groep": "lender"
+ },
+ {
+  "naam": "Onderlinge Nederland",
+  "bestand": "onderlinge-nederland.png",
+  "w": 300,
+  "h": 87,
+  "url": "https://www.onderlingenederland.nl/",
+  "groep": "lender"
+ }
+]
