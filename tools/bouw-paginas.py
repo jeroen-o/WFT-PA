@@ -43,10 +43,17 @@ MELDING = ('<div class="melding" role="note"><strong>Let op.</strong> De PA-toet
            'Neem contact op met <a href="https://www.dfobv.nl/" target="_blank" rel="noopener">DFO BV</a> via <a href="tel:+31332580460">033 258 04 60</a> of <a href="mailto:info@dfobv.nl">info@dfobv.nl</a>.</div>')
 
 EXT = ' target="_blank" rel="noopener"'
-PARTNERS = [('Blinqx Verzekering & Hypotheek', 'blinqx.png', 471, 160, 'https://blinqx.ai/'), ('Turien & Co Assuradeuren', 'turien.png', 409, 160, 'https://www.turien.nl/'), ('Lloyds', 'lloyds.png', 558, 160, 'https://www.lloydsbank.com/')]
-def partnerband(koptekst, pre=''):
+PARTNERS = json.load(open(R + 'tools/partners.json', encoding='utf-8'))
+def _logo(o, pre, nieuw):
+    n = o['naam'].replace('&', '&amp;')
+    img = f'<img src="{pre}assets/partners/{o["bestand"]}" width="{o["w"]}" height="{o["h"]}" loading="lazy" decoding="async" alt="{n}">'
+    if not o['url']: return f'<li>{img}</li>'
+    return f'<li><a href="{o["url"]}" target="_blank" rel="noopener" aria-label="{n} ({nieuw})">{img}</a></li>'
+def partnerband(koptekst, pre='', kop2='Geldverstrekkers', nieuw='opent in een nieuw tabblad'):
     return ('<section class="partners" aria-labelledby="partners-kop"><div class="wrap"><h2 id="partners-kop">' + koptekst + '</h2><ul class="partner-logos">'
-            + ''.join(f'<li><a href="{u}" target="_blank" rel="noopener" aria-label="{n.replace("&", "&amp;")} (opent in een nieuw tabblad)"><img src="{pre}assets/partners/{f}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{n.replace("&", "&amp;")}"></a></li>' for n, f, w, h, u in PARTNERS) + '</ul></div></section>\n')
+            + ''.join(_logo(o, pre, nieuw) for o in PARTNERS if o['groep'] == 'partner') + '</ul>'
+            f'<h2 class="partners-sub" id="geldverstrekkers-kop">{kop2}</h2><ul class="lender-logos" aria-labelledby="geldverstrekkers-kop">'
+            + ''.join(_logo(o, pre, nieuw) for o in PARTNERS if o['groep'] == 'lender') + '</ul></div></section>\n')
 
 FOOTER = (partnerband('Onze partners') + '<footer class="foot">\n  <div class="wrap">\n    <div class="foot-kolommen">\n'
     '      <div class="foot-merk"><p class="foot-titel">Wft Permanent Actueel</p><p>Gratis oefentoets voor adviseurs en klantmedewerkers. Kennis actueel, elk kwartaal weer.</p>'
@@ -271,7 +278,7 @@ M = {
    onderwerpen=['Soorten krediet: doorlopend krediet, persoonlijke lening, private lease, BNPL, roodstand', 'Kredietwaardigheidstoets, leennormen en BKR-registratie',
                 'Informatie: Europese standaardinformatie en JKP', 'Herroepingsrecht, vervroegd aflossen en opzeggen', 'Maximale kredietvergoeding (principe)',
                 'Wft- en Wck-kader', 'Schuldhulp en betalingsproblemen', 'Zorgplicht, provisie en oversluiten', 'Wwft en AVG bij krediet'],
-   actueel=['<strong>CCD II per 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Tweede Kamer nam de Nederlandse implementatiewet op 6 oktober 2026 aan; de Eerste Kamer is nu aan zet en de inwerkingtreding volgt bij koninklijk besluit. Onder meer BNPL en huur of lease met koopoptie komen onder het kredietregime.',
+   actueel=['<strong>CCD II sinds 20 november 2026.</strong> De herziene richtlijn consumentenkrediet is vanaf die datum van toepassing. De Tweede Kamer nam de Nederlandse implementatiewet op 6 oktober 2026 aan; de Eerste Kamer behandelt het voorstel nog (nota naar aanleiding van het verslag ontvangen op 23 november, nadere procedure op 1 december) en de inwerkingtreding volgt bij koninklijk besluit. Onder meer BNPL en huur of lease met koopoptie komen onder het kredietregime.',
             '<strong>Strengere kredietwaardigheidstoets onder CCD II.</strong> Krediet mag alleen worden verstrekt als uit de kredietwaardigheidsbeoordeling blijkt dat de consument waarschijnlijk aan zijn verplichtingen kan voldoen. Daarnaast komen er strengere eisen aan reclame en aan de informatie vooraf.'],
    bronnen=['wft', 'bgfo', 'wck', 'ccd2', 'wwft', 'avg']),
  'schade-particulier': dict(
@@ -474,7 +481,8 @@ DATUMS = [
     ('2025-04-01', 'Start PE-periode 2025–2028', 'Binnen deze periode haal je per beroepskwalificatie één PE-examen.', ALLE),
     ('2026-01-01', 'DAC8 van toepassing', 'Cryptodienstverleners in de EU geven klantgegevens door aan de belastingdienst.', ['vermogen']),
     ('2026-04-01', 'Nieuwe toetstermen CDFD', 'Vernieuwde eind- en toetstermen voor alle Wft-modules.', ALLE),
-    ('2026-10-27', 'CCD II in de Eerste Kamer', 'De commissie voor Financiën van de Eerste Kamer houdt de inbreng voor het verslag over de implementatiewet CCD II.', ['consumptief-krediet']),
+    ('2026-12-01', 'CCD II: Eerste Kamer bespreekt de nadere procedure', 'De commissie voor Financiën van de Eerste Kamer bespreekt hoe het wetsvoorstel verder wordt behandeld.', ['consumptief-krediet']),
+    ('2026-12-03', 'Consultatie tarief Wft-examen sluit', 'Het ministerie van Financiën consulteert de Regeling tarief centrale examenbank Wft 2027. Beoogd is een verhoging van het examentarief per 1 januari 2027 van € 85 naar € 128; nog niet vastgesteld.', ALLE),
     ('2026-11-20', 'CCD II gaat gelden', 'De herziene richtlijn consumentenkrediet: strengere kredietwaardigheidstoets, ook BNPL en lease met koopoptie.', ['consumptief-krediet']),
     ('2026-12-09', 'Omzetting nieuwe richtlijn productaansprakelijkheid', 'Uiterste datum voor de Nederlandse wet; software telt als product.', ['schade-zakelijk', 'schade-particulier']),
     ('2027-01-01', 'Jaarlijkse wijzigingen', 'Nieuwe jaarversies van onder meer de leennormen, NHG-normen, zorgpremies en eigen risico, en fiscale bedragen.', ['hypothecair-krediet', 'zorgverzekering', 'vermogen', 'inkomen', 'pensioen']),
@@ -783,7 +791,7 @@ for regel in bron.split('\n'):
             m = re.match(r'- (.+?): (.*?) \(directe verwijzing nog te verifiëren\)', regel)
             if m: huidig[1].append((m.group(1), 'https://wetten.overheid.nl/zoeken?keyword=' + m.group(1).split(' (')[0].replace(' ', '+'), m.group(2), True))
 VERANDERT = [
- '<strong>CCD II — 20 november 2026.</strong> De herziene richtlijn consumentenkrediet gaat gelden; de Tweede Kamer nam de Nederlandse implementatiewet op 6 oktober 2026 aan; de Eerste Kamer is nu aan zet en de inwerkingtreding volgt bij koninklijk besluit. Aanbieders van BNPL, uitgestelde-betaalkaarten en huur of lease met koopoptie moeten toetsen of zij vergunningplichtig worden.',
+ '<strong>CCD II — sinds 20 november 2026.</strong> De herziene richtlijn consumentenkrediet is van toepassing. De Tweede Kamer nam de Nederlandse implementatiewet op 6 oktober 2026 aan; de Eerste Kamer behandelt het voorstel nog en de inwerkingtreding volgt bij koninklijk besluit. Aanbieders van BNPL, uitgestelde-betaalkaarten en huur of lease met koopoptie moeten toetsen of zij vergunningplichtig worden.',
  '<strong>EU-witwaspakket (AMLR en AMLD6).</strong> Komt boven op de huidige Wwft; de Wwft wordt op termijn vervangen door een implementatiewet bij het Europese pakket. De poortwachtersrol van adviseurs verandert mee.',
  '<strong>Hypotheekacceptatie 2026.</strong> De NHG-kostengrens is € 470.000. Meerdere geldverstrekkers beperken het aflossingsvrije deel bij nieuwe aanvragen tot 30% van de woningwaarde, en taxatierapporten moeten ingaan op funderingsrisico.',
  '<strong>AI-verordening en DORA.</strong> Gefaseerde toepassing raakt advieskantoren via software, modellen en uitbesteding.',
